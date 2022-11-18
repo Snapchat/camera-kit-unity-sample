@@ -38,5 +38,6 @@ public class GameManager : MonoBehaviour
 
     public void SpaceshipLanded() {
         Debug.Log("Spaceship Landed");
+        NativeAPI.SpaceshipLanded(_shotsOnAlien);
     }
 }

@@ -7,7 +7,7 @@
 @protocol NativeCallsProtocol
 @required
 - (void) showHostMainWindow:(NSString*)color;
-// other methods
+- (void) invokeCameraKit:(int)alienShotCount;
 @end
 
 __attribute__ ((visibility("default")))

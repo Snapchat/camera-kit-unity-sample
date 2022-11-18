@@ -79,41 +79,42 @@ AppDelegate* hostDelegate = NULL;
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor blueColor];
     
-    // INIT UNITY
-    self.unityInitBtn = [UIButton buttonWithType: UIButtonTypeSystem];
-    [self.unityInitBtn setTitle: @"Init" forState: UIControlStateNormal];
-    self.unityInitBtn.frame = CGRectMake(0, 0, 100, 44);
-    self.unityInitBtn.center = CGPointMake(50, 120);
-    self.unityInitBtn.backgroundColor = [UIColor greenColor];
-    [self.unityInitBtn addTarget: hostDelegate action: @selector(initUnity) forControlEvents: UIControlEventPrimaryActionTriggered];
-    [self.view addSubview: self.unityInitBtn];
-    
-    // SHOW UNITY
-    self.unpauseBtn = [UIButton buttonWithType: UIButtonTypeSystem];
-    [self.unpauseBtn setTitle: @"Show Unity" forState: UIControlStateNormal];
-    self.unpauseBtn.frame = CGRectMake(100, 0, 100, 44);
-    self.unpauseBtn.center = CGPointMake(150, 120);
-    self.unpauseBtn.backgroundColor = [UIColor lightGrayColor];
-    [self.unpauseBtn addTarget: hostDelegate action: @selector(ShowMainView) forControlEvents: UIControlEventPrimaryActionTriggered];
-    [self.view addSubview: self.unpauseBtn];
-    
-    // UNLOAD UNITY
-    self.unloadBtn = [UIButton buttonWithType: UIButtonTypeSystem];
-    [self.unloadBtn setTitle: @"Unload" forState: UIControlStateNormal];
-    self.unloadBtn.frame = CGRectMake(200, 0, 100, 44);
-    self.unloadBtn.center = CGPointMake(250, 120);
-    self.unloadBtn.backgroundColor = [UIColor redColor];
-    [self.unloadBtn addTarget: hostDelegate action: @selector(unloadButtonTouched:) forControlEvents: UIControlEventPrimaryActionTriggered];
-    [self.view addSubview: self.unloadBtn];
-    
-    // QUIT UNITY
-    self.quitBtn = [UIButton buttonWithType: UIButtonTypeSystem];
-    [self.quitBtn setTitle: @"Quit" forState: UIControlStateNormal];
-    self.quitBtn.frame = CGRectMake(300, 0, 100, 44);
-    self.quitBtn.center = CGPointMake(250, 170);
-    self.quitBtn.backgroundColor = [UIColor redColor];
-    [self.quitBtn addTarget: hostDelegate action: @selector(quitButtonTouched:) forControlEvents: UIControlEventPrimaryActionTriggered];
-    [self.view addSubview: self.quitBtn];
+//    // INIT UNITY
+//    self.unityInitBtn = [UIButton buttonWithType: UIButtonTypeSystem];
+//    [self.unityInitBtn setTitle: @"Init" forState: UIControlStateNormal];
+//    self.unityInitBtn.frame = CGRectMake(0, 0, 100, 44);
+//    self.unityInitBtn.center = CGPointMake(50, 120);
+//    self.unityInitBtn.backgroundColor = [UIColor greenColor];
+//    [self.unityInitBtn addTarget: hostDelegate action: @selector(initUnity) forControlEvents: UIControlEventPrimaryActionTriggered];
+//    [self.view addSubview: self.unityInitBtn];
+//
+//    // SHOW UNITY
+//    self.unpauseBtn = [UIButton buttonWithType: UIButtonTypeSystem];
+//    [self.unpauseBtn setTitle: @"Show Unity" forState: UIControlStateNormal];
+//    self.unpauseBtn.frame = CGRectMake(100, 0, 100, 44);
+//    self.unpauseBtn.center = CGPointMake(150, 120);
+//    self.unpauseBtn.backgroundColor = [UIColor lightGrayColor];
+//    [self.unpauseBtn addTarget: hostDelegate action: @selector(ShowMainView) forControlEvents: UIControlEventPrimaryActionTriggered];
+//    [self.view addSubview: self.unpauseBtn];
+//
+//    // UNLOAD UNITY
+//    self.unloadBtn = [UIButton buttonWithType: UIButtonTypeSystem];
+//    [self.unloadBtn setTitle: @"Unload" forState: UIControlStateNormal];
+//    self.unloadBtn.frame = CGRectMake(200, 0, 100, 44);
+//    self.unloadBtn.center = CGPointMake(250, 120);
+//    self.unloadBtn.backgroundColor = [UIColor redColor];
+//    [self.unloadBtn addTarget: hostDelegate action: @selector(unloadButtonTouched:) forControlEvents: UIControlEventPrimaryActionTriggered];
+//    [self.view addSubview: self.unloadBtn];
+//
+//    // QUIT UNITY
+//    self.quitBtn = [UIButton buttonWithType: UIButtonTypeSystem];
+//    [self.quitBtn setTitle: @"Quit" forState: UIControlStateNormal];
+//    self.quitBtn.frame = CGRectMake(300, 0, 100, 44);
+//    self.quitBtn.center = CGPointMake(250, 170);
+//    self.quitBtn.backgroundColor = [UIColor redColor];
+//    [self.quitBtn addTarget: hostDelegate action: @selector(quitButtonTouched:) forControlEvents: UIControlEventPrimaryActionTriggered];
+//    [self.view addSubview: self.quitBtn];
+    [hostDelegate initUnity];
 }
 
 - (void)didReceiveMemoryWarning
@@ -141,6 +142,11 @@ NSDictionary* appLaunchOpts;
     } else {
         [[self ufw] showUnityWindow];
     }
+}
+
+- (void)invokeCameraKit:(int)alienShotCount
+{
+    NSLog(@"Message received. Loud and clear. Will invoke Camera Kit here. %d", alienShotCount);
 }
 
 - (void)showHostMainWindow
@@ -202,41 +208,41 @@ NSDictionary* appLaunchOpts;
     
     auto view = [[[self ufw] appController] rootView];
     
-    if(self.showUnityOffButton == nil) {
-        self.showUnityOffButton = [UIButton buttonWithType: UIButtonTypeSystem];
-        [self.showUnityOffButton setTitle: @"Show Main" forState: UIControlStateNormal];
-        self.showUnityOffButton.frame = CGRectMake(0, 0, 100, 44);
-        self.showUnityOffButton.center = CGPointMake(50, 300);
-        self.showUnityOffButton.backgroundColor = [UIColor greenColor];
-        [view addSubview: self.showUnityOffButton];
-        [self.showUnityOffButton addTarget: self action: @selector(showHostMainWindow) forControlEvents: UIControlEventPrimaryActionTriggered];
-        
-        self.btnSendMsg = [UIButton buttonWithType: UIButtonTypeSystem];
-        [self.btnSendMsg setTitle: @"Send Msg" forState: UIControlStateNormal];
-        self.btnSendMsg.frame = CGRectMake(0, 0, 100, 44);
-        self.btnSendMsg.center = CGPointMake(150, 300);
-        self.btnSendMsg.backgroundColor = [UIColor yellowColor];
-        [view addSubview: self.btnSendMsg];
-        [self.btnSendMsg addTarget: self action: @selector(sendMsgToUnity) forControlEvents: UIControlEventPrimaryActionTriggered];
-        
-        // Unload
-        self.unloadBtn = [UIButton buttonWithType: UIButtonTypeSystem];
-        [self.unloadBtn setTitle: @"Unload" forState: UIControlStateNormal];
-        self.unloadBtn.frame = CGRectMake(250, 0, 100, 44);
-        self.unloadBtn.center = CGPointMake(250, 300);
-        self.unloadBtn.backgroundColor = [UIColor redColor];
-        [self.unloadBtn addTarget: self action: @selector(unloadButtonTouched:) forControlEvents: UIControlEventPrimaryActionTriggered];
-        [view addSubview: self.unloadBtn];
-        
-        // Quit
-        self.quitBtn = [UIButton buttonWithType: UIButtonTypeSystem];
-        [self.quitBtn setTitle: @"Quit" forState: UIControlStateNormal];
-        self.quitBtn.frame = CGRectMake(250, 0, 100, 44);
-        self.quitBtn.center = CGPointMake(250, 350);
-        self.quitBtn.backgroundColor = [UIColor redColor];
-        [self.quitBtn addTarget: self action: @selector(quitButtonTouched:) forControlEvents: UIControlEventPrimaryActionTriggered];
-        [view addSubview: self.quitBtn];
-    }
+//    if(self.showUnityOffButton == nil) {
+//        self.showUnityOffButton = [UIButton buttonWithType: UIButtonTypeSystem];
+//        [self.showUnityOffButton setTitle: @"Show Main" forState: UIControlStateNormal];
+//        self.showUnityOffButton.frame = CGRectMake(0, 0, 100, 44);
+//        self.showUnityOffButton.center = CGPointMake(50, 300);
+//        self.showUnityOffButton.backgroundColor = [UIColor greenColor];
+//        [view addSubview: self.showUnityOffButton];
+//        [self.showUnityOffButton addTarget: self action: @selector(showHostMainWindow) forControlEvents: UIControlEventPrimaryActionTriggered];
+//
+//        self.btnSendMsg = [UIButton buttonWithType: UIButtonTypeSystem];
+//        [self.btnSendMsg setTitle: @"Send Msg" forState: UIControlStateNormal];
+//        self.btnSendMsg.frame = CGRectMake(0, 0, 100, 44);
+//        self.btnSendMsg.center = CGPointMake(150, 300);
+//        self.btnSendMsg.backgroundColor = [UIColor yellowColor];
+//        [view addSubview: self.btnSendMsg];
+//        [self.btnSendMsg addTarget: self action: @selector(sendMsgToUnity) forControlEvents: UIControlEventPrimaryActionTriggered];
+//
+//        // Unload
+//        self.unloadBtn = [UIButton buttonWithType: UIButtonTypeSystem];
+//        [self.unloadBtn setTitle: @"Unload" forState: UIControlStateNormal];
+//        self.unloadBtn.frame = CGRectMake(250, 0, 100, 44);
+//        self.unloadBtn.center = CGPointMake(250, 300);
+//        self.unloadBtn.backgroundColor = [UIColor redColor];
+//        [self.unloadBtn addTarget: self action: @selector(unloadButtonTouched:) forControlEvents: UIControlEventPrimaryActionTriggered];
+//        [view addSubview: self.unloadBtn];
+//
+//        // Quit
+//        self.quitBtn = [UIButton buttonWithType: UIButtonTypeSystem];
+//        [self.quitBtn setTitle: @"Quit" forState: UIControlStateNormal];
+//        self.quitBtn.frame = CGRectMake(250, 0, 100, 44);
+//        self.quitBtn.center = CGPointMake(250, 350);
+//        self.quitBtn.backgroundColor = [UIColor redColor];
+//        [self.quitBtn addTarget: self action: @selector(quitButtonTouched:) forControlEvents: UIControlEventPrimaryActionTriggered];
+//        [view addSubview: self.quitBtn];
+//    }
 }
 
 - (void)unloadButtonTouched:(UIButton *)sender
