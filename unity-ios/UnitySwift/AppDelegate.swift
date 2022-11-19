@@ -7,9 +7,14 @@
 
 import UIKit
 import UnityFramework
+import SCSDKCameraKit
+import SCSDKCameraKitReferenceUI
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate, UnityFrameworkListener , NativeCallsProtocol   {
+    fileprivate var supportedOrientations: UIInterfaceOrientationMask = .allButUpsideDown
+
+    
     func showHostMainWindow(_ color: String!) {
         if(color == Constants.COLOR.BLUE) {
             self.unitySampleView.nativeTitleLable.backgroundColor = .red
@@ -24,7 +29,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UnityFrameworkListener , 
     }
     
     func invokeCameraKit(_ alienShotCount: Int32) {
-        print("Going to invoke camera kit now")
+//        let storyboard = UIStoryboard(name: "Main", bundle: .main)
+//        let viewController = storyboard.instantiateViewController(withIdentifier: "Host")
+//
+//        self.window = UIWindow.init(frame: UIScreen.main.bounds)
+//
+//        if let nativeWindow = self.window {
+//            nativeWindow.rootViewController = viewController;
+//            nativeWindow.makeKeyAndVisible()
+//        }
+        let cameraController = SampleCameraController()
+        cameraController.groupIDs = ["1511b3fd-5ce4-4409-857f-71bc1bc43506", "d00052ac-7f07-47d9-8195-fa8d033698d2"]
+        let cameraViewController = CameraViewController(cameraController: cameraController)
+        cameraViewController.appOrientationDelegate = self
+        window?.rootViewController = cameraViewController
+        window?.makeKeyAndVisible()
+        unloadUnity()
     }
     
     var window: UIWindow?
@@ -208,4 +228,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UnityFrameworkListener , 
         self.didQuit = true
     }
     
+}
+
+
+extension AppDelegate: AppOrientationDelegate {
+
+    func lockOrientation(_ orientation: UIInterfaceOrientationMask) {
+        supportedOrientations = orientation
+    }
+
+    func unlockOrientation() {
+        supportedOrientations = .allButUpsideDown
+    }
+
+}
+
+class SampleCameraController: CameraController {
+    override func configureDataProvider() -> DataProviderComponent {
+        DataProviderComponent(
+            deviceMotion: nil, userData: UserDataProvider(), lensHint: nil, location: nil,
+            mediaPicker: lensMediaProvider, remoteApiServiceProviders: [])
+    }
 }
