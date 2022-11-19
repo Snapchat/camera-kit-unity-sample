@@ -2,6 +2,11 @@
 
 #include <UnityFramework/UnityFramework.h>
 #include <UnityFramework/NativeCallProxy.h>
+#include <SCSDKCameraKit/SCSDKCameraKit.h>
+#include <SCSDKCameraKitReferenceUI/SCSDKCameraKitReferenceUI-Swift.h>
+#include <SCSDKCameraKitReferenceUI/SCSDKCameraKitReferenceUI-umbrella.h>
+#include <ARKit/ARKit.h>
+
 
 UnityFramework* UnityFrameworkLoad()
 {
@@ -147,6 +152,35 @@ NSDictionary* appLaunchOpts;
 - (void)invokeCameraKit:(int)alienShotCount
 {
     NSLog(@"Message received. Loud and clear. Will invoke Camera Kit here. %d", alienShotCount);
+    NSString *lensGroupid = @"1511b3fd-5ce4-4409-857f-71bc1bc43506";
+    
+    AVCaptureSession *session = [AVCaptureSession alloc];
+    [session beginConfiguration];
+    AVCaptureDevice *videoDevice = [AVCaptureDevice defaultDeviceWithDeviceType:AVCaptureDeviceTypeBuiltInWideAngleCamera mediaType:AVMediaTypeVideo position:AVCaptureDevicePositionFront];
+    NSError *error = nil;
+    AVCaptureDeviceInput *videoDeviceInput = [AVCaptureDeviceInput deviceInputWithDevice:videoDevice error:&error];
+    if ([session canAddInput:videoDeviceInput]) {
+        [session addInput:videoDeviceInput];
+        [session commitConfiguration];
+        [session startRunning];
+    } else {
+        NSLog(@"Error, couldn't initialize AV session");
+    }
+    
+    
+    SCCameraKitSession *cameraKitSession = [SCCameraKitSession alloc];
+    SCCameraKitAVSessionInput *cameraKitInput = [[SCCameraKitAVSessionInput alloc] initWithSession:session];
+
+    ARSession *arSession = [ARSession alloc];
+    SCCameraKitARSessionInput *arInput = [[SCCameraKitARSessionInput alloc] initWithSession:arSession];
+    [cameraKitSession startWithInput:cameraKitInput arInput:arInput];
+    
+    SCCameraKitPreviewView *previewView = [SCCameraKitPreviewView alloc];
+    [previewView setAutomaticallyConfiguresTouchHandler:YES];
+    [cameraKitSession addOutput:previewView];
+    [[[cameraKitSession lenses] repository] lensesForGroupID:lensGroupid];
+    self.viewController.view = previewView;
+    [self.window makeKeyAndVisible];
 }
 
 - (void)showHostMainWindow

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		9D15FC4F2264A1600006315A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D15FC4D2264A1600006315A /* LaunchScreen.storyboard */; };
 		9D78DAFD2265A7FC00274039 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D78DAFC2265A7FC00274039 /* UIKit.framework */; };
 		DCF334012927AE07000AEB9F /* UnityFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DCF333FF2927AE07000AEB9F /* UnityFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F14FA3A7565058645B4ED8BF /* Pods_unity_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 547F18434F8FC500E6940D22 /* Pods_unity_ios.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,6 +31,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		547F18434F8FC500E6940D22 /* Pods_unity_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_unity_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6012DF077894499FB497A37C /* Pods-unity-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unity-ios.release.xcconfig"; path = "Target Support Files/Pods-unity-ios/Pods-unity-ios.release.xcconfig"; sourceTree = "<group>"; };
+		817E5D7190DCEA544D1681D0 /* Pods-unity-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unity-ios.debug.xcconfig"; path = "Target Support Files/Pods-unity-ios/Pods-unity-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		9D15FC3F2264A1600006315A /* unity-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "unity-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D15FC462264A1600006315A /* MainViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MainViewController.mm; sourceTree = "<group>"; };
 		9D15FC492264A1600006315A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -46,18 +50,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D78DAFD2265A7FC00274039 /* UIKit.framework in Frameworks */,
+				F14FA3A7565058645B4ED8BF /* Pods_unity_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		714A4176948A9152CBDEECC0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				817E5D7190DCEA544D1681D0 /* Pods-unity-ios.debug.xcconfig */,
+				6012DF077894499FB497A37C /* Pods-unity-ios.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		9D15FC362264A15F0006315A = {
 			isa = PBXGroup;
 			children = (
 				9D15FC412264A1600006315A /* unity-ios */,
 				9D15FC402264A1600006315A /* Products */,
 				9D78DAFB2265A7FC00274039 /* Frameworks */,
+				714A4176948A9152CBDEECC0 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +101,7 @@
 			children = (
 				DCF333FF2927AE07000AEB9F /* UnityFramework.framework */,
 				9D78DAFC2265A7FC00274039 /* UIKit.framework */,
+				547F18434F8FC500E6940D22 /* Pods_unity_ios.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -97,10 +113,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9D15FC552264A1600006315A /* Build configuration list for PBXNativeTarget "unity-ios" */;
 			buildPhases = (
+				DF639362F4246E75C2E18DFC /* [CP] Check Pods Manifest.lock */,
 				9D15FC3B2264A15F0006315A /* Sources */,
 				9D15FC3C2264A15F0006315A /* Frameworks */,
 				9D15FC3D2264A15F0006315A /* Resources */,
 				DCF334022927AE07000AEB9F /* Embed Frameworks */,
+				487D16754DBDCE203BAF12B3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -122,6 +140,7 @@
 				TargetAttributes = {
 					9D15FC3E2264A15F0006315A = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1410;
 					};
 				};
 			};
@@ -155,6 +174,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		487D16754DBDCE203BAF12B3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-unity-ios/Pods-unity-ios-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-unity-ios/Pods-unity-ios-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-unity-ios/Pods-unity-ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF639362F4246E75C2E18DFC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-unity-ios-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9D15FC3B2264A15F0006315A /* Sources */ = {
@@ -301,8 +362,10 @@
 		};
 		9D15FC562264A1600006315A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 817E5D7190DCEA544D1681D0 /* Pods-unity-ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 424M5254LK;
 				INFOPLIST_FILE = "unity-ios/Info.plist";
@@ -313,14 +376,19 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.snap.camerakitdemos.unity.ioswrapper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "unity-ios/unity-ios-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		9D15FC572264A1600006315A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6012DF077894499FB497A37C /* Pods-unity-ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 424M5254LK;
 				INFOPLIST_FILE = "unity-ios/Info.plist";
@@ -331,6 +399,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.snap.camerakitdemos.unity.ioswrapper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "unity-ios/unity-ios-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

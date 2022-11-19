@@ -1,0 +1,21 @@
+PODS:
+  - SCSDKCameraKit (1.17.0)
+  - SCSDKCameraKitReferenceUI (1.17.0):
+    - SCSDKCameraKit (~> 1.17.0)
+
+DEPENDENCIES:
+  - SCSDKCameraKit
+  - SCSDKCameraKitReferenceUI
+
+SPEC REPOS:
+  trunk:
+    - SCSDKCameraKit
+    - SCSDKCameraKitReferenceUI
+
+SPEC CHECKSUMS:
+  SCSDKCameraKit: e22060ccaa865824d11dbe553c5712428e97a5fa
+  SCSDKCameraKitReferenceUI: ea9d6e6d8b50fc2b47649ec4f3eeacc6e7c00d75
+
+PODFILE CHECKSUM: 3068010ced3409e368daa36bccb0222bae2507e7
+
+COCOAPODS: 1.11.0
