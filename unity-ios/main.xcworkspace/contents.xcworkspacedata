@@ -5,6 +5,9 @@
       location = "group:../unity-game/unity-ios-build/Unity-iPhone.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:unity-ios.xcodeproj">
+      location = "group:UnitySwift.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>
