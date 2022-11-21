@@ -29,16 +29,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UnityFrameworkListener , 
     }
     
     func invokeCameraKit(_ alienShotCount: Int32) {
-//        let storyboard = UIStoryboard(name: "Main", bundle: .main)
-//        let viewController = storyboard.instantiateViewController(withIdentifier: "Host")
-//
-//        self.window = UIWindow.init(frame: UIScreen.main.bounds)
-//
-//        if let nativeWindow = self.window {
-//            nativeWindow.rootViewController = viewController;
-//            nativeWindow.makeKeyAndVisible()
-//        }
-//        cameraController.groupIDs = ["1511b3fd-5ce4-4409-857f-71bc1bc43506", "42947d70-639e-4349-bd36-6ea9617060d6", "c9cbd587-5446-4351-a6dd-b803ec16e315"]
         let cameraController = SampleCameraController()
         cameraController.groupIDs = ["42947d70-639e-4349-bd36-6ea9617060d6"]
         cameraController.alienShotCount = Int(alienShotCount)
@@ -262,8 +252,6 @@ class SampleCameraController: CameraController {
     }
     
     override func launchData(for lens: Lens) -> LensLaunchData {
-        print ("lens " + lens.id)
-        print ("shots " + String(alienShotCount))
         let launchDataBuilder = LensLaunchDataBuilder()
         launchDataBuilder.add(string: String(self.alienShotCount), key: "shotsOnInvader")
         return launchDataBuilder.launchData ?? EmptyLensLaunchData()
