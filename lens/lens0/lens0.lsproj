@@ -3,7 +3,7 @@
     "document_id": "MDTfI7l3mQeP3hnFsfke",
     "original_document_id": "bTE6b6GXZP6dl1LX6Bw0",
     "version": "29",
-    "lastChanged": "1669053289377",
+    "lastChanged": "1669054702970",
     "preview": "icon.png",
     "videoPreview": "preview.mp4",
     "videoPreviewUpdateTime": "",
@@ -55,7 +55,7 @@
             "hints": [
                 ""
             ],
-            "lens": "Dynamic Lens Alien",
+            "lens": "Dynamic Alien v2",
             "applicability": "1",
             "lens_descriptors": "",
             "Spectacles2021UseAllowed": "false"
