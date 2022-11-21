@@ -38,10 +38,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UnityFrameworkListener , 
 //            nativeWindow.rootViewController = viewController;
 //            nativeWindow.makeKeyAndVisible()
 //        }
+//        cameraController.groupIDs = ["1511b3fd-5ce4-4409-857f-71bc1bc43506", "42947d70-639e-4349-bd36-6ea9617060d6", "c9cbd587-5446-4351-a6dd-b803ec16e315"]
         let cameraController = SampleCameraController()
-        cameraController.groupIDs = ["1511b3fd-5ce4-4409-857f-71bc1bc43506", "d00052ac-7f07-47d9-8195-fa8d033698d2"]
+        cameraController.groupIDs = ["42947d70-639e-4349-bd36-6ea9617060d6"]
+        cameraController.alienShotCount = Int(alienShotCount)
+        
         let cameraViewController = CameraViewController(cameraController: cameraController)
         cameraViewController.appOrientationDelegate = self
+        
         window?.rootViewController = cameraViewController
         window?.makeKeyAndVisible()
         unloadUnity()
@@ -103,6 +107,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UnityFrameworkListener , 
             unityFramework.appController()?.applicationDidBecomeActive(application)
         }
         
+    }
+    
+    func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+        return supportedOrientations
     }
     
     func applicationWillTerminate(_ application: UIApplication) {
@@ -244,9 +252,20 @@ extension AppDelegate: AppOrientationDelegate {
 }
 
 class SampleCameraController: CameraController {
+    
+    fileprivate var alienShotCount = 0;
+    
     override func configureDataProvider() -> DataProviderComponent {
         DataProviderComponent(
             deviceMotion: nil, userData: UserDataProvider(), lensHint: nil, location: nil,
             mediaPicker: lensMediaProvider, remoteApiServiceProviders: [])
+    }
+    
+    override func launchData(for lens: Lens) -> LensLaunchData {
+        print ("lens " + lens.id)
+        print ("shots " + String(alienShotCount))
+        let launchDataBuilder = LensLaunchDataBuilder()
+        launchDataBuilder.add(string: String(self.alienShotCount), key: "shotsOnInvader")
+        return launchDataBuilder.launchData ?? EmptyLensLaunchData()
     }
 }

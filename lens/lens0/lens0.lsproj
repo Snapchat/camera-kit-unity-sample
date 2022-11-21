@@ -1,0 +1,567 @@
+{
+    "lens_id": "",
+    "document_id": "MDTfI7l3mQeP3hnFsfke",
+    "original_document_id": "bTE6b6GXZP6dl1LX6Bw0",
+    "version": "29",
+    "lastChanged": "1669053289377",
+    "preview": "icon.png",
+    "videoPreview": "preview.mp4",
+    "videoPreviewUpdateTime": "",
+    "isReadOnly": "false",
+    "isAutoSaved": "true",
+    "api_level": "public",
+    "public_api_user_data_access": "unrestricted",
+    "studioVersion": {
+        "createdWith": {
+            "type": "Public",
+            "major": "4",
+            "minor": "22",
+            "patch": "0",
+            "build": "0"
+        },
+        "lastSavedWith": {
+            "type": "Public",
+            "major": "4",
+            "minor": "31",
+            "patch": "0",
+            "build": "0"
+        }
+    },
+    "view": {
+        "ResourceUiComponent": {
+            "collapsedList": [
+                [
+                    [
+                        "Invader@2x"
+                    ],
+                    [
+                        "ParamsManager"
+                    ],
+                    [
+                        "Unlit"
+                    ]
+                ]
+            ]
+        },
+        "SceneTreeUiComponent": {
+            "collapsedList": [
+                ""
+            ],
+            "selectionSetList": ""
+        },
+        "MetaInfoUIComponent": {
+            "icon_hash": "8cb9d35f1bdfc27606cb5d555a8385ab",
+            "icon_path": "icon.png",
+            "hints": [
+                ""
+            ],
+            "lens": "Dynamic Lens Alien",
+            "applicability": "1",
+            "lens_descriptors": "",
+            "Spectacles2021UseAllowed": "false"
+        },
+        "PreviewUiComponent": {
+            "preview_descriptor": {
+                "is_capture": "0",
+                "camera_type": "2"
+            },
+            "show_snap_ui": "true",
+            "show_sponsored_ui": "false",
+            "preview_images_project_config": {
+                "back_preview_id": "bundle:Preview\/Images\/Beach.jpg",
+                "back_preview_is_favorite": "false",
+                "front_preview_id": "bundle:Preview\/Images\/Person 1.jpg",
+                "front_preview_is_favorite": "false"
+            },
+            "preview_videos_project_config": {
+                "back_preview_id": "bundle:Preview\/Videos\/Beach.webm",
+                "back_preview_is_favorite": "false",
+                "front_preview_id": "bundle:Preview\/Videos\/Idle Person 1.webm",
+                "front_preview_is_favorite": "false"
+            },
+            "preview_ie_project_config": {
+                "back_preview_id": "bundle:Preview\/InteractiveEnvironments\/Colorful Home",
+                "back_preview_is_favorite": "false",
+                "front_preview_id": "bundle:Preview\/InteractiveEnvironments\/Colorful Home",
+                "front_preview_is_favorite": "false"
+            }
+        },
+        "InspectorUiComponent": {
+            "collapsedList": [
+                [
+                    "1666103837214807:4386",
+                    "1669027626892658:35946"
+                ]
+            ]
+        },
+        "ObjectTracking3DUIComponent": {
+            "foldedOwnerSceneObjects": ""
+        },
+        "MapUiComponent": {
+            "mapPinPoints": ""
+        },
+        "Material::UiComponent": {
+            "active_graph_asset": "-1:-1"
+        },
+        "Script::UiComponent": {
+            "active_graph_asset": "-1:-1"
+        },
+        "VFX::UiComponent": {
+            "active_graph_asset": "-1:-1"
+        }
+    },
+    "model": {
+        "IResourceManager": {
+            "list": [
+                {
+                    "resId": "1",
+                    "uid": "1:1",
+                    "name": "Camera Output",
+                    "sourceFilePath": "",
+                    "additionalProperties": "",
+                    "flags": "0"
+                },
+                {
+                    "resId": "2",
+                    "uid": "2:2",
+                    "name": "Camera Input",
+                    "sourceFilePath": "",
+                    "additionalProperties": "",
+                    "flags": "0"
+                },
+                {
+                    "resId": "12",
+                    "uid": "8675309:9035768",
+                    "name": "Physics Root World Settings Asset",
+                    "sourceFilePath": "",
+                    "additionalProperties": "",
+                    "flags": "0"
+                },
+                {
+                    "resId": "21",
+                    "uid": "1666104031825555:30794",
+                    "name": "Files\/File21.js",
+                    "sourceFilePath": "",
+                    "additionalProperties": "",
+                    "flags": "1"
+                },
+                {
+                    "resId": "23",
+                    "uid": "1669027773496460:48059",
+                    "name": "Files\/File24.png",
+                    "sourceFilePath": "",
+                    "additionalProperties": "",
+                    "flags": "1"
+                },
+                {
+                    "resId": "24",
+                    "uid": "1669050340912545:26859",
+                    "name": "Files\/File28",
+                    "sourceFilePath": "",
+                    "additionalProperties": "",
+                    "flags": "1"
+                }
+            ],
+            "MaterialUpdateManager": {
+                "unrecognizedMaterials": ""
+            }
+        },
+        "InspectorComponent": {
+            "Component": {
+                "EyeColorVisual": {
+                    "uidData": "",
+                    "generalData": ""
+                },
+                "FaceStretchVisual": {
+                    "uidsToFeatureNamesWithIntensity": ""
+                },
+                "ScreenTransform": {
+                    "uidData": "",
+                    "generalData": ""
+                }
+            }
+        },
+        "RenderOrderComponent": {
+            "autoRenderOrder": {
+                "0": "1517446348227994:84813",
+                "1": "1517446348228144:84822",
+                "2": "1528843813151434:5126",
+                "3": "1666103837214120:4383",
+                "4": "1666103863565284:7738",
+                "5": "1666104144341612:46255",
+                "6": "1669027649096606:38262",
+                "7": "1669027659875867:39978"
+            }
+        },
+        "LayerComponent": {
+            "nextLayerId": "2",
+            "showOrthographicLayer": "false",
+            "layersInfo": [
+                {
+                    "layerId": "0",
+                    "layerName": "Default Layer",
+                    "layerMask": "1",
+                    "colorCode": "20"
+                },
+                {
+                    "layerId": "1",
+                    "layerName": "Orthographic Layer",
+                    "layerMask": "1048576",
+                    "colorCode": "21"
+                }
+            ]
+        },
+        "IFileManager": {
+            "pathes": [
+                {
+                    "k": "21",
+                    "v": "Files\/File21.js"
+                },
+                {
+                    "k": "24",
+                    "v": "Files\/File24.pvr"
+                },
+                {
+                    "k": "25",
+                    "v": "Files\/File25.png"
+                },
+                {
+                    "k": "26",
+                    "v": "Files\/File26.png"
+                },
+                {
+                    "k": "27",
+                    "v": "Files\/File27.pvr"
+                },
+                {
+                    "k": "28",
+                    "v": "Files\/File28"
+                },
+                {
+                    "k": "29",
+                    "v": "Files\/File29.lsmat"
+                }
+            ]
+        },
+        "RemoteApi::ModelManager": {
+            "api_specs": ""
+        },
+        "WorldComponent": {
+            "sceneFile": "scene.scn",
+            "sceneType": "binaryScene",
+            "hitTestDisabledObjectsList": {
+                "type_name": "array"
+            }
+        }
+    },
+    "controller": {
+        "IResourceController": {
+            "public": {
+                "pathes": [
+                    {
+                        "k": "976",
+                        "v": "ParamsManager.js"
+                    },
+                    {
+                        "k": "978",
+                        "v": "Invader@2x.png"
+                    },
+                    {
+                        "k": "988",
+                        "v": "Unlit.lsmat"
+                    }
+                ],
+                "hashes": [
+                    {
+                        "k": "1",
+                        "v": "671afbc1d6810060ccbaac866a91cfa1"
+                    },
+                    {
+                        "k": "2",
+                        "v": "8e599835d0d45c5879eafb1f474469cd"
+                    },
+                    {
+                        "k": "967",
+                        "v": "0cf0e87a54f33218fcf92a12d7f0ede2"
+                    },
+                    {
+                        "k": "969",
+                        "v": "cb607d7b25a160872c49fb4d2635cc33"
+                    },
+                    {
+                        "k": "970",
+                        "v": "c1b22adb808b801d453498c35c300b9a"
+                    },
+                    {
+                        "k": "971",
+                        "v": "297b6fcf213bbe172528e5611cca5add"
+                    },
+                    {
+                        "k": "972",
+                        "v": "c2a082319c8815b06bbc291fdcd8bc5f"
+                    },
+                    {
+                        "k": "973",
+                        "v": "ed978c2100842783343b8527cb44898b"
+                    },
+                    {
+                        "k": "974",
+                        "v": "aff223caac98651f5fd7692d4c902d2d"
+                    },
+                    {
+                        "k": "975",
+                        "v": "9b7777c52f2a97ea0687d50ab8e38a52"
+                    },
+                    {
+                        "k": "976",
+                        "v": "be44d76f205f8dbd0f023dacd8514e1f"
+                    },
+                    {
+                        "k": "977",
+                        "v": "0f1a2adea95d0f938534e86f02354cd2"
+                    },
+                    {
+                        "k": "978",
+                        "v": "f03e5788149021b169317d8cc79dee81"
+                    },
+                    {
+                        "k": "987",
+                        "v": "0c8dcfed2f50bb81ac5276a14967c005"
+                    },
+                    {
+                        "k": "988",
+                        "v": "bed906d8f058398ea2eca3676bf6595b"
+                    }
+                ],
+                "publicState": {
+                    "tree": {
+                        "isFolder": "true",
+                        "lastModified": "2022-11-21T17:54:19",
+                        "name": "Public",
+                        "hash": "7e3e1ecb9444c8876571c5d5e9ce243c",
+                        "children": [
+                            {
+                                "isFolder": "false",
+                                "lastModified": "2022-11-21T17:54:19",
+                                "name": "ParamsManager.js",
+                                "hash": "be44d76f205f8dbd0f023dacd8514e1f",
+                                "children": ""
+                            },
+                            {
+                                "isFolder": "false",
+                                "lastModified": "2022-11-21T10:49:25",
+                                "name": "Invader@2x.png",
+                                "hash": "f03e5788149021b169317d8cc79dee81",
+                                "children": ""
+                            },
+                            {
+                                "isFolder": "false",
+                                "lastModified": "2022-11-21T17:05:41",
+                                "name": "Unlit.lsmat",
+                                "hash": "bed906d8f058398ea2eca3676bf6595b",
+                                "children": ""
+                            },
+                            {
+                                "isFolder": "false",
+                                "lastModified": "2022-06-07T19:07:37",
+                                "name": "folder.lock",
+                                "hash": "d41d8cd98f00b204e9800998ecf8427e",
+                                "children": ""
+                            }
+                        ]
+                    }
+                },
+                "complexResources": ""
+            },
+            "tree": {
+                "name": "",
+                "type": "0",
+                "subtype": "-1",
+                "resourceId": "-1",
+                "dependency": "0",
+                "hidden": "false",
+                "uid": "-1:-1",
+                "fileId": "18446744073709551615",
+                "originalId": "18446744073709551615",
+                "publicId": "18446744073709551615",
+                "source": "",
+                "additional": "",
+                "resources": [
+                    {
+                        "name": "Render Target",
+                        "type": "1",
+                        "subtype": "1",
+                        "resourceId": "1",
+                        "dependency": "0",
+                        "hidden": "false",
+                        "uid": "1:1",
+                        "fileId": "18446744073709551615",
+                        "originalId": "18446744073709551615",
+                        "publicId": "18446744073709551615",
+                        "source": "",
+                        "additional": ""
+                    },
+                    {
+                        "name": "Device Camera Texture",
+                        "type": "1",
+                        "subtype": "3",
+                        "resourceId": "2",
+                        "dependency": "0",
+                        "hidden": "false",
+                        "uid": "2:2",
+                        "fileId": "18446744073709551615",
+                        "originalId": "18446744073709551615",
+                        "publicId": "18446744073709551615",
+                        "source": "",
+                        "additional": ""
+                    },
+                    {
+                        "name": "Physics Root World Settings",
+                        "type": "36",
+                        "subtype": "1",
+                        "resourceId": "12",
+                        "dependency": "0",
+                        "hidden": "false",
+                        "uid": "8675309:9035768",
+                        "fileId": "18446744073709551615",
+                        "originalId": "18446744073709551615",
+                        "publicId": "18446744073709551615",
+                        "source": "",
+                        "additional": ""
+                    },
+                    {
+                        "name": "ParamsManager",
+                        "type": "4",
+                        "subtype": "0",
+                        "resourceId": "21",
+                        "dependency": "0",
+                        "hidden": "false",
+                        "uid": "1666104031825555:30794",
+                        "fileId": "21",
+                        "originalId": "18446744073709551615",
+                        "publicId": "976",
+                        "source": "\/Users\/eneto\/Documents\/WordOfTheDay_DynamicLens\/Public\/Scripts\/WordOfTheDayManager.js",
+                        "additional": ""
+                    },
+                    {
+                        "name": "Invader@2x",
+                        "type": "1",
+                        "subtype": "9",
+                        "resourceId": "23",
+                        "dependency": "0",
+                        "hidden": "false",
+                        "uid": "1669027773496460:48059",
+                        "fileId": "24",
+                        "originalId": "25",
+                        "publicId": "978",
+                        "source": "\/Users\/eneto\/Downloads\/Invader@2x.png",
+                        "additional": {
+                            "originHash": "f03e5788149021b169317d8cc79dee81"
+                        }
+                    },
+                    {
+                        "name": "Unlit",
+                        "type": "2",
+                        "subtype": "1",
+                        "resourceId": "24",
+                        "dependency": "0",
+                        "hidden": "false",
+                        "uid": "1669050340912545:26859",
+                        "fileId": "28",
+                        "originalId": "29",
+                        "publicId": "988",
+                        "source": "",
+                        "additional": ""
+                    }
+                ]
+            }
+        },
+        "InspectorController": {
+            "selection": {
+                "objects": [
+                    "101:100"
+                ]
+            }
+        },
+        "EffectsController": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "6": "",
+            "7": "",
+            "8": "",
+            "10": "",
+            "11": "",
+            "12": "",
+            "13": "",
+            "14": "",
+            "15": "",
+            "16": "",
+            "17": "",
+            "18": "",
+            "19": "",
+            "20": "",
+            "22": "",
+            "23": "",
+            "24": "",
+            "25": "",
+            "26": "",
+            "27": "",
+            "28": "",
+            "29": "",
+            "30": "",
+            "31": "",
+            "32": "",
+            "33": "",
+            "34": ""
+        },
+        "ObjectPrefabController": {
+            "state": {
+                "objectToInfo": ""
+            },
+            "importInfo": ""
+        },
+        "ObjectTracking3DController": {
+            "hand_tracking_mode": "0"
+        },
+        "Compression::IController": {
+            "new_compression_info": [
+                {
+                    "k": "1669027773496460:48059",
+                    "v": {
+                        "infos": {
+                            "originalSize": "289561",
+                            "compressedSize": "63232",
+                            "originalRAM": "2402816",
+                            "compressedRAM": "301184",
+                            "extension": "png",
+                            "settings": {
+                                "isCompressed": "true",
+                                "level": "2",
+                                "type": "1",
+                                "subtype": "9"
+                            }
+                        },
+                        "uncompressed_file": "26",
+                        "compressed_files": [
+                            {
+                                "k": {
+                                    "uncompressed_hash": "f03e5788149021b169317d8cc79dee81",
+                                    "settings_hash": "2049"
+                                },
+                                "v": "27"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "AssetImportController": {
+            "itemUidToID": ""
+        }
+    },
+    "templateName": "Empty Project",
+    "templateUrl": "Lens Studio version 4.22.0"
+}
