@@ -11,35 +11,10 @@ import SCSDKCameraKit
 import SCSDKCameraKitReferenceUI
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate, UnityFrameworkListener , NativeCallsProtocol   {
+class AppDelegate: UIResponder, UIApplicationDelegate, UnityFrameworkListener    {
     fileprivate var supportedOrientations: UIInterfaceOrientationMask = .allButUpsideDown
-
-    
-    func showHostMainWindow(_ color: String!) {
-        if(color == Constants.COLOR.BLUE) {
-            self.unitySampleView.nativeTitleLable.backgroundColor = .red
-            self.unitySampleView.nativeTitleLable.textColor = .white
-        } else if(color == Constants.COLOR.RED) {
-            self.unitySampleView.nativeTitleLable.backgroundColor = .white
-            self.unitySampleView.nativeTitleLable.textColor = .black
-        }else if(color == Constants.COLOR.WHITE) {
-            self.unitySampleView.nativeTitleLable.backgroundColor = .blue
-            self.unitySampleView.nativeTitleLable.textColor = .white
-        }
-    }
-    
-    func invokeCameraKit(_ alienShotCount: Int32) {
-        let cameraController = SampleCameraController()
-        cameraController.groupIDs = ["42947d70-639e-4349-bd36-6ea9617060d6"]
-        cameraController.alienShotCount = Int(alienShotCount)
-        
-        let cameraViewController = CameraViewController(cameraController: cameraController)
-        cameraViewController.appOrientationDelegate = self
-        
-        window?.rootViewController = cameraViewController
-        window?.makeKeyAndVisible()
-        unloadUnity()
-    }
+    fileprivate var cameraController: SampleCameraController = SampleCameraController()
+    fileprivate var cameraViewController: CameraViewController? = nil
     
     var window: UIWindow?
     var appLaunchOpts: [UIApplication.LaunchOptionsKey: Any]?
@@ -239,6 +214,36 @@ extension AppDelegate: AppOrientationDelegate {
         supportedOrientations = .allButUpsideDown
     }
 
+}
+
+extension AppDelegate: NativeCallsProtocol {
+    
+    func invokeCameraKit(_ alienShotCount: Int32) {
+//        let cameraController = SampleCameraController()
+        cameraController.groupIDs = ["42947d70-639e-4349-bd36-6ea9617060d6"]
+        cameraController.alienShotCount = Int(alienShotCount)
+        cameraController.cameraKit.lenses.repository.addObserver(self, specificLensID: "8e8bfaac-df3f-44fc-87c6-4f28652d54ec", inGroupID: "42947d70-639e-4349-bd36-6ea9617060d6")
+        
+        cameraViewController = CameraViewController(cameraController: cameraController)
+        cameraViewController?.appOrientationDelegate = self
+        
+        window?.rootViewController = cameraViewController
+        window?.makeKeyAndVisible()
+        
+        unloadUnity()
+    }
+}
+
+extension AppDelegate: LensRepositorySpecificObserver {
+    
+    func repository(_ repository: LensRepository, didUpdate lens: Lens, forGroupID groupID: String) {
+        cameraController.applyLens(lens);
+        cameraViewController?.cameraView.carouselView.selectItem(CarouselItem(lensId: lens.id, groupId: groupID))
+    }
+    func repository(_ repository: LensRepository, didFailToUpdateLensID lensID: String, forGroupID groupID: String, error: Error?) {
+        print("Error loading lens " + lensID)
+    }
+    
 }
 
 class SampleCameraController: CameraController {
