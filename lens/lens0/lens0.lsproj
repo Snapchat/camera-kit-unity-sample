@@ -3,7 +3,7 @@
     "document_id": "MDTfI7l3mQeP3hnFsfke",
     "original_document_id": "bTE6b6GXZP6dl1LX6Bw0",
     "version": "29",
-    "lastChanged": "1669054702970",
+    "lastChanged": "1669298411325",
     "preview": "icon.png",
     "videoPreview": "preview.mp4",
     "videoPreviewUpdateTime": "",
@@ -314,7 +314,7 @@
                     },
                     {
                         "k": "976",
-                        "v": "be44d76f205f8dbd0f023dacd8514e1f"
+                        "v": "6b4ade6621aaa55f8faca1bc68d55c73"
                     },
                     {
                         "k": "977",
@@ -336,34 +336,34 @@
                 "publicState": {
                     "tree": {
                         "isFolder": "true",
-                        "lastModified": "2022-11-21T17:54:19",
+                        "lastModified": "2022-11-24T13:59:53",
                         "name": "Public",
-                        "hash": "7e3e1ecb9444c8876571c5d5e9ce243c",
+                        "hash": "7def1ec62a113a325e02d29e77b53254",
                         "children": [
                             {
                                 "isFolder": "false",
-                                "lastModified": "2022-11-21T17:54:19",
+                                "lastModified": "2022-11-24T13:59:53",
                                 "name": "ParamsManager.js",
-                                "hash": "be44d76f205f8dbd0f023dacd8514e1f",
+                                "hash": "6b4ade6621aaa55f8faca1bc68d55c73",
                                 "children": ""
                             },
                             {
                                 "isFolder": "false",
-                                "lastModified": "2022-11-21T10:49:25",
+                                "lastModified": "2022-11-21T19:15:54",
                                 "name": "Invader@2x.png",
                                 "hash": "f03e5788149021b169317d8cc79dee81",
                                 "children": ""
                             },
                             {
                                 "isFolder": "false",
-                                "lastModified": "2022-11-21T17:05:41",
+                                "lastModified": "2022-11-21T19:15:54",
                                 "name": "Unlit.lsmat",
                                 "hash": "bed906d8f058398ea2eca3676bf6595b",
                                 "children": ""
                             },
                             {
                                 "isFolder": "false",
-                                "lastModified": "2022-06-07T19:07:37",
+                                "lastModified": "2022-11-21T19:15:54",
                                 "name": "folder.lock",
                                 "hash": "d41d8cd98f00b204e9800998ecf8427e",
                                 "children": ""
@@ -478,8 +478,13 @@
         },
         "InspectorController": {
             "selection": {
-                "objects": [
-                    "101:100"
+                "resources": [
+                    {
+                        "uid": "1666104031825555:30794",
+                        "path_list": [
+                            "ParamsManager"
+                        ]
+                    }
                 ]
             }
         },
