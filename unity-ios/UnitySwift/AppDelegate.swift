@@ -219,18 +219,19 @@ extension AppDelegate: AppOrientationDelegate {
 extension AppDelegate: NativeCallsProtocol {
     
     func invokeCameraKit(_ alienShotCount: Int32) {
-//        let cameraController = SampleCameraController()
         cameraController.groupIDs = ["42947d70-639e-4349-bd36-6ea9617060d6"]
         cameraController.alienShotCount = Int(alienShotCount)
         cameraController.cameraKit.lenses.repository.addObserver(self, specificLensID: "8e8bfaac-df3f-44fc-87c6-4f28652d54ec", inGroupID: "42947d70-639e-4349-bd36-6ea9617060d6")
         
-        cameraViewController = CameraViewController(cameraController: cameraController)
-        cameraViewController?.appOrientationDelegate = self
+        if (cameraViewController == nil) {
+            cameraViewController = CameraViewController(cameraController: cameraController)
+            cameraViewController?.appOrientationDelegate = self
+            cameraViewController?.modalPresentationStyle = .formSheet
+        }
+
+        self.unityFramework?.pause(true)
+        self.unityFramework?.appController().rootViewController.present(cameraViewController!, animated: true)
         
-        window?.rootViewController = cameraViewController
-        window?.makeKeyAndVisible()
-        
-        unloadUnity()
     }
 }
 
@@ -244,6 +245,16 @@ extension AppDelegate: LensRepositorySpecificObserver {
         print("Error loading lens " + lensID)
     }
     
+}
+
+extension CameraViewController {
+    open override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        if isBeingDismissed {
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.unityFramework?.pause(false);
+        }
+    }
 }
 
 class SampleCameraController: CameraController {

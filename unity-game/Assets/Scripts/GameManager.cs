@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
     public GameObject enemy;
     public GameObject earth;
     public TextMeshProUGUI alienCounter;
+    public TextMeshProUGUI pauseLabel;
+
     private int _shotsOnAlien;
 
 
@@ -39,5 +41,14 @@ public class GameManager : MonoBehaviour
     public void SpaceshipLanded() {
         Debug.Log("Spaceship Landed");
         NativeAPI.SpaceshipLanded(_shotsOnAlien);
+    }
+
+    void OnApplicationFocus(bool hasFocus)
+    {
+        pauseLabel.gameObject.SetActive(!hasFocus);
+    }
+
+    void OnApplicationPause(bool pauseStatus) {
+        pauseLabel.gameObject.SetActive(pauseStatus);     
     }
 }

@@ -8,9 +8,11 @@ public static class NativeAPI
 
     static NativeAPI() {
 #if UNITY_IOS && !UNITY_EDITOR
-			_nativeBridge = new NativeAPIiOS();
+		_nativeBridge = new NativeAPIiOS();
 #elif UNITY_ANDROID && !UNITY_EDITOR
-			_nativeBridge = new NativeAPIAndroid();
+		_nativeBridge = new NativeAPIAndroid();
+#else
+        _nativeBridge = new NativeAPIEditor();
 #endif
     }
 

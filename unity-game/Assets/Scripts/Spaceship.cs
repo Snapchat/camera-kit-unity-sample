@@ -8,11 +8,13 @@ public class Spaceship : MonoBehaviour
     public float bulletIntervalSeconds = .1f;
     private Bounds _earthBounds;
     private bool _canSendMessage = true;
+    private bool _isPaused = false;
+    private bool _isShooting = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine("ShootBullets");
+        StartShooting();
         _earthBounds = GameManager.Instance.earth.GetComponent<Renderer>().bounds;
     }
 
@@ -34,10 +36,37 @@ public class Spaceship : MonoBehaviour
 
     }
 
-    IEnumerator ShootBullets() {
-     for(;;) {
-         Instantiate(bulletPrefab, transform.position, Quaternion.identity);
-         yield return new WaitForSeconds(bulletIntervalSeconds);
-     }
- }
+    void OnApplicationPause(bool pauseStatus) {
+        _isPaused = pauseStatus;
+        if (_isPaused) {
+            StopShooting();
+        } else {
+            StartShooting();
+        }
+    }
+
+    void OnApplicationFocus(bool hasFocus) {
+        _isPaused = !hasFocus;
+        if (_isPaused) {
+            StopShooting();
+        } else {
+            StartShooting();
+        }
+    }
+
+    void StartShooting() {
+        if (!_isShooting) {
+            InvokeRepeating("ShootBullet", 0f, bulletIntervalSeconds);
+            _isShooting = true;
+        }
+    }
+
+    void StopShooting() {
+        CancelInvoke();
+        _isShooting = false;
+    }
+
+    void ShootBullet() {
+        Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+    }
 }
