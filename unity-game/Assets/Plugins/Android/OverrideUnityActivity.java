@@ -8,7 +8,7 @@ public abstract class OverrideUnityActivity extends UnityPlayerActivity
 {
     public static OverrideUnityActivity instance = null;
 
-    abstract protected void showMainActivity(String setToColor);
+    abstract protected void invokeCameraKit(int alienHitCount);
 
     @Override
     protected void onCreate(Bundle savedInstanceState)

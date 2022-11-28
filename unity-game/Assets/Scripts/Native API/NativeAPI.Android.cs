@@ -11,7 +11,15 @@ public class NativeAPIAndroid : INativeAPI
     }
 
     public void SpaceshipLanded(int alienShotCount) {
-        throw new NotImplementedException();
+        try
+        {
+            AndroidJavaClass jc = new AndroidJavaClass("com.snap.samples.OverrideUnityActivity");
+            AndroidJavaObject overrideActivity = jc.GetStatic<AndroidJavaObject>("instance");
+            overrideActivity.Call("invokeCameraKit", alienShotCount);
+        } catch(Exception e)
+        {
+            throw new Exception ("Exception during NativeAPIAndroid.SpaceshipLanded: " + e.Message);
+        }
     }
 }
 #endif
