@@ -1,0 +1,78 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.snap.camerakitsamples.unity.android"
+        minSdk 29
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        manifestPlaceholders = [
+                'cameraKitApplicationId': '01361f3f-c65e-42af-b48c-437e952e22bf',
+                'cameraKitApiToken': 'eyJhbGciOiJIUzI1NiIsImtpZCI6IkNhbnZhc1MyU0hNQUNQcm9kIiwidHlwIjoiSldUIn0.eyJhdWQiOiJjYW52YXMtY2FudmFzYXBpIiwiaXNzIjoiY2FudmFzLXMyc3Rva2VuIiwibmJmIjoxNjY2MDIxNTA5LCJzdWIiOiIwMTM2MWYzZi1jNjVlLTQyYWYtYjQ4Yy00MzdlOTUyZTIyYmZ-U1RBR0lOR34zOTU2MmRiMi1mNzUzLTQzODgtYWY0MS05M2Q3YThhMzkyYWQifQ.QWXI1YRWGcLoj4_3gw1B2mUBEx4bomcbO1MnCIfhtJc'
+        ]
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.google.android.material:material:1.7.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.4'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
+
+    // Camera Kit Dependencies
+    def lifecycle_version = "2.5.1"
+    def cameraKitVersion = "1.18.0"
+
+    implementation "androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    implementation "com.snap.camerakit:support-camera-activity:$cameraKitVersion"
+    // The main CameraKit artifact that provides all the core functionality.
+    // It is not necessary to define it here if support-camera-layout artifact is
+    // used as it transitively depends on it, however it is kept for the reference.
+    implementation "com.snap.camerakit:camerakit:$cameraKitVersion"
+    // Provides convenience Kotlin specific extensions to the public CameraKit API.
+    implementation "com.snap.camerakit:camerakit-kotlin:$cameraKitVersion"
+    // Provides an opinionated but extensible implementation that wraps
+    // camera as well as CameraKit Session management with a View that can be
+    // embedded into any Activity or Fragment where CameraKit integration is needed.
+    implementation "com.snap.camerakit:support-camera-layout:$cameraKitVersion"
+    // Optional dependency that provides location access to certain lenses.
+    // Used by the support-camera-layout when creating the Source<LocationProcessor>
+    // for the CameraKit Session, if removed, falls back to default, no-op implementation.
+    implementation "com.snap.camerakit:support-gms-location:$cameraKitVersion"
+    // Optional dependency that provides ArCore backed Source<ImageProcessor> to enable
+    // depth and other ArCore specific features in lenses that require them.
+    // Used by the support-camera-layout but can be safely removed if not needed.
+    implementation "com.snap.camerakit:support-arcore:$cameraKitVersion"
+    // Optional dependency that provides customizable lenses carousel view.
+    implementation "com.snap.camerakit:support-lenses-carousel:$cameraKitVersion"
+    implementation "com.snap.camerakit:lenses-bundle:$cameraKitVersion"
+
+}
