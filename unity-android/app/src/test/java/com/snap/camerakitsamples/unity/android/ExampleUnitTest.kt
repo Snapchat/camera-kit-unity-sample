@@ -1,4 +1,4 @@
-package com.snap.camerakitsamples.unityandroid
+package com.snap.camerakitsamples.unity.android
 
 import org.junit.Test
 

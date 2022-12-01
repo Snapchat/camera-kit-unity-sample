@@ -23,7 +23,7 @@ function getData() {
 
 function populateFields() {
     
-    script.key1Text.text = "Invader was shot " + shotsOnInvader + " times";
+    script.key1Text.text = "Invader was hit " + shotsOnInvader + " times";
 }
 
 try {

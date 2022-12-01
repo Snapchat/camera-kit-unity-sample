@@ -11,8 +11,11 @@
 /[Uu]ser[Ss]ettings/
 .DS_Store
 
-# Unity IOS build folder
+# Unity build folders
+# These folders are not checked into github, but should keep the same names
 /unity-ios-build/
+/unity-android-build/
+
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
