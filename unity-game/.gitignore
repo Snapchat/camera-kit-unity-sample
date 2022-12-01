@@ -15,7 +15,7 @@
 # These folders are not checked into github, but should keep the same names
 /unity-ios-build/
 /unity-android-build/
-
+*_DoNotShip/
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
