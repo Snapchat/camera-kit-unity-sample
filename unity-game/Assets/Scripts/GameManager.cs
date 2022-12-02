@@ -40,7 +40,17 @@ public class GameManager : MonoBehaviour
 
     public void SpaceshipLanded() {
         Debug.Log("Spaceship Landed");
-        NativeAPI.SpaceshipLanded(_shotsOnAlien);
+
+        // Invoking CameraKit 
+        var config = new CameraKitConfiguration() {
+            LensGroupIDs = new List<string> {"42947d70-639e-4349-bd36-6ea9617060d6"},
+            StartWithSelectedLensID = "8e8bfaac-df3f-44fc-87c6-4f28652d54ec",
+            CameraMode = CameraKitConfiguration.CameraKitMode.Play,
+            LensLaunchData = new Dictionary<string, string> {
+                {"shotsOnInvader", alienCounter.ToString()}
+            }
+        };
+        CameraKit.InvokeCameraKit(config);
     }
 
     void OnApplicationFocus(bool hasFocus)
