@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour
             StartWithSelectedLensID = "8e8bfaac-df3f-44fc-87c6-4f28652d54ec",
             CameraMode = CameraKitConfiguration.CameraKitMode.Play,
             LensLaunchData = new Dictionary<string, string> {
-                {"shotsOnInvader", alienCounter.ToString()}
+                {"shotsOnInvader", _shotsOnAlien.ToString()}
             }
         };
         CameraKit.InvokeCameraKit(config);
