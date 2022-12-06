@@ -1,39 +1,20 @@
+// [!] important set UnityFramework in Target Membership for this file
+// [!]           and set Public header visibility
+
 #import <Foundation/Foundation.h>
-#import "NativeCallProxy.h"
 
+// NativeCallsProtocol defines protocol with methods you want to be called from managed
+@protocol NativeCallsProtocol
+@required
+- (void) invokeCameraKitWithLensGroupIds:(NSArray<NSString*>*)lensGroupIDs withStartingLensId:(NSString*) lensId withCamerMode:(NSNumber*) cameraMode;
+- (void) invokeCameraKitWithSingleLens: (NSString*) lensId withLaunchData:(NSDictionary<NSString*,NSString*>*) launchData withCamerMode:(NSNumber*) cameraMode;
+@end
 
-@implementation FrameworkLibAPI
-
-id<NativeCallsProtocol> api = NULL;
-+(void) registerAPIforNativeCalls:(id<NativeCallsProtocol>) aApi
-{
-    api = aApi;
-}
+__attribute__ ((visibility("default")))
+@interface FrameworkLibAPI : NSObject
+// call it any time after UnityFrameworkLoad to set object implementing NativeCallsProtocol methods
++(void) registerAPIforNativeCalls:(id<NativeCallsProtocol>) aApi;
 
 @end
 
 
-extern "C" {
-    void invokeCameraKit(const char* const *lensGroupIds[], int lensGroupIdsLength, const char* const *launchDataKeys[], int launchDataKeysLength, const char* const *launchDataValues[], int launchDataValuesLength, char *startingLensId, int cameraMode) {
-        
-        NSMutableArray *lgids = [[NSMutableArray alloc] init];
-        for (int i = 0; i < lensGroupIdsLength; i++) {
-            NSString* groupid = [[NSString alloc] initWithCString:(const char*) lensGroupIds[i] encoding:NSUTF8StringEncoding];
-            [lgids addObject:groupid];
-        }
-        
-        NSMutableDictionary *launchParams = [[NSMutableDictionary alloc] init];
-        for (int i = 0; i < launchDataKeysLength; i++) {
-            NSString* key = [[NSString alloc] initWithCString:(const char*) launchDataKeys[i] encoding:NSUTF8StringEncoding];
-            NSString* value = [[NSString alloc] initWithCString:(const char*) launchDataValues[i] encoding:NSUTF8StringEncoding];
-            [launchParams setObject:value forKey:key];
-        }
-        
-        NSString *lensId = [[NSString alloc] initWithCString:(const char*) startingLensId encoding:NSUTF8StringEncoding];
-        NSNumber *mode = [[NSNumber alloc] initWithInt:cameraMode];
-        
-        
-        return [api invokeCameraKitWithLensGroupId:lgids withLaunchData:launchParams withStartingLensId:lensId withCamerMode:mode];
-        
-    }
-}

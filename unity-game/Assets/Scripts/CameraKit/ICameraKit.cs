@@ -4,11 +4,7 @@ using UnityEngine;
 
 public interface ICameraKit 
 {
-    void InvokeCameraKit(
-        string[] lensGroupIds, 
-        string startingLensId, 
-        string[] lensLaunchDataKeys, 
-        string[] lensLaunchDataValues, 
-        int cameraKitMode
-    );
+    void InvokeCameraKit(CameraKitConfiguration config);
+
+    void Validate(CameraKitConfiguration config);
 }

@@ -11,7 +11,7 @@ import SCSDKCameraKit
 import SCSDKCameraKitReferenceUI
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate, UnityFrameworkListener    {
+class AppDelegate: UIResponder, UIApplicationDelegate, UnityFrameworkListener {
     fileprivate var supportedOrientations: UIInterfaceOrientationMask = .allButUpsideDown
     fileprivate var cameraController: SampleCameraController = SampleCameraController()
     fileprivate var cameraViewController: CameraViewController? = nil
@@ -217,12 +217,22 @@ extension AppDelegate: AppOrientationDelegate {
 }
 
 extension AppDelegate: NativeCallsProtocol {
-    
-    func invokeCameraKit(_ alienShotCount: Int32) {
-        cameraController.groupIDs = ["42947d70-639e-4349-bd36-6ea9617060d6"]
-        cameraController.alienShotCount = Int(alienShotCount)
-        cameraController.cameraKit.lenses.repository.addObserver(self, specificLensID: "8e8bfaac-df3f-44fc-87c6-4f28652d54ec", inGroupID: "42947d70-639e-4349-bd36-6ea9617060d6")
+    func invokeCameraKit(withSingleLens lensId: String!, withLaunchData launchData: [String : String]!, withCamerMode cameraMode: NSNumber!) {
+//        cameraController.cameraKit.lenses.repository.
+        cameraController.cameraKit.lenses.repository.addObserver(self, specificLensID: lensId, inGroupID: "");
+        invokeCameraKit();
         
+    }
+    func invokeCameraKit(withLensGroupIds lensGroupIDs: [String]!, withStartingLensId lensId: String!, withCamerMode cameraMode: NSNumber!) {
+        cameraController.groupIDs = lensGroupIDs;
+        cameraController.initialLensId = lensId;
+        for groupid in lensGroupIDs {
+            cameraController.cameraKit.lenses.repository.addObserver(self, groupID: groupid)
+        }
+        invokeCameraKit();
+    }
+    
+    func invokeCameraKit() {
         if (cameraViewController == nil) {
             cameraViewController = CameraViewController(cameraController: cameraController)
             cameraViewController?.appOrientationDelegate = self
@@ -231,15 +241,35 @@ extension AppDelegate: NativeCallsProtocol {
 
         self.unityFramework?.pause(true)
         self.unityFramework?.appController().rootViewController.present(cameraViewController!, animated: true)
-        
     }
+    
+//    func invokeCameraKit(withLensGroupId lensGroupIDs: [String]!, withLaunchData launchData: [String : String]!, withStartingLensId lensId: String!, withCamerMode cameraMode: NSNumber!) {
+//
+//        cameraController.groupIDs = lensGroupIDs
+//        cameraController.launchDataFromUnity = launchData
+//        cameraController.initialLensId = lensId
+//
+//        for groupid in lensGroupIDs {
+//            cameraController.cameraKit.lenses.repository.addObserver(self, groupID: groupid)
+//            cameraController.cameraKit.lenses.repository.addObserver(self, specificLensID: lensId, inGroupID: groupid)
+//        }
+//    }
 }
 
-extension AppDelegate: LensRepositorySpecificObserver {
+extension AppDelegate: LensRepositorySpecificObserver, LensRepositoryGroupObserver    {
+    func repository(_ repository: LensRepository, didUpdateLenses lenses: [Lens], forGroupID groupID: String) {
+        
+    }
+    
+    func repository(_ repository: LensRepository, didFailToUpdateLensesForGroupID groupID: String, error: Error?) {
+        
+    }
     
     func repository(_ repository: LensRepository, didUpdate lens: Lens, forGroupID groupID: String) {
-        cameraController.applyLens(lens);
-        cameraViewController?.cameraView.carouselView.selectItem(CarouselItem(lensId: lens.id, groupId: groupID))
+        if (lens.id == cameraController.initialLensId) {
+            cameraController.applyLens(lens);
+            cameraViewController?.cameraView.carouselView.selectItem(CarouselItem(lensId: lens.id, groupId: groupID))
+        }
     }
     func repository(_ repository: LensRepository, didFailToUpdateLensID lensID: String, forGroupID groupID: String, error: Error?) {
         print("Error loading lens " + lensID)
@@ -259,7 +289,8 @@ extension CameraViewController {
 
 class SampleCameraController: CameraController {
     
-    fileprivate var alienShotCount = 0;
+    fileprivate var launchDataFromUnity: [String:String]?
+    fileprivate var initialLensId: String?
     
     override func configureDataProvider() -> DataProviderComponent {
         DataProviderComponent(
@@ -269,7 +300,9 @@ class SampleCameraController: CameraController {
     
     override func launchData(for lens: Lens) -> LensLaunchData {
         let launchDataBuilder = LensLaunchDataBuilder()
-        launchDataBuilder.add(string: String(self.alienShotCount), key: "shotsOnInvader")
+        self.launchDataFromUnity?.forEach {
+            launchDataBuilder.add(string: $1, key: $0)
+        }
         return launchDataBuilder.launchData ?? EmptyLensLaunchData()
     }
 }

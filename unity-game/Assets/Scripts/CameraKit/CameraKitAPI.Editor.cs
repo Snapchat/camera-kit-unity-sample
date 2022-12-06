@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class CameraKitAPIEditor : ICameraKit
 {
-    public void InvokeCameraKit(
-        string[] lensGroupIds, 
-        string startingLensId, 
-        string[] lensLaunchDataKeys, 
-        string[] lensLaunchDataValues, 
-        int cameraKitMode
-    ) {
+    public void InvokeCameraKit(CameraKitConfiguration config)  {
         Debug.Log("When you're testing on device, Camera Kit will be invoked now");
-        Debug.Log(string.Format("Params: Group IDs {0}, startingLensId {1}, dataKeys: {2}, dataValues: {3}, mode: {4} ", lensGroupIds, startingLensId, lensLaunchDataKeys, lensLaunchDataValues, cameraKitMode));
+        if (config.GetType() == typeof(CameraKitConfiguration.LensGroupsConfig)) {
+            Debug.Log("...Invoking Camera Kit with lens group ids ");
+        }
+        else if (config.GetType() == typeof(CameraKitConfiguration.LensSingleConfig)) {
+            Debug.Log("...Invoking Camera Kit with a single lens");
+        }
+    }
+
+    public void Validate(CameraKitConfiguration config) 
+    {
+
     }
 }

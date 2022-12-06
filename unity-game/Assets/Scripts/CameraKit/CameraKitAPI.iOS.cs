@@ -12,36 +12,68 @@ public class CameraKitAPIiOS : ICameraKit
     }
 
     [DllImport("__Internal")]
-    static extern void invokeCameraKit(
+    static extern void invokeCameraKitWithLensGroups(
         IntPtr lensGroupIds, int lensGroupIdsLength,
-        IntPtr lensLaunchDataKeys, int lensLaunchDataKeysLength,
-        IntPtr lensLaunchDataValues, int lensLaunchDataValuesLength,
         string startingLensId,
         int cameraKitMode
     );
 
-    public void InvokeCameraKit(
-        string[] lensGroupIds, 
-        string startingLensId, 
-        string[] lensLaunchDataKeys, 
-        string[] lensLaunchDataValues, 
+    [DllImport("__Internal")]
+    static extern void invokeCameraKitWithSingleLens(
+        string startingLensId,
+        IntPtr lensLaunchDataKeys, int lensLaunchDataKeysLength,
+        IntPtr lensLaunchDataValues, int lensLaunchDataValuesLength,        
         int cameraKitMode
-    ) {
-        var unsafeptr_LensGroupIds = marshalStringArray(lensGroupIds);
-        var unsafeptr_DataKeys = marshalStringArray(lensLaunchDataKeys);
-        var unsafeptr_DataValues = marshalStringArray(lensLaunchDataValues);
+    );
 
+    public void InvokeCameraKit(CameraKitConfiguration config) {
+        var cameraMode = config.CameraMode;
 
-        invokeCameraKit(
-            unsafeptr_LensGroupIds, lensGroupIds.Length, 
-            unsafeptr_DataKeys, lensLaunchDataKeys.Length, 
-            unsafeptr_DataValues, lensLaunchDataKeys.Length, 
-            startingLensId, 
-            cameraKitMode);
+        // Invoking Camera Kit with Lens Groups
+        if (config.GetType() == typeof(CameraKitConfiguration.LensGroupsConfig)) {
+            var castConfig = (CameraKitConfiguration.LensGroupsConfig)config;
+            var lensGroupIds = castConfig.LensGroupIDs.ToArray();
+            var unsafeptr_LensGroupIds = marshalStringArray(lensGroupIds);
+            var startingLensId = castConfig.StartWithSelectedLensID;
 
-        CleanUpNativeStrArray(unsafeptr_LensGroupIds, lensGroupIds.Length);
-        CleanUpNativeStrArray(unsafeptr_DataKeys, lensLaunchDataKeys.Length);
-        CleanUpNativeStrArray(unsafeptr_DataValues, lensLaunchDataKeys.Length);
+            invokeCameraKitWithLensGroups(
+                unsafeptr_LensGroupIds, lensGroupIds.Length,
+                startingLensId,
+                (int) cameraMode
+            );
+
+            CleanUpNativeStrArray(unsafeptr_LensGroupIds, lensGroupIds.Length);
+
+        } 
+        // Invoking Camera Kit with Single Lens
+        else if (config.GetType() == typeof(CameraKitConfiguration.LensSingleConfig)) {
+            var castConfig = (CameraKitConfiguration.LensSingleConfig)config;
+            var lensId = castConfig.LensID;
+            string[] launchDataKeys = new string[0];
+            string[] launchDataValues = new string[0];
+            if (castConfig.LensLaunchData != null) {
+                launchDataKeys = new List<string>(castConfig.LensLaunchData.Keys).ToArray();
+                launchDataValues = new List<string>(castConfig.LensLaunchData.Values).ToArray();
+            }
+            var unsafeptr_DataKeys = marshalStringArray(launchDataKeys);
+            var unsafeptr_DataValues = marshalStringArray(launchDataValues);
+
+            invokeCameraKitWithSingleLens(
+                lensId,
+                unsafeptr_DataKeys, launchDataKeys.Length,
+                unsafeptr_DataValues, launchDataValues.Length,
+                (int)cameraMode
+            );
+
+            CleanUpNativeStrArray(unsafeptr_DataKeys, launchDataKeys.Length);
+            CleanUpNativeStrArray(unsafeptr_DataValues, launchDataKeys.Length);
+        }
+    }
+
+    public void Validate(CameraKitConfiguration config) {
+        if (config.CameraMode == CameraKitConfiguration.CameraKitMode.Play) {
+            Debug.Log("CameraKit: iOS does not support CameraKitMode.Play");
+        }
     }
 
     private IntPtr marshalStringArray(string[] strArr) {

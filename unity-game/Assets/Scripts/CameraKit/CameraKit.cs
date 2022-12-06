@@ -18,15 +18,8 @@ public static class CameraKit
 
     public static void InvokeCameraKit(CameraKitConfiguration config)
     {
-        config.Validate();
-
-        string[] launchDataKeys = new string[0];
-        string[] launchDataValues = new string[0];
-        if (config.LensLaunchData != null) {
-            launchDataKeys = new List<string>(config.LensLaunchData.Keys).ToArray();
-            launchDataValues = new List<string>(config.LensLaunchData.Values).ToArray();
-        }
-        _nativeBridge.InvokeCameraKit(config.LensGroupIDs.ToArray(), config.StartWithSelectedLensID, launchDataKeys, launchDataValues, (int) config.CameraMode);
+        _nativeBridge.Validate(config);
+        _nativeBridge.InvokeCameraKit(config);
     }
 }
 

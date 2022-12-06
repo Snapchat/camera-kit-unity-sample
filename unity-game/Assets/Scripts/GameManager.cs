@@ -41,15 +41,19 @@ public class GameManager : MonoBehaviour
     public void SpaceshipLanded() {
         Debug.Log("Spaceship Landed");
 
-        // Invoking CameraKit 
-        var config = new CameraKitConfiguration() {
-            LensGroupIDs = new List<string> {"42947d70-639e-4349-bd36-6ea9617060d6"},
-            StartWithSelectedLensID = "8e8bfaac-df3f-44fc-87c6-4f28652d54ec",
-            CameraMode = CameraKitConfiguration.CameraKitMode.Play,
-            LensLaunchData = new Dictionary<string, string> {
-                {"shotsOnInvader", _shotsOnAlien.ToString()}
-            }
+        // --- Configuring CameraKit ---
+        // In order to pass launchData to the Lens, the Lens needs to be built to interpret it 
+        // The source code for the lens used in this project is part of the Github project. 
+        // Please check the ParamsManager.js script in the lens included in this repository.
+        // More info: https://docs.snap.com/lens-studio/references/guides/distributing/snap-kit/        
+        var launchData = new Dictionary<string, string> {
+            {"shotsOnInvader", _shotsOnAlien.ToString()}
         };
+        var lensId = "8e8bfaac-df3f-44fc-87c6-4f28652d54ec";
+        var groupId = "42947d70-639e-4349-bd36-6ea9617060d6";
+        var config = CameraKitConfiguration.CreateWithSingleLens(lensId, groupId, launchData);
+        
+        // --- Invoking CameraKit ---
         CameraKit.InvokeCameraKit(config);
     }
 
