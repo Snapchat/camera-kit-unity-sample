@@ -217,15 +217,15 @@ extension AppDelegate: AppOrientationDelegate {
 }
 
 extension AppDelegate: NativeCallsProtocol {
-    func invokeCameraKit(withSingleLens lensId: String!, withLaunchData launchData: [String : String]!, withCamerMode cameraMode: NSNumber!) {
-//        cameraController.cameraKit.lenses.repository.
-        cameraController.cameraKit.lenses.repository.addObserver(self, specificLensID: lensId, inGroupID: "");
+    func invokeCameraKit(withSingleLens lensId: String!, withGroupID groupId: String!, withLaunchData launchData: [String : String]!, withCamerMode cameraMode: NSNumber!) {
+        cameraController.launchDataFromUnity = launchData;
+        cameraController.cameraKit.lenses.repository.addObserver(self, specificLensID: lensId, inGroupID: groupId);
         invokeCameraKit();
         
     }
     func invokeCameraKit(withLensGroupIds lensGroupIDs: [String]!, withStartingLensId lensId: String!, withCamerMode cameraMode: NSNumber!) {
         cameraController.groupIDs = lensGroupIDs;
-        cameraController.initialLensId = lensId;
+        cameraController.startingLensId = lensId;
         for groupid in lensGroupIDs {
             cameraController.cameraKit.lenses.repository.addObserver(self, groupID: groupid)
         }
@@ -241,6 +241,9 @@ extension AppDelegate: NativeCallsProtocol {
 
         self.unityFramework?.pause(true)
         self.unityFramework?.appController().rootViewController.present(cameraViewController!, animated: true)
+        if (cameraController.initialLens != nil) {
+            cameraController.applyLens(cameraController.initialLens!);
+        }
     }
     
 //    func invokeCameraKit(withLensGroupId lensGroupIDs: [String]!, withLaunchData launchData: [String : String]!, withStartingLensId lensId: String!, withCamerMode cameraMode: NSNumber!) {
@@ -258,18 +261,34 @@ extension AppDelegate: NativeCallsProtocol {
 
 extension AppDelegate: LensRepositorySpecificObserver, LensRepositoryGroupObserver    {
     func repository(_ repository: LensRepository, didUpdateLenses lenses: [Lens], forGroupID groupID: String) {
+        print("repository.didUpdateLenses plural")
+        lenses.forEach({
+            if ($0.id == cameraController.startingLensId) {
+                cameraController.initialLens = $0;
+            }
+        })
         
     }
     
     func repository(_ repository: LensRepository, didFailToUpdateLensesForGroupID groupID: String, error: Error?) {
-        
+        print("failed to update lenses")
     }
     
     func repository(_ repository: LensRepository, didUpdate lens: Lens, forGroupID groupID: String) {
-        if (lens.id == cameraController.initialLensId) {
-            cameraController.applyLens(lens);
-            cameraViewController?.cameraView.carouselView.selectItem(CarouselItem(lensId: lens.id, groupId: groupID))
-        }
+//        cameraController.applyLens(lens);
+//        cameraViewController?.cameraView.carouselView.selectItem(CarouselItem(lensId: lens.id, groupId: groupID))
+//        let launchDataBuilder = LensLaunchDataBuilder()
+//        cameraController.launchDataFromUnity?.forEach {
+//            launchDataBuilder.add(string: $1, key: $0)
+//        }
+//        cameraController.cameraKit.lenses.processor?.apply(lens: lens, launchData: launchDataBuilder.launchData)
+//        print("did update lens (singular)")
+//        if (lens.id == cameraController.initialLensId) {
+//            cameraController.applyLens(lens);
+//            cameraViewController?.cameraView.carouselView.selectItem(CarouselItem(lensId: lens.id, groupId: groupID))
+//        }
+        print("repository.didUpdateLens singular")
+        cameraController.initialLens = lens;
     }
     func repository(_ repository: LensRepository, didFailToUpdateLensID lensID: String, forGroupID groupID: String, error: Error?) {
         print("Error loading lens " + lensID)
@@ -290,7 +309,8 @@ extension CameraViewController {
 class SampleCameraController: CameraController {
     
     fileprivate var launchDataFromUnity: [String:String]?
-    fileprivate var initialLensId: String?
+    fileprivate var startingLensId: String?
+    fileprivate var initialLens: Lens?
     
     override func configureDataProvider() -> DataProviderComponent {
         DataProviderComponent(

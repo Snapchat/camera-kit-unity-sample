@@ -26,7 +26,7 @@ extern "C" {
         return [api invokeCameraKitWithLensGroupIds:lgids withStartingLensId:lensId withCamerMode:mode];
         
     }
-    void invokeCameraKitWithSingleLens(char *startingLensId, const char* const *launchDataKeys[], int launchDataKeysLength, const char* const *launchDataValues[], int launchDataValuesLength, int cameraMode) {
+    void invokeCameraKitWithSingleLens(char *startingLensId, char *groupId, const char* const *launchDataKeys[], int launchDataKeysLength, const char* const *launchDataValues[], int launchDataValuesLength, int cameraMode) {
         
         NSMutableDictionary *launchParams = [[NSMutableDictionary alloc] init];
         for (int i = 0; i < launchDataKeysLength; i++) {
@@ -36,9 +36,10 @@ extern "C" {
         }
         
         NSString *lensId = [[NSString alloc] initWithCString:(const char*) startingLensId encoding:NSUTF8StringEncoding];
+        NSString *gpid = [[NSString alloc] initWithCString:(const char*) groupId encoding:NSUTF8StringEncoding];
         NSNumber *mode = [[NSNumber alloc] initWithInt:cameraMode];
         
-        return [api invokeCameraKitWithSingleLens:lensId withLaunchData:launchParams withCamerMode:mode];
+        return [api invokeCameraKitWithSingleLens:lensId withGroupID:gpid withLaunchData:launchParams withCamerMode:mode];
         
     }
 }
