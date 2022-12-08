@@ -21,11 +21,12 @@ The project contains the following folders:
 - [lens/](lens/): Sample Dynamic Lens project
 
 ## What to expect
-* **Development flow**: After the initial setup described below, you will develop your game/app in Unity as normal. The only difference is during build time. You will ask Unity to export a project source code and then shift focus to the native IDE (XCode or Android Studio) and build from there. This also means that application metadata (icons, descriptions) will not be handled by Unity and will need to be set up in the native IDEs.
-* **Application behavior**: The native apps that wrap your Unity application have the sole purpose of connecting Unity with CameraKit. Your Unity logic will be invoked as soon as the app starts. From Unity's C# code you can invoke Camera Kit. Camera Kit is invoked as an Form Sheet Modal on iOS (where swiping down returns to the game) and a full screen activity on Android (where pressing the back button returns to the game). A Unity pause signal is sent to your application whenever Camera Kit is invoked/dismissed so make sure to respond to Application Pause events in your Unity logic
+### Development flow
+After the initial setup described below, you will develop your game/app in Unity as normal. The only difference is during build time. You will ask Unity to export a project source code and then shift focus to the native IDE (XCode or Android Studio) and build from there. This also means that application metadata (icons, descriptions) will not be handled by Unity and will need to be set up in the native IDEs.
+### Application behavior
+The native apps that wrap your Unity application have the sole purpose of connecting Unity with CameraKit. Your Unity project is the main application logic and will be invoked as soon as the app starts. From Unity's C# code you can invoke Camera Kit. Camera Kit is invoked as an Form Sheet Modal on iOS (where swiping down returns to the game) and a full screen activity on Android (where pressing the back button returns to the game). A Unity pause signal is sent to your application whenever Camera Kit is invoked/dismissed so make sure to respond to Application Pause events in your Unity logic
 
 <!-- TODO: insert gif --> 
-
 
 ## App Setup
 ### Step 1: Account Setup 
@@ -33,6 +34,15 @@ Follow the steps on the [Camera Kit Documentation](https://docs.snap.com/snap-ki
    * An App ID 
    * An API Token
    * A Lens Group ID 
+  
 ### Step 2: Android Setup
+1. In Unity, open the Unity Project ([unity-game/](unity-game/))
+2. Go to Build Settings and change the Platform to **Android**
+3. Still in the Build Settings dialog, check the box **Export Project**
+4. Go to Player Settings -> Settings for Android -> Other Settings, and make sure these options are set
+   * Minimum API level: 22
+   * Scripting Backend: IL2CPP
+   * API Compatibility Level: .NET Standard 2.1
+   * Target architectures: ARMv7, ARM64 
 
 ### Step 3: iOS Setup
