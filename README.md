@@ -1,6 +1,8 @@
 # Camera Kit Unity Template
 This repository contains a template set up that allows you to build a Unity application and leverage Snap's CameraKit technology. It supports both iOS and Android builds. 
 
+<img src="readme-images/ck-demo.gif" width="200px">
+
 ## Requirements
 - Unity 2022.1.23f1
 - Camera Kit SDK 1.18.1 (compatible with Lens Studio v4.34)
@@ -77,7 +79,7 @@ Follow the steps on the [Camera Kit Documentation](https://docs.snap.com/snap-ki
 
 ## Camera Kit C# API
 ```csharp
-// --- Configuring CameraKit to Launch with a Single Lens ---
+// --- Configuring CameraKit to Launch with a Single Lens, passing LaunchParams ---
 var launchData = new Dictionary<string, string> {
     {"shotsOnInvader", _shotsOnAlien.ToString()}
 };
