@@ -6,7 +6,8 @@
 // NativeCallsProtocol defines protocol with methods you want to be called from managed
 @protocol NativeCallsProtocol
 @required
-- (void) invokeCameraKit:(int)alienShotCount;
+- (void) invokeCameraKitWithLensGroupIds:(NSArray<NSString*>*)lensGroupIDs withStartingLensId:(NSString*) lensId withCamerMode:(NSNumber*) cameraMode;
+- (void) invokeCameraKitWithSingleLens: (NSString*) lensId withGroupID: (NSString*) groupId withLaunchData:(NSDictionary<NSString*,NSString*>*) launchData withCamerMode:(NSNumber*) cameraMode;
 @end
 
 __attribute__ ((visibility("default")))

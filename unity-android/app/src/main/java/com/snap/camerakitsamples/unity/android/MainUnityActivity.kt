@@ -1,6 +1,7 @@
 package com.snap.camerakitsamples.unity.android
 
 import android.content.Intent
+import android.graphics.Camera
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.ComponentActivity
@@ -30,29 +31,40 @@ class MainUnityActivity : OverrideUnityActivity() {
         }
     }
 
-    override fun invokeCameraKit(alienHitCount: Int) {
-        Log.d("camkit", "Invoking Camera Kit")
-        var builder = LensesLaunchData.newBuilder()
-        builder.putString("shotsOnInvader", alienHitCount.toString())
-
-
-        var cameraConfig = CameraActivity.Configuration.WithLens("8e8bfaac-df3f-44fc-87c6-4f28652d54ec",
-        "42947d70-639e-4349-bd36-6ea9617060d6", true, {this.putString("shotsOnInvader", alienHitCount.toString())});
-        var intent = CameraActivity.intentForPlayWith(applicationContext, cameraConfig);
-
+    override fun invokeCameraKitWithGroup(
+        lensGroupIds: Array<String>,
+        startingLensId: String?,
+        cameraKitMode: Int
+    ) {
+        var cameraConfig = CameraActivity.Configuration.WithLenses(
+            lensGroupIds,
+            startingLensId
+        );
+        var intent = if (cameraKitMode == 0) CameraActivity.intentForPlayWith(applicationContext, cameraConfig) else CameraActivity.intentForCaptureWith(applicationContext, cameraConfig);
         startActivityForResult(intent, 1);
+    }
 
-//        var playLauncher = (App.mainActivity as ComponentActivity).registerForActivityResult(CameraActivity.Play) { result ->
-//            Log.d("camkit", "Got play result: $result")
-//            when (result) {
-//                is CameraActivity.Play.Result.Completed -> {
-//                    Log.d("camkit", "Capture completed")
-//                }
-//                is CameraActivity.Play.Result.Failure -> {
-//                    Log.d("camkit", "Capture failed")
-//                }
-//            }
-//        }
-//        playLauncher.launch(CameraActivity.Configuration.WithLenses(arrayOf("42947d70-639e-4349-bd36-6ea9617060d6")));
+    override fun invokeCameraKitWithSingleLens(
+        lensId: String,
+        groupId: String,
+        lensLaunchDataKeys: Array<String>?,
+        lensLaunchDataValues: Array<String>?,
+        cameraKitMode: Int
+    ) {
+
+        var cameraConfig = CameraActivity.Configuration.WithLens(
+            lensId,
+            groupId,
+            true,
+            {
+                if (lensLaunchDataKeys != null && lensLaunchDataValues != null) {
+                    for (i in lensLaunchDataKeys.indices) {
+                        this.putString(lensLaunchDataKeys[i], lensLaunchDataValues[i]);
+                    }
+                }
+            }
+        );
+        var intent = if (cameraKitMode == 0) CameraActivity.intentForPlayWith(applicationContext, cameraConfig) else CameraActivity.intentForCaptureWith(applicationContext, cameraConfig);
+        startActivityForResult(intent, 1);
     }
 }

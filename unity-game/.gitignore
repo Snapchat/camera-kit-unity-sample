@@ -16,6 +16,8 @@
 /unity-ios-build/
 /unity-android-build/
 *_DoNotShip/
+!/unity-ios-build/.deleteme
+!/unity-android-build/.deleteme
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data

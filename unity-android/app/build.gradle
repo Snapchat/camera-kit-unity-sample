@@ -17,14 +17,14 @@ dependencies {
     // Camera Kit Dependencies
     implementation "androidx.lifecycle:lifecycle-viewmodel:2.5.1"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
-    implementation "com.snap.camerakit:support-camera-activity:1.18.0"
-    implementation "com.snap.camerakit:camerakit:1.18.0"
-    implementation "com.snap.camerakit:camerakit-kotlin:1.18.0"
-    implementation "com.snap.camerakit:support-camera-layout:1.18.0"
-    implementation "com.snap.camerakit:support-gms-location:1.18.0"
-    implementation "com.snap.camerakit:support-arcore:1.18.0"
-    implementation "com.snap.camerakit:support-lenses-carousel:1.18.0"
-    implementation "com.snap.camerakit:lenses-bundle:1.18.0"
+    implementation "com.snap.camerakit:support-camera-activity:1.18.1"
+    implementation "com.snap.camerakit:camerakit:1.18.1"
+    implementation "com.snap.camerakit:camerakit-kotlin:1.18.1"
+    implementation "com.snap.camerakit:support-camera-layout:1.18.1"
+    implementation "com.snap.camerakit:support-gms-location:1.18.1"
+    implementation "com.snap.camerakit:support-arcore:1.18.1"
+    implementation "com.snap.camerakit:support-lenses-carousel:1.18.1"
+    implementation "com.snap.camerakit:lenses-bundle:1.18.1"
 }
 
 
