@@ -242,26 +242,13 @@ extension AppDelegate: NativeCallsProtocol {
         self.unityFramework?.pause(true)
         self.unityFramework?.appController().rootViewController.present(cameraViewController!, animated: true)
         if (cameraController.initialLens != nil) {
-            cameraController.applyLens(cameraController.initialLens!);
+            cameraController.cameraKit.lenses.processor?.apply(lens: cameraController.initialLens!, launchData: cameraController.buildLaunchData())
         }
     }
-    
-//    func invokeCameraKit(withLensGroupId lensGroupIDs: [String]!, withLaunchData launchData: [String : String]!, withStartingLensId lensId: String!, withCamerMode cameraMode: NSNumber!) {
-//
-//        cameraController.groupIDs = lensGroupIDs
-//        cameraController.launchDataFromUnity = launchData
-//        cameraController.initialLensId = lensId
-//
-//        for groupid in lensGroupIDs {
-//            cameraController.cameraKit.lenses.repository.addObserver(self, groupID: groupid)
-//            cameraController.cameraKit.lenses.repository.addObserver(self, specificLensID: lensId, inGroupID: groupid)
-//        }
-//    }
 }
 
 extension AppDelegate: LensRepositorySpecificObserver, LensRepositoryGroupObserver    {
     func repository(_ repository: LensRepository, didUpdateLenses lenses: [Lens], forGroupID groupID: String) {
-        print("repository.didUpdateLenses plural")
         lenses.forEach({
             if ($0.id == cameraController.startingLensId) {
                 cameraController.initialLens = $0;
@@ -275,19 +262,6 @@ extension AppDelegate: LensRepositorySpecificObserver, LensRepositoryGroupObserv
     }
     
     func repository(_ repository: LensRepository, didUpdate lens: Lens, forGroupID groupID: String) {
-//        cameraController.applyLens(lens);
-//        cameraViewController?.cameraView.carouselView.selectItem(CarouselItem(lensId: lens.id, groupId: groupID))
-//        let launchDataBuilder = LensLaunchDataBuilder()
-//        cameraController.launchDataFromUnity?.forEach {
-//            launchDataBuilder.add(string: $1, key: $0)
-//        }
-//        cameraController.cameraKit.lenses.processor?.apply(lens: lens, launchData: launchDataBuilder.launchData)
-//        print("did update lens (singular)")
-//        if (lens.id == cameraController.initialLensId) {
-//            cameraController.applyLens(lens);
-//            cameraViewController?.cameraView.carouselView.selectItem(CarouselItem(lensId: lens.id, groupId: groupID))
-//        }
-        print("repository.didUpdateLens singular")
         cameraController.initialLens = lens;
     }
     func repository(_ repository: LensRepository, didFailToUpdateLensID lensID: String, forGroupID groupID: String, error: Error?) {
@@ -318,7 +292,7 @@ class SampleCameraController: CameraController {
             mediaPicker: lensMediaProvider, remoteApiServiceProviders: [])
     }
     
-    override func launchData(for lens: Lens) -> LensLaunchData {
+    func buildLaunchData() -> LensLaunchData {
         let launchDataBuilder = LensLaunchDataBuilder()
         self.launchDataFromUnity?.forEach {
             launchDataBuilder.add(string: $1, key: $0)
