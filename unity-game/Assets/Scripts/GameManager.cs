@@ -52,7 +52,7 @@ public class GameManager : MonoBehaviour
         var lensId = "8e8bfaac-df3f-44fc-87c6-4f28652d54ec";
         var groupId = "42947d70-639e-4349-bd36-6ea9617060d6";
         var config = CameraKitConfiguration.CreateWithSingleLens(lensId, groupId, launchData);
-        
+
         // --- Invoking CameraKit ---
         CameraKit.InvokeCameraKit(config);
     }
