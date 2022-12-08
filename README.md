@@ -36,13 +36,26 @@ Follow the steps on the [Camera Kit Documentation](https://docs.snap.com/snap-ki
    * A Lens Group ID 
   
 ### Step 2: Android Setup
+
+**Note:** These steps should only be performed once. But if you ever clean your output folder when exporting from Unity, you'll need to perform steps 6 and 7 again.
+
 1. In Unity, open the Unity Project ([unity-game/](unity-game/))
-2. Go to Build Settings and change the Platform to **Android**
-3. Still in the Build Settings dialog, check the box **Export Project**
-4. Go to Player Settings -> Settings for Android -> Other Settings, and make sure these options are set
+1. Go to Build Settings and change the Platform to **Android**
+1. Still in the Build Settings dialog, check the box **Export Project**
+1. Go to Player Settings -> Settings for Android -> Other Settings, and make sure these options are set
    * Minimum API level: 22
    * Scripting Backend: IL2CPP
    * API Compatibility Level: .NET Standard 2.1
    * Target architectures: ARMv7, ARM64 
+1. Add your API Key and App ID to  [unity-android/app/src/main/AndroidManifest.xml](unity-android/app/src/main/AndroidManifest.xml), replacing the placeholder strings
+1. Copy the `ndk.dir` property from [unity-game/unity-android-build/local.properties](unity-game/unity-android-build/local.properties) and append it to [unity-android/local.properties](unity-android/local.properties)
+1. Open the file [unity-game/unity-android-build/unityLibrary/src/main/AndroidManifest.xml](unity-game/unity-android-build/unityLibrary/src/main/AndroidManifest.xml) and add the property `android:exported="true"` to `UnityPlayerActivity`. It should look like this: `
+<activity android:name="com.unity3d.player.UnityPlayerActivity" android:exported="true" ... >`
+1. Now you should be ready to build your application. You can read here more information on [how to build to a device](https://developer.android.com/studio/run) or emulator from Android Studio.
+
+
+
 
 ### Step 3: iOS Setup
+1. In Unity, open Build Settings and change the project target to iOS
+2. 
