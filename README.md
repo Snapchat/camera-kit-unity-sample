@@ -1,5 +1,5 @@
 # Camera Kit Unity Template
-This repository contains a template set up that allows you to build a Unity application and leverage Snap's CameraKit technology. It supports both iOS and Android builds. 
+This repository contains a template project that allows you to build a Unity application and leverage Snap's Camera Kit technology. It supports both iOS and Android builds. 
 
 <img src="readme-images/ck-demo.gif" width="200px">
 
@@ -22,13 +22,17 @@ The project contains the following folders:
 - [unity-game/](unity-game/): Unity Project 
 - [lens/](lens/): Sample Dynamic Lens project
 
-## What to expect
+## How to use this template
+
+ 
+The recommended way to use this template is to start by following the App Setup section below and making sure that you can run the space shooter demo and invoke Camera Kit successfully on your desired platform(s). After that, you can remove the contents of the Sprites, Scripts, Prefabs and Scenes folders which effectively turns your Unity project into a blank project that is set up to build with Camera Kit.
+
 ### Development flow
 After the initial setup described below, you will develop your game/app in Unity as normal. The only difference is during build time. You will ask Unity to export a project source code and then shift focus to the native IDE (XCode or Android Studio) and build from there. This also means that application metadata (icons, descriptions) will not be handled by Unity and will need to be set up in the native IDEs.
-### Application behavior
-The native apps that wrap your Unity application have the sole purpose of connecting Unity with CameraKit. Your Unity project is the main application logic and will be invoked as soon as the app starts. From Unity's C# code you can invoke Camera Kit. Camera Kit is invoked as an Form Sheet Modal on iOS (where swiping down returns to the game) and a full screen activity on Android (where pressing the back button returns to the game). A Unity pause signal is sent to your application whenever Camera Kit is invoked/dismissed so make sure to respond to Application Pause events in your Unity logic
 
-<!-- TODO: insert gif --> 
+### Application behavior
+The native apps that wrap your Unity application have the sole purpose of connecting Unity with Camera Kit. Your Unity project is the main application logic and will be invoked as soon as the app starts. From Unity's C# code you can invoke Camera Kit. Camera Kit is invoked as an Form Sheet Modal on iOS (where swiping down returns to the game) and a full screen activity on Android (where pressing the back button returns to the game). A Unity pause signal is sent to your application whenever Camera Kit is invoked/dismissed so make sure to respond to Application Pause events in your Unity logic
+
 
 ## App Setup
 ### Step 1: Account Setup 
@@ -79,28 +83,21 @@ Follow the steps on the [Camera Kit Documentation](https://docs.snap.com/snap-ki
 
 ## Camera Kit C# API
 ```csharp
-// --- Configuring CameraKit to Launch with a Single Lens, passing LaunchParams ---
-var launchData = new Dictionary<string, string> {
-    {"shotsOnInvader", _shotsOnAlien.ToString()}
-};
-var lensId = "8e8bfaac-df3f-44fc-87c6-4f28652d54ec";
-var groupId = "42947d70-639e-4349-bd36-6ea9617060d6";
+// Configuring Camera Kit to Launch with a Single Lens, passing launch data
 var config = CameraKitConfiguration.CreateWithSingleLens(lensId, groupId, launchData);
 
-// --- Configuring CameraKit to Launch with one or more Lens Groups  ---
-var groupIds = new List<string> {"d00052ac-7f07-47d9-8195-fa8d033698d2", "1511b3fd-5ce4-4409-857f-71bc1bc43506"}
-var initialLensId = "0103eea7-e8fa-4dfe-8d7a-fcc6a2d3be28";
+// Configuring Camera Kit to Launch with one or more Lens Groups
 var config = CameraKitConfiguration.CreateWithLensGroups(groupIds, initialiLensId);
 
-// --- Invoking CameraKit ---
+// Invoking Camera Kit
 CameraKit.InvokeCameraKit(config);
 ```
 
 
 ## Camera Kit Features supported
-- [x] Open CameraKit with multiple Lens Groups in carousel
+- [x] Open Camera Kit with multiple Lens Groups in carousel
 - [x] Define Lens that should be initially selected
-- [x] Open CameraKit with a Single Lens
+- [x] Open Camera Kit with a Single Lens
 - [x] Send Launch Params on a Single Lens
 - [ ] Send Launch Params to all lenses in a collection of Lens Groups (WIP)
 - [ ] Use Remote API to get data back from Lenses (WIP)
