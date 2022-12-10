@@ -14,26 +14,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
+
         <meta-data android:name="com.snap.camerakit.app.id" android:value="ADD-YOUR-APP-ID-HERE" />
         <meta-data android:name="com.snap.camerakit.api.token" android:value="ADD-YOUR-API-TOKEN-HERE" />
 
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".MainUnityActivity"
+            android:exported="true"
+            android:screenOrientation="fullSensor"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale|layoutDirection|density"
+            android:hardwareAccelerated="false">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <activity
-            android:label="@string/app_name"
-            android:name="com.snap.camerakitsamples.unity.android.MainUnityActivity"
-            android:screenOrientation="fullSensor"
-            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale|layoutDirection|density"
-            android:hardwareAccelerated="false"
-            android:process=":Unity">
         </activity>
     </application>
 

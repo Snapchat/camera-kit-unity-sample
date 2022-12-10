@@ -1,17 +1,17 @@
 package com.snap.camerakitsamples.unity.android
 
 import android.content.Intent
-import android.graphics.Camera
 import android.os.Bundle
 import android.util.Log
-import androidx.activity.ComponentActivity
-import com.snap.camerakit.lenses.LensesComponent
-import com.snap.camerakit.lenses.LensesLaunchData
 import com.snap.camerakit.support.app.CameraActivity
 import com.snap.samples.OverrideUnityActivity
 
+private const val REQUEST_CODE_CAMERA_KIT_CAPTURE = 1
+private const val REQUEST_CODE_CAMERA_KIT_PLAY = 2
+private const val TAG = "MainUnityActivity"
+
 class MainUnityActivity : OverrideUnityActivity() {
-    // Setup activity layout
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val intent = intent
@@ -24,7 +24,7 @@ class MainUnityActivity : OverrideUnityActivity() {
         setIntent(intent)
     }
 
-    fun handleIntent(intent: Intent?) {
+    private fun handleIntent(intent: Intent?) {
         if (intent == null || intent.extras == null) return
         if (intent.extras!!.containsKey("doQuit")) if (mUnityPlayer != null) {
             finish()
@@ -36,12 +36,18 @@ class MainUnityActivity : OverrideUnityActivity() {
         startingLensId: String?,
         cameraKitMode: Int
     ) {
-        var cameraConfig = CameraActivity.Configuration.WithLenses(
+        val cameraKitConfig = CameraActivity.Configuration.WithLenses(
             lensGroupIds,
             startingLensId
-        );
-        var intent = if (cameraKitMode == 0) CameraActivity.intentForPlayWith(applicationContext, cameraConfig) else CameraActivity.intentForCaptureWith(applicationContext, cameraConfig);
-        startActivityForResult(intent, 1);
+        )
+        val (intent, requestCode) = if (cameraKitMode == 0) {
+            CameraActivity
+                .intentForPlayWith(this, cameraKitConfig) to REQUEST_CODE_CAMERA_KIT_PLAY
+        } else {
+            CameraActivity
+                .intentForCaptureWith(this, cameraKitConfig) to REQUEST_CODE_CAMERA_KIT_CAPTURE
+        }
+        startActivityForResult(intent, requestCode)
     }
 
     override fun invokeCameraKitWithSingleLens(
@@ -51,8 +57,7 @@ class MainUnityActivity : OverrideUnityActivity() {
         lensLaunchDataValues: Array<String>?,
         cameraKitMode: Int
     ) {
-
-        var cameraConfig = CameraActivity.Configuration.WithLens(
+        val cameraKitConfig = CameraActivity.Configuration.WithLens(
             lensId,
             groupId,
             true,
@@ -63,8 +68,32 @@ class MainUnityActivity : OverrideUnityActivity() {
                     }
                 }
             }
-        );
-        var intent = if (cameraKitMode == 0) CameraActivity.intentForPlayWith(applicationContext, cameraConfig) else CameraActivity.intentForCaptureWith(applicationContext, cameraConfig);
-        startActivityForResult(intent, 1);
+        )
+        val (intent, requestCode) = if (cameraKitMode == 0) {
+            CameraActivity
+                .intentForPlayWith(this, cameraKitConfig) to REQUEST_CODE_CAMERA_KIT_PLAY
+        } else {
+            CameraActivity
+                .intentForCaptureWith(this, cameraKitConfig) to REQUEST_CODE_CAMERA_KIT_CAPTURE
+        }
+        startActivityForResult(intent, requestCode)
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent) {
+        when (requestCode) {
+            REQUEST_CODE_CAMERA_KIT_PLAY -> {
+                val result = CameraActivity.Play.parseResult(resultCode, data)
+                Log.d(TAG, "Got Camera Kit play result: $result")
+            }
+            REQUEST_CODE_CAMERA_KIT_CAPTURE -> {
+                val result = CameraActivity.Capture.parseResult(resultCode, data)
+                Log.d(TAG, "Got Camera Kit capture result: $result")
+            }
+            else -> {
+                Log.d(TAG, "Got unexpected requestCode [$requestCode] " +
+                        "resultCode [$resultCode] back with data: $data")
+                super.onActivityResult(requestCode, resultCode, data)
+            }
+        }
     }
 }

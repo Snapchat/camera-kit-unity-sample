@@ -1,32 +1,19 @@
 apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-android'
 
 dependencies {
     implementation project(':unityLibrary')
-    implementation fileTree(dir: project(':unityLibrary').getProjectDir().toString() + ('\\libs'), include: ['*.jar'])
-
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'androidx.appcompat:appcompat:1.0.0'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    implementation 'com.google.android.material:material:1.0.0'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
-
-    // Camera Kit Dependencies
-    implementation "androidx.lifecycle:lifecycle-viewmodel:2.5.1"
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
-    implementation "com.snap.camerakit:support-camera-activity:1.18.1"
-    implementation "com.snap.camerakit:camerakit:1.18.1"
-    implementation "com.snap.camerakit:camerakit-kotlin:1.18.1"
-    implementation "com.snap.camerakit:support-camera-layout:1.18.1"
-    implementation "com.snap.camerakit:support-gms-location:1.18.1"
-    implementation "com.snap.camerakit:support-arcore:1.18.1"
-    implementation "com.snap.camerakit:support-lenses-carousel:1.18.1"
-    implementation "com.snap.camerakit:lenses-bundle:1.18.1"
+    implementation fileTree(
+            dir: new File(project(':unityLibrary').projectDir.toString(), 'libs'),
+            include: ['*.jar']
+    )
+    // All-batteries included Camera Kit based Activity:
+    implementation "com.snap.camerakit:support-camera-activity:$cameraKitVersion"
+    // Additional, optional Camera Kit dependencies which provide implementation for common needs
+    // such as device location tracking and ArCore support:
+    implementation "com.snap.camerakit:support-gms-location:$cameraKitVersion"
+    implementation "com.snap.camerakit:support-arcore:$cameraKitVersion"
 }
-
 
 android {
     compileSdkVersion 33
@@ -50,4 +37,3 @@ android {
         }
     }
 }
-
