@@ -8,15 +8,12 @@ pluginManagement {
 
 include ':app'
 include ':unityLibrary'
-project(':unityLibrary').projectDir=new File('..\\unity-game\\unity-android-build\\unityLibrary')
+project(':unityLibrary').projectDir = new File('..\\unity-game\\unity-android-build\\unityLibrary')
 
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
         mavenCentral()
-        flatDir {
-            dirs "${project(':unityLibrary').projectDir}/libs"
-        }
     }
 }
