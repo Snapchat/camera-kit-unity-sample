@@ -8,27 +8,22 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
-    private var delegate:AppDelegate?
-    
-    
+    private var delegate: AppDelegate?
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
         }
-        self.delegate = appDelegate
-        
+        delegate = appDelegate
     }
-    
-    @IBAction func startUnity(_ sender: Any) {
-        guard let appDelegate = self.delegate else {
+
+    @IBAction
+    func startUnity(_ sender: Any) {
+        guard let appDelegate = delegate else {
             return
         }
         appDelegate.initUnity()
-        
     }
-    
 }
-

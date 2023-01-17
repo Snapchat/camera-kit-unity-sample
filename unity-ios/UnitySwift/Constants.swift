@@ -8,7 +8,7 @@
 import Foundation
 
 struct Constants {
-    struct ERRORMESSAGES {
+    enum ERRORMESSAGES {
         static let ALREADY_INIT: String = "Unity already initialized"
         static let UNLOAD_FIREST: String = "Unload Unity first"
         static let INIT_FIREST: String = "Initialize Unity first"
@@ -16,8 +16,8 @@ struct Constants {
         static let USE_UNLOAD: String = "Use unload instead"
         static let NOT_INITIALIZED: String = "Unity is not initialized"
     }
-    
-    struct COLOR {
+
+    enum COLOR {
         static let RED: String = "RED"
         static let BLUE: String = "BLUE"
         static let WHITE: String = "WHITE"
