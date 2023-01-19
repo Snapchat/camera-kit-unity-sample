@@ -13,7 +13,7 @@ import UnityFramework
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate, UnityFrameworkListener {
     fileprivate var supportedOrientations: UIInterfaceOrientationMask = .allButUpsideDown
-    fileprivate var cameraController: SampleCameraController = .init()
+    fileprivate var cameraController: UnityCameraController = .init()
     fileprivate var cameraViewController: CameraViewController?
 
     var window: UIWindow?
@@ -240,7 +240,7 @@ extension AppDelegate: NativeCallsProtocol {
 
     func invokeCameraKit() {
         if cameraViewController == nil {
-            cameraViewController = CameraViewController(cameraController: cameraController)
+            cameraViewController = UnityCameraViewController(cameraController: cameraController)
             cameraViewController?.appOrientationDelegate = self
             cameraViewController?.modalPresentationStyle = .formSheet
         }
@@ -282,7 +282,7 @@ extension AppDelegate: LensRepositorySpecificObserver, LensRepositoryGroupObserv
     }
 }
 
-extension CameraViewController {
+class UnityCameraViewController: CameraViewController{
     override open func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         if isBeingDismissed {
@@ -292,7 +292,7 @@ extension CameraViewController {
     }
 }
 
-class SampleCameraController: CameraController {
+class UnityCameraController: CameraController {
     fileprivate var launchDataFromUnity: [String: String]?
     fileprivate var startingLensId: String?
     fileprivate var initialLens: Lens?
