@@ -61,10 +61,6 @@ class UnityUIView: UIView {
             delegate = temDelegate
         } else {
         }
-
-//        self.addSubview(nativeTitleLable)
-//        self.addSubview(unloadButton)
-//        self.addSubview(quitButton)
     }
 
     @objc

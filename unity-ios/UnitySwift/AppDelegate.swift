@@ -108,8 +108,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UnityFrameworkListener {
         if let nativeWindow = window {
             if unityIsInitialized() {
                 UnitySampleUtils.showAlert(
-                    Constants.ERRORMESSAGES.ALREADY_INIT,
-                    Constants.ERRORMESSAGES.UNLOAD_FIREST,
+                    Constants.ErrorMessages.alreadyInitialized,
+                    Constants.ErrorMessages.unloadFirst,
                     window: nativeWindow
                 )
                 return
@@ -117,8 +117,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UnityFrameworkListener {
 
             if didQuit {
                 UnitySampleUtils.showAlert(
-                    Constants.ERRORMESSAGES.CANNOTBE_INITIALIZED,
-                    Constants.ERRORMESSAGES.USE_UNLOAD,
+                    Constants.ErrorMessages.cannotBeInitialized,
+                    Constants.ErrorMessages.useUnload,
                     window: nativeWindow
                 )
                 return
@@ -157,8 +157,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UnityFrameworkListener {
     func quitButtonTouched(_ sender: UIButton) {
         if !unityIsInitialized() {
             UnitySampleUtils.showAlert(
-                Constants.ERRORMESSAGES.NOT_INITIALIZED,
-                Constants.ERRORMESSAGES.INIT_FIREST,
+                Constants.ErrorMessages.notInitialized,
+                Constants.ErrorMessages.initFirst,
                 window: window
             )
         } else {
@@ -182,8 +182,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UnityFrameworkListener {
     private func unloadUnity() {
         if !unityIsInitialized() {
             UnitySampleUtils.showAlert(
-                Constants.ERRORMESSAGES.NOT_INITIALIZED,
-                Constants.ERRORMESSAGES.INIT_FIREST,
+                Constants.ErrorMessages.notInitialized,
+                Constants.ErrorMessages.initFirst,
                 window: window
             )
             return
