@@ -290,31 +290,74 @@ class UnityCameraViewController: CameraViewController{
         if isBeingDismissed {
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             appDelegate.unityFramework?.pause(false)
-            //self.cameraController.captureSession.outputs ??
-            // Send messages about camera dismissed here.
+            appDelegate.unityFramework?.sendMessageToGO(withName: "CameraKitHandler", functionName: "OnCameraKitDismissed", message:"")
         }
     }
-    
-    
 }
-
+    
 class UnityCameraController: CameraController {
     fileprivate var launchDataFromUnity: [String: String]?
     fileprivate var startingLensId: String?
     fileprivate var initialLens: Lens?
-
+    
     override func configureDataProvider() -> DataProviderComponent {
         DataProviderComponent(
             deviceMotion: nil, userData: UserDataProvider(), lensHint: nil, location: nil,
             mediaPicker: lensMediaProvider, remoteApiServiceProviders: [UnityRemoteApiServiceProvider()]
         )
     }
-
+    
     func buildLaunchData() -> LensLaunchData {
         let launchDataBuilder = LensLaunchDataBuilder()
         launchDataFromUnity?.forEach {
             launchDataBuilder.add(string: $1, key: $0)
         }
         return launchDataBuilder.launchData ?? EmptyLensLaunchData()
+    }
+    
+    override func takePhoto(completion: ((UIImage?, Error?) -> Void)?) {
+        super.takePhoto(completion: {image, error in
+            let pathToSavedImage = self.saveImageToDocumentsDirectory(image: image!, withName: "CameraKitOutput.png")
+            if (pathToSavedImage == nil) {
+                print("Error. Failed to save image")
+            }
+            DispatchQueue.main.async {
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                appDelegate.unityFramework?.sendMessageToGO(withName: "CameraKitHandler", functionName: "OnCameraKitCaptureResult", message: pathToSavedImage)
+                appDelegate.cameraViewController?.dismiss(animated: true)
+            }
+        })
+        
+    }
+    
+    override func finishRecording(completion: ((URL?, Error?) -> Void)?) {
+        super.finishRecording(completion: {url, error in
+            DispatchQueue.main.async {
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                appDelegate.unityFramework?.sendMessageToGO(withName: "CameraKitHandler", functionName: "OnCameraKitCaptureResult", message: url?.absoluteString)
+                appDelegate.cameraViewController?.dismiss(animated: true)
+            }
+        })
+    }
+    
+    func getDocumentDirectoryPath() -> NSString {
+        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        let documentsDirectory = paths[0]
+        return documentsDirectory as NSString
+    }
+    
+    func saveImageToDocumentsDirectory(image: UIImage, withName: String) -> String? {
+        if let data = image.pngData() {
+            let dirPath = getDocumentDirectoryPath()
+            let imageFileUrl = URL(fileURLWithPath: dirPath.appendingPathComponent(withName) as String)
+            do {
+                try data.write(to: imageFileUrl)
+                print("Successfully saved image at path: \(imageFileUrl)")
+                return imageFileUrl.absoluteString
+            } catch {
+                print("Error saving image: \(error)")
+            }
+        }
+        return nil
     }
 }
