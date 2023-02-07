@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UnityFrameworkListener {
     var unitySampleView: UnityUIView!
     var didQuit: Bool = false
 
-    @objc var unityFramework: UnityFramework?
+    @objc public var unityFramework: UnityFramework?
 
     func application(
         _ application: UIApplication,
@@ -219,7 +219,8 @@ extension AppDelegate: NativeCallsProtocol {
         withSingleLens lensId: String!,
         withGroupID groupId: String!,
         withLaunchData launchData: [String: String]!,
-        withCamerMode cameraMode: NSNumber!
+        withCamerMode cameraMode: NSNumber!,
+        withRemoteAPISpecId remoteApiSpecId: String!
     ) {
         cameraController.launchDataFromUnity = launchData
         cameraController.cameraKit.lenses.repository.addObserver(self, specificLensID: lensId, inGroupID: groupId)
@@ -228,7 +229,8 @@ extension AppDelegate: NativeCallsProtocol {
     func invokeCameraKit(
         withLensGroupIds lensGroupIDs: [String]!,
         withStartingLensId lensId: String!,
-        withCamerMode cameraMode: NSNumber!
+        withCamerMode cameraMode: NSNumber!,
+        withRemoteAPISpecId remoteApiSpecId: String!
     ) {
         cameraController.groupIDs = lensGroupIDs
         cameraController.startingLensId = lensId
@@ -288,8 +290,12 @@ class UnityCameraViewController: CameraViewController{
         if isBeingDismissed {
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             appDelegate.unityFramework?.pause(false)
+            //self.cameraController.captureSession.outputs ??
+            // Send messages about camera dismissed here.
         }
     }
+    
+    
 }
 
 class UnityCameraController: CameraController {
@@ -300,7 +306,7 @@ class UnityCameraController: CameraController {
     override func configureDataProvider() -> DataProviderComponent {
         DataProviderComponent(
             deviceMotion: nil, userData: UserDataProvider(), lensHint: nil, location: nil,
-            mediaPicker: lensMediaProvider, remoteApiServiceProviders: []
+            mediaPicker: lensMediaProvider, remoteApiServiceProviders: [UnityRemoteApiServiceProvider()]
         )
     }
 

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2909160E542AAAB7C38C9A4B /* Pods_UnitySwift_UnitySwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7C1C1CCFAA0CC1922C8D410 /* Pods_UnitySwift_UnitySwiftUITests.framework */; };
+		48DA0A5DA0BF883D46B12B73 /* Pods_UnitySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 777D43B3A1CBEFD73C4FD568 /* Pods_UnitySwift.framework */; };
 		495B9FC7272D650700370A17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495B9FC6272D650700370A17 /* AppDelegate.swift */; };
 		495B9FCB272D650700370A17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495B9FCA272D650700370A17 /* ViewController.swift */; };
 		495B9FCE272D650700370A17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 495B9FCC272D650700370A17 /* Main.storyboard */; };
@@ -18,10 +20,9 @@
 		49C04C4E276B040900B5E378 /* UnitySampleUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C04C4D276B040900B5E378 /* UnitySampleUtils.swift */; };
 		49C04C50276B043300B5E378 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C04C4F276B043300B5E378 /* Constants.swift */; };
 		49C04C54276B048A00B5E378 /* UnityUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C04C53276B048A00B5E378 /* UnityUIView.swift */; };
-		AD2BC83634D448765B85314B /* Pods_UnitySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAE1B55B7F7BA513A3C50B0D /* Pods_UnitySwift.framework */; };
+		8732D8D477A1B051CCB83A56 /* Pods_UnitySwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99CF5BF811C3AEF1CF4B98F0 /* Pods_UnitySwiftTests.framework */; };
 		DC35C66D2928FFA0005608B1 /* UnityFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 49C04C3F276AFBD900B5E378 /* UnityFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DFB34C2DEB1D00EB12B049CF /* Pods_UnitySwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE6CE31DC18AA7F84798BB5 /* Pods_UnitySwiftTests.framework */; };
-		FC8E003D2B5F7D3FB92A4BDA /* Pods_UnitySwift_UnitySwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57FA4BAD7BBE81A76CCD4D3F /* Pods_UnitySwift_UnitySwiftUITests.framework */; };
+		DCF092702992BB7800D06E54 /* UnityRemoteApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF0926F2992BB7800D06E54 /* UnityRemoteApi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,9 +57,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		040A949A8440A8B72962EAE6 /* Pods-UnitySwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitySwiftTests.release.xcconfig"; path = "Target Support Files/Pods-UnitySwiftTests/Pods-UnitySwiftTests.release.xcconfig"; sourceTree = "<group>"; };
-		158A2123FABF568AC6CF4E0A /* Pods-UnitySwift-UnitySwiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitySwift-UnitySwiftUITests.release.xcconfig"; path = "Target Support Files/Pods-UnitySwift-UnitySwiftUITests/Pods-UnitySwift-UnitySwiftUITests.release.xcconfig"; sourceTree = "<group>"; };
-		280CE573361F7A9932E988CE /* Pods-UnitySwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitySwift.debug.xcconfig"; path = "Target Support Files/Pods-UnitySwift/Pods-UnitySwift.debug.xcconfig"; sourceTree = "<group>"; };
+		2251BFF1B76F2F9BC15D233F /* Pods-UnitySwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitySwiftTests.debug.xcconfig"; path = "Target Support Files/Pods-UnitySwiftTests/Pods-UnitySwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
+		326D7A5EAB9C584F39CE2728 /* Pods-UnitySwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitySwift.debug.xcconfig"; path = "Target Support Files/Pods-UnitySwift/Pods-UnitySwift.debug.xcconfig"; sourceTree = "<group>"; };
 		495B9FC3272D650700370A17 /* UnitySwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnitySwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		495B9FC6272D650700370A17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		495B9FCA272D650700370A17 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,12 +78,14 @@
 		49C04C4F276B043300B5E378 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		49C04C53276B048A00B5E378 /* UnityUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnityUIView.swift; sourceTree = "<group>"; };
 		49C04C55276B075B00B5E378 /* UnitySwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UnitySwift-Bridging-Header.h"; sourceTree = "<group>"; };
-		57FA4BAD7BBE81A76CCD4D3F /* Pods_UnitySwift_UnitySwiftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnitySwift_UnitySwiftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		96092328D07D041C0CF3A7CF /* Pods-UnitySwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitySwift.release.xcconfig"; path = "Target Support Files/Pods-UnitySwift/Pods-UnitySwift.release.xcconfig"; sourceTree = "<group>"; };
-		9BE6CE31DC18AA7F84798BB5 /* Pods_UnitySwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnitySwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DAE1B55B7F7BA513A3C50B0D /* Pods_UnitySwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnitySwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EE1117BA8A0C08780D89D59D /* Pods-UnitySwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitySwiftTests.debug.xcconfig"; path = "Target Support Files/Pods-UnitySwiftTests/Pods-UnitySwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
-		FF188E4A462B0B4D2141FD7C /* Pods-UnitySwift-UnitySwiftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitySwift-UnitySwiftUITests.debug.xcconfig"; path = "Target Support Files/Pods-UnitySwift-UnitySwiftUITests/Pods-UnitySwift-UnitySwiftUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5F7AF7E8958AE59FDD67373A /* Pods-UnitySwift-UnitySwiftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitySwift-UnitySwiftUITests.debug.xcconfig"; path = "Target Support Files/Pods-UnitySwift-UnitySwiftUITests/Pods-UnitySwift-UnitySwiftUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		777D43B3A1CBEFD73C4FD568 /* Pods_UnitySwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnitySwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		99CF5BF811C3AEF1CF4B98F0 /* Pods_UnitySwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnitySwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A55067091A520F7EA105D068 /* Pods-UnitySwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitySwiftTests.release.xcconfig"; path = "Target Support Files/Pods-UnitySwiftTests/Pods-UnitySwiftTests.release.xcconfig"; sourceTree = "<group>"; };
+		A7C1C1CCFAA0CC1922C8D410 /* Pods_UnitySwift_UnitySwiftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnitySwift_UnitySwiftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4E00EA406BC98E3368052D5 /* Pods-UnitySwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitySwift.release.xcconfig"; path = "Target Support Files/Pods-UnitySwift/Pods-UnitySwift.release.xcconfig"; sourceTree = "<group>"; };
+		C2E23730DECF85265EED7E7D /* Pods-UnitySwift-UnitySwiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitySwift-UnitySwiftUITests.release.xcconfig"; path = "Target Support Files/Pods-UnitySwift-UnitySwiftUITests/Pods-UnitySwift-UnitySwiftUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DCF0926F2992BB7800D06E54 /* UnityRemoteApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnityRemoteApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD2BC83634D448765B85314B /* Pods_UnitySwift.framework in Frameworks */,
+				48DA0A5DA0BF883D46B12B73 /* Pods_UnitySwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,7 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFB34C2DEB1D00EB12B049CF /* Pods_UnitySwiftTests.framework in Frameworks */,
+				8732D8D477A1B051CCB83A56 /* Pods_UnitySwiftTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,7 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC8E003D2B5F7D3FB92A4BDA /* Pods_UnitySwift_UnitySwiftUITests.framework in Frameworks */,
+				2909160E542AAAB7C38C9A4B /* Pods_UnitySwift_UnitySwiftUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +151,7 @@
 				49C04C4F276B043300B5E378 /* Constants.swift */,
 				49C04C53276B048A00B5E378 /* UnityUIView.swift */,
 				49C04C55276B075B00B5E378 /* UnitySwift-Bridging-Header.h */,
+				DCF0926F2992BB7800D06E54 /* UnityRemoteApi.swift */,
 			);
 			path = UnitySwift;
 			sourceTree = "<group>";
@@ -173,12 +176,12 @@
 		508B453C46AF4E243D43D29E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				280CE573361F7A9932E988CE /* Pods-UnitySwift.debug.xcconfig */,
-				96092328D07D041C0CF3A7CF /* Pods-UnitySwift.release.xcconfig */,
-				FF188E4A462B0B4D2141FD7C /* Pods-UnitySwift-UnitySwiftUITests.debug.xcconfig */,
-				158A2123FABF568AC6CF4E0A /* Pods-UnitySwift-UnitySwiftUITests.release.xcconfig */,
-				EE1117BA8A0C08780D89D59D /* Pods-UnitySwiftTests.debug.xcconfig */,
-				040A949A8440A8B72962EAE6 /* Pods-UnitySwiftTests.release.xcconfig */,
+				326D7A5EAB9C584F39CE2728 /* Pods-UnitySwift.debug.xcconfig */,
+				B4E00EA406BC98E3368052D5 /* Pods-UnitySwift.release.xcconfig */,
+				5F7AF7E8958AE59FDD67373A /* Pods-UnitySwift-UnitySwiftUITests.debug.xcconfig */,
+				C2E23730DECF85265EED7E7D /* Pods-UnitySwift-UnitySwiftUITests.release.xcconfig */,
+				2251BFF1B76F2F9BC15D233F /* Pods-UnitySwiftTests.debug.xcconfig */,
+				A55067091A520F7EA105D068 /* Pods-UnitySwiftTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -189,9 +192,9 @@
 				49C04C48276B02CE00B5E378 /* UnityFramework.framework */,
 				49C04C44276AFCEC00B5E378 /* UnityFramework.framework */,
 				49C04C3F276AFBD900B5E378 /* UnityFramework.framework */,
-				DAE1B55B7F7BA513A3C50B0D /* Pods_UnitySwift.framework */,
-				57FA4BAD7BBE81A76CCD4D3F /* Pods_UnitySwift_UnitySwiftUITests.framework */,
-				9BE6CE31DC18AA7F84798BB5 /* Pods_UnitySwiftTests.framework */,
+				777D43B3A1CBEFD73C4FD568 /* Pods_UnitySwift.framework */,
+				A7C1C1CCFAA0CC1922C8D410 /* Pods_UnitySwift_UnitySwiftUITests.framework */,
+				99CF5BF811C3AEF1CF4B98F0 /* Pods_UnitySwiftTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -203,12 +206,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 495B9FED272D650800370A17 /* Build configuration list for PBXNativeTarget "UnitySwift" */;
 			buildPhases = (
-				7384EB1F41A06DCD640FCFE4 /* [CP] Check Pods Manifest.lock */,
+				46CFEE9C544153961E915094 /* [CP] Check Pods Manifest.lock */,
 				495B9FBF272D650700370A17 /* Sources */,
 				495B9FC0272D650700370A17 /* Frameworks */,
 				495B9FC1272D650700370A17 /* Resources */,
-				46A5827F837F5728A8B4CD18 /* [CP] Embed Pods Frameworks */,
 				DC35C66E2928FFA0005608B1 /* Embed Frameworks */,
+				FF9F063809D76C1830EF495D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -223,7 +226,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 495B9FF0272D650800370A17 /* Build configuration list for PBXNativeTarget "UnitySwiftTests" */;
 			buildPhases = (
-				AE867AFCEFB9C74EC8835A08 /* [CP] Check Pods Manifest.lock */,
+				76B49FA97EC7433681E7DF07 /* [CP] Check Pods Manifest.lock */,
 				495B9FD5272D650800370A17 /* Sources */,
 				495B9FD6272D650800370A17 /* Frameworks */,
 				495B9FD7272D650800370A17 /* Resources */,
@@ -242,11 +245,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 495B9FF3272D650800370A17 /* Build configuration list for PBXNativeTarget "UnitySwiftUITests" */;
 			buildPhases = (
-				9DB77A26C71FDBD22BB9CFA2 /* [CP] Check Pods Manifest.lock */,
+				03F503D4575F5E9474E12B6E /* [CP] Check Pods Manifest.lock */,
 				495B9FDF272D650800370A17 /* Sources */,
 				495B9FE0272D650800370A17 /* Frameworks */,
 				495B9FE1272D650800370A17 /* Resources */,
-				C501FE1560990AA72936457D /* [CP] Embed Pods Frameworks */,
+				26462D068D58143144F7042A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -330,46 +333,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		46A5827F837F5728A8B4CD18 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-UnitySwift/Pods-UnitySwift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-UnitySwift/Pods-UnitySwift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UnitySwift/Pods-UnitySwift-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7384EB1F41A06DCD640FCFE4 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-UnitySwift-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9DB77A26C71FDBD22BB9CFA2 /* [CP] Check Pods Manifest.lock */ = {
+		03F503D4575F5E9474E12B6E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -391,7 +355,46 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AE867AFCEFB9C74EC8835A08 /* [CP] Check Pods Manifest.lock */ = {
+		26462D068D58143144F7042A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UnitySwift-UnitySwiftUITests/Pods-UnitySwift-UnitySwiftUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UnitySwift-UnitySwiftUITests/Pods-UnitySwift-UnitySwiftUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UnitySwift-UnitySwiftUITests/Pods-UnitySwift-UnitySwiftUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		46CFEE9C544153961E915094 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UnitySwift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		76B49FA97EC7433681E7DF07 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -413,21 +416,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C501FE1560990AA72936457D /* [CP] Embed Pods Frameworks */ = {
+		FF9F063809D76C1830EF495D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-UnitySwift-UnitySwiftUITests/Pods-UnitySwift-UnitySwiftUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-UnitySwift/Pods-UnitySwift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-UnitySwift-UnitySwiftUITests/Pods-UnitySwift-UnitySwiftUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-UnitySwift/Pods-UnitySwift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UnitySwift-UnitySwiftUITests/Pods-UnitySwift-UnitySwiftUITests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UnitySwift/Pods-UnitySwift-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -441,6 +444,7 @@
 				49C04C50276B043300B5E378 /* Constants.swift in Sources */,
 				49C04C4E276B040900B5E378 /* UnitySampleUtils.swift in Sources */,
 				495B9FC7272D650700370A17 /* AppDelegate.swift in Sources */,
+				DCF092702992BB7800D06E54 /* UnityRemoteApi.swift in Sources */,
 				49C04C54276B048A00B5E378 /* UnityUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -615,7 +619,7 @@
 		};
 		495B9FEE272D650800370A17 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 280CE573361F7A9932E988CE /* Pods-UnitySwift.debug.xcconfig */;
+			baseConfigurationReference = 326D7A5EAB9C584F39CE2728 /* Pods-UnitySwift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -650,7 +654,7 @@
 		};
 		495B9FEF272D650800370A17 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 96092328D07D041C0CF3A7CF /* Pods-UnitySwift.release.xcconfig */;
+			baseConfigurationReference = B4E00EA406BC98E3368052D5 /* Pods-UnitySwift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -684,7 +688,7 @@
 		};
 		495B9FF1272D650800370A17 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EE1117BA8A0C08780D89D59D /* Pods-UnitySwiftTests.debug.xcconfig */;
+			baseConfigurationReference = 2251BFF1B76F2F9BC15D233F /* Pods-UnitySwiftTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -710,7 +714,7 @@
 		};
 		495B9FF2272D650800370A17 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 040A949A8440A8B72962EAE6 /* Pods-UnitySwiftTests.release.xcconfig */;
+			baseConfigurationReference = A55067091A520F7EA105D068 /* Pods-UnitySwiftTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -736,7 +740,7 @@
 		};
 		495B9FF4272D650800370A17 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FF188E4A462B0B4D2141FD7C /* Pods-UnitySwift-UnitySwiftUITests.debug.xcconfig */;
+			baseConfigurationReference = 5F7AF7E8958AE59FDD67373A /* Pods-UnitySwift-UnitySwiftUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -760,7 +764,7 @@
 		};
 		495B9FF5272D650800370A17 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 158A2123FABF568AC6CF4E0A /* Pods-UnitySwift-UnitySwiftUITests.release.xcconfig */;
+			baseConfigurationReference = C2E23730DECF85265EED7E7D /* Pods-UnitySwift-UnitySwiftUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

@@ -7,9 +7,9 @@
 	<key>NSCameraUsageDescription</key>
 	<string>This app needs to use the camera for AR features</string>
 	<key>SCCameraKitAPIToken</key>
-	<string>ADD-YOUR-API-TOKEN-HERE</string>
+	<string>eyJhbGciOiJIUzI1NiIsImtpZCI6IkNhbnZhc1MyU0hNQUNQcm9kIiwidHlwIjoiSldUIn0.eyJhdWQiOiJjYW52YXMtY2FudmFzYXBpIiwiaXNzIjoiY2FudmFzLXMyc3Rva2VuIiwibmJmIjoxNjY2MDIxNTA5LCJzdWIiOiIwMTM2MWYzZi1jNjVlLTQyYWYtYjQ4Yy00MzdlOTUyZTIyYmZ-U1RBR0lOR34zOTU2MmRiMi1mNzUzLTQzODgtYWY0MS05M2Q3YThhMzkyYWQifQ.QWXI1YRWGcLoj4_3gw1B2mUBEx4bomcbO1MnCIfhtJc</string>
 	<key>SCCameraKitClientID</key>
-	<string>ADD-YOUR-APP-ID-HERE</string>
+	<string>01361f3f-c65e-42af-b48c-437e952e22bf</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
