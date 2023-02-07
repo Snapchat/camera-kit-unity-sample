@@ -37,9 +37,9 @@ class MainUnityActivity : OverrideUnityActivity() {
     override fun invokeCameraKitWithGroup(
         lensGroupIds: Array<String>,
         startingLensId: String?,
-        cameraKitMode: Int
+        cameraKitMode: Int,
+        remoteApiSpecId: String?
         ) {
-        val remoteApiSpecId = "98821e72-0407-4125-be80-89a9c7933631";
         val cameraKitConfig = CameraActivity.Configuration.WithLenses(
             lensGroupIds,
             startingLensId
@@ -49,7 +49,7 @@ class MainUnityActivity : OverrideUnityActivity() {
 
     private fun invokeCameraKit(
         cameraKitMode: Int,
-        remoteApiSpecId: String,
+        remoteApiSpecId: String?,
         cameraKitConfig: CameraActivity.Configuration
     ) {
         val (requestCode) = if (cameraKitMode == 0) {
@@ -57,7 +57,7 @@ class MainUnityActivity : OverrideUnityActivity() {
         } else {
             REQUEST_CODE_CAMERA_KIT_CAPTURE
         }
-        UnityGenericApiService.Factory.supportedApiSpecIds = setOf(remoteApiSpecId)
+        remoteApiSpecId?.let { UnityGenericApiService.Factory.supportedApiSpecIds = setOf(it) }
         val intent = CustomCameraActivity.intentFor(this, cameraKitConfig, cameraKitMode);
         startActivityForResult(intent, requestCode)
     }
@@ -67,10 +67,9 @@ class MainUnityActivity : OverrideUnityActivity() {
         groupId: String,
         lensLaunchDataKeys: Array<String>?,
         lensLaunchDataValues: Array<String>?,
-        cameraKitMode: Int
+        cameraKitMode: Int,
+        remoteApiSpecId: String?
     ) {
-        val remoteApiSpecId = "98821e72-0407-4125-be80-89a9c7933631";
-
         val cameraKitConfig = CameraActivity.Configuration.WithLens(
             lensId,
             groupId,
@@ -104,19 +103,4 @@ class MainUnityActivity : OverrideUnityActivity() {
             }
         }
     }
-
-//    companion object {
-//        private var instance : MainUnityActivity? = null
-//
-//        @JvmStatic
-//        private fun setInstance(activity: MainUnityActivity) {
-//            instance = activity
-//        }
-//
-//        fun sendMessage(activity: MainUnityActivity) {
-//            if (instance != null) {
-//                UnityPlayer.UnitySendMessage("GameManager", "OnResponseFromLens", )
-//            }
-//        }
-//    }
 }

@@ -55,7 +55,8 @@ public class GameManager : MonoBehaviour
         };
         var lensId = "89203528-8b0d-41df-9cd2-cf754f393f75";
         var groupId = "42947d70-639e-4349-bd36-6ea9617060d6";
-        var config = CameraKitConfiguration.CreateWithSingleLens(lensId, groupId, launchData);
+        var remoteApiSpecId= "98821e72-0407-4125-be80-89a9c7933631";
+        var config = CameraKitConfiguration.CreateWithSingleLens(lensId, groupId, remoteApiSpecId, launchData);
         config.CameraMode = CameraKitConfiguration.CameraKitMode.Capture;
 
         // --- Invoking CameraKit ---
