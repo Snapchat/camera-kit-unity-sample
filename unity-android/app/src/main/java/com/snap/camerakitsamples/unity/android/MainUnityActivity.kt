@@ -3,8 +3,10 @@ package com.snap.camerakitsamples.unity.android
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import androidx.core.graphics.component1
 import com.snap.camerakit.support.app.CameraActivity
 import com.snap.samples.OverrideUnityActivity
+import com.unity3d.player.UnityPlayer
 
 private const val REQUEST_CODE_CAMERA_KIT_CAPTURE = 1
 private const val REQUEST_CODE_CAMERA_KIT_PLAY = 2
@@ -16,6 +18,7 @@ class MainUnityActivity : OverrideUnityActivity() {
         super.onCreate(savedInstanceState)
         val intent = intent
         handleIntent(intent)
+//        setInstance(this)
     }
 
     override fun onNewIntent(intent: Intent) {
@@ -35,18 +38,27 @@ class MainUnityActivity : OverrideUnityActivity() {
         lensGroupIds: Array<String>,
         startingLensId: String?,
         cameraKitMode: Int
-    ) {
+        ) {
+        val remoteApiSpecId = "98821e72-0407-4125-be80-89a9c7933631";
         val cameraKitConfig = CameraActivity.Configuration.WithLenses(
             lensGroupIds,
             startingLensId
         )
-        val (intent, requestCode) = if (cameraKitMode == 0) {
-            CameraActivity
-                .intentForPlayWith(this, cameraKitConfig) to REQUEST_CODE_CAMERA_KIT_PLAY
+        invokeCameraKit(cameraKitMode, remoteApiSpecId, cameraKitConfig)
+    }
+
+    private fun invokeCameraKit(
+        cameraKitMode: Int,
+        remoteApiSpecId: String,
+        cameraKitConfig: CameraActivity.Configuration
+    ) {
+        val (requestCode) = if (cameraKitMode == 0) {
+            REQUEST_CODE_CAMERA_KIT_PLAY
         } else {
-            CameraActivity
-                .intentForCaptureWith(this, cameraKitConfig) to REQUEST_CODE_CAMERA_KIT_CAPTURE
+            REQUEST_CODE_CAMERA_KIT_CAPTURE
         }
+        UnityGenericApiService.Factory.supportedApiSpecIds = setOf(remoteApiSpecId)
+        val intent = CustomCameraActivity.intentFor(this, cameraKitConfig, cameraKitMode);
         startActivityForResult(intent, requestCode)
     }
 
@@ -57,6 +69,8 @@ class MainUnityActivity : OverrideUnityActivity() {
         lensLaunchDataValues: Array<String>?,
         cameraKitMode: Int
     ) {
+        val remoteApiSpecId = "98821e72-0407-4125-be80-89a9c7933631";
+
         val cameraKitConfig = CameraActivity.Configuration.WithLens(
             lensId,
             groupId,
@@ -69,17 +83,11 @@ class MainUnityActivity : OverrideUnityActivity() {
                 }
             }
         )
-        val (intent, requestCode) = if (cameraKitMode == 0) {
-            CameraActivity
-                .intentForPlayWith(this, cameraKitConfig) to REQUEST_CODE_CAMERA_KIT_PLAY
-        } else {
-            CameraActivity
-                .intentForCaptureWith(this, cameraKitConfig) to REQUEST_CODE_CAMERA_KIT_CAPTURE
-        }
-        startActivityForResult(intent, requestCode)
+        invokeCameraKit(cameraKitMode, remoteApiSpecId, cameraKitConfig);
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent) {
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         when (requestCode) {
             REQUEST_CODE_CAMERA_KIT_PLAY -> {
                 val result = CameraActivity.Play.parseResult(resultCode, data)
@@ -96,4 +104,19 @@ class MainUnityActivity : OverrideUnityActivity() {
             }
         }
     }
+
+//    companion object {
+//        private var instance : MainUnityActivity? = null
+//
+//        @JvmStatic
+//        private fun setInstance(activity: MainUnityActivity) {
+//            instance = activity
+//        }
+//
+//        fun sendMessage(activity: MainUnityActivity) {
+//            if (instance != null) {
+//                UnityPlayer.UnitySendMessage("GameManager", "OnResponseFromLens", )
+//            }
+//        }
+//    }
 }

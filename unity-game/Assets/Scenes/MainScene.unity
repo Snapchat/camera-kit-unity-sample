@@ -1168,6 +1168,10 @@ MonoBehaviour:
   earth: {fileID: 1248885005}
   alienCounter: {fileID: 1244459982}
   pauseLabel: {fileID: 1924097494}
+  UFOSprite: {fileID: 21300000, guid: 539540f822cb5432195ddb2bc06c41d9, type: 3}
+  SatelliteSprite: {fileID: 21300000, guid: db035ebe0a87f4329abd75dea423c418, type: 3}
+  InvaderSprite: {fileID: 21300000, guid: 1e4b14422646a49898eda068400a6389, type: 3}
+  EnemyRenderer: {fileID: 1961876771}
 --- !u!4 &1956128590
 Transform:
   m_ObjectHideFlags: 0
