@@ -1,11 +1,9 @@
 # Camera Kit Unity Template
 This repository contains a template project that allows you to build a Unity application and leverage Snap's Camera Kit technology. It supports both iOS and Android builds. 
 
-<img src="readme-images/ck-demo.gif" width="200px">
-
 ## Requirements
 - Unity 2022.1.23f1
-- Camera Kit SDK 1.18.1 (compatible with Lens Studio v4.34)
+- Camera Kit SDK 1.19.1 (compatible with Lens Studio v4.36)
 - Android: 
   - Android Studio Bumblebee (Min SDK version 22, Target SDK version 33)
   - Gradle 7.2
@@ -82,16 +80,100 @@ Follow the steps on the [Camera Kit Documentation](https://docs.snap.com/snap-ki
 5. **Ready!** Now you're be ready to build your application. Building from XCode should be a familiar step since this is the default workflow for Unity developers. Simply remember that your main project is not Unity-iPhone anymore, it's UnitySwift instead.
 
 ## Camera Kit C# API
+
+### Invoking Camera Kit
 ```csharp
-// Configuring Camera Kit to Launch with a Single Lens, passing launch data
+// 1. Configure Camera Kit to Launch with a Single Lens, passing launch data
 var config = CameraKitConfiguration.CreateWithSingleLens(lensId, groupId, launchData);
 
-// Configuring Camera Kit to Launch with one or more Lens Groups
-var config = CameraKitConfiguration.CreateWithLensGroups(groupIds, initialiLensId);
-
-// Invoking Camera Kit
+// 2. Invoke Camera Kit
 CameraKit.InvokeCameraKit(config);
 ```
+
+
+### Getting Capture Result
+```csharp
+// 1. Assign a callback go the Remote API Reponse event
+void OnEnable()
+{
+   CameraKitHandler.OnCaptureFinished += OnCameraKitCaptured;
+}
+
+// 3. Handle the callback
+void OnCameraKitCaptured(string capturedFileUri)
+{
+   Debug.Log("Camera Kit captured. File " + capturedFileUri);
+}
+
+```
+
+## Optional: Getting a callback from your Lens
+
+With the setup above, you're able to invoke a Lens that receives data from your Unity logic. This could be sufficient for use cases like using Lenses for try-on, product display, or shareable moments. But if you want to get data back from your Lens into your C# logic, you'll need to make use of Remote APIs.
+
+Note: Remote APIs have this name because they were originally planned to communicate with remote services via HTTP calls. But on Camera Kit, what the Lens invokes as a Lens API actually triggers native code. So we are leveraging what the Lens understands as a Remote API invocation to trigger local logic in the app, and pass data back to Unity. No server-side logic will be required to callback to your Unity app.
+
+### Remote API Set up
+In order to get a callback from your app, you'll need to configure a Remote API. You can [read more about Remote APIs here](https://docs.snap.com/camera-kit/guides/tutorials/communicating-between-lenses-and-app)
+1. Open the API Dashboard here: [my-lenses.snapchat.com/apis](https://my-lenses.snapchat.com/apis)
+2. Select Add API, and fill out the information as below:
+   1. Target platforms: `CAMERA_KIT`
+   2. Visibility: `Private`
+   3. Host: `unity`
+   4. Security Scheme: `NONE`
+   5.  Click **Next**
+3. In the following screen, add an Endpoint with information as below:
+   1.  Reference ID: `unitySendData`
+   2.  Path: `sendData`
+   3.  Method: `POST`
+4. Click **Add Parameter**, and add a Parameter with information as below:
+   1. Name: `unityData`
+   2. Parameter Location: `HEADER`
+   3. External Name: `unitySendData`
+   4. Optional: `YES`
+   5. Constant: `NO`
+5. Check the confirmation box and click **Submit API**
+
+In the end, your API should look like this:
+
+<img src="readme-images/RemoteAPIconfig.png" width="400px">
+
+From this moment on, you have a **Remote API Spec ID** in the portal, which you will need for the steps below.
+
+### Invoking Remote API from Lens (Javascript)
+You can refer to our documentation portal for information on how to use Remote APIs from your Lens :  [Using API Spec in Lens Studio](https://docs.snap.com/camera-kit/guides/tutorials/communicating-between-lenses-and-app#using-api-spec-in-lens-studio)
+
+You can also refer to the Lens sample included in this repository for a working example on how to properly use this API. The relevant code is in [ShipSelector.js](lens/lens0/Public/ShipSelector.js)
+
+### Handling Remote API callback from Unity (C#)
+
+```csharp
+// 1. Modify this class to reflect your API Response
+public class SerializedResponseFromLens
+{
+   ...
+}
+
+// 2. Pass your Remote API Spec ID when invoking CameraKit
+var config = CameraKitConfiguration.CreateWithSingleLens(...);
+config.RemoteApiSpecId = "YOUR-REMOTE-API-SPEC-ID";
+CameraKitHandler.InvokeCameraKit(config);
+        
+// 3. Assign a callback go the Remote API Reponse event
+void OnEnable()
+{
+   CameraKitHandler.OnResponseFromLensEvent += OnCameraKitAPIResponse;
+}
+
+// 4. Handle the callback
+void OnCameraKitAPIResponse(SerializedResponseFromLens responseObj)
+{
+   ...
+}
+
+```
+
+
 
 
 ## Camera Kit Features supported
@@ -99,6 +181,6 @@ CameraKit.InvokeCameraKit(config);
 - [x] Define Lens that should be initially selected
 - [x] Open Camera Kit with a Single Lens
 - [x] Send Launch Params on a Single Lens
+- [x] Use Remote API to get data back from Lenses
 - [ ] Send Launch Params to all lenses in a collection of Lens Groups (WIP)
-- [ ] Use Remote API to get data back from Lenses (WIP)
 

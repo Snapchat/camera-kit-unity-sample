@@ -3,14 +3,14 @@
     "document_id": "MDTfI7l3mQeP3hnFsfke",
     "original_document_id": "bTE6b6GXZP6dl1LX6Bw0",
     "version": "29",
-    "lastChanged": "1669298411325",
+    "lastChanged": "1674587147034",
     "preview": "icon.png",
     "videoPreview": "preview.mp4",
     "videoPreviewUpdateTime": "",
     "isReadOnly": "false",
     "isAutoSaved": "true",
     "api_level": "public",
-    "public_api_user_data_access": "unrestricted",
+    "public_api_user_data_access": "restricted",
     "studioVersion": {
         "createdWith": {
             "type": "Public",
@@ -22,7 +22,7 @@
         "lastSavedWith": {
             "type": "Public",
             "major": "4",
-            "minor": "31",
+            "minor": "34",
             "patch": "0",
             "build": "0"
         }
@@ -36,6 +36,38 @@
                     ],
                     [
                         "ParamsManager"
+                    ],
+                    [
+                        "ShipSelector"
+                    ],
+                    [
+                        "Textures",
+                        "Invader Button@2x"
+                    ],
+                    [
+                        "Textures",
+                        "Satellite Button@2x"
+                    ],
+                    [
+                        "Textures",
+                        "Satellite@2x"
+                    ],
+                    [
+                        "Textures",
+                        "UFO Button@2x"
+                    ],
+                    [
+                        "Textures",
+                        "UFO@2x"
+                    ],
+                    [
+                        "Unity SDK - Generic API"
+                    ],
+                    [
+                        "Unity SDK - Generic API API"
+                    ],
+                    [
+                        "Unity SDK - Generic API API Module"
                     ],
                     [
                         "Unlit"
@@ -160,6 +192,86 @@
                     "sourceFilePath": "",
                     "additionalProperties": "",
                     "flags": "1"
+                },
+                {
+                    "resId": "25",
+                    "uid": "1674567957131675:17599",
+                    "name": "Files\/File30.jpg",
+                    "sourceFilePath": "",
+                    "additionalProperties": "",
+                    "flags": "1"
+                },
+                {
+                    "resId": "26",
+                    "uid": "1674568116313403:27971",
+                    "name": "",
+                    "sourceFilePath": "",
+                    "additionalProperties": "",
+                    "flags": "0"
+                },
+                {
+                    "resId": "27",
+                    "uid": "1674568116319637:27973",
+                    "name": "Files\/File34.js",
+                    "sourceFilePath": "",
+                    "additionalProperties": "",
+                    "flags": "1"
+                },
+                {
+                    "resId": "28",
+                    "uid": "1674568116325473:27979",
+                    "name": "Files\/File35.js",
+                    "sourceFilePath": "",
+                    "additionalProperties": "",
+                    "flags": "1"
+                },
+                {
+                    "resId": "30",
+                    "uid": "1674570924061498:198496",
+                    "name": "Files\/File39.png",
+                    "sourceFilePath": "",
+                    "additionalProperties": "",
+                    "flags": "1"
+                },
+                {
+                    "resId": "31",
+                    "uid": "1674570924141260:198554",
+                    "name": "Files\/File42.png",
+                    "sourceFilePath": "",
+                    "additionalProperties": "",
+                    "flags": "1"
+                },
+                {
+                    "resId": "32",
+                    "uid": "1674570924260920:198725",
+                    "name": "Files\/File45.png",
+                    "sourceFilePath": "",
+                    "additionalProperties": "",
+                    "flags": "1"
+                },
+                {
+                    "resId": "33",
+                    "uid": "1674570924335533:198737",
+                    "name": "Files\/File48.png",
+                    "sourceFilePath": "",
+                    "additionalProperties": "",
+                    "flags": "1"
+                },
+                {
+                    "resId": "34",
+                    "uid": "1674570924416266:198752",
+                    "name": "Files\/File51.png",
+                    "sourceFilePath": "",
+                    "additionalProperties": "",
+                    "flags": "1"
+                },
+                {
+                    "resId": "35",
+                    "uid": "1674571081166410:209688",
+                    "name": "Files\/File60.js",
+                    "sourceFilePath": "",
+                    "additionalProperties": "",
+                    "flags": "1"
                 }
             ],
             "MaterialUpdateManager": {
@@ -176,7 +288,78 @@
                     "uidsToFeatureNamesWithIntensity": ""
                 },
                 "ScreenTransform": {
-                    "uidData": "",
+                    "uidData": [
+                        {
+                            "k": "1674571284606677:222813",
+                            "v": {
+                                "isBasicMode": "true",
+                                "basicModeSetup": {
+                                    "fixWidth": "false",
+                                    "fixHeight": "false",
+                                    "attachBottom": "false",
+                                    "attachLeft": "false",
+                                    "attachRight": "false",
+                                    "attachTop": "false"
+                                }
+                            }
+                        },
+                        {
+                            "k": "1674571284621084:222940",
+                            "v": {
+                                "isBasicMode": "true",
+                                "basicModeSetup": {
+                                    "fixWidth": "false",
+                                    "fixHeight": "false",
+                                    "attachBottom": "true",
+                                    "attachLeft": "false",
+                                    "attachRight": "false",
+                                    "attachTop": "false"
+                                }
+                            }
+                        },
+                        {
+                            "k": "1674571422289181:249352",
+                            "v": {
+                                "isBasicMode": "true",
+                                "basicModeSetup": {
+                                    "fixWidth": "false",
+                                    "fixHeight": "false",
+                                    "attachBottom": "true",
+                                    "attachLeft": "false",
+                                    "attachRight": "false",
+                                    "attachTop": "false"
+                                }
+                            }
+                        },
+                        {
+                            "k": "1674571464013447:269969",
+                            "v": {
+                                "isBasicMode": "true",
+                                "basicModeSetup": {
+                                    "fixWidth": "false",
+                                    "fixHeight": "false",
+                                    "attachBottom": "true",
+                                    "attachLeft": "false",
+                                    "attachRight": "false",
+                                    "attachTop": "false"
+                                }
+                            }
+                        },
+                        {
+                            "k": "1674571496562077:281842",
+                            "v": {
+                                "isBasicMode": "true",
+                                "basicModeSetup": {
+                                    "fixWidth": "false",
+                                    "fixHeight": "false",
+                                    "attachBottom": "true",
+                                    "attachLeft": "true",
+                                    "attachRight": "false",
+                                    "attachTop": "false"
+                                }
+                            }
+                        }
+                    ],
                     "generalData": ""
                 }
             }
@@ -190,12 +373,19 @@
                 "4": "1666103863565284:7738",
                 "5": "1666104144341612:46255",
                 "6": "1669027649096606:38262",
-                "7": "1669027659875867:39978"
+                "7": "1669027659875867:39978",
+                "8": "1674568116327894:27983",
+                "9": "1674571284599312:222754",
+                "10": "1674571284606069:222811",
+                "11": "1674571284620920:222939",
+                "12": "1674571422274847:249115",
+                "13": "1674571463999554:269730",
+                "14": "1674571496561842:281841"
             }
         },
         "LayerComponent": {
             "nextLayerId": "2",
-            "showOrthographicLayer": "false",
+            "showOrthographicLayer": "true",
             "layersInfo": [
                 {
                     "layerId": "0",
@@ -240,11 +430,149 @@
                 {
                     "k": "29",
                     "v": "Files\/File29.lsmat"
+                },
+                {
+                    "k": "30",
+                    "v": "Files\/File30.pvr"
+                },
+                {
+                    "k": "31",
+                    "v": "Files\/File31.png"
+                },
+                {
+                    "k": "32",
+                    "v": "Files\/File32.png"
+                },
+                {
+                    "k": "33",
+                    "v": "Files\/File33.pvr"
+                },
+                {
+                    "k": "34",
+                    "v": "Files\/File34.js"
+                },
+                {
+                    "k": "35",
+                    "v": "Files\/File35.js"
+                },
+                {
+                    "k": "39",
+                    "v": "Files\/File39.pvr"
+                },
+                {
+                    "k": "40",
+                    "v": "Files\/File40.png"
+                },
+                {
+                    "k": "41",
+                    "v": "Files\/File41.png"
+                },
+                {
+                    "k": "42",
+                    "v": "Files\/File42.pvr"
+                },
+                {
+                    "k": "43",
+                    "v": "Files\/File43.png"
+                },
+                {
+                    "k": "44",
+                    "v": "Files\/File44.png"
+                },
+                {
+                    "k": "45",
+                    "v": "Files\/File45.pvr"
+                },
+                {
+                    "k": "46",
+                    "v": "Files\/File46.png"
+                },
+                {
+                    "k": "47",
+                    "v": "Files\/File47.png"
+                },
+                {
+                    "k": "48",
+                    "v": "Files\/File48.pvr"
+                },
+                {
+                    "k": "49",
+                    "v": "Files\/File49.png"
+                },
+                {
+                    "k": "50",
+                    "v": "Files\/File50.png"
+                },
+                {
+                    "k": "51",
+                    "v": "Files\/File51.pvr"
+                },
+                {
+                    "k": "52",
+                    "v": "Files\/File52.png"
+                },
+                {
+                    "k": "53",
+                    "v": "Files\/File53.png"
+                },
+                {
+                    "k": "55",
+                    "v": "Files\/File55.pvr"
+                },
+                {
+                    "k": "56",
+                    "v": "Files\/File56.pvr"
+                },
+                {
+                    "k": "57",
+                    "v": "Files\/File57.pvr"
+                },
+                {
+                    "k": "58",
+                    "v": "Files\/File58.pvr"
+                },
+                {
+                    "k": "59",
+                    "v": "Files\/File59.pvr"
+                },
+                {
+                    "k": "60",
+                    "v": "Files\/File60.js"
                 }
             ]
         },
         "RemoteApi::ModelManager": {
-            "api_specs": ""
+            "api_specs": [
+                {
+                    "k": "1674568116313403:27971",
+                    "v": {
+                        "api_spec_id": "98821e72-0407-4125-be80-89a9c7933631",
+                        "name": "Unity SDK - Generic API",
+                        "provider_name": "Camera Kit - Unity SDK",
+                        "description": "A generic API allowing for interchange of information between the Unity SDK and Lens Studio",
+                        "host": "unity",
+                        "documentation_url": "",
+                        "endpoints": [
+                            {
+                                "ref_id": "unitySendData",
+                                "metadata": {
+                                    "name": "",
+                                    "description": ""
+                                },
+                                "parameters": [
+                                    {
+                                        "name": "unityData",
+                                        "is_optional": "true"
+                                    }
+                                ]
+                            }
+                        ],
+                        "local_only": "false",
+                        "visibility": "private",
+                        "source": "developer"
+                    }
+                }
+            ]
         },
         "WorldComponent": {
             "sceneFile": "scene.scn",
@@ -269,6 +597,46 @@
                     {
                         "k": "988",
                         "v": "Unlit.lsmat"
+                    },
+                    {
+                        "k": "989",
+                        "v": "Textures"
+                    },
+                    {
+                        "k": "990",
+                        "v": "Textures\/Invader@2x.png"
+                    },
+                    {
+                        "k": "991",
+                        "v": "Unity SDK - Generic API API Module.js"
+                    },
+                    {
+                        "k": "992",
+                        "v": "Unity SDK - Generic API API.js"
+                    },
+                    {
+                        "k": "994",
+                        "v": "Textures\/UFO@2x.png"
+                    },
+                    {
+                        "k": "995",
+                        "v": "Textures\/Satellite@2x.png"
+                    },
+                    {
+                        "k": "996",
+                        "v": "Textures\/Invader Button@2x.png"
+                    },
+                    {
+                        "k": "997",
+                        "v": "Textures\/UFO Button@2x.png"
+                    },
+                    {
+                        "k": "998",
+                        "v": "Textures\/Satellite Button@2x.png"
+                    },
+                    {
+                        "k": "999",
+                        "v": "ShipSelector.js"
                     }
                 ],
                 "hashes": [
@@ -330,19 +698,123 @@
                     },
                     {
                         "k": "988",
-                        "v": "bed906d8f058398ea2eca3676bf6595b"
+                        "v": "32e3cb0c02bce2c4ac1371d7a4652452"
+                    },
+                    {
+                        "k": "990",
+                        "v": "f03e5788149021b169317d8cc79dee81"
+                    },
+                    {
+                        "k": "991",
+                        "v": "f9f89e25efde98c01b26ca277d331cdc"
+                    },
+                    {
+                        "k": "992",
+                        "v": "4c5343e2b9385cecf530dd51b859d2d6"
+                    },
+                    {
+                        "k": "993",
+                        "v": "f03e5788149021b169317d8cc79dee81"
+                    },
+                    {
+                        "k": "994",
+                        "v": "417fe4026e80d137e1713c4735133032"
+                    },
+                    {
+                        "k": "995",
+                        "v": "6b12e8234df86dd1c0c36f4f3b83b979"
+                    },
+                    {
+                        "k": "996",
+                        "v": "980a4f114b0406c051ddfef215ac6237"
+                    },
+                    {
+                        "k": "997",
+                        "v": "b33c9af0ed2989470fd2a8aa9da8415c"
+                    },
+                    {
+                        "k": "998",
+                        "v": "9d64bd6850517f4b172269e782af2d91"
+                    },
+                    {
+                        "k": "999",
+                        "v": "62e03300cde9e8c8ab452b7604a6fc0b"
                     }
                 ],
                 "publicState": {
                     "tree": {
                         "isFolder": "true",
-                        "lastModified": "2022-11-24T13:59:53",
+                        "lastModified": "2023-01-24T19:05:44",
                         "name": "Public",
-                        "hash": "7def1ec62a113a325e02d29e77b53254",
+                        "hash": "8fc3f1af1e045807f66ff34af73edaf0",
                         "children": [
                             {
+                                "isFolder": "true",
+                                "lastModified": "2023-01-24T16:21:54",
+                                "name": "Textures",
+                                "hash": "e7e76118d8e9efe68b167d2375a1cb16",
+                                "children": [
+                                    {
+                                        "isFolder": "false",
+                                        "lastModified": "2023-01-24T14:35:10",
+                                        "name": "Invader Button@2x.png",
+                                        "hash": "980a4f114b0406c051ddfef215ac6237",
+                                        "children": ""
+                                    },
+                                    {
+                                        "isFolder": "false",
+                                        "lastModified": "2023-01-24T14:35:10",
+                                        "name": "Satellite Button@2x.png",
+                                        "hash": "9d64bd6850517f4b172269e782af2d91",
+                                        "children": ""
+                                    },
+                                    {
+                                        "isFolder": "false",
+                                        "lastModified": "2023-01-24T14:35:10",
+                                        "name": "UFO@2x.png",
+                                        "hash": "417fe4026e80d137e1713c4735133032",
+                                        "children": ""
+                                    },
+                                    {
+                                        "isFolder": "false",
+                                        "lastModified": "2023-01-24T13:45:57",
+                                        "name": "Invader@2x.png",
+                                        "hash": "f03e5788149021b169317d8cc79dee81",
+                                        "children": ""
+                                    },
+                                    {
+                                        "isFolder": "false",
+                                        "lastModified": "2023-01-24T14:35:10",
+                                        "name": "Satellite@2x.png",
+                                        "hash": "6b12e8234df86dd1c0c36f4f3b83b979",
+                                        "children": ""
+                                    },
+                                    {
+                                        "isFolder": "false",
+                                        "lastModified": "2023-01-24T14:35:10",
+                                        "name": "UFO Button@2x.png",
+                                        "hash": "b33c9af0ed2989470fd2a8aa9da8415c",
+                                        "children": ""
+                                    },
+                                    {
+                                        "isFolder": "false",
+                                        "lastModified": "2023-01-24T13:45:57",
+                                        "name": "folder.lock",
+                                        "hash": "d41d8cd98f00b204e9800998ecf8427e",
+                                        "children": ""
+                                    }
+                                ]
+                            },
+                            {
                                 "isFolder": "false",
-                                "lastModified": "2022-11-24T13:59:53",
+                                "lastModified": "2023-01-24T17:19:08",
+                                "name": "Unity SDK - Generic API API.js",
+                                "hash": "4c5343e2b9385cecf530dd51b859d2d6",
+                                "children": ""
+                            },
+                            {
+                                "isFolder": "false",
+                                "lastModified": "2022-12-01T15:16:23",
                                 "name": "ParamsManager.js",
                                 "hash": "6b4ade6621aaa55f8faca1bc68d55c73",
                                 "children": ""
@@ -356,9 +828,23 @@
                             },
                             {
                                 "isFolder": "false",
-                                "lastModified": "2022-11-21T19:15:54",
+                                "lastModified": "2023-01-24T19:05:44",
+                                "name": "Unity SDK - Generic API API Module.js",
+                                "hash": "f9f89e25efde98c01b26ca277d331cdc",
+                                "children": ""
+                            },
+                            {
+                                "isFolder": "false",
+                                "lastModified": "2023-01-24T17:20:17",
+                                "name": "ShipSelector.js",
+                                "hash": "62e03300cde9e8c8ab452b7604a6fc0b",
+                                "children": ""
+                            },
+                            {
+                                "isFolder": "false",
+                                "lastModified": "2023-01-24T13:45:56",
                                 "name": "Unlit.lsmat",
-                                "hash": "bed906d8f058398ea2eca3676bf6595b",
+                                "hash": "32e3cb0c02bce2c4ac1371d7a4652452",
                                 "children": ""
                             },
                             {
@@ -472,19 +958,182 @@
                         "publicId": "988",
                         "source": "",
                         "additional": ""
+                    },
+                    {
+                        "name": "Textures",
+                        "type": "0",
+                        "subtype": "-1",
+                        "resourceId": "-1",
+                        "dependency": "0",
+                        "hidden": "false",
+                        "uid": "-1:-1",
+                        "fileId": "18446744073709551615",
+                        "originalId": "18446744073709551615",
+                        "publicId": "989",
+                        "source": "",
+                        "additional": "",
+                        "resources": [
+                            {
+                                "name": "Invader@2x",
+                                "type": "1",
+                                "subtype": "9",
+                                "resourceId": "25",
+                                "dependency": "0",
+                                "hidden": "false",
+                                "uid": "1674567957131675:17599",
+                                "fileId": "30",
+                                "originalId": "31",
+                                "publicId": "990",
+                                "source": "\/Users\/eneto\/Library\/Caches\/Snap\/Lens Studio\/temp\/StudioeUHKwiHBSYWA\/\/system\/\/emergencyFiles\/emergencyJpg.jpg",
+                                "additional": {
+                                    "originHash": "f03e5788149021b169317d8cc79dee81"
+                                }
+                            },
+                            {
+                                "name": "UFO@2x",
+                                "type": "1",
+                                "subtype": "9",
+                                "resourceId": "30",
+                                "dependency": "0",
+                                "hidden": "false",
+                                "uid": "1674570924061498:198496",
+                                "fileId": "39",
+                                "originalId": "40",
+                                "publicId": "994",
+                                "source": "\/Users\/eneto\/Downloads\/UFO@2x.png",
+                                "additional": {
+                                    "originHash": "417fe4026e80d137e1713c4735133032"
+                                }
+                            },
+                            {
+                                "name": "Satellite@2x",
+                                "type": "1",
+                                "subtype": "9",
+                                "resourceId": "31",
+                                "dependency": "0",
+                                "hidden": "false",
+                                "uid": "1674570924141260:198554",
+                                "fileId": "42",
+                                "originalId": "43",
+                                "publicId": "995",
+                                "source": "\/Users\/eneto\/Downloads\/Satellite@2x.png",
+                                "additional": {
+                                    "originHash": "6b12e8234df86dd1c0c36f4f3b83b979"
+                                }
+                            },
+                            {
+                                "name": "Invader Button@2x",
+                                "type": "1",
+                                "subtype": "9",
+                                "resourceId": "32",
+                                "dependency": "0",
+                                "hidden": "false",
+                                "uid": "1674570924260920:198725",
+                                "fileId": "45",
+                                "originalId": "46",
+                                "publicId": "996",
+                                "source": "\/Users\/eneto\/Downloads\/Invader Button@2x.png",
+                                "additional": {
+                                    "originHash": "980a4f114b0406c051ddfef215ac6237"
+                                }
+                            },
+                            {
+                                "name": "UFO Button@2x",
+                                "type": "1",
+                                "subtype": "9",
+                                "resourceId": "33",
+                                "dependency": "0",
+                                "hidden": "false",
+                                "uid": "1674570924335533:198737",
+                                "fileId": "48",
+                                "originalId": "49",
+                                "publicId": "997",
+                                "source": "\/Users\/eneto\/Downloads\/UFO Button@2x.png",
+                                "additional": {
+                                    "originHash": "b33c9af0ed2989470fd2a8aa9da8415c"
+                                }
+                            },
+                            {
+                                "name": "Satellite Button@2x",
+                                "type": "1",
+                                "subtype": "9",
+                                "resourceId": "34",
+                                "dependency": "0",
+                                "hidden": "false",
+                                "uid": "1674570924416266:198752",
+                                "fileId": "51",
+                                "originalId": "52",
+                                "publicId": "998",
+                                "source": "\/Users\/eneto\/Downloads\/Satellite Button@2x.png",
+                                "additional": {
+                                    "originHash": "9d64bd6850517f4b172269e782af2d91"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Unity SDK - Generic API",
+                        "type": "27",
+                        "subtype": "0",
+                        "resourceId": "26",
+                        "dependency": "0",
+                        "hidden": "false",
+                        "uid": "1674568116313403:27971",
+                        "fileId": "18446744073709551615",
+                        "originalId": "18446744073709551615",
+                        "publicId": "18446744073709551615",
+                        "source": "",
+                        "additional": ""
+                    },
+                    {
+                        "name": "Unity SDK - Generic API API Module",
+                        "type": "4",
+                        "subtype": "0",
+                        "resourceId": "27",
+                        "dependency": "0",
+                        "hidden": "false",
+                        "uid": "1674568116319637:27973",
+                        "fileId": "34",
+                        "originalId": "18446744073709551615",
+                        "publicId": "991",
+                        "source": "\/Users\/eneto\/Library\/Caches\/Snap\/Lens Studio\/temp\/PNFzNXrIByIH.js",
+                        "additional": ""
+                    },
+                    {
+                        "name": "Unity SDK - Generic API API",
+                        "type": "4",
+                        "subtype": "0",
+                        "resourceId": "28",
+                        "dependency": "0",
+                        "hidden": "false",
+                        "uid": "1674568116325473:27979",
+                        "fileId": "35",
+                        "originalId": "18446744073709551615",
+                        "publicId": "992",
+                        "source": "\/Users\/eneto\/Library\/Caches\/Snap\/Lens Studio\/temp\/pjlbUcRlREGa.js",
+                        "additional": ""
+                    },
+                    {
+                        "name": "ShipSelector",
+                        "type": "4",
+                        "subtype": "0",
+                        "resourceId": "35",
+                        "dependency": "0",
+                        "hidden": "false",
+                        "uid": "1674571081166410:209688",
+                        "fileId": "60",
+                        "originalId": "18446744073709551615",
+                        "publicId": "999",
+                        "source": "\/Users\/eneto\/Library\/Caches\/Snap\/Lens Studio\/temp\/StudioPyAshodVMykr\/\/system\/\/emergencyFiles\/emergencyJs.js",
+                        "additional": ""
                     }
                 ]
             }
         },
         "InspectorController": {
             "selection": {
-                "resources": [
-                    {
-                        "uid": "1666104031825555:30794",
-                        "path_list": [
-                            "ParamsManager"
-                        ]
-                    }
+                "objects": [
+                    "1674571496561842:281841"
                 ]
             }
         },
@@ -560,11 +1209,182 @@
                             }
                         ]
                     }
+                },
+                {
+                    "k": "1674567957131675:17599",
+                    "v": {
+                        "infos": {
+                            "originalSize": "289561",
+                            "compressedSize": "63232",
+                            "originalRAM": "2402816",
+                            "compressedRAM": "301184",
+                            "extension": "png",
+                            "settings": {
+                                "isCompressed": "true",
+                                "level": "2",
+                                "type": "1",
+                                "subtype": "9"
+                            }
+                        },
+                        "uncompressed_file": "32",
+                        "compressed_files": [
+                            {
+                                "k": {
+                                    "uncompressed_hash": "f03e5788149021b169317d8cc79dee81",
+                                    "settings_hash": "2049"
+                                },
+                                "v": "33"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "k": "1674570924061498:198496",
+                    "v": {
+                        "infos": {
+                            "originalSize": "297161",
+                            "compressedSize": "73429",
+                            "originalRAM": "2402816",
+                            "compressedRAM": "301184",
+                            "extension": "png",
+                            "settings": {
+                                "isCompressed": "true",
+                                "level": "2",
+                                "type": "1",
+                                "subtype": "9"
+                            }
+                        },
+                        "uncompressed_file": "41",
+                        "compressed_files": [
+                            {
+                                "k": {
+                                    "uncompressed_hash": "417fe4026e80d137e1713c4735133032",
+                                    "settings_hash": "2049"
+                                },
+                                "v": "55"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "k": "1674570924141260:198554",
+                    "v": {
+                        "infos": {
+                            "originalSize": "716144",
+                            "compressedSize": "193146",
+                            "originalRAM": "2402816",
+                            "compressedRAM": "301184",
+                            "extension": "png",
+                            "settings": {
+                                "isCompressed": "true",
+                                "level": "2",
+                                "type": "1",
+                                "subtype": "9"
+                            }
+                        },
+                        "uncompressed_file": "44",
+                        "compressed_files": [
+                            {
+                                "k": {
+                                    "uncompressed_hash": "6b12e8234df86dd1c0c36f4f3b83b979",
+                                    "settings_hash": "2049"
+                                },
+                                "v": "56"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "k": "1674570924260920:198725",
+                    "v": {
+                        "infos": {
+                            "originalSize": "174294",
+                            "compressedSize": "38688",
+                            "originalRAM": "2402816",
+                            "compressedRAM": "301184",
+                            "extension": "png",
+                            "settings": {
+                                "isCompressed": "true",
+                                "level": "2",
+                                "type": "1",
+                                "subtype": "9"
+                            }
+                        },
+                        "uncompressed_file": "47",
+                        "compressed_files": [
+                            {
+                                "k": {
+                                    "uncompressed_hash": "980a4f114b0406c051ddfef215ac6237",
+                                    "settings_hash": "2049"
+                                },
+                                "v": "57"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "k": "1674570924335533:198737",
+                    "v": {
+                        "infos": {
+                            "originalSize": "196021",
+                            "compressedSize": "50052",
+                            "originalRAM": "2402816",
+                            "compressedRAM": "301184",
+                            "extension": "png",
+                            "settings": {
+                                "isCompressed": "true",
+                                "level": "2",
+                                "type": "1",
+                                "subtype": "9"
+                            }
+                        },
+                        "uncompressed_file": "50",
+                        "compressed_files": [
+                            {
+                                "k": {
+                                    "uncompressed_hash": "b33c9af0ed2989470fd2a8aa9da8415c",
+                                    "settings_hash": "2049"
+                                },
+                                "v": "58"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "k": "1674570924416266:198752",
+                    "v": {
+                        "infos": {
+                            "originalSize": "275157",
+                            "compressedSize": "68206",
+                            "originalRAM": "2402816",
+                            "compressedRAM": "301184",
+                            "extension": "png",
+                            "settings": {
+                                "isCompressed": "true",
+                                "level": "2",
+                                "type": "1",
+                                "subtype": "9"
+                            }
+                        },
+                        "uncompressed_file": "53",
+                        "compressed_files": [
+                            {
+                                "k": {
+                                    "uncompressed_hash": "9d64bd6850517f4b172269e782af2d91",
+                                    "settings_hash": "2049"
+                                },
+                                "v": "59"
+                            }
+                        ]
+                    }
                 }
             ]
         },
         "AssetImportController": {
             "itemUidToID": ""
+        },
+        "DigitalGoodsController": {
+            "digital_goods": ""
         }
     },
     "templateName": "Empty Project",

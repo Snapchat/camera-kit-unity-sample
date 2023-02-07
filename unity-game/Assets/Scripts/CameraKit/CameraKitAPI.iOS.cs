@@ -15,7 +15,8 @@ public class CameraKitAPIiOS : ICameraKit
     static extern void invokeCameraKitWithLensGroups(
         IntPtr lensGroupIds, int lensGroupIdsLength,
         string startingLensId,
-        int cameraKitMode
+        int cameraKitMode,
+        string remoteApiSpecId
     );
 
     [DllImport("__Internal")]
@@ -24,7 +25,8 @@ public class CameraKitAPIiOS : ICameraKit
         string groupId,
         IntPtr lensLaunchDataKeys, int lensLaunchDataKeysLength,
         IntPtr lensLaunchDataValues, int lensLaunchDataValuesLength,        
-        int cameraKitMode
+        int cameraKitMode,
+        string remoteApiSpecId
     );
 
     public void InvokeCameraKit(CameraKitConfiguration config) {
@@ -36,11 +38,13 @@ public class CameraKitAPIiOS : ICameraKit
             var lensGroupIds = castConfig.LensGroupIDs.ToArray();
             var unsafeptr_LensGroupIds = marshalStringArray(lensGroupIds);
             var startingLensId = castConfig.StartWithSelectedLensID;
+            var remoteApiSpecId = castConfig.RemoteAPISpecId;
 
             invokeCameraKitWithLensGroups(
                 unsafeptr_LensGroupIds, lensGroupIds.Length,
                 startingLensId,
-                (int) cameraMode
+                (int) cameraMode,
+                remoteApiSpecId
             );
 
             CleanUpNativeStrArray(unsafeptr_LensGroupIds, lensGroupIds.Length);
@@ -51,6 +55,8 @@ public class CameraKitAPIiOS : ICameraKit
             var castConfig = (CameraKitConfiguration.LensSingleConfig)config;
             var lensId = castConfig.LensID;
             var groupId = castConfig.GroupID;
+            var remoteApiSpecId = castConfig.RemoteAPISpecId;
+
             string[] launchDataKeys = new string[0];
             string[] launchDataValues = new string[0];
             if (castConfig.LensLaunchData != null) {
@@ -65,7 +71,8 @@ public class CameraKitAPIiOS : ICameraKit
                 groupId,
                 unsafeptr_DataKeys, launchDataKeys.Length,
                 unsafeptr_DataValues, launchDataValues.Length,
-                (int)cameraMode
+                (int)cameraMode,
+                remoteApiSpecId
             );
 
             CleanUpNativeStrArray(unsafeptr_DataKeys, launchDataKeys.Length);

@@ -3,8 +3,10 @@ package com.snap.camerakitsamples.unity.android
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import androidx.core.graphics.component1
 import com.snap.camerakit.support.app.CameraActivity
 import com.snap.samples.OverrideUnityActivity
+import com.unity3d.player.UnityPlayer
 
 private const val REQUEST_CODE_CAMERA_KIT_CAPTURE = 1
 private const val REQUEST_CODE_CAMERA_KIT_PLAY = 2
@@ -34,19 +36,24 @@ class MainUnityActivity : OverrideUnityActivity() {
     override fun invokeCameraKitWithGroup(
         lensGroupIds: Array<String>,
         startingLensId: String?,
-        cameraKitMode: Int
-    ) {
+        cameraKitMode: Int,
+        remoteApiSpecId: String?
+        ) {
         val cameraKitConfig = CameraActivity.Configuration.WithLenses(
             lensGroupIds,
             startingLensId
         )
-        val (intent, requestCode) = if (cameraKitMode == 0) {
-            CameraActivity
-                .intentForPlayWith(this, cameraKitConfig) to REQUEST_CODE_CAMERA_KIT_PLAY
-        } else {
-            CameraActivity
-                .intentForCaptureWith(this, cameraKitConfig) to REQUEST_CODE_CAMERA_KIT_CAPTURE
-        }
+        invokeCameraKit(cameraKitMode, remoteApiSpecId, cameraKitConfig)
+    }
+
+    private fun invokeCameraKit(
+        cameraKitMode: Int,
+        remoteApiSpecId: String?,
+        cameraKitConfig: CameraActivity.Configuration
+    ) {
+        val requestCode = if (cameraKitMode == 0) REQUEST_CODE_CAMERA_KIT_PLAY else REQUEST_CODE_CAMERA_KIT_CAPTURE
+        remoteApiSpecId?.let { UnityGenericApiService.Factory.supportedApiSpecIds = setOf(it) }
+        val intent = CustomCameraActivity.intentFor(this, cameraKitConfig, cameraKitMode);
         startActivityForResult(intent, requestCode)
     }
 
@@ -55,7 +62,8 @@ class MainUnityActivity : OverrideUnityActivity() {
         groupId: String,
         lensLaunchDataKeys: Array<String>?,
         lensLaunchDataValues: Array<String>?,
-        cameraKitMode: Int
+        cameraKitMode: Int,
+        remoteApiSpecId: String?
     ) {
         val cameraKitConfig = CameraActivity.Configuration.WithLens(
             lensId,
@@ -69,24 +77,24 @@ class MainUnityActivity : OverrideUnityActivity() {
                 }
             }
         )
-        val (intent, requestCode) = if (cameraKitMode == 0) {
-            CameraActivity
-                .intentForPlayWith(this, cameraKitConfig) to REQUEST_CODE_CAMERA_KIT_PLAY
-        } else {
-            CameraActivity
-                .intentForCaptureWith(this, cameraKitConfig) to REQUEST_CODE_CAMERA_KIT_CAPTURE
-        }
-        startActivityForResult(intent, requestCode)
+        invokeCameraKit(cameraKitMode, remoteApiSpecId, cameraKitConfig);
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent) {
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         when (requestCode) {
             REQUEST_CODE_CAMERA_KIT_PLAY -> {
                 val result = CameraActivity.Play.parseResult(resultCode, data)
+                UnityPlayer.UnitySendMessage("CameraKitHandler", "OnCameraKitDismissed", "")
                 Log.d(TAG, "Got Camera Kit play result: $result")
             }
             REQUEST_CODE_CAMERA_KIT_CAPTURE -> {
                 val result = CameraActivity.Capture.parseResult(resultCode, data)
+                if (data == null) {
+                    UnityPlayer.UnitySendMessage("CameraKitHandler", "OnCameraKitDismissed", "")
+                } else {
+                    UnityPlayer.UnitySendMessage("CameraKitHandler", "OnCameraKitCaptureResult", data?.data.toString())
+                }
                 Log.d(TAG, "Got Camera Kit capture result: $result")
             }
             else -> {

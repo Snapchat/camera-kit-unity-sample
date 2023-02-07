@@ -12,6 +12,7 @@ public abstract class CameraKitConfiguration
     }
 
     public CameraKitMode CameraMode;
+    public string RemoteAPISpecId;
 
     public class LensGroupsConfig : CameraKitConfiguration {        
         public List<string> LensGroupIDs;
@@ -24,20 +25,22 @@ public abstract class CameraKitConfiguration
         public Dictionary<string, string> LensLaunchData;
     }
 
-    public static LensGroupsConfig CreateWithLensGroups(List<string> lensGroupIds, string startingLensId)
+    public static LensGroupsConfig CreateWithLensGroups(List<string> lensGroupIds, string startingLensId, string remoteApiSpecId)
     {
         var config = new LensGroupsConfig();
         config.LensGroupIDs = lensGroupIds;
         config.StartWithSelectedLensID = startingLensId;
+        config.RemoteAPISpecId = remoteApiSpecId;
         return config;
     }
 
-    public static LensSingleConfig CreateWithSingleLens(string lensId, string groupID, Dictionary<string, string> lensLaunchData) 
+    public static LensSingleConfig CreateWithSingleLens(string lensId, string groupID, string remoteApiSpecId, Dictionary<string, string> lensLaunchData) 
     {
         var config = new LensSingleConfig();
         config.LensLaunchData = lensLaunchData;
         config.LensID = lensId;
         config.GroupID = groupID;
+        config.RemoteAPISpecId = remoteApiSpecId;
         return config;
     }   
 

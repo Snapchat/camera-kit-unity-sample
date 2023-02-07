@@ -16,8 +16,9 @@ public class CameraKitAPIAndroid : ICameraKit
             var lensGroupIds = castConfig.LensGroupIDs.ToArray();
             var startingLensId = castConfig.StartWithSelectedLensID;
             var cameraMode = castConfig.CameraMode;
+            var remoteApiSpecId = castConfig.RemoteAPISpecId;
 
-            callNativeJavaMethod("invokeCameraKitWithGroup", lensGroupIds, startingLensId, (int) cameraMode);
+            callNativeJavaMethod("invokeCameraKitWithGroup", lensGroupIds, startingLensId, (int) cameraMode, remoteApiSpecId);
         }
         else if (config.GetType() == typeof(CameraKitConfiguration.LensSingleConfig)) {
             var castConfig = (CameraKitConfiguration.LensSingleConfig)config;
@@ -26,12 +27,14 @@ public class CameraKitAPIAndroid : ICameraKit
             var groupId = castConfig.GroupID;
             string[] launchDataKeys = new string[0];
             string[] launchDataValues = new string[0];
+            var remoteApiSpecId = castConfig.RemoteAPISpecId;
+
             if (castConfig.LensLaunchData != null) {
                 launchDataKeys = new List<string>(castConfig.LensLaunchData.Keys).ToArray();
                 launchDataValues = new List<string>(castConfig.LensLaunchData.Values).ToArray();
             }
             
-            callNativeJavaMethod("invokeCameraKitWithSingleLens", startingLensId, groupId, launchDataKeys, launchDataValues, (int) cameraMode);
+            callNativeJavaMethod("invokeCameraKitWithSingleLens", startingLensId, groupId, launchDataKeys, launchDataValues, (int) cameraMode, remoteApiSpecId);
         }
     }
 
