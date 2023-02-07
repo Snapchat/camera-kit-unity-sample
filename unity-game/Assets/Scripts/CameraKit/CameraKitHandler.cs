@@ -8,6 +8,8 @@ public class CameraKitHandler : MonoBehaviour
     private static ICameraKit _nativeBridge;
 
 	public static event Action<SerializedResponseFromLens> OnResponseFromLensEvent;
+	public static event Action OnCameraDismissed;
+	public static event Action<string> OnCaptureFinished;
 	
 	static CameraKitHandler()
 		{
@@ -47,14 +49,24 @@ public class CameraKitHandler : MonoBehaviour
         	_nativeBridge.InvokeCameraKit(config);		
 		}
 
-		// This is a public method on a GameObject that is active at runtime
-		// So it is invoked from native code via UnitySendMessage with the method name and GameObject name
-		// It's important not to change the GameObject's name, otherwise this method will not get called
+		//--- Camera Kit Message Handlers ---
+		// These are are invoked from native code via UnitySendMessage with the method name and GameObject name
+		// It's important not to change the GameObject's name (CameraKitHandler), otherwise these methods will not get called.
 
         public void OnResponseFromLens(string responseJson)
         {
             var response = JsonUtility.FromJson<SerializedResponseFromLens>(responseJson);
 			OnResponseFromLensEvent?.Invoke(response);
         }
+
+		public void OnCameraKitDismissed() 
+		{
+			OnCameraDismissed?.Invoke();
+		}
+
+		public void OnCameraKitCaptureResult(string capturedFileUriPath) 
+		{
+			OnCaptureFinished?.Invoke(capturedFileUriPath);
+		}
 
 }

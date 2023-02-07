@@ -35,12 +35,16 @@ public class GameManager : MonoBehaviour
     void OnEnable()
     {   
         // --- Listening to response callback from CameraKit's Remote APIs  ---
-        CameraKitHandler.OnResponseFromLensEvent += OnCameraKitResponse;
+        CameraKitHandler.OnResponseFromLensEvent += OnCameraKitAPIResponse;
+        CameraKitHandler.OnCaptureFinished += OnCameraKitCaptured;
+        CameraKitHandler.OnCameraDismissed += OnCameraKitDismissed;
     }
 
     void OnDisable() 
     {
-        CameraKitHandler.OnResponseFromLensEvent -= OnCameraKitResponse;
+        CameraKitHandler.OnResponseFromLensEvent -= OnCameraKitAPIResponse;
+        CameraKitHandler.OnCaptureFinished -= OnCameraKitCaptured;
+        CameraKitHandler.OnCameraDismissed -= OnCameraKitDismissed;
     }
 
     private void InvokeCameraKit()
@@ -63,15 +67,25 @@ public class GameManager : MonoBehaviour
         CameraKitHandler.InvokeCameraKit(config);
     }
 
-    private void OnCameraKitResponse(SerializedResponseFromLens responseObj)
+    private void OnCameraKitAPIResponse(SerializedResponseFromLens responseObj)
     {
         // --- Obtaining a response from CameraKit ---
         // In order to pass data from the Lens to the Unity project, your Lens needs to use Remote APIs
         // The source code for the lens used in this project is part of the Github project. 
         // Please check the ShipSelector.js script in the lens included in this repository.
         // More info: https://docs.snap.com/camera-kit/guides/tutorials/communicating-between-lenses-and-app#lens-studio-best-practices-for-remote-apis  
-        Debug.Log("Ship selected: "+ responseObj.shipSelected);
+        Debug.Log("Camera Kit API Response. Ship selected: "+ responseObj.shipSelected);
         ChangeSpaceshipAppearance(responseObj.shipSelected);
+    }
+
+    private void OnCameraKitCaptured(string capturedFileUri)
+    {
+        Debug.Log("Camera Kit captured. File " + capturedFileUri);
+    }
+
+    private void OnCameraKitDismissed()
+    {
+        Debug.Log("Camera Kit dismissed.");
     }
 
     public void AlienHit() {
@@ -80,8 +94,6 @@ public class GameManager : MonoBehaviour
     }
 
     public void SpaceshipLanded() {
-        Debug.Log("Spaceship Landed");
-
         InvokeCameraKit();
     }
 

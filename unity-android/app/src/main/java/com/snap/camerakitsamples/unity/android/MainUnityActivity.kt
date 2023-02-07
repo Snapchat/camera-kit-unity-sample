@@ -18,7 +18,6 @@ class MainUnityActivity : OverrideUnityActivity() {
         super.onCreate(savedInstanceState)
         val intent = intent
         handleIntent(intent)
-//        setInstance(this)
     }
 
     override fun onNewIntent(intent: Intent) {
@@ -52,11 +51,7 @@ class MainUnityActivity : OverrideUnityActivity() {
         remoteApiSpecId: String?,
         cameraKitConfig: CameraActivity.Configuration
     ) {
-        val (requestCode) = if (cameraKitMode == 0) {
-            REQUEST_CODE_CAMERA_KIT_PLAY
-        } else {
-            REQUEST_CODE_CAMERA_KIT_CAPTURE
-        }
+        val requestCode = if (cameraKitMode == 0) REQUEST_CODE_CAMERA_KIT_PLAY else REQUEST_CODE_CAMERA_KIT_CAPTURE
         remoteApiSpecId?.let { UnityGenericApiService.Factory.supportedApiSpecIds = setOf(it) }
         val intent = CustomCameraActivity.intentFor(this, cameraKitConfig, cameraKitMode);
         startActivityForResult(intent, requestCode)
@@ -90,10 +85,16 @@ class MainUnityActivity : OverrideUnityActivity() {
         when (requestCode) {
             REQUEST_CODE_CAMERA_KIT_PLAY -> {
                 val result = CameraActivity.Play.parseResult(resultCode, data)
+                UnityPlayer.UnitySendMessage("CameraKitHandler", "OnCameraKitDismissed", "")
                 Log.d(TAG, "Got Camera Kit play result: $result")
             }
             REQUEST_CODE_CAMERA_KIT_CAPTURE -> {
                 val result = CameraActivity.Capture.parseResult(resultCode, data)
+                if (data == null) {
+                    UnityPlayer.UnitySendMessage("CameraKitHandler", "OnCameraKitDismissed", "")
+                } else {
+                    UnityPlayer.UnitySendMessage("CameraKitHandler", "OnCameraKitCaptureResult", data?.data.toString())
+                }
                 Log.d(TAG, "Got Camera Kit capture result: $result")
             }
             else -> {
