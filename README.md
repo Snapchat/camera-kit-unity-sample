@@ -82,15 +82,24 @@ Follow the steps on the [Camera Kit Documentation](https://docs.snap.com/snap-ki
 5. **Ready!** Now you're be ready to build your application. Building from XCode should be a familiar step since this is the default workflow for Unity developers. Simply remember that your main project is not Unity-iPhone anymore, it's UnitySwift instead.
 
 ## Camera Kit C# API
+
+### Invoking Camera Kit
 ```csharp
 // Configuring Camera Kit to Launch with a Single Lens, passing launch data
 var config = CameraKitConfiguration.CreateWithSingleLens(lensId, groupId, launchData);
 
-// Configuring Camera Kit to Launch with one or more Lens Groups
-var config = CameraKitConfiguration.CreateWithLensGroups(groupIds, initialiLensId);
-
 // Invoking Camera Kit
 CameraKit.InvokeCameraKit(config);
+```
+
+### Using Remote APIs
+```csharp
+
+```
+
+### Getting Capture Result
+```csharp
+
 ```
 
 
@@ -99,6 +108,6 @@ CameraKit.InvokeCameraKit(config);
 - [x] Define Lens that should be initially selected
 - [x] Open Camera Kit with a Single Lens
 - [x] Send Launch Params on a Single Lens
+- [x] Use Remote API to get data back from Lenses
 - [ ] Send Launch Params to all lenses in a collection of Lens Groups (WIP)
-- [ ] Use Remote API to get data back from Lenses (WIP)
 
