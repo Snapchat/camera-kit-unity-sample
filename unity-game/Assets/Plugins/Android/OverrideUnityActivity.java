@@ -1,4 +1,5 @@
-package com.snap.samples;
+package com.snap.camerakit.plugin;
+
 import android.os.Bundle;
 import android.widget.FrameLayout;
 

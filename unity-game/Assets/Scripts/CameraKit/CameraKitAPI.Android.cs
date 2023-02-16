@@ -45,7 +45,7 @@ public class CameraKitAPIAndroid : ICameraKit
 
     private void callNativeJavaMethod(string methodName, params object[] args)
     {
-        AndroidJavaClass jc = new AndroidJavaClass("com.snap.samples.OverrideUnityActivity");
+        AndroidJavaClass jc = new AndroidJavaClass("com.snap.camerakit.plugin.OverrideUnityActivity");
         AndroidJavaObject overrideActivity = jc.GetStatic<AndroidJavaObject>("instance");
         overrideActivity.Call(methodName, args);        
     }
