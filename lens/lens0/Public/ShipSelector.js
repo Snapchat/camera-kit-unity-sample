@@ -1,6 +1,6 @@
 // -----JS CODE-----
 // @input Component.Image targetImage
-// @input Asset.Texture targetTexture
+// @input Asset.RemoteReferenceAsset targetTexture
 // @input string shipName
 // @input Component.ScriptComponent unityApi
 
@@ -8,7 +8,13 @@ var event = script.createEvent("TouchEndEvent");
 
 event.bind(function(eventData)
 {
-    script.targetImage.mainPass.baseTex = script.targetTexture;
+    print("tap!")
+    script.targetTexture.downloadAsset(function (asset) { // download success
+        script.targetImage.mainPass.baseTex = asset;
+    }, 
+    function () { // download failure
+        print("Texture failed to download");
+    });
     var dataToSend = {
         isEmpty : false,
         shipSelected : script.shipName

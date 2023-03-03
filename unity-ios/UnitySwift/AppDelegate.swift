@@ -136,18 +136,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UnityFrameworkListener {
                 argv: CommandLine.unsafeArgv,
                 appLaunchOpts: appLaunchOpts
             )
-
-            attachUnityView()
         }
-    }
-
-    func attachUnityView() {
-        guard let unityRootView = unityFramework?.appController()?.rootView else {
-            return
-        }
-
-        unitySampleView = UnityUIView(frame: UIScreen.main.bounds)
-        unityRootView.addSubview(unitySampleView)
     }
 
     func unloadButtonTouched(_ sender: UIButton) {
@@ -247,8 +236,17 @@ extension AppDelegate: NativeCallsProtocol {
             cameraViewController?.modalPresentationStyle = .formSheet
         }
 
-        unityFramework?.pause(true)
-        unityFramework?.appController().rootViewController.present(cameraViewController!, animated: true)
+//        unityFramework?.pause(true)
+//        unityFramework?.appController().rootViewController.present(cameraViewController!, animated: true)
+//        unityFramework?.appController().rootViewController.add(cameraViewController!, frame: UIScreen.main.bounds)
+        
+        if let nativeWindow = window {
+//            unityFramework?.appController().rootView.alpha = 0.5;
+            unityFramework?.appController().rootView.backgroundColor = UIColor.black.withAlphaComponent(0.0);
+            nativeWindow.rootViewController?.add(cameraViewController!, frame: UIScreen.main.bounds)
+        }
+        
+        
         if cameraController.initialLens != nil {
             cameraController.cameraKit.lenses.processor?.apply(
                 lens: cameraController.initialLens!,
@@ -359,5 +357,25 @@ class UnityCameraController: CameraController {
             }
         }
         return nil
+    }
+}
+
+@nonobjc extension UIViewController {
+    func add(_ child: UIViewController, frame: CGRect? = nil) {
+        addChild(child)
+
+        if let frame = frame {
+            child.view.frame = frame
+        }
+
+        view.insertSubview(child.view, at: 0)
+        child.didMove(toParent: self)
+    }
+    
+
+    func remove() {
+        willMove(toParent: nil)
+        view.removeFromSuperview()
+        removeFromParent()
     }
 }

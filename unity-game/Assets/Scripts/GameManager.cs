@@ -57,7 +57,8 @@ public class GameManager : MonoBehaviour
         var launchData = new Dictionary<string, string>() {
             { "shotsOnInvader", _shotsOnAlien.ToString() }
         };
-        var lensId = "89203528-8b0d-41df-9cd2-cf754f393f75";
+        // var lensId = "89203528-8b0d-41df-9cd2-cf754f393f75";
+        var lensId = "bbb0bd20-1598-47bb-9f4e-886b0186df7c";
         var groupId = "42947d70-639e-4349-bd36-6ea9617060d6";
         var remoteApiSpecId= "98821e72-0407-4125-be80-89a9c7933631";
         var config = CameraKitConfiguration.CreateWithSingleLens(lensId, groupId, remoteApiSpecId, launchData);

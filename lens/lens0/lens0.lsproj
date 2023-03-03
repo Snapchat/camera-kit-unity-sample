@@ -3,7 +3,7 @@
     "document_id": "MDTfI7l3mQeP3hnFsfke",
     "original_document_id": "bTE6b6GXZP6dl1LX6Bw0",
     "version": "29",
-    "lastChanged": "1674587147034",
+    "lastChanged": "1677767575696",
     "preview": "icon.png",
     "videoPreview": "preview.mp4",
     "videoPreviewUpdateTime": "",
@@ -35,7 +35,13 @@
                         "Invader@2x"
                     ],
                     [
+                        "Invader@2x 2"
+                    ],
+                    [
                         "ParamsManager"
+                    ],
+                    [
+                        "Satellite@2x"
                     ],
                     [
                         "ShipSelector"
@@ -58,6 +64,9 @@
                     ],
                     [
                         "Textures",
+                        "UFO@2x"
+                    ],
+                    [
                         "UFO@2x"
                     ],
                     [
@@ -87,7 +96,7 @@
             "hints": [
                 ""
             ],
-            "lens": "Dynamic Alien v2",
+            "lens": "Dynamic Alien v3",
             "applicability": "1",
             "lens_descriptors": "",
             "Spectacles2021UseAllowed": "false"
@@ -272,6 +281,30 @@
                     "sourceFilePath": "",
                     "additionalProperties": "",
                     "flags": "1"
+                },
+                {
+                    "resId": "36",
+                    "uid": "1677758963579298:15524",
+                    "name": "",
+                    "sourceFilePath": "",
+                    "additionalProperties": "",
+                    "flags": "0"
+                },
+                {
+                    "resId": "37",
+                    "uid": "1677758983427956:17490",
+                    "name": "",
+                    "sourceFilePath": "",
+                    "additionalProperties": "",
+                    "flags": "0"
+                },
+                {
+                    "resId": "38",
+                    "uid": "1677759048473881:22176",
+                    "name": "",
+                    "sourceFilePath": "",
+                    "additionalProperties": "",
+                    "flags": "0"
                 }
             ],
             "MaterialUpdateManager": {
@@ -706,7 +739,7 @@
                     },
                     {
                         "k": "991",
-                        "v": "f9f89e25efde98c01b26ca277d331cdc"
+                        "v": "bc4466cdc97080d70a8722e85d13961b"
                     },
                     {
                         "k": "992",
@@ -738,67 +771,67 @@
                     },
                     {
                         "k": "999",
-                        "v": "62e03300cde9e8c8ab452b7604a6fc0b"
+                        "v": "e5e94b34685535d3eecd7ae55639b0a1"
                     }
                 ],
                 "publicState": {
                     "tree": {
                         "isFolder": "true",
-                        "lastModified": "2023-01-24T19:05:44",
+                        "lastModified": "2023-03-02T14:32:37",
                         "name": "Public",
-                        "hash": "8fc3f1af1e045807f66ff34af73edaf0",
+                        "hash": "6cbc173854e668f330f424d2d3c75c5a",
                         "children": [
                             {
                                 "isFolder": "true",
-                                "lastModified": "2023-01-24T16:21:54",
+                                "lastModified": "2023-02-07T21:55:52",
                                 "name": "Textures",
                                 "hash": "e7e76118d8e9efe68b167d2375a1cb16",
                                 "children": [
                                     {
                                         "isFolder": "false",
-                                        "lastModified": "2023-01-24T14:35:10",
+                                        "lastModified": "2023-02-07T21:55:52",
                                         "name": "Invader Button@2x.png",
                                         "hash": "980a4f114b0406c051ddfef215ac6237",
                                         "children": ""
                                     },
                                     {
                                         "isFolder": "false",
-                                        "lastModified": "2023-01-24T14:35:10",
+                                        "lastModified": "2023-02-07T21:55:52",
                                         "name": "Satellite Button@2x.png",
                                         "hash": "9d64bd6850517f4b172269e782af2d91",
                                         "children": ""
                                     },
                                     {
                                         "isFolder": "false",
-                                        "lastModified": "2023-01-24T14:35:10",
+                                        "lastModified": "2023-02-07T21:55:52",
                                         "name": "UFO@2x.png",
                                         "hash": "417fe4026e80d137e1713c4735133032",
                                         "children": ""
                                     },
                                     {
                                         "isFolder": "false",
-                                        "lastModified": "2023-01-24T13:45:57",
+                                        "lastModified": "2023-02-07T21:55:52",
                                         "name": "Invader@2x.png",
                                         "hash": "f03e5788149021b169317d8cc79dee81",
                                         "children": ""
                                     },
                                     {
                                         "isFolder": "false",
-                                        "lastModified": "2023-01-24T14:35:10",
+                                        "lastModified": "2023-02-07T21:55:52",
                                         "name": "Satellite@2x.png",
                                         "hash": "6b12e8234df86dd1c0c36f4f3b83b979",
                                         "children": ""
                                     },
                                     {
                                         "isFolder": "false",
-                                        "lastModified": "2023-01-24T14:35:10",
+                                        "lastModified": "2023-02-07T21:55:52",
                                         "name": "UFO Button@2x.png",
                                         "hash": "b33c9af0ed2989470fd2a8aa9da8415c",
                                         "children": ""
                                     },
                                     {
                                         "isFolder": "false",
-                                        "lastModified": "2023-01-24T13:45:57",
+                                        "lastModified": "2023-02-07T21:55:52",
                                         "name": "folder.lock",
                                         "hash": "d41d8cd98f00b204e9800998ecf8427e",
                                         "children": ""
@@ -807,7 +840,7 @@
                             },
                             {
                                 "isFolder": "false",
-                                "lastModified": "2023-01-24T17:19:08",
+                                "lastModified": "2023-02-07T21:55:52",
                                 "name": "Unity SDK - Generic API API.js",
                                 "hash": "4c5343e2b9385cecf530dd51b859d2d6",
                                 "children": ""
@@ -828,21 +861,21 @@
                             },
                             {
                                 "isFolder": "false",
-                                "lastModified": "2023-01-24T19:05:44",
+                                "lastModified": "2023-03-02T14:32:37",
                                 "name": "Unity SDK - Generic API API Module.js",
-                                "hash": "f9f89e25efde98c01b26ca277d331cdc",
+                                "hash": "bc4466cdc97080d70a8722e85d13961b",
                                 "children": ""
                             },
                             {
                                 "isFolder": "false",
-                                "lastModified": "2023-01-24T17:20:17",
+                                "lastModified": "2023-03-02T12:28:49",
                                 "name": "ShipSelector.js",
-                                "hash": "62e03300cde9e8c8ab452b7604a6fc0b",
+                                "hash": "e5e94b34685535d3eecd7ae55639b0a1",
                                 "children": ""
                             },
                             {
                                 "isFolder": "false",
-                                "lastModified": "2023-01-24T13:45:56",
+                                "lastModified": "2023-02-07T21:55:52",
                                 "name": "Unlit.lsmat",
                                 "hash": "32e3cb0c02bce2c4ac1371d7a4652452",
                                 "children": ""
@@ -1126,14 +1159,61 @@
                         "publicId": "999",
                         "source": "\/Users\/eneto\/Library\/Caches\/Snap\/Lens Studio\/temp\/StudioPyAshodVMykr\/\/system\/\/emergencyFiles\/emergencyJs.js",
                         "additional": ""
+                    },
+                    {
+                        "name": "UFO@2x",
+                        "type": "44",
+                        "subtype": "0",
+                        "resourceId": "36",
+                        "dependency": "0",
+                        "hidden": "false",
+                        "uid": "1677758963579298:15524",
+                        "fileId": "18446744073709551615",
+                        "originalId": "18446744073709551615",
+                        "publicId": "18446744073709551615",
+                        "source": "",
+                        "additional": ""
+                    },
+                    {
+                        "name": "Satellite@2x",
+                        "type": "44",
+                        "subtype": "0",
+                        "resourceId": "37",
+                        "dependency": "0",
+                        "hidden": "false",
+                        "uid": "1677758983427956:17490",
+                        "fileId": "18446744073709551615",
+                        "originalId": "18446744073709551615",
+                        "publicId": "18446744073709551615",
+                        "source": "",
+                        "additional": ""
+                    },
+                    {
+                        "name": "Invader@2x 2",
+                        "type": "44",
+                        "subtype": "0",
+                        "resourceId": "38",
+                        "dependency": "0",
+                        "hidden": "false",
+                        "uid": "1677759048473881:22176",
+                        "fileId": "18446744073709551615",
+                        "originalId": "18446744073709551615",
+                        "publicId": "18446744073709551615",
+                        "source": "",
+                        "additional": ""
                     }
                 ]
             }
         },
         "InspectorController": {
             "selection": {
-                "objects": [
-                    "1674571496561842:281841"
+                "resources": [
+                    {
+                        "uid": "1674568116313403:27971",
+                        "path_list": [
+                            "Unity SDK - Generic API"
+                        ]
+                    }
                 ]
             }
         },

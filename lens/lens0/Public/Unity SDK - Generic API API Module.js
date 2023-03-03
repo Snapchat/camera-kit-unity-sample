@@ -32,7 +32,7 @@ function ApiModule(remoteServiceModule) {
 }
 
 
-ApiModule.prototype. = function(unityData, cb) {
+ApiModule.prototype.unitySendData = function(unityData, cb) {
     var req = global.RemoteApiRequest.create();
     req.endpoint = "unitySendData";
     req.parameters = {
