@@ -8,6 +8,9 @@
 @required
 - (void) invokeCameraKitWithLensGroupIds:(NSArray<NSString*>*)lensGroupIDs withStartingLensId:(NSString*) lensId withCamerMode:(NSNumber*) cameraMode withRemoteAPISpecId:(NSString*) remoteApiSpecId;
 - (void) invokeCameraKitWithSingleLens: (NSString*) lensId withGroupID: (NSString*) groupId withLaunchData:(NSDictionary<NSString*,NSString*>*) launchData withCamerMode:(NSNumber*) cameraMode withRemoteAPISpecId:(NSString*) remoteApiSpecId;
+- (void) updateLensParams: (NSString*) lensId withLaunchData:(NSDictionary<NSString*,NSString*>*) launchData;
+- (void) dismissCameraKit;
+
 @end
 
 __attribute__ ((visibility("default")))

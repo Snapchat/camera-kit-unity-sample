@@ -10,6 +10,9 @@ public class CameraKitHandler : MonoBehaviour
 	public static event Action<SerializedResponseFromLens> OnResponseFromLensEvent;
 	public static event Action OnCameraDismissed;
 	public static event Action<string> OnCaptureFinished;
+	public static event Action OnLensRequestedUpdatedState;
+	
+	public static bool IsCameraKitShowing {get; private set;}
 	
 	static CameraKitHandler()
 		{
@@ -47,6 +50,7 @@ public class CameraKitHandler : MonoBehaviour
 		{
 			_nativeBridge.Validate(config);
         	_nativeBridge.InvokeCameraKit(config);		
+			IsCameraKitShowing = true;
 		}
 
 		//--- Camera Kit Message Handlers ---
@@ -67,6 +71,21 @@ public class CameraKitHandler : MonoBehaviour
 		public void OnCameraKitCaptureResult(string capturedFileUriPath) 
 		{
 			OnCaptureFinished?.Invoke(capturedFileUriPath);
+		}
+
+		public static void DismissCameraKit()
+		{
+			_nativeBridge.DismissCameraKit();
+			IsCameraKitShowing = false;
+		}
+
+		public void OnLensRequestedState() {
+			OnLensRequestedUpdatedState?.Invoke();
+		}
+
+		public static void UpdateLensState(Dictionary<string, string> lensParams)
+		{
+			_nativeBridge.UpdateLensState(lensParams);
 		}
 
 }

@@ -1,15 +1,26 @@
 // -----JS CODE-----
-// @input Component.Image targetImage
-// @input Asset.RemoteReferenceAsset targetTexture
-// @input string shipName
+// @input Asset.RemoteReferenceAsset leftTargetTexture
+// @input string leftShipName
+// @input Asset.RemoteReferenceAsset rightTargetTexture
+// @input string rightShipName
 // @input Component.ScriptComponent unityApi
+// @input Component.Image targetImage
 
-var event = script.createEvent("TouchEndEvent");
-
-event.bind(function(eventData)
+script.api.onLeft = function()
 {
-    print("tap!")
-    script.targetTexture.downloadAsset(function (asset) { // download success
+    print("onLeft")
+    shipSelected(script.leftTargetTexture, script.leftShipName);
+}
+
+script.api.onRight = function()
+{
+    print("onRight")
+    shipSelected(script.rightTargetTexture, script.rightShipName);
+}
+
+function shipSelected(remoteAsset, shipName) {
+    print("ship selected! " + shipName)
+    remoteAsset.downloadAsset(function (asset) { // download success
         script.targetImage.mainPass.baseTex = asset;
     }, 
     function () { // download failure
@@ -17,7 +28,7 @@ event.bind(function(eventData)
     });
     var dataToSend = {
         isEmpty : false,
-        shipSelected : script.shipName
+        shipSelected : shipName
     };
-    script.unityApi.api.callUnity(dataToSend);
-});
+    script.unityApi.api.callUnity(dataToSend);   
+}

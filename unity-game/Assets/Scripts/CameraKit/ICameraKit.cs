@@ -7,4 +7,8 @@ public interface ICameraKit
     void InvokeCameraKit(CameraKitConfiguration config);
 
     void Validate(CameraKitConfiguration config);
+
+    void UpdateLensState(Dictionary<string, string> lensState);
+
+    void DismissCameraKit();
 }

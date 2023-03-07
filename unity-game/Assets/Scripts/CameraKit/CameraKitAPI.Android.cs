@@ -43,6 +43,16 @@ public class CameraKitAPIAndroid : ICameraKit
 
     }
 
+    public void UpdateLensState(Dictionary<string, string> lensParams)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void DismissCameraKit()
+    {
+        throw new System.NotImplementedException();
+    }
+
     private void callNativeJavaMethod(string methodName, params object[] args)
     {
         AndroidJavaClass jc = new AndroidJavaClass("com.snap.camerakit.plugin.OverrideUnityActivity");

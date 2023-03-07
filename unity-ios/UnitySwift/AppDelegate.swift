@@ -9,6 +9,7 @@ import SCSDKCameraKit
 import SCSDKCameraKitReferenceUI
 import UIKit
 import UnityFramework
+import CoreLocation
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate, UnityFrameworkListener {
@@ -20,6 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UnityFrameworkListener {
     var appLaunchOpts: [UIApplication.LaunchOptionsKey: Any]?
     var unitySampleView: UnityUIView!
     var didQuit: Bool = false
+    var locationManager: CLLocationManager?
+
 
     @objc public var unityFramework: UnityFramework?
 
@@ -212,6 +215,7 @@ extension AppDelegate: NativeCallsProtocol {
         withRemoteAPISpecId remoteApiSpecId: String!
     ) {
         cameraController.launchDataFromUnity = launchData
+        cameraController.groupIDs = [groupId]
         cameraController.cameraKit.lenses.repository.addObserver(self, specificLensID: lensId, inGroupID: groupId)
         invokeCameraKit()
     }
@@ -235,13 +239,8 @@ extension AppDelegate: NativeCallsProtocol {
             cameraViewController?.appOrientationDelegate = self
             cameraViewController?.modalPresentationStyle = .formSheet
         }
-
-//        unityFramework?.pause(true)
-//        unityFramework?.appController().rootViewController.present(cameraViewController!, animated: true)
-//        unityFramework?.appController().rootViewController.add(cameraViewController!, frame: UIScreen.main.bounds)
         
         if let nativeWindow = window {
-//            unityFramework?.appController().rootView.alpha = 0.5;
             unityFramework?.appController().rootView.backgroundColor = UIColor.black.withAlphaComponent(0.0);
             nativeWindow.rootViewController?.add(cameraViewController!, frame: UIScreen.main.bounds)
         }
@@ -253,6 +252,15 @@ extension AppDelegate: NativeCallsProtocol {
                 launchData: cameraController.buildLaunchData()
             )
         }
+    }
+    
+    func updateLensState(_ launchData: [String : String]!) {
+        LensRequestStateApiServiceCall.appState = launchData;
+    }
+    
+    func dismissCameraKit() {
+        cameraController.cameraKit.stop();
+        cameraViewController?.remove();
     }
 }
 
@@ -282,7 +290,19 @@ extension AppDelegate: LensRepositorySpecificObserver, LensRepositoryGroupObserv
     }
 }
 
-class UnityCameraViewController: CameraViewController{
+extension AppDelegate: CLLocationManagerDelegate {
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        manager.requestWhenInUseAuthorization()
+    }
+}
+
+
+
+
+class UnityCameraViewController: CameraViewController  {
+    
+
+    
     override open func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         if isBeingDismissed {
@@ -291,6 +311,7 @@ class UnityCameraViewController: CameraViewController{
             appDelegate.unityFramework?.sendMessageToGO(withName: "CameraKitHandler", functionName: "OnCameraKitDismissed", message:"")
         }
     }
+    
 }
     
 class UnityCameraController: CameraController {
@@ -368,7 +389,8 @@ class UnityCameraController: CameraController {
             child.view.frame = frame
         }
 
-        view.insertSubview(child.view, at: 0)
+        view.insertSubview(child.view, at: 1)
+//        view.addSubview(child.view)
         child.didMove(toParent: self)
     }
     

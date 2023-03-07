@@ -29,6 +29,15 @@ public class CameraKitAPIiOS : ICameraKit
         string remoteApiSpecId
     );
 
+    [DllImport("__Internal")]
+    static extern void updateLensState(
+        IntPtr lensLaunchDataKeys, int lensLaunchDataKeysLength,
+        IntPtr lensLaunchDataValues, int lensLaunchDataValuesLength
+    );
+    
+    [DllImport("__Internal")]
+    static extern void dismissCameraKit();
+
     public void InvokeCameraKit(CameraKitConfiguration config) {
         var cameraMode = config.CameraMode;
 
@@ -47,7 +56,7 @@ public class CameraKitAPIiOS : ICameraKit
                 remoteApiSpecId
             );
 
-            CleanUpNativeStrArray(unsafeptr_LensGroupIds, lensGroupIds.Length);
+            cleanUpNativeStrArray(unsafeptr_LensGroupIds, lensGroupIds.Length);
 
         } 
         // Invoking Camera Kit with Single Lens
@@ -75,8 +84,8 @@ public class CameraKitAPIiOS : ICameraKit
                 remoteApiSpecId
             );
 
-            CleanUpNativeStrArray(unsafeptr_DataKeys, launchDataKeys.Length);
-            CleanUpNativeStrArray(unsafeptr_DataValues, launchDataKeys.Length);
+            cleanUpNativeStrArray(unsafeptr_DataKeys, launchDataKeys.Length);
+            cleanUpNativeStrArray(unsafeptr_DataValues, launchDataKeys.Length);
         }
     }
 
@@ -84,6 +93,31 @@ public class CameraKitAPIiOS : ICameraKit
         if (config.CameraMode == CameraKitConfiguration.CameraKitMode.Play) {
             Debug.Log("CameraKit: iOS does not support CameraKitMode.Play");
         }
+    }
+
+    public void UpdateLensState(Dictionary<string, string> lensParams)
+    {
+        string[] launchDataKeys = new string[0];
+        string[] launchDataValues = new string[0];
+        if (lensParams != null) {
+            launchDataKeys = new List<string>(lensParams.Keys).ToArray();
+            launchDataValues = new List<string>(lensParams.Values).ToArray();
+        }
+        var unsafeptr_DataKeys = marshalStringArray(launchDataKeys);
+        var unsafeptr_DataValues = marshalStringArray(launchDataValues);
+
+        updateLensState(
+            unsafeptr_DataKeys, launchDataKeys.Length,
+            unsafeptr_DataValues, launchDataValues.Length
+        );
+
+        cleanUpNativeStrArray(unsafeptr_DataKeys, launchDataKeys.Length);
+        cleanUpNativeStrArray(unsafeptr_DataValues, launchDataKeys.Length);
+    }
+
+    public void DismissCameraKit()
+    {
+        dismissCameraKit();
     }
 
     private IntPtr marshalStringArray(string[] strArr) {
@@ -98,7 +132,7 @@ public class CameraKitAPIiOS : ICameraKit
         return dataNative;
     }
 
-    private static void CleanUpNativeStrArray(IntPtr dataPtr, int arraySize)
+    private static void cleanUpNativeStrArray(IntPtr dataPtr, int arraySize)
     {
         var dataPtrArray = new IntPtr[arraySize];
         Marshal.Copy(dataPtr, dataPtrArray, 0, arraySize);

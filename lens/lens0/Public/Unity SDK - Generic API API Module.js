@@ -45,4 +45,15 @@ ApiModule.prototype.unitySendData = function(unityData, cb) {
     });
 };
 
+ApiModule.prototype.unityRequestState = function(cb) {
+    var req = global.RemoteApiRequest.create();
+    req.endpoint = "unityRequestState";
+    req.parameters = {};
+    this.remoteServiceModule.performApiRequest(req, function(response) {
+        if(cb) {
+            handleAPIResponse(response, cb);
+        }
+    });
+};
+
 module.exports.ApiModule = ApiModule;

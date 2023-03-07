@@ -30,15 +30,52 @@ class UnityRemoteApiService: NSObject, LensRemoteApiService {
             DispatchQueue.main.async {
                 let appDelegate = UIApplication.shared.delegate as! AppDelegate
                 appDelegate.unityFramework?.sendMessageToGO(withName: "CameraKitHandler", functionName: "OnResponseFromLens", message: request.parameters["unityData"])
-            }            
+            }
+            return IgnoredRemoteApiServiceCall()
+        } else if (request.endpointId == "unityRequestState") {
+            DispatchQueue.main.async {
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                appDelegate.unityFramework?.sendMessageToGO(withName: "CameraKitHandler", functionName: "OnLensRequestedState", message: "")
+            }
+            return LensRequestStateApiServiceCall(responseHandler: responseHandler, request: request)
         }
-        return IgnoredRemoteApiServiceCall()
+        else {
+            return IgnoredRemoteApiServiceCall()
+        }
+        
     }
 }
 
 class IgnoredRemoteApiServiceCall: NSObject, LensRemoteApiServiceCall {
     let status: LensRemoteApiServiceCallStatus = .ignored
 
+    func cancelRequest() {
+        // no-op
+    }
+}
+
+class LensRequestStateApiServiceCall: NSObject, LensRemoteApiServiceCall {
+    public static var appState: [String:String] = [:]
+    let status: LensRemoteApiServiceCallStatus = .answered
+    
+    init(responseHandler: @escaping (LensRemoteApiServiceCallStatus, LensRemoteApiResponseProtocol) -> Void, request: LensRemoteApiRequest)
+    {
+        super.init()
+        responseHandler(status, LensRequestStateApiServiceCall.buildResponse(request: request))
+    }
+    
+    private static func buildResponse(request: LensRemoteApiRequest) -> LensRemoteApiResponse {
+        let body = try? NSKeyedArchiver.archivedData(withRootObject: LensRequestStateApiServiceCall.appState, requiringSecureCoding: false)
+        let apiResponse = LensRemoteApiResponse (
+            request: request,
+            status: .success,
+            metadata: [:],
+            body: body
+        )
+        
+        return apiResponse;
+    }
+    
     func cancelRequest() {
         // no-op
     }
