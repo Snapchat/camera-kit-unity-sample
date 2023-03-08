@@ -214,6 +214,7 @@ extension AppDelegate: NativeCallsProtocol {
         withCamerMode cameraMode: NSNumber!,
         withRemoteAPISpecId remoteApiSpecId: String!
     ) {
+        cameraController = UnityCameraController()
         cameraController.launchDataFromUnity = launchData
         cameraController.groupIDs = [groupId]
         cameraController.cameraKit.lenses.repository.addObserver(self, specificLensID: lensId, inGroupID: groupId)
@@ -225,6 +226,7 @@ extension AppDelegate: NativeCallsProtocol {
         withCamerMode cameraMode: NSNumber!,
         withRemoteAPISpecId remoteApiSpecId: String!
     ) {
+        cameraController = UnityCameraController()
         cameraController.groupIDs = lensGroupIDs
         cameraController.startingLensId = lensId
         for groupid in lensGroupIDs {
@@ -234,7 +236,6 @@ extension AppDelegate: NativeCallsProtocol {
     }
 
     func invokeCameraKit() {
-        cameraController = UnityCameraController()
         cameraViewController = UnityCameraViewController(cameraController: cameraController)
         cameraViewController?.appOrientationDelegate = self
         cameraViewController?.modalPresentationStyle = .formSheet
