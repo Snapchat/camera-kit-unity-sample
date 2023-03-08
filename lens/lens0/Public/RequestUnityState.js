@@ -20,12 +20,12 @@ if (global.timeSinceLastUpdate >= script.timeBetweenUpdatesInSeconds) {
 
 function requestUpdatedStateFromUnity() 
 {
-    print("requesting update from unity")
+    //requesting update from unity
     ApiModule.unityRequestState(function(err, response) {
         if (err) {
             print("error")
         } else {
-            print("success. got updated state from unity")
+            // success. got updated state from unity
             if (response.shotsOnInvader) {
                 script.stateText.text = "Invader was hit " + response.shotsOnInvader + " times";
             }

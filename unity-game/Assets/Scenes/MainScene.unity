@@ -297,8 +297,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278246911
+  m_fontColor: {r: 1, g: 0.8666667, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -651,8 +651,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278246911
+  m_fontColor: {r: 1, g: 0.8666667, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -777,8 +777,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9a6a9f56b26bd4a98941cd2e9c955306, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 943f4aa541f1c4250a0e48c8a82a7874, type: 3}
+  m_Color: {r: 0.9150943, g: 0.9150943, b: 0.9150943, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1165,13 +1165,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 1961876770}
-  earth: {fileID: 1248885005}
+  earthBoundingBox: {fileID: 1248885005}
   alienCounter: {fileID: 1244459982}
   pauseLabel: {fileID: 1924097494}
   UFOSprite: {fileID: 21300000, guid: 539540f822cb5432195ddb2bc06c41d9, type: 3}
   SatelliteSprite: {fileID: 21300000, guid: db035ebe0a87f4329abd75dea423c418, type: 3}
   InvaderSprite: {fileID: 21300000, guid: 1e4b14422646a49898eda068400a6389, type: 3}
   EnemyRenderer: {fileID: 1961876771}
+  planetSpriteOn: {fileID: 21300000, guid: 9a6a9f56b26bd4a98941cd2e9c955306, type: 3}
+  planetSpriteOff: {fileID: 21300000, guid: 943f4aa541f1c4250a0e48c8a82a7874, type: 3}
+  planetRenderer: {fileID: 1612548192}
 --- !u!4 &1956128590
 Transform:
   m_ObjectHideFlags: 0

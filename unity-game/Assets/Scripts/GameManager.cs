@@ -7,14 +7,17 @@ using System;
 public class GameManager : MonoBehaviour
 {
     public GameObject enemy;
-    public GameObject earth;
+    public GameObject earthBoundingBox;
     public TextMeshProUGUI alienCounter;
     public TextMeshProUGUI pauseLabel;
     public Sprite UFOSprite;
     public Sprite SatelliteSprite;
     public Sprite InvaderSprite;
     public SpriteRenderer EnemyRenderer;
-
+    public Sprite planetSpriteOn;
+    public Sprite planetSpriteOff;
+    public SpriteRenderer planetRenderer;
+    
     private int _shotsOnAlien;
 
 
@@ -81,6 +84,11 @@ public class GameManager : MonoBehaviour
         ChangeSpaceshipAppearance(responseObj.shipSelected);
     }
 
+    private void DismissCameraKit()
+    {
+        CameraKitHandler.DismissCameraKit();
+    }
+
     private void OnCameraKitCaptured(string capturedFileUri)
     {
         Debug.Log("Camera Kit captured. File " + capturedFileUri);
@@ -97,14 +105,20 @@ public class GameManager : MonoBehaviour
     }
 
     public void SpaceshipLanded() {
-        InvokeCameraKit();
+        if (CameraKitHandler.IsCameraKitShowing) {
+            DismissCameraKit();
+            planetRenderer.sprite = planetSpriteOff;
+        } else {
+            InvokeCameraKit();
+            planetRenderer.sprite = planetSpriteOn;
+        }
     }
 
     private void OnLensRequestedState() {
-        var launchData = new Dictionary<string, string>() {
+        var updatedState = new Dictionary<string, string>() {
             { "shotsOnInvader", _shotsOnAlien.ToString() }
         };
-        CameraKitHandler.UpdateLensState(launchData);
+        CameraKitHandler.UpdateLensState(updatedState);
     }
 
     private void ChangeSpaceshipAppearance(string appearance)

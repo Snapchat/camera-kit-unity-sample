@@ -65,15 +65,20 @@ class LensRequestStateApiServiceCall: NSObject, LensRemoteApiServiceCall {
     }
     
     private static func buildResponse(request: LensRemoteApiRequest) -> LensRemoteApiResponse {
-        let body = try? NSKeyedArchiver.archivedData(withRootObject: LensRequestStateApiServiceCall.appState, requiringSecureCoding: false)
-        let apiResponse = LensRemoteApiResponse (
-            request: request,
-            status: .success,
-            metadata: [:],
-            body: body
-        )
-        
-        return apiResponse;
+//        let body = try? NSKeyedArchiver.archivedData(withRootObject: LensRequestStateApiServiceCall.appState, requiringSecureCoding: false)
+        do
+        {
+            let jsonData = try JSONSerialization.data(withJSONObject: LensRequestStateApiServiceCall.appState)
+            let apiResponse = LensRemoteApiResponse (
+                request: request,
+                status: .success,
+                metadata: [:],
+                body: jsonData
+            )
+            return apiResponse;
+        } catch {
+            return LensRemoteApiResponse(request: request, status: .internalServiceError, metadata: ["error": "could not parse state to lens"], body: nil)
+        }
     }
     
     func cancelRequest() {

@@ -234,18 +234,16 @@ extension AppDelegate: NativeCallsProtocol {
     }
 
     func invokeCameraKit() {
-        if cameraViewController == nil {
-            cameraViewController = UnityCameraViewController(cameraController: cameraController)
-            cameraViewController?.appOrientationDelegate = self
-            cameraViewController?.modalPresentationStyle = .formSheet
-        }
-        
+        cameraController = UnityCameraController()
+        cameraViewController = UnityCameraViewController(cameraController: cameraController)
+        cameraViewController?.appOrientationDelegate = self
+        cameraViewController?.modalPresentationStyle = .formSheet
+    
         if let nativeWindow = window {
             unityFramework?.appController().rootView.backgroundColor = UIColor.black.withAlphaComponent(0.0);
             nativeWindow.rootViewController?.add(cameraViewController!, frame: UIScreen.main.bounds)
         }
-        
-        
+                
         if cameraController.initialLens != nil {
             cameraController.cameraKit.lenses.processor?.apply(
                 lens: cameraController.initialLens!,
@@ -259,6 +257,7 @@ extension AppDelegate: NativeCallsProtocol {
     }
     
     func dismissCameraKit() {
+        unityFramework?.appController().rootView.backgroundColor = UIColor.black;
         cameraController.cameraKit.stop();
         cameraViewController?.remove();
     }

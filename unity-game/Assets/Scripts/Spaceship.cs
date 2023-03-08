@@ -15,7 +15,7 @@ public class Spaceship : MonoBehaviour
     void Start()
     {
         StartShooting();
-        _earthBounds = GameManager.Instance.earth.GetComponent<Renderer>().bounds;
+        _earthBounds = GameManager.Instance.earthBoundingBox.GetComponent<Renderer>().bounds;
     }
 
     // Update is called once per frame

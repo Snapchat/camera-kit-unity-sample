@@ -3,7 +3,7 @@ This repository contains a template project that allows you to build a Unity app
 
 ## Requirements
 - Unity 2022.1.23f1
-- Camera Kit SDK 1.19.1 (compatible with Lens Studio v4.36)
+- Camera Kit SDK 1.20.0 (compatible with Lens Studio v4.40)
 - Android: 
   - Android Studio Bumblebee (Min SDK version 22, Target SDK version 33)
   - Gradle 7.2
@@ -107,7 +107,7 @@ void OnCameraKitCaptured(string capturedFileUri)
 
 ```
 
-## Optional: Getting a callback from your Lens
+## Optional: Sending data from Lens to Unity
 
 With the setup above, you're able to invoke a Lens that receives data from your Unity logic. This could be sufficient for use cases like using Lenses for try-on, product display, or shareable moments. But if you want to get data back from your Lens into your C# logic, you'll need to make use of Remote APIs.
 
@@ -173,14 +173,57 @@ void OnCameraKitAPIResponse(SerializedResponseFromLens responseObj)
 
 ```
 
+## Optional: Sending data from Unity to Lens
+Since lenses are not set up to receive a constant stream of data from the enclosing app, we are leveraging scheduled Remote API calls (see above) to ping the Unity application multiple times per second and get an updated state from the Unity logic. The script that does this in Lens Studio is configurable so that you can define how many calls per second you want to fire. You can see the script in action in the lens included with this repository. For that, please look at the `RequestUnityState.js` file. The definition of "state" here is always a `Dictionary<string,string>` that will be converted to a JSON string and parsed by the lens.
 
+Define a new API endpoint in your Unity API with the following settings:
+   1.  Reference ID: `unityRequestState`
+   2.  Path: `unityRequestState`
+   3.  Method: `GET`
 
+After that, you can subscribe to the event and update the Lens State, like so:
 
-## Camera Kit Features supported
-- [x] Open Camera Kit with multiple Lens Groups in carousel
-- [x] Define Lens that should be initially selected
-- [x] Open Camera Kit with a Single Lens
-- [x] Send Launch Params on a Single Lens
-- [x] Use Remote API to get data back from Lenses
-- [ ] Send Launch Params to all lenses in a collection of Lens Groups (WIP)
+```csharp
+   void OnEnable()
+    {   
+        CameraKitHandler.OnLensRequestedUpdatedState += OnLensRequestedState;
+    }
 
+    void OnDisable() 
+    {
+        CameraKitHandler.OnLensRequestedUpdatedState -= OnLensRequestedState;
+    }
+
+    private void OnLensRequestedState() {
+        var updatedState = new Dictionary<string, string>() {
+            { "shotsOnInvader", _shotsOnAlien.ToString() }
+        };
+        CameraKitHandler.UpdateLensState(updatedState);
+    }
+```
+
+# CameraKitHandler
+
+## Events
+### ⚡️ `OnResponseFromLensEvent` 
+Fires when the CameraKit Lens invokes the `unitySendData` endpoint of the Remote API. 
+This event will contain a `SerializedResponseFromLens` object with data passed by the lens. You can modify the `SerializedResponseFromLens` class to match the data sent by your lens.
+
+### ⚡️ `OnCameraDismissed`
+Fires when CameraKit is dismissed.
+
+### ⚡️ `OnCaptureFinished`
+Fires when CameraKit finishes capturing. This event will contain an `string` object that contains a path to the captured file.
+
+### ⚡️ `OnLensRequestedUpdatedState`
+Fires when CameraKit is asking for an updated State from Unity. You can set your Lens logic to request this at specific times, or on a schedule (multiple times per second) as in the example provided with this repository. To properly respond to this event, call `CameraKitHandler.UpdateLensState` in the event handler.
+
+## Methods
+### ▶️ `DismissCameraKit()`
+Stops camera and rendering. Sets unity view background color to black. 
+
+### ▶️ `UpdateLensState(Dictionary<string,string> state)`
+Updates lens state that will be fetched next stime the lens requests it. 
+
+### ▶️ `InvokeCameraKit(CameraKitConfiguration config)`
+Starts Camera Kit with the provided configuration
