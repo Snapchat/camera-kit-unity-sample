@@ -44,10 +44,8 @@ extern "C" {
         return [api invokeCameraKitWithSingleLens:lensId withGroupID:gpid withLaunchData:launchParams withCamerMode:mode withRemoteAPISpecId:remoteApi];
         
     }
-    void updateLensParams(char *lensId, const char* const *launchDataKeys[], int launchDataKeysLength, const char* const *launchDataValues[], int launchDataValuesLength)
+    void updateLensState(const char* const *launchDataKeys[], int launchDataKeysLength, const char* const *launchDataValues[], int launchDataValuesLength)
     {
-        NSString *lid = [[NSString alloc] initWithCString:(const char*) lensId encoding:NSUTF8StringEncoding];
-        
         NSMutableDictionary *launchParams = [[NSMutableDictionary alloc] init];
         for (int i = 0; i < launchDataKeysLength; i++) {
             NSString* key = [[NSString alloc] initWithCString:(const char*) launchDataKeys[i] encoding:NSUTF8StringEncoding];
@@ -55,7 +53,7 @@ extern "C" {
             [launchParams setObject:value forKey:key];
         }
         
-        return [api updateLensParams:lid withLaunchData:launchParams];
+        return [api updateLensState:launchParams];
     }
 
     void dismissCameraKit()
