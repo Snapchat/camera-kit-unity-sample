@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour
         var launchData = new Dictionary<string, string>() {
             { "shotsOnInvader", _shotsOnAlien.ToString() }
         };
-        var lensId = "08476ff8-3dd9-4ea2-9a8b-95ba2abd6e0c"; // DEFAULT
+        var lensId = "24a3242e-661f-47e6-852f-2d3cd5028370"; // DEFAULT
         // var lensId = "bbb0bd20-1598-47bb-9f4e-886b0186df7c"; // SURTUR - original
         var groupId = "42947d70-639e-4349-bd36-6ea9617060d6";
         var remoteApiSpecId= "98821e72-0407-4125-be80-89a9c7933631";
@@ -102,6 +102,10 @@ public class GameManager : MonoBehaviour
     public void AlienHit() {
         _shotsOnAlien++;
         alienCounter.text = "Shots on Alien: " + _shotsOnAlien;
+        var updatedState = new Dictionary<string, string>() {
+            { "shotsOnInvader", _shotsOnAlien.ToString() }
+        };
+        CameraKitHandler.UpdateLensState(updatedState);
     }
 
     public void SpaceshipLanded() {
@@ -115,10 +119,9 @@ public class GameManager : MonoBehaviour
     }
 
     private void OnLensRequestedState() {
-        var updatedState = new Dictionary<string, string>() {
-            { "shotsOnInvader", _shotsOnAlien.ToString() }
-        };
-        CameraKitHandler.UpdateLensState(updatedState);
+        //no-op
+        // leave request open until we're ready to update state
+        // in this case, whenever the spaceship is hit
     }
 
     private void ChangeSpaceshipAppearance(string appearance)

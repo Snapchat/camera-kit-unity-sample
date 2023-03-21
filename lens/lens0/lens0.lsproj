@@ -3,7 +3,7 @@
     "document_id": "MDTfI7l3mQeP3hnFsfke",
     "original_document_id": "bTE6b6GXZP6dl1LX6Bw0",
     "version": "29",
-    "lastChanged": "1678275329877",
+    "lastChanged": "1679328042842",
     "preview": "icon.png",
     "videoPreview": "preview.mp4",
     "videoPreviewUpdateTime": "",
@@ -131,7 +131,7 @@
             "hints": [
                 "lens_hint_tilt_your_head"
             ],
-            "lens": "Dynamic Alien v4",
+            "lens": "Dynamic Alien v5",
             "applicability": "1",
             "lens_descriptors": "",
             "Spectacles2021UseAllowed": "false"
@@ -994,19 +994,19 @@
                     },
                     {
                         "k": "1010",
-                        "v": "76b3f76ca9dd1f9374b8e2aba1b03873"
+                        "v": "f47e86d8f4141c9c7c96dcb71c3e63e7"
                     }
                 ],
                 "publicState": {
                     "tree": {
                         "isFolder": "true",
-                        "lastModified": "2023-03-08T11:00:09",
+                        "lastModified": "2023-03-20T15:19:24",
                         "name": "Public",
-                        "hash": "62ad383b4d192e41e7b6b3474ba47e44",
+                        "hash": "ad346733175487cd75be7a125e53a7dc",
                         "children": [
                             {
                                 "isFolder": "true",
-                                "lastModified": "2023-03-07T17:09:33",
+                                "lastModified": "2023-03-16T14:16:58",
                                 "name": "Textures",
                                 "hash": "ad657aa8683370cdb670a9168ca78a41",
                                 "children": [
@@ -1019,7 +1019,7 @@
                                     },
                                     {
                                         "isFolder": "false",
-                                        "lastModified": "2023-03-07T17:09:33",
+                                        "lastModified": "2023-03-16T14:16:58",
                                         "name": "Invader@2x 2.png",
                                         "hash": "f03e5788149021b169317d8cc79dee81",
                                         "children": ""
@@ -1070,7 +1070,7 @@
                             },
                             {
                                 "isFolder": "false",
-                                "lastModified": "2023-03-07T20:47:22",
+                                "lastModified": "2023-03-16T14:16:58",
                                 "name": "Unity SDK - Generic API API.js",
                                 "hash": "eefbd02b72d89195a5e4b826648d87e8",
                                 "children": ""
@@ -1084,9 +1084,9 @@
                             },
                             {
                                 "isFolder": "false",
-                                "lastModified": "2023-03-08T11:00:09",
+                                "lastModified": "2023-03-20T15:19:24",
                                 "name": "RequestUnityState.js",
-                                "hash": "76b3f76ca9dd1f9374b8e2aba1b03873",
+                                "hash": "f47e86d8f4141c9c7c96dcb71c3e63e7",
                                 "children": ""
                             },
                             {
@@ -1098,74 +1098,74 @@
                             },
                             {
                                 "isFolder": "false",
-                                "lastModified": "2023-03-07T17:16:23",
+                                "lastModified": "2023-03-16T14:16:58",
                                 "name": "Tilt_Head__PLACE_IN_OBJECTS_PANEL.oprfb",
                                 "hash": "7fbf2702fa7fe4e168b53270ed5d0cdb",
                                 "children": ""
                             },
                             {
                                 "isFolder": "false",
-                                "lastModified": "2023-03-07T20:42:50",
+                                "lastModified": "2023-03-16T14:16:58",
                                 "name": "Unity SDK - Generic API API Module.js",
                                 "hash": "934f4a4e22cfff7b47314e676d08fd21",
                                 "children": ""
                             },
                             {
                                 "isFolder": "false",
-                                "lastModified": "2023-03-07T17:39:32",
+                                "lastModified": "2023-03-16T14:16:58",
                                 "name": "ShipSelector.js",
                                 "hash": "c177f1957349cfef684aedbab53f4f47",
                                 "children": ""
                             },
                             {
                                 "isFolder": "false",
-                                "lastModified": "2023-03-07T17:09:33",
+                                "lastModified": "2023-03-16T14:16:58",
                                 "name": "Unlit.lsmat",
                                 "hash": "053bf6d4f190e6b220139020f3cedfe8",
                                 "children": ""
                             },
                             {
                                 "isFolder": "true",
-                                "lastModified": "2023-03-07T17:36:04",
+                                "lastModified": "2023-03-16T14:16:58",
                                 "name": "TIlt Head Left_Right Resources",
                                 "hash": "30ee57bb824c35f0e28c10edd73375c8",
                                 "children": [
                                     {
                                         "isFolder": "false",
-                                        "lastModified": "2023-03-07T17:36:04",
+                                        "lastModified": "2023-03-16T14:16:58",
                                         "name": "Tilt Head.js",
                                         "hash": "da8baee0aa724546f29552d4ed4701ef",
                                         "children": ""
                                     },
                                     {
                                         "isFolder": "true",
-                                        "lastModified": "2023-03-07T17:16:24",
+                                        "lastModified": "2023-03-16T14:16:58",
                                         "name": "Example [DELETE ME]",
                                         "hash": "c438c6272f884097a7e2ba6164cb8c70",
                                         "children": [
                                             {
                                                 "isFolder": "true",
-                                                "lastModified": "2023-03-07T17:16:24",
+                                                "lastModified": "2023-03-16T14:16:58",
                                                 "name": "Materials",
                                                 "hash": "e6b96a500a18bf69eea661ae970720a9",
                                                 "children": [
                                                     {
                                                         "isFolder": "false",
-                                                        "lastModified": "2023-03-07T17:16:24",
+                                                        "lastModified": "2023-03-16T14:16:58",
                                                         "name": "Grey.lsmat",
                                                         "hash": "54d91c54fda437fde4b0ab59892d4a47",
                                                         "children": ""
                                                     },
                                                     {
                                                         "isFolder": "false",
-                                                        "lastModified": "2023-03-07T17:16:24",
+                                                        "lastModified": "2023-03-16T14:16:58",
                                                         "name": "Green.lsmat",
                                                         "hash": "b615950d6cab81e371d7aa1f5620a078",
                                                         "children": ""
                                                     },
                                                     {
                                                         "isFolder": "false",
-                                                        "lastModified": "2023-03-07T17:16:24",
+                                                        "lastModified": "2023-03-16T14:16:58",
                                                         "name": "folder.lock",
                                                         "hash": "d41d8cd98f00b204e9800998ecf8427e",
                                                         "children": ""
@@ -1174,21 +1174,21 @@
                                             },
                                             {
                                                 "isFolder": "false",
-                                                "lastModified": "2023-03-07T17:16:23",
+                                                "lastModified": "2023-03-16T14:16:58",
                                                 "name": "UsageExample.js",
                                                 "hash": "c2e4801291ff01ccaefc656d5e41800d",
                                                 "children": ""
                                             },
                                             {
                                                 "isFolder": "false",
-                                                "lastModified": "2023-03-07T17:16:23",
+                                                "lastModified": "2023-03-16T14:16:58",
                                                 "name": "Sphere.mesh",
                                                 "hash": "ffbce66d7c12d942b13208740e9d0059",
                                                 "children": ""
                                             },
                                             {
                                                 "isFolder": "false",
-                                                "lastModified": "2023-03-07T17:16:24",
+                                                "lastModified": "2023-03-16T14:16:58",
                                                 "name": "folder.lock",
                                                 "hash": "d41d8cd98f00b204e9800998ecf8427e",
                                                 "children": ""
@@ -1197,7 +1197,7 @@
                                     },
                                     {
                                         "isFolder": "false",
-                                        "lastModified": "2023-03-07T17:16:23",
+                                        "lastModified": "2023-03-16T14:16:58",
                                         "name": "folder.lock",
                                         "hash": "d41d8cd98f00b204e9800998ecf8427e",
                                         "children": ""
@@ -1724,8 +1724,13 @@
         },
         "InspectorController": {
             "selection": {
-                "objects": [
-                    "1678221505550781:302728"
+                "resources": [
+                    {
+                        "uid": "1678218321164633:138175",
+                        "path_list": [
+                            "RequestUnityState"
+                        ]
+                    }
                 ]
             }
         },

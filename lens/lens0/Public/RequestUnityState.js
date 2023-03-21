@@ -1,34 +1,44 @@
 // -----JS CODE-----
 // @input Asset.RemoteServiceModule remoteServiceModule
 // @input Component.Text stateText
-// @input float timeBetweenUpdatesInSeconds
+// @input int maximumConsecutiveErrors
+
 
 // Import module
 const Module = require("./Unity SDK - Generic API API Module");
 const ApiModule = new Module.ApiModule(script.remoteServiceModule);
 
-if (typeof(global.timeSinceLastUpdate) === 'undefined')
+if (typeof(global.consecutiveErrorCount) === 'undefined')
 {
-    global.timeSinceLastUpdate = 0;
-}
-global.timeSinceLastUpdate += getDeltaTime();
-
-if (global.timeSinceLastUpdate >= script.timeBetweenUpdatesInSeconds) {
-    requestUpdatedStateFromUnity()
-    global.timeSinceLastUpdate = 0;
+    global.consecutiveErrorCount = 0;
 }
 
-function requestUpdatedStateFromUnity() 
+script.api.requestUpdatedStateFromUnity = function() 
 {
+    print("requesting unity update")
     //requesting update from unity
-    ApiModule.unityRequestState(function(err, response) {
-        if (err) {
-            print("error")
-        } else {
-            // success. got updated state from unity
-            if (response.shotsOnInvader) {
-                script.stateText.text = "Invader was hit " + response.shotsOnInvader + " times";
-            }
-        }
-    })
+    ApiModule.unityRequestState(script.api.handleUnityUpdate)
 }
+
+script.api.handleUnityUpdate = function(err, response) {
+    if (err) {
+        print("error")
+        global.consecutiveErrorCount += 1
+        if (global.consecutiveErrorCount >= script.maximumConsecutiveErrors) {
+            print("too many errors. giving up on getting state from Unity")
+        } else {
+            script.api.requestUpdatedStateFromUnity()
+        }
+    } else {
+        print("success. got updated state from unity")
+        global.consecutiveErrorCount = 0
+        if (response.shotsOnInvader) {
+            script.stateText.text = "Invader was hit " + response.shotsOnInvader + " times";
+        }
+        script.api.requestUpdatedStateFromUnity()
+
+    }
+    
+}
+
+script.api.requestUpdatedStateFromUnity();

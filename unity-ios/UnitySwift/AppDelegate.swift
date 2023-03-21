@@ -254,7 +254,7 @@ extension AppDelegate: NativeCallsProtocol {
     }
     
     func updateLensState(_ launchData: [String : String]!) {
-        LensRequestStateApiServiceCall.appState = launchData;
+        LensRequestStateApiServiceCall.updateAppState(appState: launchData)
     }
     
     func dismissCameraKit() {

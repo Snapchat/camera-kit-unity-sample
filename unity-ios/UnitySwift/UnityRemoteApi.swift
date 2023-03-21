@@ -55,13 +55,17 @@ class IgnoredRemoteApiServiceCall: NSObject, LensRemoteApiServiceCall {
 }
 
 class LensRequestStateApiServiceCall: NSObject, LensRemoteApiServiceCall {
-    public static var appState: [String:String] = [:]
-    let status: LensRemoteApiServiceCallStatus = .answered
+    private static var appState: [String:String] = [:]
+    private static var responseHandler: (LensRemoteApiServiceCallStatus, LensRemoteApiResponseProtocol) -> Void = {_,_ in }
+    private static var request: LensRemoteApiRequest? = nil;
+    
+    let status: LensRemoteApiServiceCallStatus = .ongoing
     
     init(responseHandler: @escaping (LensRemoteApiServiceCallStatus, LensRemoteApiResponseProtocol) -> Void, request: LensRemoteApiRequest)
     {
         super.init()
-        responseHandler(status, LensRequestStateApiServiceCall.buildResponse(request: request))
+        LensRequestStateApiServiceCall.responseHandler = responseHandler;
+        LensRequestStateApiServiceCall.request = request
     }
     
     private static func buildResponse(request: LensRemoteApiRequest) -> LensRemoteApiResponse {
@@ -81,7 +85,15 @@ class LensRequestStateApiServiceCall: NSObject, LensRemoteApiServiceCall {
         }
     }
     
+    public static func updateAppState(appState: [String:String]) {
+        self.appState = appState;
+        guard let req = self.request else {
+            return
+        }
+        self.responseHandler(.answered, self.buildResponse(request: req))
+    }
+    
     func cancelRequest() {
-        // no-op
+        LensRequestStateApiServiceCall.responseHandler = {_,_ in }
     }
 }
