@@ -22,8 +22,16 @@ public class AnimationSay : BaseAnimation
     override public void Play()
     {
         _bubble.gameObject.SetActive(true);
-        _text.text = _whatToSay;
         _text.gameObject.SetActive(true);
+        _text.text = "";
+        StartCoroutine(TypewriterText());
+    }
+
+    private IEnumerator TypewriterText() {
+        foreach (char c in _whatToSay) {
+            _text.text += c;
+            yield return new WaitForSeconds(0.02f);
+        }
         Finished();
     }
 

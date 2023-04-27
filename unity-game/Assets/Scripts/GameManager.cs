@@ -6,28 +6,14 @@ using System;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject enemy;
-    public GameObject earthBoundingBox;
-    public TextMeshProUGUI alienCounter;
+    public AnimationManager animationManager;
     public TextMeshProUGUI pauseLabel;
-    public Sprite UFOSprite;
-    public Sprite SatelliteSprite;
-    public Sprite InvaderSprite;
-    public SpriteRenderer EnemyRenderer;
-    public Sprite planetSpriteOn;
-    public Sprite planetSpriteOff;
-    public SpriteRenderer planetRenderer;
-    
-    private int _shotsOnAlien;
-
 
     public static GameManager Instance { get; private set; }
 
     void Awake()
     {
-        _shotsOnAlien = 0;
-
-        if (Instance != null) {
+       if (Instance != null) {
         Debug.LogError("There is more than one instance!");
         return;
         }
@@ -59,9 +45,7 @@ public class GameManager : MonoBehaviour
         // The source code for the lens used in this project is part of the Github project. 
         // Please check the ParamsManager.js script in the lens included in this repository.
         // More info: https://docs.snap.com/lens-studio/references/guides/distributing/snap-kit/  
-        var launchData = new Dictionary<string, string>() {
-            { "shotsOnInvader", _shotsOnAlien.ToString() }
-        };
+        var launchData = new Dictionary<string, string>() { };
         // var lensId = "24a3242e-661f-47e6-852f-2d3cd5028370"; // DEFAULT
         // // var lensId = "bbb0bd20-1598-47bb-9f4e-886b0186df7c"; // SURTUR - original
         // var groupId = "42947d70-639e-4349-bd36-6ea9617060d6";
@@ -84,7 +68,6 @@ public class GameManager : MonoBehaviour
         // Please check the ShipSelector.js script in the lens included in this repository.
         // More info: https://docs.snap.com/camera-kit/guides/tutorials/communicating-between-lenses-and-app#lens-studio-best-practices-for-remote-apis  
         Debug.Log("Camera Kit API Response. Ship selected: "+ responseObj.shipSelected);
-        ChangeSpaceshipAppearance(responseObj.shipSelected);
     }
 
     private void DismissCameraKit()
@@ -102,46 +85,10 @@ public class GameManager : MonoBehaviour
         Debug.Log("Camera Kit dismissed.");
     }
 
-    public void AlienHit() {
-        _shotsOnAlien++;
-        alienCounter.text = "Shots on Alien: " + _shotsOnAlien;
-        var updatedState = new Dictionary<string, string>() {
-            { "shotsOnInvader", _shotsOnAlien.ToString() }
-        };
-        CameraKitHandler.UpdateLensState(updatedState);
-    }
-
-    public void SpaceshipLanded() {
-        if (CameraKitHandler.IsCameraKitShowing) {
-            DismissCameraKit();
-            planetRenderer.sprite = planetSpriteOff;
-        } else {
-            InvokeCameraKit();
-            planetRenderer.sprite = planetSpriteOn;
-        }
-    }
-
     private void OnLensRequestedState() {
         //no-op
         // leave request open until we're ready to update state
         // in this case, whenever the spaceship is hit
-    }
-
-    private void ChangeSpaceshipAppearance(string appearance)
-    {
-        switch (appearance) {
-            case "UFO": 
-                EnemyRenderer.sprite = UFOSprite;
-                break;
-            case "Satellite": 
-                EnemyRenderer.sprite = SatelliteSprite;
-                break;
-            case "Invader": 
-                EnemyRenderer.sprite = InvaderSprite;
-                break;
-            default:
-                break;
-        }
     }
 
     void OnApplicationFocus(bool hasFocus)
@@ -152,4 +99,24 @@ public class GameManager : MonoBehaviour
     void OnApplicationPause(bool pauseStatus) {
         pauseLabel.gameObject.SetActive(pauseStatus);     
     }
+
+    #region Button Handlers
+    public void OnMaskTryOnSelected() {
+        animationManager.PlayScene("ShowMasks");
+    }
+
+    public void OnCollectCoinsSelected() {
+        animationManager.PlayScene("Oops");
+    }
+
+    public void OnInkSplashSelected() {
+        animationManager.PlayScene("Oops");
+    }
+
+    public void OnMaskSelected(string mask) {
+        Debug.Log("Mask selected " + mask);
+    } 
+
+
+    #endregion
 }

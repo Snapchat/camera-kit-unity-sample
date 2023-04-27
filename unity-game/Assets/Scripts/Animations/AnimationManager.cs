@@ -1,24 +1,42 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+
+[Serializable]
+public struct NamedScene 
+{
+    public string name;
+    public BaseAnimation[] animations;
+}
 
 public class AnimationManager : MonoBehaviour
 {
     [SerializeField]
-    private List<BaseAnimation> _animations;
+    private List<NamedScene> _scenes;
 
     // Start is called before the first frame update
     void Awake()
     {
-        PlayAnimation(0);
+        PlayScene("Intro");
     }
 
-    private void PlayAnimation(int index) {
+    public void PlayScene(string sceneName)
+    {
+        foreach (var namedScene in _scenes) {
+            if (namedScene.name == sceneName) {
+                PlayScene(namedScene.animations);
+                return;
+            }
+        }
+    }
+
+    private void PlayScene(BaseAnimation[] animations, int index = 0) {
         Debug.Log("Playing animation " + index);
-        var currentAnimation = _animations[index];
-        if (index < (_animations.Count - 1)) {
+        var currentAnimation = animations[index];
+        if (index < (animations.Length - 1)) {
             Debug.Log("attaching event handler to " + index + ", so it plays animation " + (index+1));
-            currentAnimation.OnAnimationFinished += () => PlayAnimation(index+1);
+            currentAnimation.OnAnimationFinished += () => PlayScene(animations, index+1);
         } 
         currentAnimation.Play();
     }
