@@ -40,24 +40,9 @@ public class GameManager : MonoBehaviour
 
     public void InvokeCameraKit()
     {
-        // --- Configuring CameraKit ---
-        // In order to pass launchData to the Lens, the Lens needs to be built to interpret it 
-        // The source code for the lens used in this project is part of the Github project. 
-        // Please check the ParamsManager.js script in the lens included in this repository.
-        // More info: https://docs.snap.com/lens-studio/references/guides/distributing/snap-kit/  
-        var launchData = new Dictionary<string, string>() { };
-        // var lensId = "24a3242e-661f-47e6-852f-2d3cd5028370"; // DEFAULT
-        // // var lensId = "bbb0bd20-1598-47bb-9f4e-886b0186df7c"; // SURTUR - original
-        // var groupId = "42947d70-639e-4349-bd36-6ea9617060d6";
-
-        var lensId = "57988410875";
-        var groupId = "5701736840822784";
-        var remoteApiSpecId= "98821e72-0407-4125-be80-89a9c7933631";
-        var config = CameraKitConfiguration.CreateWithSingleLens(lensId, groupId, remoteApiSpecId, launchData);
-        config.CameraMode = CameraKitConfiguration.CameraKitMode.Capture;
-
+        //....
         // --- Invoking CameraKit ---
-        CameraKitHandler.InvokeCameraKit(config);
+        // CameraKitHandler.InvokeCameraKit(config);
     }
 
     private void OnCameraKitAPIResponse(SerializedResponseFromLens responseObj)
@@ -114,7 +99,16 @@ public class GameManager : MonoBehaviour
     }
 
     public void OnMaskSelected(string mask) {
-        Debug.Log("Mask selected " + mask);
+        var launchParams = new Dictionary<string, string>() {
+            {"selectedMask", mask}
+        };
+        var config = new CameraKitConfiguration() {
+            LensGroupID = Constants.LENS_GROUP_ID,
+            LensID = Constants.LENS_ID_MASK_TRYON,
+            OpenIn = RenderMode.Fullscreen
+        };
+
+        CameraKitHandler.InvokeCameraKit(config);
     } 
 
 

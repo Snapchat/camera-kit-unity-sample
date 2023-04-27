@@ -1,4 +1,4 @@
-// -----JS CODE-----
+    // -----JS CODE-----
 // @input Asset.RemoteReferenceAsset leftTargetTexture
 // @input string leftShipName
 // @input Asset.RemoteReferenceAsset rightTargetTexture
