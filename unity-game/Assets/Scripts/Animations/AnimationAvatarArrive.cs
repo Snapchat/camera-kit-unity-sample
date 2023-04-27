@@ -23,8 +23,8 @@ public class AnimationAvatarArrive : BaseAnimation
     override public void Play()
     {
         Debug.Log("Avatar Arrive playing...");
-        var startPos = new Vector3(_startPosition, -1.99f, 0);
-        var endPos = new Vector3(_endPosition, -1.99f, 0);
+        var startPos = new Vector3(_startPosition, _avatar.transform.position.y, 0);
+        var endPos = new Vector3(_endPosition, _avatar.transform.position.y, 0);
         StartCoroutine(MoveFromTo(startPos, endPos, _speed));
     }
 
@@ -38,6 +38,7 @@ public class AnimationAvatarArrive : BaseAnimation
             yield return new WaitForFixedUpdate();         // Leave the routine and return here in the next frame
         }
         _avatar.transform.position = b;
+        yield return new WaitForSeconds(0.5f);
         Finished();
     }
 

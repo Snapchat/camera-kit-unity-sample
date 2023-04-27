@@ -10,8 +10,11 @@ public class AnimationResetScene : BaseAnimation
     [SerializeField]
     private GameObject _mainAvatar;
 
+    [SerializeField]
+    private Vector2 _avatarStartPosition;
+
     void OnEnable() {
-        _mainAvatar.transform.position = new Vector3(4, -1.99f, 0);
+        _mainAvatar.transform.position = new Vector3(_avatarStartPosition.x, _avatarStartPosition.y, 0);
         _speechBubble.gameObject.SetActive(false);
     }
 
