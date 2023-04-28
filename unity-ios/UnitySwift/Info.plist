@@ -9,7 +9,7 @@
 	<key>NSCameraUsageDescription</key>
 	<string>This app needs to use the camera for AR features</string>
 	<key>SCCameraKitAPIToken</key>
-	<string>eyJhbGciOiJIUzI1NiIsImtpZCI6IkNhbnZhc1MyU0hNQUNQcm9kIiwidHlwIjoiSldUIn0.eyJhdWQiOiJjYW52YXMtY2FudmFzYXBpIiwiaXNzIjoiY2FudmFzLXMyc3Rva2VuIiwibmJmIjoxNjQ1MDUzOTE1LCJzdWIiOiI4OGIwMWRlYS0wNDZlLTQ0YzEtODc5NS04ZDA0ZjAyZDExNzF-U1RBR0lOR341YWViZmIyOC1hZTNjLTQ0Y2EtYjgzYy01M2Q5MTEzZjg1YzYifQ.Bk0VO7PAxMQLRIDmNwf5ZIu-JyJbfu3kkuVXuWFnVcY</string>
+	<string>eyJhbGciOiJIUzI1NiIsImtpZCI6IkNhbnZhc1MyU0hNQUNQcm9kIiwidHlwIjoiSldUIn0.eyJhdWQiOiJjYW52YXMtY2FudmFzYXBpIiwiaXNzIjoiY2FudmFzLXMyc3Rva2VuIiwibmJmIjoxNjY2MDIxNTA5LCJzdWIiOiIwMTM2MWYzZi1jNjVlLTQyYWYtYjQ4Yy00MzdlOTUyZTIyYmZ-U1RBR0lOR34zOTU2MmRiMi1mNzUzLTQzODgtYWY0MS05M2Q3YThhMzkyYWQifQ.QWXI1YRWGcLoj4_3gw1B2mUBEx4bomcbO1MnCIfhtJc</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoadsInWebContent</key>
@@ -22,7 +22,7 @@
 		<true/>
 	</dict>
 	<key>SCCameraKitClientID</key>
-	<string>88b01dea-046e-44c1-8795-8d04f02d1171</string>
+	<string>01361f3f-c65e-42af-b48c-437e952e22bf</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

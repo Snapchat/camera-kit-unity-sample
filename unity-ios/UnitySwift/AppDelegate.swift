@@ -208,34 +208,53 @@ extension AppDelegate: AppOrientationDelegate {
 
 extension AppDelegate: NativeCallsProtocol {
     func invokeCameraKit(
-        withSingleLens lensId: String!,
+        withLens lensId: String!,
         withGroupID groupId: String!,
         withLaunchData launchData: [String: String]!,
-        withCamerMode cameraMode: NSNumber!,
+        withRenderMode renderMode: NSNumber!,
         withRemoteAPISpecId remoteApiSpecId: String!
     ) {
-        cameraController = UnityCameraController()
         cameraController.launchDataFromUnity = launchData
         cameraController.groupIDs = [groupId]
-        cameraController.cameraKit.lenses.repository.addObserver(self, specificLensID: lensId, inGroupID: groupId)
-        invokeCameraKit()
-    }
-    func invokeCameraKit(
-        withLensGroupIds lensGroupIDs: [String]!,
-        withStartingLensId lensId: String!,
-        withCamerMode cameraMode: NSNumber!,
-        withRemoteAPISpecId remoteApiSpecId: String!
-    ) {
-        cameraController = UnityCameraController()
-        cameraController.groupIDs = lensGroupIDs
         cameraController.startingLensId = lensId
-        for groupid in lensGroupIDs {
-            cameraController.cameraKit.lenses.repository.addObserver(self, groupID: groupid)
+        cameraController.cameraKit.lenses.repository.addObserver(self, specificLensID: lensId, inGroupID: groupId)
+        
+        if (renderMode == 1) { 
+            invokeCameraKitAsBackgroundLayer()
+        } else {
+            invokeCameraKitAsModalFullScreen(lensId: lensId, groupId: groupId, launchDataFromUnity: launchData)
         }
-        invokeCameraKit()
+        
+    }
+    
+    func invokeCameraKitAsModalFullScreen(lensId: String!, groupId: String!, launchDataFromUnity: [String:String]!) {
+        
+        if cameraViewController == nil {
+            cameraViewController = UnityCameraViewController(cameraController: cameraController)
+            cameraViewController?.appOrientationDelegate = self
+            cameraViewController?.modalPresentationStyle = .formSheet
+        }
+        
+        unityFramework?.pause(true)
+        unityFramework?.appController().rootViewController.present(cameraViewController!, animated: true)
+        
+        var lens = cameraController.cameraKit.lenses.repository.lens(id: lensId, groupID: groupId)
+        let launchDataBuilder = LensLaunchDataBuilder()
+        launchDataFromUnity?.forEach {
+            launchDataBuilder.add(string: $1, key: $0)
+        }
+        var launchDataToLens = launchDataBuilder.launchData ?? EmptyLensLaunchData()
+        cameraController.cameraKit.lenses.processor?.apply(lens: lens!, launchData: launchDataToLens)
+        
+//        if cameraController.initialLens != nil {
+//            cameraController.cameraKit.lenses.processor?.apply(
+//                lens: cameraController.initialLens!,
+//                launchData: cameraController.buildLaunchData()
+//            )
+//        }
     }
 
-    func invokeCameraKit() {
+    func invokeCameraKitAsBackgroundLayer() {
         cameraViewController = UnityCameraViewController(cameraController: cameraController)
         cameraViewController?.appOrientationDelegate = self
         cameraViewController?.modalPresentationStyle = .formSheet
@@ -259,7 +278,8 @@ extension AppDelegate: NativeCallsProtocol {
     
     func dismissCameraKit() {
         unityFramework?.appController().rootView.backgroundColor = UIColor.black;
-        cameraController.cameraKit.stop();
+        cameraController.cameraKit.lenses.processor?.clear()
+        cameraController.cameraKit.stop()
         cameraViewController?.remove();
     }
 }

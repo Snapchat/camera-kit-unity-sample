@@ -99,13 +99,13 @@ public class GameManager : MonoBehaviour
     }
 
     public void OnMaskSelected(string mask) {
-        var launchParams = new Dictionary<string, string>() {
-            {"selectedMask", mask}
-        };
         var config = new CameraKitConfiguration() {
             LensGroupID = Constants.LENS_GROUP_ID,
             LensID = Constants.LENS_ID_MASK_TRYON,
-            RenderMode = CameraKitRenderMode.Fullscreen
+            RenderMode = CameraKitRenderMode.Fullscreen,
+            LaunchParameters = new Dictionary<string, string>() {
+                {"selectedMask", mask}
+            }
         };
 
         CameraKitHandler.InvokeCameraKit(config);
