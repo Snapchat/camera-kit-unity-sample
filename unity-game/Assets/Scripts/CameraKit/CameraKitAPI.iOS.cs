@@ -12,20 +12,12 @@ public class CameraKitAPIiOS : ICameraKit
     }
 
     [DllImport("__Internal")]
-    static extern void invokeCameraKitWithLensGroups(
-        IntPtr lensGroupIds, int lensGroupIdsLength,
-        string startingLensId,
-        int cameraKitMode,
-        string remoteApiSpecId
-    );
-
-    [DllImport("__Internal")]
-    static extern void invokeCameraKitWithSingleLens(
-        string startingLensId,
+    static extern void invokeCameraKit(
+        string lensId,
         string groupId,
         IntPtr lensLaunchDataKeys, int lensLaunchDataKeysLength,
         IntPtr lensLaunchDataValues, int lensLaunchDataValuesLength,        
-        int cameraKitMode,
+        int renderMode,
         string remoteApiSpecId
     );
 
@@ -39,60 +31,31 @@ public class CameraKitAPIiOS : ICameraKit
     static extern void dismissCameraKit();
 
     public void InvokeCameraKit(CameraKitConfiguration config) {
-        var cameraMode = config.CameraMode;
-
-        // Invoking Camera Kit with Lens Groups
-        if (config.GetType() == typeof(CameraKitConfiguration.LensGroupsConfig)) {
-            var castConfig = (CameraKitConfiguration.LensGroupsConfig)config;
-            var lensGroupIds = castConfig.LensGroupIDs.ToArray();
-            var unsafeptr_LensGroupIds = marshalStringArray(lensGroupIds);
-            var startingLensId = castConfig.StartWithSelectedLensID;
-            var remoteApiSpecId = castConfig.RemoteAPISpecId;
-
-            invokeCameraKitWithLensGroups(
-                unsafeptr_LensGroupIds, lensGroupIds.Length,
-                startingLensId,
-                (int) cameraMode,
-                remoteApiSpecId
-            );
-
-            cleanUpNativeStrArray(unsafeptr_LensGroupIds, lensGroupIds.Length);
-
-        } 
-        // Invoking Camera Kit with Single Lens
-        else if (config.GetType() == typeof(CameraKitConfiguration.LensSingleConfig)) {
-            var castConfig = (CameraKitConfiguration.LensSingleConfig)config;
-            var lensId = castConfig.LensID;
-            var groupId = castConfig.GroupID;
-            var remoteApiSpecId = castConfig.RemoteAPISpecId;
-
-            string[] launchDataKeys = new string[0];
-            string[] launchDataValues = new string[0];
-            if (castConfig.LensLaunchData != null) {
-                launchDataKeys = new List<string>(castConfig.LensLaunchData.Keys).ToArray();
-                launchDataValues = new List<string>(castConfig.LensLaunchData.Values).ToArray();
-            }
-            var unsafeptr_DataKeys = marshalStringArray(launchDataKeys);
-            var unsafeptr_DataValues = marshalStringArray(launchDataValues);
-
-            invokeCameraKitWithSingleLens(
-                lensId,
-                groupId,
-                unsafeptr_DataKeys, launchDataKeys.Length,
-                unsafeptr_DataValues, launchDataValues.Length,
-                (int)cameraMode,
-                remoteApiSpecId
-            );
-
-            cleanUpNativeStrArray(unsafeptr_DataKeys, launchDataKeys.Length);
-            cleanUpNativeStrArray(unsafeptr_DataValues, launchDataKeys.Length);
+        string[] launchDataKeys = new string[0];
+        string[] launchDataValues = new string[0];
+        if (config.LaunchParameters != null) {
+            launchDataKeys = new List<string>(config.LaunchParameters.Keys).ToArray();
+            launchDataValues = new List<string>(config.LaunchParameters.Values).ToArray();
         }
+        var unsafeptr_DataKeys = marshalStringArray(launchDataKeys);
+        var unsafeptr_DataValues = marshalStringArray(launchDataValues);
+
+        invokeCameraKit(
+            config.LensID,
+            config.LensGroupID,
+            unsafeptr_DataKeys, launchDataKeys.Length,
+            unsafeptr_DataValues, launchDataValues.Length,
+            (int)config.RenderMode,
+            config.RemoteAPISpecId
+        );
+
+        cleanUpNativeStrArray(unsafeptr_DataKeys, launchDataKeys.Length);
+        cleanUpNativeStrArray(unsafeptr_DataValues, launchDataKeys.Length);
+        
     }
 
     public void Validate(CameraKitConfiguration config) {
-        if (config.CameraMode == CameraKitConfiguration.CameraKitMode.Play) {
-            Debug.Log("CameraKit: iOS does not support CameraKitMode.Play");
-        }
+        
     }
 
     public void UpdateLensState(Dictionary<string, string> lensParams)

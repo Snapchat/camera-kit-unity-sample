@@ -105,7 +105,7 @@ public class GameManager : MonoBehaviour
         var config = new CameraKitConfiguration() {
             LensGroupID = Constants.LENS_GROUP_ID,
             LensID = Constants.LENS_ID_MASK_TRYON,
-            OpenIn = RenderMode.Fullscreen
+            RenderMode = CameraKitRenderMode.Fullscreen
         };
 
         CameraKitHandler.InvokeCameraKit(config);

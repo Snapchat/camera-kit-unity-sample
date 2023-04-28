@@ -11,46 +11,38 @@ public class CameraKitAPIAndroid : ICameraKit
     }
 
     public void InvokeCameraKit(CameraKitConfiguration config) {
-        if (config.GetType() == typeof(CameraKitConfiguration.LensGroupsConfig)) {
-            var castConfig = (CameraKitConfiguration.LensGroupsConfig)config;
-            var lensGroupIds = castConfig.LensGroupIDs.ToArray();
-            var startingLensId = castConfig.StartWithSelectedLensID;
-            var cameraMode = castConfig.CameraMode;
-            var remoteApiSpecId = castConfig.RemoteAPISpecId;
+        string[] launchDataKeys = new string[0];
+        string[] launchDataValues = new string[0];
 
-            callNativeJavaMethod("invokeCameraKitWithGroup", lensGroupIds, startingLensId, (int) cameraMode, remoteApiSpecId);
+        if (config.LaunchParameters != null) {
+            launchDataKeys = new List<string>(config.LaunchParameters.Keys).ToArray();
+            launchDataValues = new List<string>(config.LaunchParameters.Values).ToArray();
         }
-        else if (config.GetType() == typeof(CameraKitConfiguration.LensSingleConfig)) {
-            var castConfig = (CameraKitConfiguration.LensSingleConfig)config;
-            var startingLensId = castConfig.LensID;
-            var cameraMode = castConfig.CameraMode;
-            var groupId = castConfig.GroupID;
-            string[] launchDataKeys = new string[0];
-            string[] launchDataValues = new string[0];
-            var remoteApiSpecId = castConfig.RemoteAPISpecId;
-
-            if (castConfig.LensLaunchData != null) {
-                launchDataKeys = new List<string>(castConfig.LensLaunchData.Keys).ToArray();
-                launchDataValues = new List<string>(castConfig.LensLaunchData.Values).ToArray();
-            }
-            
-            callNativeJavaMethod("invokeCameraKitWithSingleLens", startingLensId, groupId, launchDataKeys, launchDataValues, (int) cameraMode, remoteApiSpecId);
-        }
+        
+        callNativeJavaMethod(
+            "invokeCameraKit", 
+            config.LensID, 
+            config.LensGroupID, 
+            launchDataKeys, 
+            launchDataValues, 
+            (int) config.RenderMode, 
+            config.RemoteAPISpecId
+        );
     }
 
     public void Validate(CameraKitConfiguration config)
     {
-
+        throw new System.NotImplementedException("Validate is not implemented on Camera Kit Android");
     }
 
     public void UpdateLensState(Dictionary<string, string> lensParams)
     {
-        throw new System.NotImplementedException();
+        throw new System.NotImplementedException("Update Lens State is not implemented on Camera Kit Android");
     }
 
     public void DismissCameraKit()
     {
-        throw new System.NotImplementedException();
+        throw new System.NotImplementedException("Dismiss Camera Kit is not implemented on Camera Kit Android");
     }
 
     private void callNativeJavaMethod(string methodName, params object[] args)
