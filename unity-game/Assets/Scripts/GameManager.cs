@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public AnimationManager animationManager;
     public TextMeshProUGUI pauseLabel;
+    public string temporaryCapturedMedia;
 
     public static GameManager Instance { get; private set; }
 
@@ -62,7 +63,7 @@ public class GameManager : MonoBehaviour
 
     private void OnCameraKitCaptured(string capturedFileUri)
     {
-        Debug.Log("Camera Kit captured. File " + capturedFileUri);
+        animationManager.PlayScene("MediaCaptured");
     }
 
     private void OnCameraKitDismissed()

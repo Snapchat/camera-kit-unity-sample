@@ -24,6 +24,7 @@ public class AnimationSay : BaseAnimation
         _bubble.gameObject.SetActive(true);
         _text.gameObject.SetActive(true);
         _text.text = "";
+        StopAllCoroutines();
         StartCoroutine(TypewriterText());
     }
 
