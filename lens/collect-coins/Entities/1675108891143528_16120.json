@@ -1,0 +1,22 @@
+{
+    "1675108891143420:15773": {
+        "IResourceController": {
+            "public": {
+                "path": "Models/pole/Meshes"
+            }
+        }
+    },
+    "1675108891143528:16120": {
+        "IResourceController": {
+            "name": "Meshes",
+            "type": 0,
+            "subtype": -1,
+            "dependency": 0,
+            "hidden": false,
+            "publicId": "1675108891143420:15773",
+            "resources": [
+                "1675108891143202:15454"
+            ]
+        }
+    }
+}

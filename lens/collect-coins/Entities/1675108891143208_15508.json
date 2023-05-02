@@ -1,0 +1,33 @@
+{
+    "1675108891143208:15508": {
+        "IResourceController": {
+            "name": "GetJointsPositionHelper",
+            "type": 4,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1628024939943126:792350",
+            "fileId": "1675108891143269:15630",
+            "publicId": "1675108891143429:15815",
+            "expected_hash": "a6efb3a6cf7945ca788dc8455817545a"
+        },
+        "IResourceManager": {
+            "uid": "1628024939943126:792350",
+            "name": "Files/File_1675108891143269_15630.js",
+            "flags": 1
+        }
+    },
+    "1675108891143269:15630": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143269_15630.js"
+        }
+    },
+    "1675108891143429:15815": {
+        "IResourceController": {
+            "public": {
+                "path": "Hand Tracking Assets/Scripts/Helpers/GetJointsPositionHelper.js",
+                "hash": "a6efb3a6cf7945ca788dc8455817545a"
+            }
+        }
+    }
+}

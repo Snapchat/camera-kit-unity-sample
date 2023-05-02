@@ -1,0 +1,85 @@
+{
+    "1628033004681912:1704484": {
+        "Compression::IController": {
+            "compressed_files": "",
+            "infos": {
+                "compressedRAM": "34824",
+                "compressedSize": "23597",
+                "extension": "mesh",
+                "originalRAM": "34824",
+                "originalSize": "23597",
+                "settings": {
+                    "attributeFormat": "",
+                    "draco": {
+                        "colorBits": "8",
+                        "compressLvl": "7",
+                        "normalBits": "8",
+                        "posBits": "11",
+                        "texBits": "10"
+                    },
+                    "info": {
+                        "hasBlendShapes": "false",
+                        "vertexAttribs": [
+                            {
+                                "canBeDisabled": "false",
+                                "format": "9",
+                                "semantic": "position"
+                            },
+                            {
+                                "canBeDisabled": "true",
+                                "format": "9",
+                                "semantic": "normal"
+                            },
+                            {
+                                "canBeDisabled": "true",
+                                "format": "9",
+                                "semantic": "tangent"
+                            },
+                            {
+                                "canBeDisabled": "true",
+                                "format": "9",
+                                "semantic": "texture0"
+                            }
+                        ]
+                    },
+                    "isCompressed": "false",
+                    "type": "0"
+                }
+            },
+            "uncompressed_file": "1675108891143385:15753"
+        }
+    },
+    "1675108891143208:15509": {
+        "IResourceController": {
+            "name": "Cup",
+            "type": 3,
+            "subtype": 0,
+            "dependency": 1,
+            "hidden": false,
+            "uid": "1628033004681912:1704484",
+            "fileId": "1675108891143270:15631",
+            "originalId": "1675108891143271:15632",
+            "expected_hash": "b598b27ff172d80d946cc245e2add034"
+        },
+        "IResourceManager": {
+            "uid": "1628033004681912:1704484",
+            "name": "Files/File_1675108891143270_15631.mesh",
+            "flags": 1
+        }
+    },
+    "1675108891143270:15631": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143270_15631.mesh"
+        }
+    },
+    "1675108891143271:15632": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143271_15632.mesh"
+        }
+    },
+    "1675108891143385:15753": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143385_15753.mesh"
+        }
+    }
+}

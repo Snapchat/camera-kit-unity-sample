@@ -1,0 +1,39 @@
+{
+    "1675108891143212:15547": {
+        "IResourceController": {
+            "name": "rock_n_roll",
+            "type": 12,
+            "subtype": -1,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1629851999068727:3765689",
+            "fileId": "1675108891143328:15693",
+            "originalId": "1675108891143329:15694",
+            "publicId": "1675108891143440:15859",
+            "expected_hash": "3b4d1592aa816c644dab6d60cd1abc42"
+        },
+        "IResourceManager": {
+            "uid": "1629851999068727:3765689",
+            "name": "rock_n_roll",
+            "flags": 0
+        }
+    },
+    "1675108891143328:15693": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143328_15693.oprfb"
+        }
+    },
+    "1675108891143329:15694": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143329_15694.oprfb"
+        }
+    },
+    "1675108891143440:15859": {
+        "IResourceController": {
+            "public": {
+                "path": "Hand Tracking Assets/Hand Gesture Presets [TRY_PREFABS]/rock_n_roll.oprfb",
+                "hash": "03a4b2ffe149b6300408c776658bdd6a"
+            }
+        }
+    }
+}

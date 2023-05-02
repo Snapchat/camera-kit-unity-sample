@@ -1,0 +1,94 @@
+{
+    "1626214447605953:7530": {
+        "Compression::IController": {
+            "compressed_files": "",
+            "infos": {
+                "compressedRAM": "15300",
+                "compressedSize": "11088",
+                "extension": "mesh",
+                "originalRAM": "15300",
+                "originalSize": "11088",
+                "settings": {
+                    "attributeFormat": "",
+                    "draco": {
+                        "colorBits": "8",
+                        "compressLvl": "7",
+                        "normalBits": "8",
+                        "posBits": "11",
+                        "texBits": "10"
+                    },
+                    "info": {
+                        "hasBlendShapes": "false",
+                        "vertexAttribs": [
+                            {
+                                "canBeDisabled": "false",
+                                "format": "9",
+                                "semantic": "position"
+                            },
+                            {
+                                "canBeDisabled": "true",
+                                "format": "9",
+                                "semantic": "normal"
+                            },
+                            {
+                                "canBeDisabled": "true",
+                                "format": "9",
+                                "semantic": "tangent"
+                            },
+                            {
+                                "canBeDisabled": "true",
+                                "format": "9",
+                                "semantic": "texture0"
+                            }
+                        ]
+                    },
+                    "isCompressed": "false",
+                    "type": "0"
+                }
+            },
+            "uncompressed_file": "1675108891143383:15751"
+        }
+    },
+    "1675108891143203:15461": {
+        "IResourceController": {
+            "name": "Frog_propeller",
+            "type": 3,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1626214447605953:7530",
+            "fileId": "1675108891143240:15598",
+            "originalId": "1675108891143240:15599",
+            "publicId": "1675108891143422:15783",
+            "expected_hash": "3c3c9304567d660cd2ed69955f916ba1"
+        },
+        "IResourceManager": {
+            "uid": "1626214447605953:7530",
+            "name": "Files/File_1675108891143240_15598.mesh",
+            "flags": 1
+        }
+    },
+    "1675108891143240:15598": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143240_15598.mesh"
+        }
+    },
+    "1675108891143240:15599": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143240_15599.mesh"
+        }
+    },
+    "1675108891143383:15751": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143383_15751.mesh"
+        }
+    },
+    "1675108891143422:15783": {
+        "IResourceController": {
+            "public": {
+                "path": "Models/frog/Meshes/Frog_propeller.mesh",
+                "hash": "3c3c9304567d660cd2ed69955f916ba1"
+            }
+        }
+    }
+}

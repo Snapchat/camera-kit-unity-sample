@@ -1,0 +1,39 @@
+{
+    "1675108891143212:15544": {
+        "IResourceController": {
+            "name": "victory",
+            "type": 12,
+            "subtype": -1,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1629851993700725:3689289",
+            "fileId": "1675108891143323:15687",
+            "originalId": "1675108891143324:15688",
+            "publicId": "1675108891143440:15856",
+            "expected_hash": "e35310f06a7b24984e76eb2cce8525c4"
+        },
+        "IResourceManager": {
+            "uid": "1629851993700725:3689289",
+            "name": "victory",
+            "flags": 0
+        }
+    },
+    "1675108891143323:15687": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143323_15687.oprfb"
+        }
+    },
+    "1675108891143324:15688": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143324_15688.oprfb"
+        }
+    },
+    "1675108891143440:15856": {
+        "IResourceController": {
+            "public": {
+                "path": "Hand Tracking Assets/Hand Gesture Presets [TRY_PREFABS]/victory.oprfb",
+                "hash": "d1971373c9f17235e882a2297d4b9ccb"
+            }
+        }
+    }
+}

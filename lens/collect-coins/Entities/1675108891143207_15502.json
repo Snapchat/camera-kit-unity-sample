@@ -1,0 +1,33 @@
+{
+    "1675108891143207:15502": {
+        "IResourceController": {
+            "name": "RainDrop-10",
+            "type": 5,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1627349793909975:40828",
+            "fileId": "1675108891143263:15624",
+            "publicId": "1675108891143428:15810",
+            "expected_hash": "fdeae8dc1847e78f10a93df2127bea39"
+        },
+        "IResourceManager": {
+            "uid": "1627349793909975:40828",
+            "name": "Files/File_1675108891143263_15624.mp3",
+            "flags": 1
+        }
+    },
+    "1675108891143263:15624": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143263_15624.mp3"
+        }
+    },
+    "1675108891143428:15810": {
+        "IResourceController": {
+            "public": {
+                "path": "Sounds/RainDrop-10.mp3",
+                "hash": "fdeae8dc1847e78f10a93df2127bea39"
+            }
+        }
+    }
+}

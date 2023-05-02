@@ -1,0 +1,17 @@
+{
+    "1675108891143204:15470": {
+        "IResourceController": {
+            "name": "Bn_Leg2_L",
+            "type": 8,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1626214447651324:7590"
+        },
+        "IResourceManager": {
+            "uid": "1626214447651324:7590",
+            "name": "",
+            "flags": 0
+        }
+    }
+}

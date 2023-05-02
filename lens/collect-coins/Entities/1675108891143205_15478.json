@@ -1,0 +1,17 @@
+{
+    "1675108891143205:15478": {
+        "IResourceController": {
+            "name": "Bn_Arm_L",
+            "type": 8,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1626214447655482:7638"
+        },
+        "IResourceManager": {
+            "uid": "1626214447655482:7638",
+            "name": "",
+            "flags": 0
+        }
+    }
+}

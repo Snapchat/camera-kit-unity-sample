@@ -1,0 +1,79 @@
+{
+    "1683022988942751:761219": {
+        "IFileManager": {
+            "path": "Files/File_1683022988942751_761219.pvr"
+        }
+    },
+    "1683022988945068:761220": {
+        "IResourceController": {
+            "name": "golden-coin",
+            "type": 1,
+            "subtype": 9,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1683022988946664:761221",
+            "fileId": "1683022988942751:761219",
+            "originalId": "1683022988948859:761226",
+            "publicId": "1683022988992197:761238",
+            "expected_hash": "4a4e33b115703a6eaae55e786366ade4",
+            "additional": {
+                "originHash": "08387bb91dec698205460c6a7aa0f4e6"
+            }
+        },
+        "IResourceManager": {
+            "uid": "1683022988946664:761221",
+            "name": "Files/File_1683022988942751_761219.png",
+            "flags": 1
+        }
+    },
+    "1683022988946664:761221": {
+        "Compression::IController": {
+            "compressed_files": [
+                {
+                    "k": {
+                        "settings_hash": "2049",
+                        "uncompressed_hash": "08387bb91dec698205460c6a7aa0f4e6"
+                    },
+                    "v": "1683022995439928:779359"
+                }
+            ],
+            "infos": {
+                "compressedRAM": "238464",
+                "compressedSize": "135082",
+                "extension": "png",
+                "originalRAM": "1893720",
+                "originalSize": "712760",
+                "settings": {
+                    "isCompressed": "true",
+                    "level": "2",
+                    "subtype": "9",
+                    "type": "1"
+                }
+            },
+            "uncompressed_file": "1683022988965466:761232"
+        }
+    },
+    "1683022988948859:761226": {
+        "IFileManager": {
+            "path": "Files/File_1683022988948859_761226.png"
+        }
+    },
+    "1683022988965466:761232": {
+        "IFileManager": {
+            "path": "Files/File_1683022988965466_761232.png"
+        }
+    },
+    "1683022988992197:761238": {
+        "IResourceController": {
+            "public": {
+                "path": "Textures/golden-coin.png",
+                "hash": "08387bb91dec698205460c6a7aa0f4e6"
+            }
+        }
+    },
+    "1683022995439928:779359": {
+        "IFileManager": {
+            "path": "Files/File_1683022995439928_779359.pvr"
+        }
+    }
+}

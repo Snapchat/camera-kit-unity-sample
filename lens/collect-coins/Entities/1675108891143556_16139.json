@@ -1,0 +1,24 @@
+{
+    "1675108891143445:15877": {
+        "IResourceController": {
+            "public": {
+                "path": "Scripts/ChainController"
+            }
+        }
+    },
+    "1675108891143556:16139": {
+        "IResourceController": {
+            "name": "ChainController",
+            "type": 0,
+            "subtype": -1,
+            "dependency": 0,
+            "hidden": false,
+            "publicId": "1675108891143445:15877",
+            "resources": [
+                "1675108891143210:15533",
+                "1675108891143211:15535",
+                "1675108891143211:15534"
+            ]
+        }
+    }
+}

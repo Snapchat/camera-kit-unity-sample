@@ -1,0 +1,17 @@
+{
+    "1675108891143205:15482": {
+        "IResourceController": {
+            "name": "Frog_propeller",
+            "type": 8,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1626214447657432:7662"
+        },
+        "IResourceManager": {
+            "uid": "1626214447657432:7662",
+            "name": "",
+            "flags": 0
+        }
+    }
+}

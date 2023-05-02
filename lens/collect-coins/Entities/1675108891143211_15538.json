@@ -1,0 +1,39 @@
+{
+    "1675108891143211:15538": {
+        "IResourceController": {
+            "name": "palm_flat",
+            "type": 12,
+            "subtype": -1,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1629851965117243:3536151",
+            "fileId": "1675108891143312:15675",
+            "originalId": "1675108891143313:15676",
+            "publicId": "1675108891143438:15850",
+            "expected_hash": "ad046b67ee90b47d04a8dffc3f0e3b8c"
+        },
+        "IResourceManager": {
+            "uid": "1629851965117243:3536151",
+            "name": "palm_flat",
+            "flags": 0
+        }
+    },
+    "1675108891143312:15675": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143312_15675.oprfb"
+        }
+    },
+    "1675108891143313:15676": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143313_15676.oprfb"
+        }
+    },
+    "1675108891143438:15850": {
+        "IResourceController": {
+            "public": {
+                "path": "Hand Tracking Assets/Hand Gesture Presets [TRY_PREFABS]/palm_flat.oprfb",
+                "hash": "be10c88d0361ed74f01d9955cf01fac6"
+            }
+        }
+    }
+}

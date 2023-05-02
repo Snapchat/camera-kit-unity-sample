@@ -1,0 +1,39 @@
+{
+    "1675108891143215:15571": {
+        "IResourceController": {
+            "name": "Frog_backpack",
+            "type": 2,
+            "subtype": 1,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1645150810751076:718310",
+            "fileId": "1675108891143393:15761",
+            "originalId": "1675108891143394:15762",
+            "publicId": "1675108891143446:15880",
+            "expected_hash": "ee40ddac715e004700bad33217816a69"
+        },
+        "IResourceManager": {
+            "uid": "1645150810751076:718310",
+            "name": "Files/File_1675108891143393_15761",
+            "flags": 1
+        }
+    },
+    "1675108891143393:15761": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143393_15761"
+        }
+    },
+    "1675108891143394:15762": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143394_15762.lsmat"
+        }
+    },
+    "1675108891143446:15880": {
+        "IResourceController": {
+            "public": {
+                "path": "Models/frog/Materials/Frog_backpack.lsmat",
+                "hash": "c3f8f8175bb9077eba3d45e18f24bfea"
+            }
+        }
+    }
+}

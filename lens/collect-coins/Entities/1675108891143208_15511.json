@@ -1,0 +1,30 @@
+{
+    "1675108891143208:15511": {
+        "IResourceController": {
+            "name": "Spoon_n_Cup",
+            "type": 12,
+            "subtype": -1,
+            "dependency": 1,
+            "hidden": false,
+            "uid": "1628033004721733:1704538",
+            "fileId": "1675108891143274:15635",
+            "originalId": "1675108891143276:15637",
+            "expected_hash": "e6ef7e361843e4ee47e476831560ab9a"
+        },
+        "IResourceManager": {
+            "uid": "1628033004721733:1704538",
+            "name": "Spoon_n_Cup",
+            "flags": 0
+        }
+    },
+    "1675108891143274:15635": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143274_15635.oprfb"
+        }
+    },
+    "1675108891143276:15637": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143276_15637.oprfb"
+        }
+    }
+}

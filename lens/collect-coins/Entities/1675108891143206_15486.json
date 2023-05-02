@@ -1,0 +1,33 @@
+{
+    "1675108891143206:15486": {
+        "IResourceController": {
+            "name": "GlobalTrackingHelper",
+            "type": 4,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1626214448434356:7760",
+            "fileId": "1675108891143244:15603",
+            "publicId": "1675108891143424:15789",
+            "expected_hash": "fb50de7391de1ab2be4af302ac7f4339"
+        },
+        "IResourceManager": {
+            "uid": "1626214448434356:7760",
+            "name": "Files/File_1675108891143244_15603.js",
+            "flags": 1
+        }
+    },
+    "1675108891143244:15603": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143244_15603.js"
+        }
+    },
+    "1675108891143424:15789": {
+        "IResourceController": {
+            "public": {
+                "path": "Hand Tracking Assets/Scripts/GlobalTrackingHelper.js",
+                "hash": "fb50de7391de1ab2be4af302ac7f4339"
+            }
+        }
+    }
+}

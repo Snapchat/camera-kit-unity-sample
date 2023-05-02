@@ -1,0 +1,33 @@
+{
+    "1683031865563258:2718757": {
+        "IFileManager": {
+            "path": "Files/File_1683031865563258_2718757.js"
+        }
+    },
+    "1683031865566219:2718758": {
+        "IResourceController": {
+            "name": "CoinCollectionController",
+            "type": 4,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1683031865566230:2718759",
+            "fileId": "1683031865563258:2718757",
+            "publicId": "1683031865567831:2718764",
+            "expected_hash": "4df5d185d13a7ed4e714bae5c77a569d"
+        },
+        "IResourceManager": {
+            "uid": "1683031865566230:2718759",
+            "name": "Files/File_1683031865563258_2718757.js",
+            "flags": 1
+        }
+    },
+    "1683031865567831:2718764": {
+        "IResourceController": {
+            "public": {
+                "path": "Scripts/CoinCollectionController.js",
+                "hash": "4df5d185d13a7ed4e714bae5c77a569d"
+            }
+        }
+    }
+}

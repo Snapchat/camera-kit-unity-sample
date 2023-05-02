@@ -1,0 +1,24 @@
+{
+    "1675108891143420:15775": {
+        "IResourceController": {
+            "public": {
+                "path": "Models/frog"
+            }
+        }
+    },
+    "1675108891143540:16125": {
+        "IResourceController": {
+            "name": "frog",
+            "type": 0,
+            "subtype": -1,
+            "dependency": 0,
+            "hidden": false,
+            "publicId": "1675108891143420:15775",
+            "resources": [
+                "1675108891143531:16122",
+                "1675108891143538:16123",
+                "1675108891143540:16124"
+            ]
+        }
+    }
+}

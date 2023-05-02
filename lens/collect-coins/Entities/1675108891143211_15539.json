@@ -1,0 +1,39 @@
+{
+    "1675108891143211:15539": {
+        "IResourceController": {
+            "name": "fist",
+            "type": 12,
+            "subtype": -1,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1629851983636066:3562051",
+            "fileId": "1675108891143314:15677",
+            "originalId": "1675108891143315:15678",
+            "publicId": "1675108891143438:15851",
+            "expected_hash": "9488366885df378c43e238a12f50da9a"
+        },
+        "IResourceManager": {
+            "uid": "1629851983636066:3562051",
+            "name": "fist",
+            "flags": 0
+        }
+    },
+    "1675108891143314:15677": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143314_15677.oprfb"
+        }
+    },
+    "1675108891143315:15678": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143315_15678.oprfb"
+        }
+    },
+    "1675108891143438:15851": {
+        "IResourceController": {
+            "public": {
+                "path": "Hand Tracking Assets/Hand Gesture Presets [TRY_PREFABS]/fist.oprfb",
+                "hash": "ce9ee5941b6459d3aa3f44eb33dd099e"
+            }
+        }
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "1675108891143215:15570": {
+        "IResourceController": {
+            "name": "Frog_jet",
+            "type": 2,
+            "subtype": 1,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1645150754124477:635119",
+            "fileId": "1675108891143391:15759",
+            "originalId": "1675108891143392:15760",
+            "publicId": "1675108891143446:15879",
+            "expected_hash": "8e5638cf6e3bc7a3d8f4c9df459ec954"
+        },
+        "IResourceManager": {
+            "uid": "1645150754124477:635119",
+            "name": "Files/File_1675108891143391_15759",
+            "flags": 1
+        }
+    },
+    "1675108891143391:15759": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143391_15759"
+        }
+    },
+    "1675108891143392:15760": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143392_15760.lsmat"
+        }
+    },
+    "1675108891143446:15879": {
+        "IResourceController": {
+            "public": {
+                "path": "Models/frog/Materials/Frog_jet.lsmat",
+                "hash": "a9540482cc1e506c8d234c8c9b84c5c6"
+            }
+        }
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "1675108891143211:15537": {
+        "IResourceController": {
+            "name": "two_finger_pointer",
+            "type": 12,
+            "subtype": -1,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1629851945011202:3510712",
+            "fileId": "1675108891143311:15674",
+            "originalId": "1675108891143332:15697",
+            "publicId": "1675108891143438:15849",
+            "expected_hash": "ef1ce5cb1c9724ca2463dc9bb83ff416"
+        },
+        "IResourceManager": {
+            "uid": "1629851945011202:3510712",
+            "name": "two_finger_pointer",
+            "flags": 0
+        }
+    },
+    "1675108891143311:15674": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143311_15674.oprfb"
+        }
+    },
+    "1675108891143332:15697": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143332_15697.oprfb"
+        }
+    },
+    "1675108891143438:15849": {
+        "IResourceController": {
+            "public": {
+                "path": "Hand Tracking Assets/Hand Gesture Presets [TRY_PREFABS]/two_finger_pointer.oprfb",
+                "hash": "252c5e704d714f3ab8dffc3594492286"
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "1683025478531800:1526984": {
+        "IResourceController": {
+            "name": "Location Asset World",
+            "type": 20,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1683025478531798:1526983"
+        },
+        "IResourceManager": {
+            "uid": "1683025478531798:1526983",
+            "name": "Location Asset",
+            "flags": 0
+        }
+    }
+}

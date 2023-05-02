@@ -1,0 +1,24 @@
+{
+    "1675108891143437:15845": {
+        "IResourceController": {
+            "public": {
+                "path": "Hand Tracking Assets/Models",
+                "hash": "1bb050e16d2d88add0e4d0597c37af10"
+            }
+        }
+    },
+    "1675108891143567:16147": {
+        "IResourceController": {
+            "name": "Models",
+            "type": 0,
+            "subtype": -1,
+            "dependency": 0,
+            "hidden": false,
+            "publicId": "1675108891143437:15845",
+            "resources": [
+                "1675108891143565:16144",
+                "1675108891143567:16146"
+            ]
+        }
+    }
+}

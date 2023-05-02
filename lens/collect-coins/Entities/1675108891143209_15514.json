@@ -1,0 +1,40 @@
+{
+    "1675108891143209:15514": {
+        "IResourceController": {
+            "name": "cloud_animation",
+            "type": 1,
+            "subtype": 5,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1628120179875365:938850",
+            "fileId": "1675108891143278:15640",
+            "originalId": "1675108891143279:15641",
+            "publicId": "1675108891143431:15821",
+            "expected_hash": "5708ab5bd41afa432d11dedc4c8a54b5"
+        },
+        "IResourceManager": {
+            "uid": "1628120179875365:938850",
+            "name": "Files/File_1675108891143278_15640",
+            "flags": 1
+        }
+    },
+    "1675108891143278:15640": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143278_15640"
+        }
+    },
+    "1675108891143279:15641": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143279_15641"
+        }
+    },
+    "1675108891143431:15821": {
+        "IResourceController": {
+            "public": {
+                "path": "VFX/Cloud VFX Resources/Textures/cloud_animation",
+                "hash": "5708ab5bd41afa432d11dedc4c8a54b5",
+                "complexResourceHash": "25a24b9ae82b385bb19098dac91678c0"
+            }
+        }
+    }
+}

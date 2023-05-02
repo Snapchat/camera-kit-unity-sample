@@ -1,0 +1,39 @@
+{
+    "1675108891143211:15536": {
+        "IResourceController": {
+            "name": "thumbs_up",
+            "type": 12,
+            "subtype": -1,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1629851877374355:3377176",
+            "fileId": "1675108891143308:15672",
+            "originalId": "1675108891143310:15673",
+            "publicId": "1675108891143438:15848",
+            "expected_hash": "7af249bad6311de6e817f33b6d4107d6"
+        },
+        "IResourceManager": {
+            "uid": "1629851877374355:3377176",
+            "name": "thumbs_up",
+            "flags": 0
+        }
+    },
+    "1675108891143308:15672": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143308_15672.oprfb"
+        }
+    },
+    "1675108891143310:15673": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143310_15673.oprfb"
+        }
+    },
+    "1675108891143438:15848": {
+        "IResourceController": {
+            "public": {
+                "path": "Hand Tracking Assets/Hand Gesture Presets [TRY_PREFABS]/thumbs_up.oprfb",
+                "hash": "f9874eb855aff621ae9933cbc71313fa"
+            }
+        }
+    }
+}

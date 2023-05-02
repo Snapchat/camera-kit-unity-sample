@@ -1,0 +1,20 @@
+{
+    "1675108891143431:15822": {
+        "IResourceController": {
+            "public": {
+                "path": "VFX/Cloud VFX Resources/VFX"
+            }
+        }
+    },
+    "1675108891143550:16133": {
+        "IResourceController": {
+            "name": "VFX",
+            "type": 0,
+            "subtype": -1,
+            "dependency": 0,
+            "hidden": false,
+            "publicId": "1675108891143431:15822",
+            "resources": []
+        }
+    }
+}

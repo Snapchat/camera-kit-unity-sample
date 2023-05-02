@@ -1,0 +1,42 @@
+{
+    "1675108891143213:15554": {
+        "IResourceController": {
+            "name": "Default Hands",
+            "type": 2,
+            "subtype": 1,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1629918891666188:527117",
+            "fileId": "1675108891143341:15706",
+            "originalId": "1675108891143341:15707",
+            "publicId": "1675108891143443:15869",
+            "expected_hash": "7dc7bb506b9ef895aeeda1d2eaba9e7f",
+            "additional": {
+                "isUnpackedInPublic": "false"
+            }
+        },
+        "IResourceManager": {
+            "uid": "1629918891666188:527117",
+            "name": "Files/File_1675108891143341_15706",
+            "flags": 1
+        }
+    },
+    "1675108891143341:15706": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143341_15706"
+        }
+    },
+    "1675108891143341:15707": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143341_15707.lsmat"
+        }
+    },
+    "1675108891143443:15869": {
+        "IResourceController": {
+            "public": {
+                "path": "Hand Tracking Assets/Materials/Default Hands.lsmat",
+                "hash": "ec6376aa4f8223c858cfece5b440ca8d"
+            }
+        }
+    }
+}

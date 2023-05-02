@@ -1,0 +1,39 @@
+{
+    "1675108891143215:15572": {
+        "IResourceController": {
+            "name": "Frog_skin",
+            "type": 2,
+            "subtype": 1,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1645150963038007:864208",
+            "fileId": "1675108891143395:15763",
+            "originalId": "1675108891143396:15764",
+            "publicId": "1675108891143446:15881",
+            "expected_hash": "8e5638cf6e3bc7a3d8f4c9df459ec954"
+        },
+        "IResourceManager": {
+            "uid": "1645150963038007:864208",
+            "name": "Files/File_1675108891143395_15763",
+            "flags": 1
+        }
+    },
+    "1675108891143395:15763": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143395_15763"
+        }
+    },
+    "1675108891143396:15764": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143396_15764.lsmat"
+        }
+    },
+    "1675108891143446:15881": {
+        "IResourceController": {
+            "public": {
+                "path": "Models/frog/Materials/Frog_skin.lsmat",
+                "hash": "5353d2a77a4788377558af1717806dd7"
+            }
+        }
+    }
+}

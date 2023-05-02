@@ -1,0 +1,33 @@
+{
+    "1675108891143208:15512": {
+        "IResourceController": {
+            "name": "RotateObjectByFingerHelper",
+            "type": 4,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1628033426760485:1985360",
+            "fileId": "1675108891143277:15638",
+            "publicId": "1675108891143430:15817",
+            "expected_hash": "f79d25536c5d4c585759745aa4501661"
+        },
+        "IResourceManager": {
+            "uid": "1628033426760485:1985360",
+            "name": "Files/File_1675108891143277_15638.js",
+            "flags": 1
+        }
+    },
+    "1675108891143277:15638": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143277_15638.js"
+        }
+    },
+    "1675108891143430:15817": {
+        "IResourceController": {
+            "public": {
+                "path": "Hand Tracking Assets/Scripts/Helpers/RotateObjectByFingerHelper.js",
+                "hash": "f79d25536c5d4c585759745aa4501661"
+            }
+        }
+    }
+}

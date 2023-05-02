@@ -1,0 +1,99 @@
+{
+    "1626214447406909:7498": {
+        "Compression::IController": {
+            "compressed_files": "",
+            "infos": {
+                "compressedRAM": "21304",
+                "compressedSize": "15163",
+                "extension": "mesh",
+                "originalRAM": "21304",
+                "originalSize": "15163",
+                "settings": {
+                    "attributeFormat": "",
+                    "draco": {
+                        "colorBits": "8",
+                        "compressLvl": "7",
+                        "normalBits": "8",
+                        "posBits": "11",
+                        "texBits": "10"
+                    },
+                    "info": {
+                        "hasBlendShapes": "false",
+                        "vertexAttribs": [
+                            {
+                                "canBeDisabled": "false",
+                                "format": "9",
+                                "semantic": "position"
+                            },
+                            {
+                                "canBeDisabled": "true",
+                                "format": "9",
+                                "semantic": "normal"
+                            },
+                            {
+                                "canBeDisabled": "true",
+                                "format": "9",
+                                "semantic": "tangent"
+                            },
+                            {
+                                "canBeDisabled": "true",
+                                "format": "9",
+                                "semantic": "texture0"
+                            },
+                            {
+                                "canBeDisabled": "true",
+                                "format": "9",
+                                "semantic": "boneData"
+                            }
+                        ]
+                    },
+                    "isCompressed": "false",
+                    "type": "0"
+                }
+            },
+            "uncompressed_file": "1675108891143382:15749"
+        }
+    },
+    "1675108891143203:15459": {
+        "IResourceController": {
+            "name": "Frog_bp 2",
+            "type": 3,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1626214447406909:7498",
+            "fileId": "1675108891143236:15594",
+            "originalId": "1675108891143237:15595",
+            "publicId": "1675108891143422:15781",
+            "expected_hash": "f1d595d39138b4823cc4e480a4287974"
+        },
+        "IResourceManager": {
+            "uid": "1626214447406909:7498",
+            "name": "Files/File_1675108891143236_15594.mesh",
+            "flags": 1
+        }
+    },
+    "1675108891143236:15594": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143236_15594.mesh"
+        }
+    },
+    "1675108891143237:15595": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143237_15595.mesh"
+        }
+    },
+    "1675108891143382:15749": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143382_15749.mesh"
+        }
+    },
+    "1675108891143422:15781": {
+        "IResourceController": {
+            "public": {
+                "path": "Models/frog/Meshes/Frog_bp 2.mesh",
+                "hash": "f1d595d39138b4823cc4e480a4287974"
+            }
+        }
+    }
+}
