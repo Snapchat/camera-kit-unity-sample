@@ -22,7 +22,6 @@ public class CameraKitConfiguration
 {
     // TODO: Implement Shutter Button Logic
     public CameraKitShutterButtonMode ShutterButtonMode = CameraKitShutterButtonMode.On;
-    // TODO: Implement Full screen without it being a swipable dialog
     public CameraKitRenderMode RenderMode = CameraKitRenderMode.Fullscreen;
     public CameraKitDevice StartWithCamera = CameraKitDevice.FrontCamera;
     public string RemoteAPISpecId;
