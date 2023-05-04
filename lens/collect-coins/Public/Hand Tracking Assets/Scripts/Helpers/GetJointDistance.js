@@ -76,7 +76,7 @@ function onUpdate() {
         if (global.checkWithinRange(rawDistance, script.minDistance, script.maxDistance)) {
             if (!passTriggerSent) {
                 if (script.sendTriggers) {
-                    print("enter range trgger sent" + script.enterRangeTrigger);
+                    //print("enter range trgger sent" + script.enterRangeTrigger);
                     global.behaviorSystem.sendCustomTrigger(script.enterRangeTrigger);   
                 }
                 if (inRangeColor && distanceLoggerObject) {
@@ -88,7 +88,7 @@ function onUpdate() {
         } else {
             if (passTriggerSent) {
                 if (script.sendTriggers) {    
-                    print("exit range trgger sent" + script.exitRangeTrigger);
+                    //print("exit range trgger sent" + script.exitRangeTrigger);
                     global.behaviorSystem.sendCustomTrigger(script.exitRangeTrigger);
                 }
                 if (outofRangeColor && distanceLoggerObject) {

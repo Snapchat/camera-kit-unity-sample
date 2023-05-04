@@ -92,7 +92,16 @@ public class GameManager : MonoBehaviour
     }
 
     public void OnCollectCoinsSelected() {
-        animationManager.PlayScene("Oops");
+        animationManager.PlayScene("StartCollectCoinsLens");
+        var config = new CameraKitConfiguration() {
+            LensGroupID = Constants.LENS_GROUP_ID,
+            LensID = Constants.LENS_ID_COLLECT_COINS,
+            RenderMode = CameraKitRenderMode.BehindUnity,     
+            StartWithCamera = CameraKitDevice.BackCamera,
+            LaunchParameters = new Dictionary<string, string>()
+        };
+
+        CameraKitHandler.InvokeCameraKit(config);
     }
 
     public void OnInkSplashSelected() {
@@ -111,6 +120,12 @@ public class GameManager : MonoBehaviour
 
         CameraKitHandler.InvokeCameraKit(config);
     } 
+
+    public void OnCloseButtonClicked() 
+    {
+        animationManager.PlayScene("LensClosed");
+        CameraKitHandler.DismissCameraKit();
+    }
 
 
     #endregion

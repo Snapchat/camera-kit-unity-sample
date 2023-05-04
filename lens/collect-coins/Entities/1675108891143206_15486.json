@@ -9,7 +9,7 @@
             "uid": "1626214448434356:7760",
             "fileId": "1675108891143244:15603",
             "publicId": "1675108891143424:15789",
-            "expected_hash": "fb50de7391de1ab2be4af302ac7f4339"
+            "expected_hash": "3e29e48cf404e918a2d88d292c9b1d12"
         },
         "IResourceManager": {
             "uid": "1626214448434356:7760",
@@ -26,7 +26,7 @@
         "IResourceController": {
             "public": {
                 "path": "Hand Tracking Assets/Scripts/GlobalTrackingHelper.js",
-                "hash": "fb50de7391de1ab2be4af302ac7f4339"
+                "hash": "3e29e48cf404e918a2d88d292c9b1d12"
             }
         }
     }

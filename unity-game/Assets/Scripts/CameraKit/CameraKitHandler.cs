@@ -11,6 +11,7 @@ public class CameraKitHandler : MonoBehaviour
 	public static event Action OnCameraDismissed;
 	public static event Action<string> OnCaptureFinished;
 	public static event Action OnLensRequestedUpdatedState;
+	public static event Action<string> OnCameraKitInitializationFailed;
 	
 	public static bool IsCameraKitShowing {get; private set;}
 	
@@ -53,39 +54,49 @@ public class CameraKitHandler : MonoBehaviour
 			IsCameraKitShowing = true;
 		}
 
-		//--- Camera Kit Message Handlers ---
-		// These are are invoked from native code via UnitySendMessage with the method name and GameObject name
-		// It's important not to change the GameObject's name (CameraKitHandler), otherwise these methods will not get called.
-
-        public void OnResponseFromLens(string responseJson)
-        {
-            var response = JsonUtility.FromJson<SerializedResponseFromLens>(responseJson);
-			OnResponseFromLensEvent?.Invoke(response);
-        }
-
-		public void OnCameraKitDismissed() 
-		{
-			OnCameraDismissed?.Invoke();
-		}
-
-		public void OnCameraKitCaptureResult(string capturedFileUriPath) 
-		{
-			OnCaptureFinished?.Invoke(capturedFileUriPath);
-		}
-
 		public static void DismissCameraKit()
 		{
 			_nativeBridge.DismissCameraKit();
 			IsCameraKitShowing = false;
 		}
 
-		public void OnLensRequestedState() {
-			OnLensRequestedUpdatedState?.Invoke();
-		}
-
 		public static void UpdateLensState(Dictionary<string, string> lensParams)
 		{
 			_nativeBridge.UpdateLensState(lensParams);
 		}
+
+		#region Camera Kit Message Handlers
+		// These are are invoked from native code via UnitySendMessage with the method name and GameObject name
+		// It's important not to change the GameObject's name (CameraKitHandler), otherwise these methods will not get called.
+
+        public void MessageResponseFromLens(string responseJson)
+        {
+            var response = JsonUtility.FromJson<SerializedResponseFromLens>(responseJson);
+			OnResponseFromLensEvent?.Invoke(response);
+        }
+
+		public void MessageCameraKitDismissed() 
+		{
+			OnCameraDismissed?.Invoke();
+		}
+
+		public void MessageCameraKitCaptureResult(string capturedFileUriPath) 
+		{
+			OnCaptureFinished?.Invoke(capturedFileUriPath);
+		}
+
+		public void MessageLensRequestedState() 
+		{
+			OnLensRequestedUpdatedState?.Invoke();
+		}
+
+		public void MessageCameraKitInitFailed(string error) 
+		{
+			OnCameraKitInitializationFailed?.Invoke(error);
+		}
+
+		#endregion
+
+
 
 }

@@ -214,13 +214,13 @@ extension AppDelegate: NativeCallsProtocol {
         withRenderMode renderMode: NSNumber!,
         withRemoteAPISpecId remoteApiSpecId: String!
     ) {
-        cameraController.launchDataFromUnity = launchData
+//        cameraController.launchDataFromUnity = launchData
         cameraController.groupIDs = [groupId]
-        cameraController.startingLensId = lensId
+//        cameraController.startingLensId = lensId
         cameraController.cameraKit.lenses.repository.addObserver(self, specificLensID: lensId, inGroupID: groupId)
         
         if (renderMode == 1) { 
-            invokeCameraKitAsBackgroundLayer()
+            invokeCameraKitAsBackgroundLayer(lensId: lensId, groupId: groupId, launchDataFromUnity: launchData)
         } else {
             invokeCameraKitAsModalFullScreen(lensId: lensId, groupId: groupId, launchDataFromUnity: launchData)
         }
@@ -238,38 +238,35 @@ extension AppDelegate: NativeCallsProtocol {
         unityFramework?.pause(true)
         unityFramework?.appController().rootViewController.present(cameraViewController!, animated: true)
         
-        var lens = cameraController.cameraKit.lenses.repository.lens(id: lensId, groupID: groupId)
+        let lens = cameraController.cameraKit.lenses.repository.lens(id: lensId, groupID: groupId)
         let launchDataBuilder = LensLaunchDataBuilder()
         launchDataFromUnity?.forEach {
             launchDataBuilder.add(string: $1, key: $0)
         }
-        var launchDataToLens = launchDataBuilder.launchData ?? EmptyLensLaunchData()
+        let launchDataToLens = launchDataBuilder.launchData ?? EmptyLensLaunchData()
         cameraController.cameraKit.lenses.processor?.apply(lens: lens!, launchData: launchDataToLens)
         
-//        if cameraController.initialLens != nil {
-//            cameraController.cameraKit.lenses.processor?.apply(
-//                lens: cameraController.initialLens!,
-//                launchData: cameraController.buildLaunchData()
-//            )
-//        }
+
     }
 
-    func invokeCameraKitAsBackgroundLayer() {
-        cameraViewController = UnityCameraViewController(cameraController: cameraController)
-        cameraViewController?.appOrientationDelegate = self
-        cameraViewController?.modalPresentationStyle = .formSheet
+    func invokeCameraKitAsBackgroundLayer(lensId: String!, groupId: String!, launchDataFromUnity: [String:String]!) {
+        if cameraViewController == nil {
+            cameraViewController = UnityCameraViewController(cameraController: cameraController)
+            cameraViewController?.appOrientationDelegate = self
+        }
     
         if let nativeWindow = window {
             unityFramework?.appController().rootView.backgroundColor = UIColor.black.withAlphaComponent(0.0);
             nativeWindow.rootViewController?.add(cameraViewController!, frame: UIScreen.main.bounds)
         }
                 
-        if cameraController.initialLens != nil {
-            cameraController.cameraKit.lenses.processor?.apply(
-                lens: cameraController.initialLens!,
-                launchData: cameraController.buildLaunchData()
-            )
+        let lens = cameraController.cameraKit.lenses.repository.lens(id: lensId, groupID: groupId)
+        let launchDataBuilder = LensLaunchDataBuilder()
+        launchDataFromUnity?.forEach {
+            launchDataBuilder.add(string: $1, key: $0)
         }
+        let launchDataToLens = launchDataBuilder.launchData ?? EmptyLensLaunchData()
+        cameraController.cameraKit.lenses.processor?.apply(lens: lens!, launchData: launchDataToLens)
     }
     
     func updateLensState(_ launchData: [String : String]!) {
@@ -286,19 +283,20 @@ extension AppDelegate: NativeCallsProtocol {
 
 extension AppDelegate: LensRepositorySpecificObserver, LensRepositoryGroupObserver {
     func repository(_ repository: LensRepository, didUpdateLenses lenses: [Lens], forGroupID groupID: String) {
-        lenses.forEach {
-            if $0.id == cameraController.startingLensId {
-                cameraController.initialLens = $0
-            }
-        }
+//        lenses.forEach {
+//            if $0.id == cameraController.startingLensId {
+//                cameraController.initialLens = $0
+//            }
+//        }
     }
 
     func repository(_ repository: LensRepository, didFailToUpdateLensesForGroupID groupID: String, error: Error?) {
+        self.unityFramework?.sendMessageToGO(withName: "CameraKitHandler", functionName: "MessageCameraKitInitFailed", message:"Failed to upload lenses")
         print("failed to update lenses")
     }
 
     func repository(_ repository: LensRepository, didUpdate lens: Lens, forGroupID groupID: String) {
-        cameraController.initialLens = lens
+//        cameraController.initialLens = lens
     }
     func repository(
         _ repository: LensRepository,
@@ -306,6 +304,7 @@ extension AppDelegate: LensRepositorySpecificObserver, LensRepositoryGroupObserv
         forGroupID groupID: String,
         error: Error?
     ) {
+        self.unityFramework?.sendMessageToGO(withName: "CameraKitHandler", functionName: "MessageCameraKitInitFailed", message:"Error loading lens " + lensID)
         print("Error loading lens " + lensID)
     }
 }
@@ -328,16 +327,16 @@ class UnityCameraViewController: CameraViewController  {
         if isBeingDismissed {
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             appDelegate.unityFramework?.pause(false)
-            appDelegate.unityFramework?.sendMessageToGO(withName: "CameraKitHandler", functionName: "OnCameraKitDismissed", message:"")
+            appDelegate.unityFramework?.sendMessageToGO(withName: "CameraKitHandler", functionName: "MessageCameraKitDismissed", message:"")
         }
     }
     
 }
     
 class UnityCameraController: CameraController {
-    fileprivate var launchDataFromUnity: [String: String]?
-    fileprivate var startingLensId: String?
-    fileprivate var initialLens: Lens?
+//    fileprivate var launchDataFromUnity: [String: String]?
+//    fileprivate var startingLensId: String?
+//    fileprivate var initialLens: Lens?
     
     override func configureDataProvider() -> DataProviderComponent {
         DataProviderComponent(
@@ -346,13 +345,13 @@ class UnityCameraController: CameraController {
         )
     }
     
-    func buildLaunchData() -> LensLaunchData {
-        let launchDataBuilder = LensLaunchDataBuilder()
-        launchDataFromUnity?.forEach {
-            launchDataBuilder.add(string: $1, key: $0)
-        }
-        return launchDataBuilder.launchData ?? EmptyLensLaunchData()
-    }
+//    func buildLaunchData() -> LensLaunchData {
+//        let launchDataBuilder = LensLaunchDataBuilder()
+//        launchDataFromUnity?.forEach {
+//            launchDataBuilder.add(string: $1, key: $0)
+//        }
+//        return launchDataBuilder.launchData ?? EmptyLensLaunchData()
+//    }
     
     override func takePhoto(completion: ((UIImage?, Error?) -> Void)?) {
         super.takePhoto(completion: {image, error in
@@ -362,7 +361,7 @@ class UnityCameraController: CameraController {
             }
             DispatchQueue.main.async {
                 let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                appDelegate.unityFramework?.sendMessageToGO(withName: "CameraKitHandler", functionName: "OnCameraKitCaptureResult", message: pathToSavedImage)
+                appDelegate.unityFramework?.sendMessageToGO(withName: "CameraKitHandler", functionName: "MessageCameraKitCaptureResult", message: pathToSavedImage)
                 appDelegate.cameraViewController?.dismiss(animated: true)
             }
         })
@@ -373,7 +372,7 @@ class UnityCameraController: CameraController {
         super.finishRecording(completion: {url, error in
             DispatchQueue.main.async {
                 let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                appDelegate.unityFramework?.sendMessageToGO(withName: "CameraKitHandler", functionName: "OnCameraKitCaptureResult", message: url?.absoluteString)
+                appDelegate.unityFramework?.sendMessageToGO(withName: "CameraKitHandler", functionName:  "MessageCameraKitCaptureResult", message: url?.absoluteString)
                 appDelegate.cameraViewController?.dismiss(animated: true)
             }
         })

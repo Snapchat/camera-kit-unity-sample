@@ -145,7 +145,7 @@ var distanceLoggers = [];
 
 function DistanceLogger(position1, position2) {
     if (!script.distanceLogger) {
-        print("ERROR! Please Input Distance Logger at " + script.getSceneObject().name);
+        //print("ERROR! Please Input Distance Logger at " + script.getSceneObject().name);
         return;
     }
 

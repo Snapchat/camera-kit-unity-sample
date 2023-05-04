@@ -33,12 +33,12 @@
         },
         "Material::UiComponent": "",
         "MetaInfoUIComponent": {
-            "icon_hash": "1ff805aef26ed623cf210296882fff26",
+            "icon_hash": "d5de771bd15040199f34768bef2481e3",
             "icon_path": "icon.png",
             "hints": [
                 ""
             ],
-            "lens": "3DHandInteractions",
+            "lens": "DUCK: Collect Coin",
             "applicability": "2",
             "lens_descriptors": "",
             "sg": "false",
@@ -56,7 +56,7 @@
             "preview_images_project_config": {
                 "back_preview_id": "bundle:Preview\/Images\/Gesture Open.jpg",
                 "back_preview_is_favorite": "false",
-                "front_preview_id": "bundle:Preview\/Images\/Gesture Horns.jpg",
+                "front_preview_id": "bundle:Preview\/Images\/Body.jpg",
                 "front_preview_is_favorite": "false"
             },
             "preview_videos_project_config": {
@@ -3485,41 +3485,6 @@
                                 "Component.RenderMeshVisual"
                             ],
                             "v": "1626479476310740:37763"
-                        }
-                    ]
-                },
-                {
-                    "k": "1628033004721733:1704538",
-                    "v": [
-                        {
-                            "k": "",
-                            "v": "1628033004712593:1704508"
-                        },
-                        {
-                            "k": [
-                                "Cup"
-                            ],
-                            "v": "1628033004715650:1704510"
-                        },
-                        {
-                            "k": [
-                                "Cup",
-                                "Component.RenderMeshVisual"
-                            ],
-                            "v": "1628033004715979:1704512"
-                        },
-                        {
-                            "k": [
-                                "Spoon"
-                            ],
-                            "v": "1628033004717332:1704524"
-                        },
-                        {
-                            "k": [
-                                "Spoon",
-                                "Component.RenderMeshVisual"
-                            ],
-                            "v": "1628033004717656:1704526"
                         }
                     ]
                 },

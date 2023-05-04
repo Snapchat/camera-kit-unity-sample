@@ -10,7 +10,7 @@
             "fileId": "1675108891143283:15645",
             "originalId": "1675108891143284:15646",
             "publicId": "1675108891143432:15825",
-            "expected_hash": "3bda13ec8e9e55c0352e56bbcc76ae48",
+            "expected_hash": "3a73475b8d5410d2d069607c0c0a1c93",
             "additional": {
                 "isUnpackedInPublic": "false"
             }
@@ -35,7 +35,7 @@
         "IResourceController": {
             "public": {
                 "path": "Hand Tracking Assets/Materials/Indicator Line.lsmat",
-                "hash": "31a2f82839711914287dab3629b66e6d"
+                "hash": "5731258ba0d3a11ee2a189768d94aab9"
             }
         }
     }
