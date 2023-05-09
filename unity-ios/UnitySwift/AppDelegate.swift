@@ -249,13 +249,6 @@ extension AppDelegate: NativeCallsProtocol {
             nativeWindow.rootViewController?.add(cameraViewController!, frame: UIScreen.main.bounds)
         }
         cameraViewController?.hideCameraUiControls(hide: true);
-        
-//        unityFramework?.pause(true)
-//
-//        let navVC = UINavigationController(rootViewController: cameraViewController!)
-//        navVC.modalPresentationStyle = .fullScreen
-//        unityFramework?.appController().rootViewController.present(navVC, animated: true);
-//        cameraViewController?.hideCameraUiControls(hide: false);
     }
     
     func updateLensState(_ launchData: [String : String]!) {

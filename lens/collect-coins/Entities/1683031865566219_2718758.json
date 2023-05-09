@@ -14,7 +14,7 @@
             "uid": "1683031865566230:2718759",
             "fileId": "1683031865563258:2718757",
             "publicId": "1683031865567831:2718764",
-            "expected_hash": "4df5d185d13a7ed4e714bae5c77a569d"
+            "expected_hash": "acfa48222cf6ccb57768bac627c5b1a4"
         },
         "IResourceManager": {
             "uid": "1683031865566230:2718759",
@@ -26,7 +26,7 @@
         "IResourceController": {
             "public": {
                 "path": "Scripts/CoinCollectionController.js",
-                "hash": "4df5d185d13a7ed4e714bae5c77a569d"
+                "hash": "acfa48222cf6ccb57768bac627c5b1a4"
             }
         }
     }

@@ -6,6 +6,20 @@ using System;
 [Serializable]
 public class SerializedResponseFromLens
 {
-    public bool isEmpty;
-    public string shipSelected;
+    public string eventName;
+    public string eventValue;
+}
+
+[Serializable]
+public class ResponseRoot
+{
+    public SerializedResponseFromLens unityData;
+}
+
+public static class LensEvents 
+{
+    public const string HAND_DETECTED = "handDetected";
+    public const string HAND_LOST = "handLost";
+    public const string COIN_GRABBED = "grabDetected";
+    public const string COIN_DEPOSITED = "coinDeposited";
 }

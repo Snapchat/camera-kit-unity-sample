@@ -20,11 +20,15 @@ public class AnimationChangeStage : BaseAnimation
     [SerializeField]
     private GameObject _xOutButton;
 
+    [SerializeField]
+    private GameObject _capturePreview;
+
     
     public override void Play() {
         _bg.texture = _targetTexture;
         _buttonsRoot.gameObject.SetActive(_showButtons);
         _xOutButton.gameObject.SetActive(!_showButtons);
+        _capturePreview.gameObject.SetActive(false);
         Finished();
     }
 }

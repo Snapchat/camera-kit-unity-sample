@@ -287,7 +287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b04a95d9c5984667949c03fa5c9e1a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _whatToSay: Ok Let's make some space here.
+  _whatToSay: Very well!
   _mirrorBubble: 0
   _bubble: {fileID: 1314575361}
   _text: {fileID: 1003224257}
@@ -492,7 +492,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b04a95d9c5984667949c03fa5c9e1a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _whatToSay: Oops! That one is coming soon. Choose something else.
+  _whatToSay: Oops! This one is not ready yet. Try again in a later version.
   _mirrorBubble: 0
   _bubble: {fileID: 1314575361}
   _text: {fileID: 1003224257}
@@ -545,6 +545,7 @@ MonoBehaviour:
   _buttonsRoot: {fileID: 923855770}
   _showButtons: 1
   _xOutButton: {fileID: 347529645}
+  _capturePreview: {fileID: 724641823}
 --- !u!1 &305782329
 GameObject:
   m_ObjectHideFlags: 0
@@ -680,6 +681,7 @@ MonoBehaviour:
     animations:
     - {fileID: 175271316}
     - {fileID: 1446360365}
+    - {fileID: 1819376934}
   - name: LensClosed
     animations:
     - {fileID: 266681912}
@@ -709,6 +711,7 @@ Transform:
   - {fileID: 1446360364}
   - {fileID: 266681911}
   - {fileID: 1915880472}
+  - {fileID: 1819376933}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -881,11 +884,11 @@ RectTransform:
   m_Father: {fileID: 1942053588}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -67, y: -182}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 29, y: -150.09998}
   m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 1, y: 1}
+  m_Pivot: {x: 0, y: 1}
 --- !u!114 &347529647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1738,6 +1741,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1144637263}
   - component: {fileID: 1144637262}
+  - component: {fileID: 1144637264}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1759,7 +1763,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animationManager: {fileID: 315072671}
   pauseLabel: {fileID: 326950535}
-  temporaryCapturedMedia: 
 --- !u!4 &1144637263
 Transform:
   m_ObjectHideFlags: 0
@@ -1775,6 +1778,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1144637264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144637261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b04a95d9c5984667949c03fa5c9e1a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _whatToSay: 
+  _mirrorBubble: 0
+  _bubble: {fileID: 1314575361}
+  _text: {fileID: 1003224257}
 --- !u!1 &1176720926
 GameObject:
   m_ObjectHideFlags: 0
@@ -1867,7 +1886,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b04a95d9c5984667949c03fa5c9e1a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _whatToSay: 'Welcome to the Unity demo! Select a Lens to open it via Camera Kit '
+  _whatToSay: Welcome to the Unity Demo. Select a lens to open it via Camera Kit
   _mirrorBubble: 0
   _bubble: {fileID: 1314575361}
   _text: {fileID: 1003224257}
@@ -1997,6 +2016,7 @@ MonoBehaviour:
   _buttonsRoot: {fileID: 923855770}
   _showButtons: 0
   _xOutButton: {fileID: 347529645}
+  _capturePreview: {fileID: 724641823}
 --- !u!1 &1557424446
 GameObject:
   m_ObjectHideFlags: 0
@@ -2041,7 +2061,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b04a95d9c5984667949c03fa5c9e1a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _whatToSay: Masks try-on, eh? Very well, select a mask to try it on.
+  _whatToSay: Very well. Select a mask above to try it on.
   _mirrorBubble: 0
   _bubble: {fileID: 1314575361}
   _text: {fileID: 1003224257}
@@ -2367,6 +2387,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1811796691}
   m_CullTransparentMesh: 1
+--- !u!1 &1819376932
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1819376933}
+  - component: {fileID: 1819376934}
+  m_Layer: 0
+  m_Name: ShopkeepLineStartHandTracking
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1819376933
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819376932}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 315072672}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1819376934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819376932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b04a95d9c5984667949c03fa5c9e1a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _whatToSay: This lens uses hand tracking. Try showing your hand to the camera.
+  _mirrorBubble: 0
+  _bubble: {fileID: 1314575361}
+  _text: {fileID: 1003224257}
 --- !u!1 &1915880471
 GameObject:
   m_ObjectHideFlags: 0
@@ -2411,7 +2479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b04a95d9c5984667949c03fa5c9e1a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _whatToSay: Hope you liked that one
+  _whatToSay: I hope you enjoyed this one.
   _mirrorBubble: 0
   _bubble: {fileID: 1314575361}
   _text: {fileID: 1003224257}
@@ -2650,7 +2718,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b04a95d9c5984667949c03fa5c9e1a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _whatToSay: That's a nice picture!
+  _whatToSay: That's a nice photo!
   _mirrorBubble: 0
   _bubble: {fileID: 1314575361}
   _text: {fileID: 1003224257}

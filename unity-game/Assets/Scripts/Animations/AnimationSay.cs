@@ -7,7 +7,7 @@ using TMPro;
 public class AnimationSay : BaseAnimation
 {
     [SerializeField]
-    private string _whatToSay;
+    public string _whatToSay;
 
     [SerializeField]
     private bool _mirrorBubble;
@@ -18,22 +18,70 @@ public class AnimationSay : BaseAnimation
     [SerializeField]
     private TextMeshProUGUI _text;
 
+    private int _currentCharacterIndex;
+    private float _timer;
+    private float _delayBetweenCharacters = 0.02f;
+    private bool _isPlaying;
+
 
     override public void Play()
     {
         _bubble.gameObject.SetActive(true);
         _text.gameObject.SetActive(true);
-        _text.text = "";
-        StopAllCoroutines();
-        StartCoroutine(TypewriterText());
+        SendInterruptSignalToOthers();
+        StartAnimating();
     }
 
-    private IEnumerator TypewriterText() {
-        foreach (char c in _whatToSay) {
-            _text.text += c;
-            yield return new WaitForSeconds(0.02f);
+    public void Play(string whatToSay) 
+    {
+        _whatToSay = whatToSay;
+        Play();
+    }
+
+    void Update()
+    {
+        if (_isPlaying)
+        {
+            _timer += Time.deltaTime;
+
+            if (_timer >= _delayBetweenCharacters)
+            {
+                _text.text = _whatToSay
+        .Substring(0, _currentCharacterIndex + 1);
+                _currentCharacterIndex++;
+
+                if (_currentCharacterIndex >= _whatToSay
+        .Length)
+                {
+                    _isPlaying = false;
+                    Finished();
+                }
+
+                _timer = 0f;
+            }
         }
-        Finished();
+    }
+
+    public void StopAnimating()
+    {
+        _isPlaying = false;
+    }
+
+    void StartAnimating() 
+    {
+        _text.text = "";
+        _isPlaying = true;
+        _currentCharacterIndex = 0;
+        _timer = 0f;
+    }
+    
+    void SendInterruptSignalToOthers()
+    {
+        AnimationSay[] animationSays = FindObjectsOfType<AnimationSay>();
+        foreach (AnimationSay animationSay in animationSays)
+        {
+            animationSay.StopAnimating();
+        }
     }
 
 }

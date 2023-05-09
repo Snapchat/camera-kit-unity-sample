@@ -9,7 +9,7 @@
     "isReadOnly": "false",
     "isAutoSaved": "true",
     "api_level": "public",
-    "public_api_user_data_access": "unrestricted",
+    "public_api_user_data_access": "restricted",
     "studioVersion": {
         "createdWith": {
             "type": "Public",
@@ -104,7 +104,38 @@
             ]
         },
         "RemoteApi::ModelManager": {
-            "api_specs": ""
+            "api_specs": [
+                {
+                    "k": "1683216184537184:5389350",
+                    "v": {
+                        "api_spec_id": "98821e72-0407-4125-be80-89a9c7933631",
+                        "name": "Unity SDK - Generic API",
+                        "provider_name": "Camera Kit - Unity SDK",
+                        "description": "A generic API allowing for interchange of information between the Unity SDK and Lens Studio",
+                        "host": "unity",
+                        "documentation_url": "",
+                        "endpoints": [
+                            {
+                                "ref_id": "unitySendData",
+                                "metadata": {
+                                    "name": "",
+                                    "description": ""
+                                },
+                                "parameters": [
+                                    {
+                                        "name": "unityData",
+                                        "is_optional": "true"
+                                    }
+                                ]
+                            }
+                        ],
+                        "local_only": "false",
+                        "visibility": "private",
+                        "source": "developer",
+                        "restricted_js_api_permissions": ""
+                    }
+                }
+            ]
         },
         "RenderOrderComponent": "",
         "WorldComponent": {
