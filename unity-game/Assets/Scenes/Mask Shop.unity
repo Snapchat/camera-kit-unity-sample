@@ -2132,7 +2132,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6969626990530192587, guid: cca52c0a2a8d1477bb8801cee743b391, type: 3}
       propertyPath: m_text
-      value: "Ink\n Splash"
+      value: "World \nMesh"
       objectReference: {fileID: 0}
     - target: {fileID: 8124401313544815567, guid: cca52c0a2a8d1477bb8801cee743b391, type: 3}
       propertyPath: m_Pivot.x
@@ -2236,7 +2236,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8321965502141700374, guid: cca52c0a2a8d1477bb8801cee743b391, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnInkSplashSelected
+      value: OnWorldMeshSelected
       objectReference: {fileID: 0}
     - target: {fileID: 8321965502141700374, guid: cca52c0a2a8d1477bb8801cee743b391, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName

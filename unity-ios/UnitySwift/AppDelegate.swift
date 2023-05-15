@@ -13,6 +13,8 @@ import CoreLocation
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate, UnityFrameworkListener {
+    
+    
     fileprivate var supportedOrientations: UIInterfaceOrientationMask = .allButUpsideDown
     fileprivate var cameraController: UnityCameraController = .init()
     fileprivate var cameraViewController: UnityCameraViewController?
@@ -210,9 +212,11 @@ extension AppDelegate: NativeCallsProtocol {
     func invokeCameraKit(
         withLens lensId: String!,
         withGroupID groupId: String!,
+        withRemoteAPISpecId remoteApiSpecId: String!,
         withLaunchData launchData: [String: String]!,
         withRenderMode renderMode: NSNumber!,
-        withRemoteAPISpecId remoteApiSpecId: String!
+        withCameraMode cameraMode: NSNumber!,
+        withShutterButtonMode shutterButtonMode: NSNumber!
     ) {
         cameraController.cameraKit.lenses.repository.addObserver(self, specificLensID: lensId, inGroupID: groupId)
         cameraController.cameraKit.lenses.repository.addObserver(self, groupID: groupId)
@@ -220,15 +224,35 @@ extension AppDelegate: NativeCallsProtocol {
         if (cameraViewController == nil) {
             cameraViewController = UnityCameraViewController(cameraController: cameraController)
         }
+        
         cameraViewController?.appOrientationDelegate = self
         cameraViewController?.applyLensId = lensId;
         cameraViewController?.applyGroupId = groupId;
         cameraViewController?.launchDataFromUnity = launchData;
+        cameraViewController?.cameraView.carouselView.isHidden = true
+        cameraViewController?.shutterButtonMode = shutterButtonMode
         
-        if (renderMode == 1) { 
+        if (renderMode == Constants.RenderMode.BehindUnity) { 
             invokeCameraKitAsBackgroundLayer()
         } else {
             invokeCameraKitAsModalFullScreen()
+        }
+        
+        if ((cameraMode == Constants.Device.BackCamera && cameraViewController?.cameraController.cameraPosition == .front)
+            || (cameraMode == Constants.Device.FrontCamera && cameraViewController?.cameraController.cameraPosition == .back)) {
+            cameraViewController?.cameraController.flipCamera()
+        }
+        
+        if (shutterButtonMode == Constants.ShutterButtonMode.On) {
+            cameraViewController?.cameraView.cameraButton.isHidden = false
+        } else if (shutterButtonMode == Constants.ShutterButtonMode.Off) {
+            cameraViewController?.cameraView.cameraButton.isHidden = true
+        } else if (shutterButtonMode == Constants.ShutterButtonMode.OnlyOnFrontCamera) {
+            if (cameraViewController?.cameraController.cameraPosition == .front) {
+                cameraViewController?.cameraView.cameraButton.isHidden = false
+            } else {
+                cameraViewController?.cameraView.cameraButton.isHidden = true
+            }
         }
         
     }
@@ -295,19 +319,18 @@ extension AppDelegate: CLLocationManagerDelegate {
     }
 }
 
-
-
-
 class UnityCameraViewController: CameraViewController  {
     
     fileprivate var launchDataFromUnity: [String: String]?
     fileprivate var applyLensId: String?
     fileprivate var applyGroupId: String?
+    fileprivate var shutterButtonMode: NSNumber?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = ""
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(dismissSelf) )
+        cameraController.uiDelegate = self
         
     }
     
@@ -339,6 +362,19 @@ class UnityCameraViewController: CameraViewController  {
     
     fileprivate func hideCameraUiControls(hide: Bool) {
         cameraView.cameraActionsView.isHidden = hide
+    }
+    
+    override func cameraControllerRequestedCameraFlip(_ controller: CameraController) {
+        //TODO: Not working
+        super.cameraControllerRequestedCameraFlip(controller)
+        if (shutterButtonMode == Constants.ShutterButtonMode.OnlyOnFrontCamera) {
+            if (cameraController.cameraPosition == .front) {
+                cameraView.cameraButton.isHidden = false
+            } else {
+                cameraView.cameraButton.isHidden = true
+            }
+        }
+        
     }
     
 }

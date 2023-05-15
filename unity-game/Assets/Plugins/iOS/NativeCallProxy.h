@@ -2,11 +2,10 @@
 // [!]           and set Public header visibility
 
 #import <Foundation/Foundation.h>
-
 // NativeCallsProtocol defines protocol with methods you want to be called from managed
 @protocol NativeCallsProtocol
 @required
-- (void) invokeCameraKitWithLens: (NSString*) lensId withGroupID: (NSString*) groupId withLaunchData:(NSDictionary<NSString*,NSString*>*) launchData withRenderMode:(NSNumber*) renderMode withRemoteAPISpecId:(NSString*) remoteApiSpecId;
+- (void) invokeCameraKitWithLens: (NSString*) lensId withGroupID: (NSString*) groupId withRemoteAPISpecId:(NSString*) remoteApiSpecId withLaunchData:(NSDictionary<NSString*,NSString*>*) launchData withRenderMode:(NSNumber*) renderMode withCameraMode: (NSNumber*) cameraMode withShutterButtonMode:(NSNumber*) shutterButtonMode;
 - (void) updateLensState: (NSDictionary<NSString*,NSString*>*) launchData;
 - (void) dismissCameraKit;
 

@@ -15,10 +15,12 @@ public class CameraKitAPIiOS : ICameraKit
     static extern void invokeCameraKit(
         string lensId,
         string groupId,
+        string remoteApiSpecId,
         IntPtr lensLaunchDataKeys, int lensLaunchDataKeysLength,
         IntPtr lensLaunchDataValues, int lensLaunchDataValuesLength,        
         int renderMode,
-        string remoteApiSpecId
+        int cameraMode,
+        int shutterButtonMode
     );
 
     [DllImport("__Internal")]
@@ -43,10 +45,12 @@ public class CameraKitAPIiOS : ICameraKit
         invokeCameraKit(
             config.LensID,
             config.LensGroupID,
+            config.RemoteAPISpecId,
             unsafeptr_DataKeys, launchDataKeys.Length,
             unsafeptr_DataValues, launchDataValues.Length,
             (int)config.RenderMode,
-            config.RemoteAPISpecId
+            (int)config.StartWithCamera,
+            (int)config.ShutterButtonMode
         );
 
         cleanUpNativeStrArray(unsafeptr_DataKeys, launchDataKeys.Length);

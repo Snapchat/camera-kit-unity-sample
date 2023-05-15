@@ -54,8 +54,8 @@ public class GameManager : MonoBehaviour
         Debug.Log("Got response from lens: Event " + responseObj.eventName + "( "+ responseObj.eventValue+" )");
         if (_activeLensId == Constants.LENS_ID_COLLECT_COINS) {
             CollectCoinsHandleEnvet(responseObj);
-        } else if (_activeLensId == Constants.LENS_ID_INK_SPLASH) {
-            InkSplashHandleEvent(responseObj);
+        } else if (_activeLensId == Constants.LENS_ID_WORLD_MESH) {
+            WorldMeshHandleEvent(responseObj);
         }
     }
 
@@ -67,11 +67,12 @@ public class GameManager : MonoBehaviour
     private void OnCameraKitCaptured(string capturedFileUri)
     {
         animationManager.PlayScene("MediaCaptured");
+        _activeLensId = null;
     }
 
     private void OnCameraKitDismissed()
     {
-        Debug.Log("Camera Kit dismissed.");
+        _activeLensId = null;
     }
 
     private void OnLensRequestedState() {
@@ -88,8 +89,8 @@ public class GameManager : MonoBehaviour
         pauseLabel.gameObject.SetActive(pauseStatus);     
     }
 
-    #region Ink Splash Tutorial
-    void InkSplashHandleEvent(SerializedResponseFromLens eventObj)
+    #region World Mesh Tutorial
+    void WorldMeshHandleEvent(SerializedResponseFromLens eventObj)
     {
 
     }
@@ -169,6 +170,7 @@ public class GameManager : MonoBehaviour
             LensID = Constants.LENS_ID_COLLECT_COINS,
             RenderMode = CameraKitRenderMode.BehindUnity,     
             StartWithCamera = CameraKitDevice.BackCamera,
+            ShutterButtonMode = CameraKitShutterButtonMode.Off,
             RemoteAPISpecId = Constants.API_SPEC_ID
         };
 
@@ -178,15 +180,28 @@ public class GameManager : MonoBehaviour
         ResetCoinCollectTutorial();
     }
 
-    public void OnInkSplashSelected() {
+    public void OnWorldMeshSelected() {
         animationManager.PlayScene("Oops");
     }
 
     public void OnMaskSelected(string mask) {
+        // Test only  vvvv
+        
+        // var shutterButtonMode = CameraKitShutterButtonMode.On;        
+        // if (mask == "pumpkin") {
+        //     shutterButtonMode = CameraKitShutterButtonMode.Off;
+        // } else if (mask == "robot") {
+        //     shutterButtonMode = CameraKitShutterButtonMode.OnlyOnForFrontCamera;
+        // }
+
+        //Test only ^^^
+
         var config = new CameraKitConfiguration() {
             LensGroupID = Constants.LENS_GROUP_ID,
             LensID = Constants.LENS_ID_MASK_TRYON,
             RenderMode = CameraKitRenderMode.Fullscreen,
+            StartWithCamera = CameraKitDevice.FrontCamera,
+            ShutterButtonMode = CameraKitShutterButtonMode.On,
             LaunchParameters = new Dictionary<string, string>() {
                 {"selectedMask", mask}
             }

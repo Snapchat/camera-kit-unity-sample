@@ -1,7 +1,5 @@
 // -----JS CODE-----
 // @input Asset.RemoteServiceModule remoteServiceModule
-// @input Component.Text stateText
-// @input int maximumConsecutiveErrors
 
 
 // Import module

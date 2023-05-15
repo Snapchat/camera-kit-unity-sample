@@ -4,8 +4,7 @@ using UnityEngine;
 
 public enum CameraKitRenderMode {
     Fullscreen = 0,
-    BehindUnity = 1,
-    iOSFormSheet = 2 // Not available on Android
+    BehindUnity = 1
 }
 
 public enum CameraKitShutterButtonMode {
