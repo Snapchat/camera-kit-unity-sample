@@ -1,0 +1,33 @@
+{
+    "1675109166452804:25824": {
+        "IResourceController": {
+            "name": "ObjectsLayout",
+            "type": 4,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1645502923063901:88847",
+            "fileId": "1675109166452938:25957",
+            "publicId": "1675109166453505:26113",
+            "expected_hash": "704e02bffb74926d03fc3a54863cfcc0"
+        },
+        "IResourceManager": {
+            "uid": "1645502923063901:88847",
+            "name": "Files/File_1675109166452938_25957.js",
+            "flags": 1
+        }
+    },
+    "1675109166452938:25957": {
+        "IFileManager": {
+            "path": "Files/File_1675109166452938_25957.js"
+        }
+    },
+    "1675109166453505:26113": {
+        "IResourceController": {
+            "public": {
+                "path": "Scripts/ObjectsLayout.js",
+                "hash": "704e02bffb74926d03fc3a54863cfcc0"
+            }
+        }
+    }
+}

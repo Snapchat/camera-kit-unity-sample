@@ -7,6 +7,9 @@ public class AnimationShowButtons : BaseAnimation
     [SerializeField]
     private GameObject[] _buttons;
 
+    [SerializeField]
+    private bool _visible;
+
     public override void Play()
     {
         StartCoroutine(ShowButtons());
@@ -16,7 +19,7 @@ public class AnimationShowButtons : BaseAnimation
         yield return new WaitForSeconds(0.3f);
         
         foreach (var button in _buttons) {
-            button.gameObject.SetActive(true);
+            button.gameObject.SetActive(_visible);
             yield return new WaitForSeconds(0.3f);
         }
 

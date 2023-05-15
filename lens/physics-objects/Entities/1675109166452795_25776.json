@@ -1,0 +1,33 @@
+{
+    "1675109166452795:25776": {
+        "IResourceController": {
+            "name": "Draggable",
+            "type": 4,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1644735272515164:412274",
+            "fileId": "1675109166452852:25886",
+            "publicId": "1675109166453487:26064",
+            "expected_hash": "da00ccef29cf47d88ecfeb2fc459280c"
+        },
+        "IResourceManager": {
+            "uid": "1644735272515164:412274",
+            "name": "Files/File_1675109166452852_25886.js",
+            "flags": 1
+        }
+    },
+    "1675109166452852:25886": {
+        "IFileManager": {
+            "path": "Files/File_1675109166452852_25886.js"
+        }
+    },
+    "1675109166453487:26064": {
+        "IResourceController": {
+            "public": {
+                "path": "Scripts/Draggable.js",
+                "hash": "da00ccef29cf47d88ecfeb2fc459280c"
+            }
+        }
+    }
+}

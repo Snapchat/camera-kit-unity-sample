@@ -1,0 +1,43 @@
+{
+    "1675109166452808:25852": {
+        "IResourceController": {
+            "name": "drag",
+            "type": 1,
+            "subtype": 5,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1646872644082793:680417",
+            "fileId": "1675109166452989:25998",
+            "originalId": "1675109166452990:25999",
+            "publicId": "1675109166453514:26135",
+            "expected_hash": "db704c27d0fc0e30e933683fe0d4cf8b",
+            "additional": {
+                "subtype": "5"
+            }
+        },
+        "IResourceManager": {
+            "uid": "1646872644082793:680417",
+            "name": "Files/File_1675109166452989_25998",
+            "flags": 1
+        }
+    },
+    "1675109166452989:25998": {
+        "IFileManager": {
+            "path": "Files/File_1675109166452989_25998"
+        }
+    },
+    "1675109166452990:25999": {
+        "IFileManager": {
+            "path": "Files/File_1675109166452990_25999"
+        }
+    },
+    "1675109166453514:26135": {
+        "IResourceController": {
+            "public": {
+                "path": "Textures/drag",
+                "hash": "db704c27d0fc0e30e933683fe0d4cf8b",
+                "complexResourceHash": "f6297fc9b0cf2c8e88d7a8d00c2abf33"
+            }
+        }
+    }
+}

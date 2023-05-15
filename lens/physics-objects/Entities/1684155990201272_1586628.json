@@ -1,0 +1,33 @@
+{
+    "1684155990199358:1586627": {
+        "IFileManager": {
+            "path": "Files/File_1684155990199358_1586627.js"
+        }
+    },
+    "1684155990201272:1586628": {
+        "IResourceController": {
+            "name": "Unity SDK - Generic API API",
+            "type": 4,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1684155990201281:1586629",
+            "fileId": "1684155990199358:1586627",
+            "publicId": "1684155990202195:1586634",
+            "expected_hash": "20a791ef7f6d0581e238c0520328bd3d"
+        },
+        "IResourceManager": {
+            "uid": "1684155990201281:1586629",
+            "name": "Files/File_1684155990199358_1586627.js",
+            "flags": 1
+        }
+    },
+    "1684155990202195:1586634": {
+        "IResourceController": {
+            "public": {
+                "path": "Unity SDK - Generic API API.js",
+                "hash": "20a791ef7f6d0581e238c0520328bd3d"
+            }
+        }
+    }
+}

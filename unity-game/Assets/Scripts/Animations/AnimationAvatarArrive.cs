@@ -22,14 +22,12 @@ public class AnimationAvatarArrive : BaseAnimation
 
     override public void Play()
     {
-        Debug.Log("Avatar Arrive playing...");
         var startPos = new Vector3(_startPosition, _avatar.transform.position.y, 0);
         var endPos = new Vector3(_endPosition, _avatar.transform.position.y, 0);
         StartCoroutine(MoveFromTo(startPos, endPos, _speed));
     }
 
     IEnumerator MoveFromTo(Vector3 a, Vector3 b, float speed) {
-        Debug.Log("Started coroutine");
         float step = (speed / (a - b).magnitude) * Time.fixedDeltaTime;
         float t = 0;
         while (t <= 1.0f) {

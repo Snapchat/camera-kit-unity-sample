@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
     void OnEnable()
     {   
         // --- Listening to response callback from CameraKit's Remote APIs  ---
-        CameraKitHandler.OnResponseFromLensEvent += OnCameraKitAPIResponse;
+        CameraKitHandler.OnResponseFromLensEvent += OnLensDataSentToUnity;
         CameraKitHandler.OnCaptureFinished += OnCameraKitCaptured;
         CameraKitHandler.OnCameraDismissed += OnCameraKitDismissed;
         CameraKitHandler.OnLensRequestedUpdatedState += OnLensRequestedState;
@@ -38,24 +38,24 @@ public class GameManager : MonoBehaviour
 
     void OnDisable() 
     {
-        CameraKitHandler.OnResponseFromLensEvent -= OnCameraKitAPIResponse;
+        CameraKitHandler.OnResponseFromLensEvent -= OnLensDataSentToUnity;
         CameraKitHandler.OnCaptureFinished -= OnCameraKitCaptured;
         CameraKitHandler.OnCameraDismissed -= OnCameraKitDismissed;
         CameraKitHandler.OnLensRequestedUpdatedState -= OnLensRequestedState;
     }
 
-    private void OnCameraKitAPIResponse(SerializedResponseFromLens responseObj)
+    private void OnLensDataSentToUnity(SerializedResponseFromLens responseObj)
     {
         // --- Obtaining a response from CameraKit ---
         // In order to pass data from the Lens to the Unity project, your Lens needs to use Remote APIs
         // The source code for the lens used in this project is part of the Github project. 
         // Please check the ShipSelector.js script in the lens included in this repository.
         // More info: https://docs.snap.com/camera-kit/guides/tutorials/communicating-between-lenses-and-app#lens-studio-best-practices-for-remote-apis  
-        Debug.Log("Got response from lens: Event " + responseObj.eventName + "( "+ responseObj.eventValue+" )");
+        Debug.Log("Got data from lens: Event " + responseObj.eventName + "( "+ responseObj.eventValue+" )");
         if (_activeLensId == Constants.LENS_ID_COLLECT_COINS) {
+            // For the purposes of this demo, the only time we're responding to 
+            // Lens events is when the coin collection lens is active
             CollectCoinsHandleEnvet(responseObj);
-        } else if (_activeLensId == Constants.LENS_ID_WORLD_MESH) {
-            WorldMeshHandleEvent(responseObj);
         }
     }
 
@@ -76,7 +76,7 @@ public class GameManager : MonoBehaviour
     }
 
     private void OnLensRequestedState() {
-        //no-op
+        // no-op
         // leave request open until we're ready to update state
     }
 
@@ -89,10 +89,18 @@ public class GameManager : MonoBehaviour
         pauseLabel.gameObject.SetActive(pauseStatus);     
     }
 
-    #region World Mesh Tutorial
-    void WorldMeshHandleEvent(SerializedResponseFromLens eventObj)
-    {
+    #region Physics Lens Tutorial
+    
+    public void OnControllerButtonPressed() {
+        CameraKitHandler.UpdateLensState(new Dictionary<string, string>() {
+            {LensEvents.BUTTON_PRESS_EVENT, "true"}
+        });
+    }
 
+    public void OnControllerButtonReleased() {
+        CameraKitHandler.UpdateLensState(new Dictionary<string, string>() {
+            {LensEvents.BUTTON_PRESS_EVENT, "false"}
+        });
     }
 
     #endregion
@@ -180,22 +188,22 @@ public class GameManager : MonoBehaviour
         ResetCoinCollectTutorial();
     }
 
-    public void OnWorldMeshSelected() {
-        animationManager.PlayScene("Oops");
+    public void OnPhysicsLensSelected() {
+        animationManager.PlayScene("StartPhysicsLens");
+        var config = new CameraKitConfiguration() {
+            LensGroupID = Constants.LENS_GROUP_ID,
+            LensID = Constants.LENS_ID_PHYSICS,
+            RenderMode = CameraKitRenderMode.BehindUnity,     
+            StartWithCamera = CameraKitDevice.BackCamera,
+            ShutterButtonMode = CameraKitShutterButtonMode.Off,
+            RemoteAPISpecId = Constants.API_SPEC_ID
+        };
+
+        CameraKitHandler.InvokeCameraKit(config);
+        _activeLensId = Constants.LENS_ID_PHYSICS;
     }
 
     public void OnMaskSelected(string mask) {
-        // Test only  vvvv
-        
-        // var shutterButtonMode = CameraKitShutterButtonMode.On;        
-        // if (mask == "pumpkin") {
-        //     shutterButtonMode = CameraKitShutterButtonMode.Off;
-        // } else if (mask == "robot") {
-        //     shutterButtonMode = CameraKitShutterButtonMode.OnlyOnForFrontCamera;
-        // }
-
-        //Test only ^^^
-
         var config = new CameraKitConfiguration() {
             LensGroupID = Constants.LENS_GROUP_ID,
             LensID = Constants.LENS_ID_MASK_TRYON,

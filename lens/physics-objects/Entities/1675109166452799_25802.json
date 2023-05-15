@@ -1,0 +1,33 @@
+{
+    "1675109166452799:25802": {
+        "IResourceController": {
+            "name": "SlowMotionSetting",
+            "type": 4,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1645061453717649:1411289",
+            "fileId": "1675109166452892:25919",
+            "publicId": "1675109166453497:26090",
+            "expected_hash": "0a1ce8ad856c0286fe4664a3b0bc6bd3"
+        },
+        "IResourceManager": {
+            "uid": "1645061453717649:1411289",
+            "name": "Files/File_1675109166452892_25919.js",
+            "flags": 1
+        }
+    },
+    "1675109166452892:25919": {
+        "IFileManager": {
+            "path": "Files/File_1675109166452892_25919.js"
+        }
+    },
+    "1675109166453497:26090": {
+        "IResourceController": {
+            "public": {
+                "path": "Scripts/SlowMotionSetting.js",
+                "hash": "0a1ce8ad856c0286fe4664a3b0bc6bd3"
+            }
+        }
+    }
+}

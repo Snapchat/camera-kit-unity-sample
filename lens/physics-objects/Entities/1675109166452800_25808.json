@@ -1,0 +1,39 @@
+{
+    "1675109166452800:25808": {
+        "IResourceController": {
+            "name": "Toon Tree Trunk",
+            "type": 2,
+            "subtype": 1,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1645120862079456:652075",
+            "fileId": "1675109166452905:25930",
+            "originalId": "1675109166452906:25931",
+            "publicId": "1675109166453499:26097",
+            "expected_hash": "b2a8af5503d6b8d784666f063804cf20"
+        },
+        "IResourceManager": {
+            "uid": "1645120862079456:652075",
+            "name": "Files/File_1675109166452905_25930",
+            "flags": 1
+        }
+    },
+    "1675109166452905:25930": {
+        "IFileManager": {
+            "path": "Files/File_1675109166452905_25930"
+        }
+    },
+    "1675109166452906:25931": {
+        "IFileManager": {
+            "path": "Files/File_1675109166452906_25931.lsmat"
+        }
+    },
+    "1675109166453499:26097": {
+        "IResourceController": {
+            "public": {
+                "path": "Materials/Toon Tree Trunk.lsmat",
+                "hash": "5eedd2e7915b2a55213fa1f81069ffa0"
+            }
+        }
+    }
+}
