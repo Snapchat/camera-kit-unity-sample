@@ -218,6 +218,8 @@ extension AppDelegate: NativeCallsProtocol {
         withCameraMode cameraMode: NSNumber!,
         withShutterButtonMode shutterButtonMode: NSNumber!
     ) {
+        //TODO: Add clearLensAfterDismiss parameter
+        cameraController = UnityCameraController()
         cameraController.cameraKit.lenses.repository.addObserver(self, specificLensID: lensId, inGroupID: groupId)
         cameraController.cameraKit.lenses.repository.addObserver(self, groupID: groupId)
         
@@ -325,6 +327,7 @@ class UnityCameraViewController: CameraViewController  {
     fileprivate var applyLensId: String?
     fileprivate var applyGroupId: String?
     fileprivate var shutterButtonMode: NSNumber?
+    fileprivate var clearLensAfterDismiss: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -358,6 +361,13 @@ class UnityCameraViewController: CameraViewController  {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.unityFramework?.pause(false)
         appDelegate.unityFramework?.sendMessageToGO(withName: "CameraKitHandler", functionName: "MessageCameraKitDismissed", message:"")
+    }
+    
+    override open func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        if (clearLensAfterDismiss) {
+            clearLens()
+        }
     }
     
     fileprivate func hideCameraUiControls(hide: Bool) {

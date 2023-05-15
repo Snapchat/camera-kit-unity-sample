@@ -25,10 +25,12 @@ touchEndEvent.bind(function(eventData) {
 
 // Handle Unity updates
 global.behaviorSystem.addCustomTriggerResponse("Unity_ButtonDown", function() {
+    print("Handling unity event: Button down")
     isTouch = true;
 });
 
 global.behaviorSystem.addCustomTriggerResponse("Unity_ButtonUp", function() {
+    print("Handling unity event: Button up")
     isTouch = false;
 });
 

@@ -32,6 +32,7 @@ script.api.handleUnityUpdate = function(err, response) {
     } else {
         print("Success. got updated state from unity")
         global.consecutiveErrorCount = 0
+        print(JSON.stringify(response))
         if (response) {
             if (response.isPressingButton == "true") {
                 global.behaviorSystem.sendCustomTrigger("Unity_ButtonDown");
