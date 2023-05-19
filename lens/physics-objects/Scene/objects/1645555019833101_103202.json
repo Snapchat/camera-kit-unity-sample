@@ -1,0 +1,86 @@
+{
+    "core": {
+        "uid": "1645555019833101:103202",
+        "type": "SceneObject",
+        "layerV2": 1,
+        "name": "Tween",
+        "position": [
+            0.0,
+            0.0,
+            0.0
+        ],
+        "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+        ],
+        "scale": [
+            1.0,
+            1.0,
+            1.0
+        ],
+        "segmentScaleCompensate": false,
+        "isuserenabled": true,
+        "components": [
+            {
+                "uid": "1645555028069050:113418",
+                "type": "Component.ScriptComponent",
+                "name": "Script",
+                "isenabled": true,
+                "isInternal": false,
+                "updatepriority": -1000,
+                "valuesManager": {
+                    "values": null
+                },
+                "includes": null,
+                "scriptObjects": null,
+                "typeObjects": null,
+                "events": [
+                    {
+                        "event": {
+                            "eventType": "SceneEvent.OnAwakeEvent"
+                        },
+                        "script": "1645002272153404:656737"
+                    }
+                ],
+                "wrapInitializationSources": true
+            },
+            {
+                "uid": "1645555029450253:122756",
+                "type": "Component.ScriptComponent",
+                "name": "Script 2",
+                "isenabled": true,
+                "isInternal": false,
+                "updatepriority": -1000,
+                "valuesManager": {
+                    "values": [
+                        {
+                            "uid": "1645555029451178:122758",
+                            "type": "Value.BoolValue",
+                            "value": false
+                        }
+                    ]
+                },
+                "includes": null,
+                "scriptObjects": [
+                    {
+                        "name": "printDebugLog",
+                        "typename": "Value.BoolValue",
+                        "scriptObject": "1645555029451178:122758"
+                    }
+                ],
+                "typeObjects": null,
+                "events": [
+                    {
+                        "event": {
+                            "eventType": "SceneEvent.OnAwakeEvent"
+                        },
+                        "script": "1645002272220707:656761"
+                    }
+                ],
+                "wrapInitializationSources": true
+            }
+        ]
+    }
+}

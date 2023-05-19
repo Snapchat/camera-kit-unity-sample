@@ -1,0 +1,41 @@
+{
+    "core": {
+        "uid": "1646082080850798:2539272",
+        "type": "SceneObject",
+        "layerV2": 1,
+        "name": "Constraint",
+        "position": [
+            0.0,
+            0.0,
+            -2.7229976654052734
+        ],
+        "rotation": [
+            0.7071068286895752,
+            0.0,
+            0.0,
+            0.7071068286895752
+        ],
+        "scale": [
+            1.0,
+            1.0,
+            1.0
+        ],
+        "segmentScaleCompensate": false,
+        "isuserenabled": true,
+        "components": [
+            {
+                "uid": "1646082080851565:2539274",
+                "type": "Physics.ConstraintComponent",
+                "name": "Physics Constraint",
+                "isenabled": true,
+                "isInternal": false,
+                "updatepriority": 0,
+                "target": "1646082080856844:2539316",
+                "constraint": {
+                    "type": "Physics.HingeConstraint"
+                },
+                "debugDraw": false
+            }
+        ]
+    }
+}

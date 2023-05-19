@@ -12,14 +12,14 @@
     "public_api_user_data_access": "restricted",
     "studioVersion": {
         "createdWith": {
-            "type": "Public",
+            "type": "Internal",
             "major": "4",
             "minor": "43",
             "patch": "0",
             "build": "0"
         },
         "lastSavedWith": {
-            "type": "Public",
+            "type": "Internal",
             "major": "4",
             "minor": "43",
             "patch": "0",
@@ -245,7 +245,6 @@
             "applicability": "2",
             "lens_descriptors": "",
             "sg": "false",
-            "git_friendly": "true",
             "Spectacles2021UseAllowed": "false"
         },
         "ObjectTracking3DUIComponent": "",

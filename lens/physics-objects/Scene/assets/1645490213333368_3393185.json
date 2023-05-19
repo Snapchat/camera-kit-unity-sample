@@ -1,0 +1,12 @@
+{
+    "core": {
+        "isLazyAsset": false,
+        "uid": "1645490213333368:3393185",
+        "type": "Asset.SegmentationModel",
+        "name": "LENSCORE_SEGMENTATION_BINARY_BODY_V2",
+        "provider": {
+            "type": "Provider.DeviceDependentBinFileProvider",
+            "assetid": "LENSCORE_SEGMENTATION_BINARY_BODY_V2"
+        }
+    }
+}

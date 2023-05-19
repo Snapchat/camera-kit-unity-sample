@@ -1,0 +1,22 @@
+{
+    "privateAssets": {
+        "1588296316843646:534374": {
+            "isLazyAsset": false,
+            "uid": "1588296316843646:534374",
+            "type": "Asset.Texture",
+            "name": "Textures/Echopark/Diff.jpeg",
+            "provider": {
+                "type": "Provider.FileTextureProvider",
+                "hash": 10785456070896523056,
+                "useCache": true,
+                "allowDownscale": false,
+                "fileinfo": {
+                    "path": "Files/File_1675109166452811_25869.jpeg",
+                    "location": 0
+                },
+                "filename": "Files/File_1675109166452811_25869.jpeg",
+                "fileLocation": 0
+            }
+        }
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "core": {
+        "isLazyAsset": false,
+        "uid": "1645774584218476:8700011",
+        "type": "Asset.Texture",
+        "name": "PBR Textures/MaterialParams",
+        "provider": {
+            "type": "Provider.FileTextureProvider",
+            "hash": 9882253333878861902,
+            "useCache": true,
+            "allowDownscale": false,
+            "fileinfo": {
+                "path": "system/materials/textures/darkblue.png",
+                "location": 0
+            },
+            "filename": "system/materials/textures/darkblue.png",
+            "fileLocation": 0
+        }
+    }
+}

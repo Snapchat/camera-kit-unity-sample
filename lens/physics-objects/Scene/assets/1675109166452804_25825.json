@@ -1,0 +1,28 @@
+{
+    "privateAssets": {
+        "1645656071855775:1396362": {
+            "isLazyAsset": false,
+            "uid": "1645656071855775:1396362",
+            "type": "Physics.WorldSettingsAsset",
+            "name": "Physics World Settings/Physics Back Camera World Settings [EDIT_ME]",
+            "defaultMatter": "-1:-1",
+            "defaultFilter": "-1:-1",
+            "gravity": [
+                0.0,
+                -980.0,
+                0.0
+            ],
+            "simRate": 2,
+            "slowStep": 1.0,
+            "slowTime": 1.0,
+            "absSpdLim": 100.0,
+            "relSpdLim": 100.0,
+            "lyrColMtx": {
+                "rows": {
+                    "bytes": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                    "subtype": null
+                }
+            }
+        }
+    }
+}

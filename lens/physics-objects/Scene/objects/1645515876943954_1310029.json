@@ -1,0 +1,26 @@
+{
+    "core": {
+        "uid": "1645515876943954:1310029",
+        "type": "SceneObject",
+        "layerV2": 1,
+        "name": "Examples [TRY_ALL_CHILDREN_EXAMPLE]",
+        "position": [
+            0.0,
+            0.0,
+            0.0
+        ],
+        "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+        ],
+        "scale": [
+            1.0,
+            1.0,
+            1.0
+        ],
+        "segmentScaleCompensate": false,
+        "isuserenabled": true
+    }
+}

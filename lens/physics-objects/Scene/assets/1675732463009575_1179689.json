@@ -1,0 +1,20 @@
+{
+    "core": {
+        "isLazyAsset": false,
+        "uid": "1675732463009575:1179689",
+        "type": "Asset.Texture",
+        "name": "Textures/Normal.png",
+        "provider": {
+            "type": "Provider.FileTextureProvider",
+            "hash": 6330485097520512976,
+            "useCache": true,
+            "allowDownscale": false,
+            "fileinfo": {
+                "path": "system/materials/textures/blue.png",
+                "location": 0
+            },
+            "filename": "system/materials/textures/blue.png",
+            "fileLocation": 0
+        }
+    }
+}

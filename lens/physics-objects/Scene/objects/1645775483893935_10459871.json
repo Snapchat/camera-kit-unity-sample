@@ -1,0 +1,26 @@
+{
+    "core": {
+        "uid": "1645775483893935:10459871",
+        "type": "SceneObject",
+        "layerV2": 1,
+        "name": "Physics Objects Pivot Point",
+        "position": [
+            9.252537727355957,
+            10.933784484863281,
+            0.0
+        ],
+        "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+        ],
+        "scale": [
+            1.0,
+            1.0,
+            1.0
+        ],
+        "segmentScaleCompensate": false,
+        "isuserenabled": true
+    }
+}

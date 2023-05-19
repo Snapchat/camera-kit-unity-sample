@@ -71,7 +71,6 @@ public class CameraKitHandler : MonoBehaviour
 
         public void MessageResponseFromLens(string responseJson)
         {
-			Debug.Log("Raw response string: " + responseJson);
 			var response = JsonUtility.FromJson<SerializedResponseFromLens>(responseJson);
 			OnResponseFromLensEvent?.Invoke(response);
         }

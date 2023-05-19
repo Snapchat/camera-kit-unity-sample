@@ -44,6 +44,53 @@ public class GameManager : MonoBehaviour
         CameraKitHandler.OnLensRequestedUpdatedState -= OnLensRequestedState;
     }
 
+    private void InvokeCameraKit_MaskLens(string mask)
+    {
+        var config = new CameraKitConfiguration()
+        {
+            LensID = Constants.LENS_ID_MASK_TRYON,
+            LensGroupID = Constants.LENS_GROUP_ID,
+            RenderMode = CameraKitRenderMode.Fullscreen,
+            StartWithCamera = CameraKitDevice.FrontCamera,
+            ShutterButtonMode = CameraKitShutterButtonMode.On,
+            LaunchParameters = new Dictionary<string, string>() {
+                {"selectedMask", mask}
+            },
+            UnloadLensAfterDismiss = false
+        };
+        CameraKitHandler.InvokeCameraKit(config);
+    }
+
+    private void InvokeCameraKit_CoinsLens()
+    {
+        var config = new CameraKitConfiguration()
+        {
+            LensID = Constants.LENS_ID_COLLECT_COINS,
+            LensGroupID = Constants.LENS_GROUP_ID,
+            RemoteAPISpecId = Constants.API_SPEC_ID,
+            RenderMode = CameraKitRenderMode.BehindUnity,
+            StartWithCamera = CameraKitDevice.BackCamera,
+            ShutterButtonMode = CameraKitShutterButtonMode.Off,
+            UnloadLensAfterDismiss = true
+        };
+        CameraKitHandler.InvokeCameraKit(config);
+    }
+
+    private void InvokeCameraKit_PhysicsLens()
+    {
+        var config = new CameraKitConfiguration()
+        {
+            LensID = Constants.LENS_ID_PHYSICS,
+            LensGroupID = Constants.LENS_GROUP_ID,
+            RemoteAPISpecId = Constants.API_SPEC_ID,
+            RenderMode = CameraKitRenderMode.BehindUnity,
+            StartWithCamera = CameraKitDevice.BackCamera,
+            ShutterButtonMode = CameraKitShutterButtonMode.Off,
+            UnloadLensAfterDismiss = true
+        };
+        CameraKitHandler.InvokeCameraKit(config);        
+    }
+
     private void OnLensDataSentToUnity(SerializedResponseFromLens responseObj)
     {
         // --- Obtaining a response from CameraKit ---
@@ -51,7 +98,6 @@ public class GameManager : MonoBehaviour
         // The source code for the lens used in this project is part of the Github project. 
         // Please check the ShipSelector.js script in the lens included in this repository.
         // More info: https://docs.snap.com/camera-kit/guides/tutorials/communicating-between-lenses-and-app#lens-studio-best-practices-for-remote-apis  
-        Debug.Log("Got data from lens: Event " + responseObj.eventName + "( "+ responseObj.eventValue+" )");
         if (_activeLensId == Constants.LENS_ID_COLLECT_COINS) {
             // For the purposes of this demo, the only time we're responding to 
             // Lens events is when the coin collection lens is active
@@ -66,20 +112,24 @@ public class GameManager : MonoBehaviour
 
     private void OnCameraKitCaptured(string capturedFileUri)
     {
+        // This handles the event of when media is captured in Camera Kit
         animationManager.PlayScene("MediaCaptured");
         _activeLensId = null;
     }
 
     private void OnCameraKitDismissed()
     {
+        // This is triggered every time Camera Kit is dismissed
         _activeLensId = null;
     }
 
     private void OnLensRequestedState() {
-        // no-op
-        // leave request open until we're ready to update state
+        // This is triggered every time Camera Kit requests an updated state
+        
+        // (no-op. leave request open until we're ready to update state)
     }
 
+    #region Pause Events
     void OnApplicationFocus(bool hasFocus)
     {
         pauseLabel.gameObject.SetActive(!hasFocus);
@@ -88,18 +138,25 @@ public class GameManager : MonoBehaviour
     void OnApplicationPause(bool pauseStatus) {
         pauseLabel.gameObject.SetActive(pauseStatus);     
     }
+    #endregion
 
     #region Physics Lens Tutorial
     
     public void OnControllerButtonPressed() {
         CameraKitHandler.UpdateLensState(new Dictionary<string, string>() {
-            {LensEvents.BUTTON_PRESS_EVENT, "true"}
+            {LensEvents.BUTTON_PRESS, "true"}
         });
     }
 
     public void OnControllerButtonReleased() {
         CameraKitHandler.UpdateLensState(new Dictionary<string, string>() {
-            {LensEvents.BUTTON_PRESS_EVENT, "false"}
+            {LensEvents.BUTTON_PRESS, "false"}
+        });
+    }
+
+    public void OnResetButtonTapped() {
+        CameraKitHandler.UpdateLensState(new Dictionary<string, string>() {
+            {LensEvents.RESET_SCENE, "true"}
         });
     }
 
@@ -171,53 +228,26 @@ public class GameManager : MonoBehaviour
         animationManager.PlayScene("ShowMasks");
     }
 
-    public void OnCollectCoinsSelected() {
-        animationManager.PlayScene("StartCollectCoinsLens");
-        var config = new CameraKitConfiguration() {
-            LensGroupID = Constants.LENS_GROUP_ID,
-            LensID = Constants.LENS_ID_COLLECT_COINS,
-            RenderMode = CameraKitRenderMode.BehindUnity,     
-            StartWithCamera = CameraKitDevice.BackCamera,
-            ShutterButtonMode = CameraKitShutterButtonMode.Off,
-            RemoteAPISpecId = Constants.API_SPEC_ID
-        };
-
-        CameraKitHandler.InvokeCameraKit(config);
-
-        _activeLensId = Constants.LENS_ID_COLLECT_COINS;
+    public void OnCollectCoinsSelected()
+    {
+        animationManager.PlayScene("StartCollectCoinsLens");        
+        InvokeCameraKit_CoinsLens();
         ResetCoinCollectTutorial();
+        _activeLensId = Constants.LENS_ID_COLLECT_COINS;
     }
 
-    public void OnPhysicsLensSelected() {
-        animationManager.PlayScene("StartPhysicsLens");
-        var config = new CameraKitConfiguration() {
-            LensGroupID = Constants.LENS_GROUP_ID,
-            LensID = Constants.LENS_ID_PHYSICS,
-            RenderMode = CameraKitRenderMode.BehindUnity,     
-            StartWithCamera = CameraKitDevice.BackCamera,
-            ShutterButtonMode = CameraKitShutterButtonMode.Off,
-            RemoteAPISpecId = Constants.API_SPEC_ID
-        };
-
-        CameraKitHandler.InvokeCameraKit(config);
+    public void OnPhysicsLensSelected()
+    {
+        animationManager.PlayScene("StartPhysicsLens");        
+        InvokeCameraKit_PhysicsLens();
         _activeLensId = Constants.LENS_ID_PHYSICS;
     }
 
-    public void OnMaskSelected(string mask) {
-        var config = new CameraKitConfiguration() {
-            LensGroupID = Constants.LENS_GROUP_ID,
-            LensID = Constants.LENS_ID_MASK_TRYON,
-            RenderMode = CameraKitRenderMode.Fullscreen,
-            StartWithCamera = CameraKitDevice.FrontCamera,
-            ShutterButtonMode = CameraKitShutterButtonMode.On,
-            LaunchParameters = new Dictionary<string, string>() {
-                {"selectedMask", mask}
-            }
-        };
-
-        CameraKitHandler.InvokeCameraKit(config);
+    public void OnMaskSelected(string mask)
+    {
+        InvokeCameraKit_MaskLens(mask);
         _activeLensId = Constants.LENS_ID_MASK_TRYON;
-    } 
+    }
 
     public void OnCloseButtonClicked() 
     {

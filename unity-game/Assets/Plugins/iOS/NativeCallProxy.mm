@@ -14,7 +14,7 @@ id<NativeCallsProtocol> api = NULL;
 
 
 extern "C" {
-    void invokeCameraKit(char *lensId, char *groupId, char *remoteApiSpecId, const char* const *launchDataKeys[], int launchDataKeysLength, const char* const *launchDataValues[], int launchDataValuesLength, int renderMode, int cameraMode, int shutterButtonMode) {
+    void invokeCameraKit(char *lensId, char *groupId, char *remoteApiSpecId, const char* const *launchDataKeys[], int launchDataKeysLength, const char* const *launchDataValues[], int launchDataValuesLength, int renderMode, int cameraMode, int shutterButtonMode, int unloadLensAfterDismiss) {
         
         NSMutableDictionary *launchParams = [[NSMutableDictionary alloc] init];
         for (int i = 0; i < launchDataKeysLength; i++) {
@@ -33,7 +33,8 @@ extern "C" {
         NSNumber *nsCameraMode = [[NSNumber alloc] initWithInt:cameraMode];
         NSNumber *nsShutterButtonMode = [[NSNumber alloc] initWithInt:shutterButtonMode];
         
-        return [api invokeCameraKitWithLens:nsLensId withGroupID:nsGroupId withRemoteAPISpecId:nsRemoteApiSpec withLaunchData:launchParams withRenderMode:nsRenderMode withCameraMode:nsCameraMode withShutterButtonMode:nsShutterButtonMode];
+        
+        return [api invokeCameraKitWithLens:nsLensId withGroupID:nsGroupId withRemoteAPISpecId:nsRemoteApiSpec withLaunchData:launchParams withRenderMode:nsRenderMode withCameraMode:nsCameraMode withShutterButtonMode:nsShutterButtonMode withUnloadLensOption:unloadLensAfterDismiss];
     }
     void updateLensState(const char* const *launchDataKeys[], int launchDataKeysLength, const char* const *launchDataValues[], int launchDataValuesLength)
     {

@@ -1,0 +1,26 @@
+{
+    "privateAssets": {
+        "1684156305007845:2212174": {
+            "isLazyAsset": false,
+            "uid": "1684156305007845:2212174",
+            "type": "Asset.ScriptAsset",
+            "name": "Scripts/RequestUnityState.js",
+            "publicName": "Scripts/RequestUnityState.js",
+            "hash": 2564016255205811221,
+            "provider": {
+                "type": "Provider.FileScriptProvider",
+                "fileinfo": {
+                    "path": "Files/File_1684156305005333_2212168.js",
+                    "location": 0
+                },
+                "filename": "Files/File_1684156305005333_2212168.js"
+            },
+            "staticInputs": null,
+            "automodules": [
+                {
+                    "asset": "1684155990194963:1586621"
+                }
+            ]
+        }
+    }
+}

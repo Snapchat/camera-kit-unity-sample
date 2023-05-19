@@ -1,0 +1,207 @@
+{
+    "core": {
+        "uid": "1646872880010157:1058314",
+        "type": "SceneObject",
+        "layerV2": 1,
+        "name": "Hint Text",
+        "position": [
+            0.0,
+            4.0,
+            -40.0
+        ],
+        "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+        ],
+        "scale": [
+            1.0,
+            1.0,
+            1.0
+        ],
+        "segmentScaleCompensate": false,
+        "isuserenabled": false,
+        "components": [
+            {
+                "uid": "1646872880011171:1058316",
+                "type": "Component.Text",
+                "name": "Text",
+                "isenabled": true,
+                "isInternal": false,
+                "updatepriority": 0,
+                "renderorder": 7,
+                "internalRenderOrder": 0,
+                "renderSpace": 1,
+                "stretchMode": {
+                    "value": 2,
+                    "description": "Stretch"
+                },
+                "verticalAlignment": {
+                    "value": 1,
+                    "description": "Center"
+                },
+                "horizontalAlignment": {
+                    "value": 1,
+                    "description": "Center"
+                },
+                "extentsTarget": "-1:-1",
+                "meshShadowMode": {
+                    "value": 0,
+                    "description": "none"
+                },
+                "shadowColor": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "shadowDensity": 1.0,
+                "blendShapesState": {
+                    "defaultWeights": null,
+                    "blendNormals": false,
+                    "enabled": true
+                },
+                "text": "Keep touching on anywhere \non screen except phyiscs \nobjects to drive the car.",
+                "font": "1645140792624997:614191",
+                "size": 50,
+                "verticalOverflow": {
+                    "value": 0,
+                    "description": "Overflow"
+                },
+                "horizontalOverflow": {
+                    "value": 0,
+                    "description": "Overflow"
+                },
+                "textFill": {
+                    "mode": {
+                        "value": 0,
+                        "description": "Color"
+                    },
+                    "color": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "texture": "-1:-1",
+                    "tileCount": 5.0,
+                    "tileZone": {
+                        "value": 0,
+                        "description": "Rect"
+                    },
+                    "textureStretch": {
+                        "value": 4,
+                        "description": "Fit Width"
+                    }
+                },
+                "dropshadowSettings": {
+                    "enabled": false,
+                    "fill": {
+                        "mode": {
+                            "value": 0,
+                            "description": "Color"
+                        },
+                        "color": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0
+                        ],
+                        "texture": "-1:-1",
+                        "tileCount": 5.0,
+                        "tileZone": {
+                            "value": 0,
+                            "description": "Rect"
+                        },
+                        "textureStretch": {
+                            "value": 4,
+                            "description": "Fit Width"
+                        }
+                    },
+                    "offset": [
+                        0.25,
+                        0.25
+                    ]
+                },
+                "outlineSettings": {
+                    "enabled": true,
+                    "fill": {
+                        "mode": {
+                            "value": 0,
+                            "description": "Color"
+                        },
+                        "color": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0
+                        ],
+                        "texture": "-1:-1",
+                        "tileCount": 5.0,
+                        "tileZone": {
+                            "value": 0,
+                            "description": "Rect"
+                        },
+                        "textureStretch": {
+                            "value": 4,
+                            "description": "Fit Width"
+                        }
+                    },
+                    "size": 0.25
+                },
+                "backgroundSettings": {
+                    "enabled": false,
+                    "fill": {
+                        "mode": {
+                            "value": 0,
+                            "description": "Color"
+                        },
+                        "color": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0
+                        ],
+                        "texture": "-1:-1",
+                        "tileCount": 5.0,
+                        "tileZone": {
+                            "value": 0,
+                            "description": "Rect"
+                        },
+                        "textureStretch": {
+                            "value": 4,
+                            "description": "Fit Width"
+                        }
+                    },
+                    "margins": {
+                        "left": 0.0,
+                        "right": 0.0,
+                        "bottom": 0.0,
+                        "top": 0.0
+                    },
+                    "cornerRadius": 0.0
+                },
+                "sizeToFit": false,
+                "letterSpacing": 0.0,
+                "lineSpacing": 1.0,
+                "depthTest": false,
+                "colorMask": [
+                    true,
+                    true,
+                    true,
+                    false
+                ],
+                "worldSpaceRect": {
+                    "left": -7.5,
+                    "right": 7.5,
+                    "bottom": -2.25,
+                    "top": 2.25
+                },
+                "editable": false,
+                "showPreview": true,
+                "touchHandler": "-1:-1"
+            }
+        ]
+    }
+}

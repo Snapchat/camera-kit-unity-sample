@@ -1,0 +1,20 @@
+{
+    "core": {
+        "isLazyAsset": false,
+        "uid": "1675732466150486:1181356",
+        "type": "Asset.Texture",
+        "name": "Textures/MaterialParams.png",
+        "provider": {
+            "type": "Provider.FileTextureProvider",
+            "hash": 9882253333878861902,
+            "useCache": true,
+            "allowDownscale": false,
+            "fileinfo": {
+                "path": "system/materials/textures/darkblue.png",
+                "location": 0
+            },
+            "filename": "system/materials/textures/darkblue.png",
+            "fileLocation": 0
+        }
+    }
+}

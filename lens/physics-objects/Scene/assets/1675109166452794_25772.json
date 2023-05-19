@@ -1,0 +1,18 @@
+{
+    "privateAssets": {
+        "1644734549732934:265661": {
+            "isLazyAsset": false,
+            "uid": "1644734549732934:265661",
+            "type": "Asset.RenderMesh",
+            "name": "WorldObjectController/Meshes/touch_collision_cube.mesh",
+            "provider": {
+                "type": "Provider.FileRenderObjectProvider",
+                "fileinfo": {
+                    "path": "Files/File_1675109166452842_25878.mesh",
+                    "location": 0
+                },
+                "filename": "Files/File_1675109166452842_25878.mesh"
+            }
+        }
+    }
+}

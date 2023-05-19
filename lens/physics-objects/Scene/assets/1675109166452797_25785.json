@@ -1,0 +1,28 @@
+{
+    "privateAssets": {
+        "1644947995861507:5657744": {
+            "isLazyAsset": false,
+            "uid": "1644947995861507:5657744",
+            "type": "Physics.WorldSettingsAsset",
+            "name": "Physics World Settings/Physics Balloon World Settings [EDIT_ME]",
+            "defaultMatter": "-1:-1",
+            "defaultFilter": "-1:-1",
+            "gravity": [
+                0.0,
+                50.0,
+                0.0
+            ],
+            "simRate": 2,
+            "slowStep": 1.0,
+            "slowTime": 1.0,
+            "absSpdLim": 0.0,
+            "relSpdLim": 0.5,
+            "lyrColMtx": {
+                "rows": {
+                    "bytes": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                    "subtype": null
+                }
+            }
+        }
+    }
+}

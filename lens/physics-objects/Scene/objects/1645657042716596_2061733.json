@@ -1,0 +1,54 @@
+{
+    "core": {
+        "uid": "1645657042716596:2061733",
+        "type": "SceneObject",
+        "layerV2": 1,
+        "name": "Ground Collider",
+        "position": [
+            0.0,
+            4.700603485107422,
+            0.0
+        ],
+        "rotation": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "scale": [
+            10.0,
+            10.000007629394531,
+            10.000007629394531
+        ],
+        "segmentScaleCompensate": false,
+        "isuserenabled": true,
+        "components": [
+            {
+                "uid": "1645657042718604:2061735",
+                "type": "Physics.ColliderComponent",
+                "name": "Physics Collider",
+                "isenabled": true,
+                "isInternal": false,
+                "updatepriority": 0,
+                "shape": {
+                    "type": "BoxShape",
+                    "boxSize": [
+                        14.0,
+                        0.20000000298023224,
+                        14.0
+                    ]
+                },
+                "matter": "1644740369898443:828192",
+                "filter": "-1:-1",
+                "worldSettings": "-1:-1",
+                "debugDrawEnabled": false,
+                "fitVisual": false,
+                "forceCompound": false,
+                "intangible": false,
+                "smooth": true,
+                "smoothTrans": 30.0,
+                "smoothRot": 30.0
+            }
+        ]
+    }
+}

@@ -1,0 +1,83 @@
+{
+    "core": {
+        "uid": "1645812497195604:1133255",
+        "type": "SceneObject",
+        "layerV2": 1,
+        "name": "temp:box_bt",
+        "position": [
+            0.0,
+            -9.093721389770508,
+            0.895463228225708
+        ],
+        "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+        ],
+        "scale": [
+            0.3518868684768677,
+            0.3518867790699005,
+            0.3518868684768677
+        ],
+        "segmentScaleCompensate": false,
+        "isuserenabled": true,
+        "components": [
+            {
+                "uid": "1645812497197229:1133261",
+                "type": "Component.RenderMeshVisual",
+                "name": "component_0",
+                "isenabled": true,
+                "isInternal": false,
+                "updatepriority": 0,
+                "renderorder": 0,
+                "internalRenderOrder": 0,
+                "renderSpace": 1,
+                "stretchMode": {
+                    "value": 2,
+                    "description": "Stretch"
+                },
+                "verticalAlignment": {
+                    "value": 1,
+                    "description": "Center"
+                },
+                "horizontalAlignment": {
+                    "value": 1,
+                    "description": "Center"
+                },
+                "extentsTarget": "-1:-1",
+                "meshShadowMode": {
+                    "value": 0,
+                    "description": "none"
+                },
+                "shadowColor": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "shadowDensity": 1.0,
+                "blendShapesState": {
+                    "defaultWeights": null,
+                    "blendNormals": false,
+                    "enabled": true
+                },
+                "materials": [
+                    {
+                        "material": "1646166097436734:566522"
+                    }
+                ],
+                "lrayEmitter": false,
+                "lrayReflMat": "-1:-1",
+                "lrayReceiver": false,
+                "lrayShadow": false,
+                "lraySieve": false,
+                "lrayEmGroups": 65535,
+                "lrayRecGroups": 65535,
+                "lrayHidden": false,
+                "mesh": "1645812485222696:1104984",
+                "skin": "-1:-1"
+            }
+        ]
+    }
+}

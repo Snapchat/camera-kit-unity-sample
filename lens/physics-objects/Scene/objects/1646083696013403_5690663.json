@@ -1,0 +1,60 @@
+{
+    "core": {
+        "uid": "1646083696013403:5690663",
+        "type": "SceneObject",
+        "layerV2": 1,
+        "name": "Cone Body",
+        "position": [
+            6.198883966135327e-06,
+            5.773686408996582,
+            7.753239515295718e-06
+        ],
+        "rotation": [
+            -7.450582373280668e-09,
+            -1.1175871783564162e-08,
+            0.0,
+            1.0
+        ],
+        "scale": [
+            1.0,
+            1.0,
+            1.0
+        ],
+        "segmentScaleCompensate": false,
+        "isuserenabled": true,
+        "components": [
+            {
+                "uid": "1646083696016781:5690680",
+                "type": "Physics.BodyComponent",
+                "name": "Physics Body",
+                "isenabled": true,
+                "isInternal": false,
+                "updatepriority": 0,
+                "shape": {
+                    "type": "ConeShape",
+                    "coneAxis": {
+                        "value": 1,
+                        "description": "Y"
+                    },
+                    "coneLength": 11.0,
+                    "coneRadius": 4.5
+                },
+                "matter": "1644790253432794:84805",
+                "filter": "-1:-1",
+                "worldSettings": "-1:-1",
+                "debugDrawEnabled": false,
+                "fitVisual": true,
+                "forceCompound": false,
+                "intangible": false,
+                "smooth": false,
+                "smoothTrans": 30.0,
+                "smoothRot": 30.0,
+                "dynamic": true,
+                "useDensity": false,
+                "massOrDensity": 0.009999999776482582,
+                "damping": 0.0,
+                "angularDamping": 0.0
+            }
+        ]
+    }
+}

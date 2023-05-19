@@ -1,0 +1,170 @@
+{
+    "core": {
+        "uid": "1644735280452848:415491",
+        "type": "SceneObject",
+        "layerV2": 1,
+        "name": "Drag Script [TRY_ME]",
+        "position": [
+            0.0,
+            0.0,
+            0.0
+        ],
+        "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+        ],
+        "scale": [
+            1.0,
+            1.0,
+            1.0
+        ],
+        "segmentScaleCompensate": false,
+        "isuserenabled": true,
+        "components": [
+            {
+                "uid": "1644735295371585:417477",
+                "type": "Component.ScriptComponent",
+                "name": "Script",
+                "isenabled": true,
+                "isInternal": false,
+                "updatepriority": -1000,
+                "valuesManager": {
+                    "values": [
+                        {
+                            "uid": "1644735295373073:417479",
+                            "type": "Value.StringArrayValue",
+                            "count": 0,
+                            "value": null
+                        },
+                        {
+                            "uid": "1644735295373079:417480",
+                            "type": "Value.SerializableArrayValue",
+                            "count": 1,
+                            "valuesTypeName": "Physics.ColliderComponent",
+                            "value": [
+                                {
+                                    "value": "-1:-1"
+                                }
+                            ]
+                        },
+                        {
+                            "uid": "1644735295373082:417481",
+                            "type": "Value.StringValue",
+                            "value": "None"
+                        },
+                        {
+                            "uid": "1644735295373086:417482",
+                            "type": "Value.StringValue",
+                            "value": "Equals"
+                        },
+                        {
+                            "uid": "1645486547930229:2423263",
+                            "type": "Value.StringValue",
+                            "value": "World Component"
+                        },
+                        {
+                            "uid": "1667338518195243:213109",
+                            "type": "Value.BoolValue",
+                            "value": false
+                        },
+                        {
+                            "uid": "1667338518195246:213110",
+                            "type": "Value.BoolValue",
+                            "value": true
+                        },
+                        {
+                            "uid": "1667338518195247:213111",
+                            "type": "Value.BoolValue",
+                            "value": false
+                        },
+                        {
+                            "uid": "1667338518195248:213112",
+                            "type": "Value.BoolValue",
+                            "value": false
+                        },
+                        {
+                            "uid": "1667338518195253:213113",
+                            "type": "Value.StringValue",
+                            "value": "rayCastAll"
+                        }
+                    ]
+                },
+                "includes": null,
+                "scriptObjects": [
+                    {
+                        "name": "camera",
+                        "typename": "Component.Camera",
+                        "scriptObject": "101:101"
+                    },
+                    {
+                        "name": "physicsProbe",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645486547930229:2423263"
+                    },
+                    {
+                        "name": "worldComponent",
+                        "typename": "Physics.WorldComponent",
+                        "scriptObject": "1645656119171866:1447893"
+                    },
+                    {
+                        "name": "rayCastType",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1667338518195253:213113"
+                    },
+                    {
+                        "name": "debugDrawEnabled",
+                        "typename": "Value.BoolValue",
+                        "scriptObject": "1667338518195243:213109"
+                    },
+                    {
+                        "name": "physicsFilterObjectsBy",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1644735295373082:417481"
+                    },
+                    {
+                        "name": "physicsAllowedObjects",
+                        "typename": "Value.SerializableArrayValue",
+                        "scriptObject": "1644735295373079:417480"
+                    },
+                    {
+                        "name": "physicsNameMatchType",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1644735295373086:417482"
+                    },
+                    {
+                        "name": "physicsAllowedNames",
+                        "typename": "Value.StringArrayValue",
+                        "scriptObject": "1644735295373073:417479"
+                    },
+                    {
+                        "name": "includeStatic",
+                        "typename": "Value.BoolValue",
+                        "scriptObject": "1667338518195248:213112"
+                    },
+                    {
+                        "name": "includeDynamic",
+                        "typename": "Value.BoolValue",
+                        "scriptObject": "1667338518195246:213110"
+                    },
+                    {
+                        "name": "includeIntangible",
+                        "typename": "Value.BoolValue",
+                        "scriptObject": "1667338518195247:213111"
+                    }
+                ],
+                "typeObjects": null,
+                "events": [
+                    {
+                        "event": {
+                            "eventType": "SceneEvent.OnAwakeEvent"
+                        },
+                        "script": "1644735272515164:412274"
+                    }
+                ],
+                "wrapInitializationSources": true
+            }
+        ]
+    }
+}

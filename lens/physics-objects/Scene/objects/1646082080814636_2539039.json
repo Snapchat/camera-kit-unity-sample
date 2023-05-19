@@ -1,0 +1,59 @@
+{
+    "core": {
+        "uid": "1646082080814636:2539039",
+        "type": "SceneObject",
+        "layerV2": 1,
+        "name": "BoxBody",
+        "position": [
+            3.710507392883301,
+            0.5813674926757813,
+            3.1812314987182617
+        ],
+        "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+        ],
+        "scale": [
+            1.0,
+            1.0,
+            1.0
+        ],
+        "segmentScaleCompensate": false,
+        "isuserenabled": true,
+        "components": [
+            {
+                "uid": "1646082080815373:2539041",
+                "type": "Physics.BodyComponent",
+                "name": "Physics Body",
+                "isenabled": true,
+                "isInternal": false,
+                "updatepriority": 0,
+                "shape": {
+                    "type": "BoxShape",
+                    "boxSize": [
+                        4.949999809265137,
+                        4.5,
+                        0.7200000286102295
+                    ]
+                },
+                "matter": "-1:-1",
+                "filter": "-1:-1",
+                "worldSettings": "-1:-1",
+                "debugDrawEnabled": false,
+                "fitVisual": false,
+                "forceCompound": false,
+                "intangible": false,
+                "smooth": false,
+                "smoothTrans": 30.0,
+                "smoothRot": 30.0,
+                "dynamic": true,
+                "useDensity": true,
+                "massOrDensity": 0.009999999776482582,
+                "damping": 0.0,
+                "angularDamping": 0.0
+            }
+        ]
+    }
+}

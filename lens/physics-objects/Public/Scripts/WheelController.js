@@ -9,6 +9,11 @@
 //@input  Component.ScriptComponent draggable
 //@input Component.ScriptComponent requestUnityState
 
+var tapEvent = script.createEvent("TapEvent");
+tapEvent.bind(function(eventData){
+    global.behaviorSystem.sendCustomTrigger("Unity_ResetScene");
+})
+
 var isTouch = false;
 // Prints the touch position when a screen touch has started
 var touchStartEvent = script.createEvent("TouchStartEvent");

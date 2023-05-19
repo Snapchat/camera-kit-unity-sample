@@ -1,0 +1,55 @@
+{
+    "core": {
+        "uid": "1646082080871168:2539406",
+        "type": "SceneObject",
+        "layerV2": 1,
+        "name": "Balloon 3",
+        "position": [
+            6.282909393310547,
+            14.097206115722656,
+            -5.780488967895508
+        ],
+        "rotation": [
+            0.2720765173435211,
+            0.9616485834121704,
+            -0.03473373502492905,
+            0.0006448123604059219
+        ],
+        "scale": [
+            0.7200008630752563,
+            0.720000147819519,
+            0.7200008630752563
+        ],
+        "segmentScaleCompensate": false,
+        "isuserenabled": true,
+        "components": [
+            {
+                "uid": "1646082080877232:2539444",
+                "type": "Physics.BodyComponent",
+                "name": "Physics Body",
+                "isenabled": true,
+                "isInternal": false,
+                "updatepriority": 0,
+                "shape": {
+                    "type": "SphereShape",
+                    "sphereRadius": 5.0
+                },
+                "matter": "-1:-1",
+                "filter": "-1:-1",
+                "worldSettings": "1644947995861507:5657744",
+                "debugDrawEnabled": false,
+                "fitVisual": false,
+                "forceCompound": false,
+                "intangible": false,
+                "smooth": false,
+                "smoothTrans": 30.0,
+                "smoothRot": 30.0,
+                "dynamic": true,
+                "useDensity": false,
+                "massOrDensity": 0.009999999776482582,
+                "damping": 0.05999999865889549,
+                "angularDamping": 0.05999999865889549
+            }
+        ]
+    }
+}

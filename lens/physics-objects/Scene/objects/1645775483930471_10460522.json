@@ -1,0 +1,26 @@
+{
+    "core": {
+        "uid": "1645775483930471:10460522",
+        "type": "SceneObject",
+        "layerV2": 1,
+        "name": "car",
+        "position": [
+            0.0,
+            0.0,
+            0.0
+        ],
+        "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+        ],
+        "scale": [
+            0.550000011920929,
+            0.550000011920929,
+            0.550000011920929
+        ],
+        "segmentScaleCompensate": false,
+        "isuserenabled": true
+    }
+}

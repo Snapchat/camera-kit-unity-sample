@@ -1,0 +1,15 @@
+{
+    "privateAssets": {
+        "1645775468587491:10393250": {
+            "isLazyAsset": false,
+            "uid": "1645775468587491:10393250",
+            "type": "Physics.Matter",
+            "name": "Physics Matters/Gift Box Physics Matter [EDIT_ME]",
+            "friction": 0.8600000143051147,
+            "rollFriction": 0.0,
+            "spinFriction": 0.05000000074505806,
+            "statBounce": 0.5799999833106995,
+            "dynaBounce": 0.5699999928474426
+        }
+    }
+}

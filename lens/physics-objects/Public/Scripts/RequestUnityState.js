@@ -37,8 +37,11 @@ script.api.handleUnityUpdate = function(err, response) {
             if (response.isPressingButton == "true") {
                 global.behaviorSystem.sendCustomTrigger("Unity_ButtonDown");
             } 
-            else { 
+            else if (response.isPressingButton == "false") { 
                 global.behaviorSystem.sendCustomTrigger("Unity_ButtonUp");
+            } 
+            else if (response.resetScene == "true") {
+                global.behaviorSystem.sendCustomTrigger("Unity_ResetScene");
             }
         }
         

@@ -1,0 +1,22 @@
+{
+    "privateAssets": {
+        "1650575968933229:155532": {
+            "isLazyAsset": false,
+            "uid": "1650575968933229:155532",
+            "type": "Asset.Texture",
+            "name": "Textures/Road.png",
+            "provider": {
+                "type": "Provider.FileTextureProvider",
+                "hash": 5844276880091487494,
+                "useCache": true,
+                "allowDownscale": false,
+                "fileinfo": {
+                    "path": "Files/File_1675109166453017_26019.pvr",
+                    "location": 0
+                },
+                "filename": "Files/File_1675109166453017_26019.pvr",
+                "fileLocation": 0
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "core": {
+        "uid": "1646185936790698:387572",
+        "type": "SceneObject",
+        "layerV2": 1,
+        "name": "Maze Example",
+        "position": [
+            0.0,
+            0.0,
+            0.0
+        ],
+        "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+        ],
+        "scale": [
+            1.0,
+            1.0,
+            1.0
+        ],
+        "segmentScaleCompensate": false,
+        "isuserenabled": false
+    }
+}

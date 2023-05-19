@@ -26,5 +26,6 @@ public static class LensEvents
     public const string COIN_DEPOSITED = "coinDeposited";
 
     // Unity-to-Lens events. These are outbound events we are sending to the Physics Lens
-    public const string BUTTON_PRESS_EVENT = "isPressingButton";
+    public const string BUTTON_PRESS = "isPressingButton";
+    public const string RESET_SCENE = "resetScene";
 }

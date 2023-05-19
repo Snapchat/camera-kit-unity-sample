@@ -1,0 +1,22 @@
+{
+    "privateAssets": {
+        "1644734549676529:265639": {
+            "isLazyAsset": false,
+            "uid": "1644734549676529:265639",
+            "type": "Asset.ScriptAsset",
+            "name": "WorldObjectController/Scripts/WorldObjectController.js",
+            "publicName": "WorldObjectController/Scripts/WorldObjectController.js",
+            "hash": 14671954502522636337,
+            "provider": {
+                "type": "Provider.FileScriptProvider",
+                "fileinfo": {
+                    "path": "Files/File_1675109166452841_25877.js",
+                    "location": 0
+                },
+                "filename": "Files/File_1675109166452841_25877.js"
+            },
+            "staticInputs": null,
+            "automodules": null
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "privateAssets": {
+        "1645002271820189:656611": {
+            "isLazyAsset": false,
+            "uid": "1645002271820189:656611",
+            "type": "Asset.ScriptAsset",
+            "name": "Scripts/Tween/TweenTypes/TweenTransform.js",
+            "publicName": "Scripts/Tween/TweenTypes/TweenTransform.js",
+            "hash": 15887922753035048726,
+            "provider": {
+                "type": "Provider.FileScriptProvider",
+                "fileinfo": {
+                    "path": "Files/File_1675109166452876_25907.js",
+                    "location": 0
+                },
+                "filename": "Files/File_1675109166452876_25907.js"
+            },
+            "staticInputs": null,
+            "automodules": null
+        }
+    }
+}

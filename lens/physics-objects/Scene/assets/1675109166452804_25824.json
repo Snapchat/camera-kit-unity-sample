@@ -1,0 +1,22 @@
+{
+    "privateAssets": {
+        "1645502923063901:88847": {
+            "isLazyAsset": false,
+            "uid": "1645502923063901:88847",
+            "type": "Asset.ScriptAsset",
+            "name": "Scripts/ObjectsLayout.js",
+            "publicName": "Scripts/ObjectsLayout.js",
+            "hash": 701762957017415409,
+            "provider": {
+                "type": "Provider.FileScriptProvider",
+                "fileinfo": {
+                    "path": "Files/File_1675109166452938_25957.js",
+                    "location": 0
+                },
+                "filename": "Files/File_1675109166452938_25957.js"
+            },
+            "staticInputs": null,
+            "automodules": null
+        }
+    }
+}

@@ -23,8 +23,6 @@ public class AnimationManager : MonoBehaviour
 
     public void PlayScene(string sceneName)
     {
-        Debug.Log("Playing scene: " + sceneName);
-
         foreach (var namedScene in _scenes) {
             if (namedScene.name == sceneName) {
                 PlayScene(namedScene.animations);
@@ -38,7 +36,6 @@ public class AnimationManager : MonoBehaviour
         if (index < (animations.Length - 1)) {
             currentAnimation.OnAnimationFinished += () => PlayScene(animations, index+1);
         } 
-        Debug.Log("--->Playing animation " + currentAnimation.name + " ("+index+") " );
         currentAnimation.Play();
     }
 }

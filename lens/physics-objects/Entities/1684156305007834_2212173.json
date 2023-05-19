@@ -14,7 +14,7 @@
             "uid": "1684156305007845:2212174",
             "fileId": "1684156305005333:2212168",
             "publicId": "1684156305008650:2212181",
-            "expected_hash": "68375757c938618a26be7561b6266bd5"
+            "expected_hash": "22e1e7a5f036d6bb71982bedb59b8830"
         },
         "IResourceManager": {
             "uid": "1684156305007845:2212174",
@@ -26,7 +26,7 @@
         "IResourceController": {
             "public": {
                 "path": "Scripts/RequestUnityState.js",
-                "hash": "68375757c938618a26be7561b6266bd5"
+                "hash": "22e1e7a5f036d6bb71982bedb59b8830"
             }
         }
     }

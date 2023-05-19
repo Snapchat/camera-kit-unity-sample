@@ -1,0 +1,28 @@
+{
+    "core": {
+        "isLazyAsset": false,
+        "uid": "1646688292496456:202587",
+        "type": "Asset.QuaternionAnimationTrackKeyFramed",
+        "name": "",
+        "keys": [
+            [
+                0.0,
+                [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                ]
+            ],
+            [
+                1.0,
+                [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                ]
+            ]
+        ]
+    }
+}

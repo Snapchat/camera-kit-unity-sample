@@ -1,0 +1,59 @@
+{
+    "core": {
+        "uid": "1645775486180899:10470005",
+        "type": "SceneObject",
+        "layerV2": 1,
+        "name": "gift box",
+        "position": [
+            0.0,
+            0.0,
+            0.0
+        ],
+        "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+        ],
+        "scale": [
+            0.20000000298023224,
+            0.20000000298023224,
+            0.20000000298023224
+        ],
+        "segmentScaleCompensate": false,
+        "isuserenabled": false,
+        "components": [
+            {
+                "uid": "1645775486186770:10470024",
+                "type": "Physics.BodyComponent",
+                "name": "Physics Body",
+                "isenabled": true,
+                "isInternal": false,
+                "updatepriority": 0,
+                "shape": {
+                    "type": "BoxShape",
+                    "boxSize": [
+                        15.0,
+                        18.0,
+                        15.0
+                    ]
+                },
+                "matter": "1645775468587491:10393250",
+                "filter": "-1:-1",
+                "worldSettings": "-1:-1",
+                "debugDrawEnabled": false,
+                "fitVisual": false,
+                "forceCompound": false,
+                "intangible": false,
+                "smooth": false,
+                "smoothTrans": 30.0,
+                "smoothRot": 30.0,
+                "dynamic": true,
+                "useDensity": false,
+                "massOrDensity": 0.0010000000474974513,
+                "damping": 0.019999999552965164,
+                "angularDamping": 0.019999999552965164
+            }
+        ]
+    }
+}

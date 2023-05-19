@@ -1,0 +1,105 @@
+{
+    "core": {
+        "uid": "1645770610173800:5688128",
+        "type": "SceneObject",
+        "layerV2": 1,
+        "name": "Cube 34",
+        "position": [
+            -39.288856506347656,
+            -0.3517723083496094,
+            17.740070343017578
+        ],
+        "rotation": [
+            -0.19959908723831177,
+            -0.6775410771369934,
+            0.6924974322319031,
+            -0.14678411185741425
+        ],
+        "scale": [
+            1.0,
+            0.9999999403953552,
+            0.9999999403953552
+        ],
+        "segmentScaleCompensate": false,
+        "isuserenabled": true,
+        "components": [
+            {
+                "uid": "1645770610175212:5688130",
+                "type": "Component.RenderMeshVisual",
+                "name": "component_33",
+                "isenabled": false,
+                "isInternal": false,
+                "updatepriority": 0,
+                "renderorder": 3,
+                "internalRenderOrder": 0,
+                "renderSpace": 1,
+                "stretchMode": {
+                    "value": 2,
+                    "description": "Stretch"
+                },
+                "verticalAlignment": {
+                    "value": 1,
+                    "description": "Center"
+                },
+                "horizontalAlignment": {
+                    "value": 1,
+                    "description": "Center"
+                },
+                "extentsTarget": "-1:-1",
+                "meshShadowMode": {
+                    "value": 0,
+                    "description": "none"
+                },
+                "shadowColor": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "shadowDensity": 1.0,
+                "blendShapesState": {
+                    "defaultWeights": null,
+                    "blendNormals": false,
+                    "enabled": true
+                },
+                "materials": null,
+                "lrayEmitter": false,
+                "lrayReflMat": "-1:-1",
+                "lrayReceiver": false,
+                "lrayShadow": false,
+                "lraySieve": false,
+                "lrayEmGroups": 65535,
+                "lrayRecGroups": 65535,
+                "lrayHidden": false,
+                "mesh": "1645770575495780:5669418",
+                "skin": "-1:-1"
+            },
+            {
+                "uid": "1645771046636027:5821870",
+                "type": "Physics.ColliderComponent",
+                "name": "Physics Collider",
+                "isenabled": true,
+                "isInternal": false,
+                "updatepriority": 0,
+                "shape": {
+                    "type": "BoxShape",
+                    "boxSize": [
+                        15.0,
+                        15.0,
+                        15.0
+                    ]
+                },
+                "matter": "1645048792208566:1387657",
+                "filter": "-1:-1",
+                "worldSettings": "-1:-1",
+                "debugDrawEnabled": false,
+                "fitVisual": true,
+                "forceCompound": true,
+                "intangible": false,
+                "smooth": true,
+                "smoothTrans": 30.0,
+                "smoothRot": 30.0
+            }
+        ]
+    }
+}

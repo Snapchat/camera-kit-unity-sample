@@ -1,0 +1,563 @@
+{
+    "core": {
+        "isLazyAsset": false,
+        "uid": "1675732467163006:1181814",
+        "type": "Asset.Material",
+        "name": "Uber PBR.lsmat",
+        "passes": [
+            {
+                "type": "Asset.Pass",
+                "name": "/Resources/Resource8/uber.glsl",
+                "twosided": false,
+                "depthwrite": true,
+                "depthtest": true,
+                "colormask": [
+                    true,
+                    true,
+                    true,
+                    false
+                ],
+                "polygonoffset": [
+                    0.0,
+                    0.0
+                ],
+                "instancecount": 1,
+                "blendmode": {
+                    "value": 6,
+                    "description": "Disabled"
+                },
+                "stencilState": {
+                    "enabled": false,
+                    "face": {
+                        "value": 0,
+                        "description": "FrontAndBack"
+                    },
+                    "stencilFailureOperation": {
+                        "value": 0,
+                        "description": "Keep"
+                    },
+                    "depthFailureOperation": {
+                        "value": 0,
+                        "description": "Keep"
+                    },
+                    "depthStencilPassOperation": {
+                        "value": 0,
+                        "description": "Keep"
+                    },
+                    "stencilCompareFunction": {
+                        "value": 0,
+                        "description": "Always"
+                    },
+                    "referenceValue": 0,
+                    "readMask": 255,
+                    "writeMask": 255
+                },
+                "cullmode": {
+                    "value": 1,
+                    "description": "Back"
+                },
+                "depthfunc": {
+                    "value": 3,
+                    "description": "LessEqual"
+                },
+                "frustumcullmode2": {
+                    "value": 0,
+                    "description": "Auto"
+                },
+                "positionmodified": false,
+                "frustumcullpad": 0.0,
+                "defines": [
+                    "ENABLE_BASE_TEX",
+                    "ENABLE_DIFFUSE_LIGHTING",
+                    "ENABLE_DIRECT_LIGHTS",
+                    "ENABLE_ENVMAP",
+                    "ENABLE_LIGHTING",
+                    "ENABLE_NORMALMAP",
+                    "ENABLE_SPECULAR_LIGHTING",
+                    "ENABLE_TONE_MAPPING",
+                    "baseTexUV 0",
+                    "emissiveTexUV 0",
+                    "materialParamsTexUV 0",
+                    "normalTexUV 0",
+                    "opacityTexUV 0",
+                    "rimColorTexUV 0",
+                    "uv2 0",
+                    "uv3 0"
+                ],
+                "properties": [
+                    {
+                        "arraySize": 1,
+                        "name": "Port_Default_N103",
+                        "type": "vec3",
+                        "value": [
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    {
+                        "arraySize": 1,
+                        "name": "Port_Default_N113",
+                        "type": "vec3",
+                        "value": [
+                            0.0,
+                            0.0,
+                            1.0
+                        ]
+                    },
+                    {
+                        "arraySize": 1,
+                        "name": "Port_Default_N134",
+                        "type": "vec3",
+                        "value": [
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    {
+                        "arraySize": 1,
+                        "name": "Port_Default_N173",
+                        "type": "vec3",
+                        "value": [
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    {
+                        "arraySize": 1,
+                        "name": "Port_Default_N204",
+                        "type": "float",
+                        "value": 1.0
+                    },
+                    {
+                        "arraySize": 1,
+                        "name": "Port_Default_N326",
+                        "type": "vec3",
+                        "value": [
+                            1.0,
+                            0.999969482421875,
+                            0.9999847412109375
+                        ]
+                    },
+                    {
+                        "arraySize": 1,
+                        "name": "Port_Input2_N072",
+                        "type": "float",
+                        "value": 1.0
+                    },
+                    {
+                        "arraySize": 1,
+                        "name": "Port_Strength1_N200",
+                        "type": "float",
+                        "value": 1.0
+                    },
+                    {
+                        "arraySize": 1,
+                        "name": "Port_Strength2_N200",
+                        "type": "float",
+                        "value": 1.0
+                    },
+                    {
+                        "arraySize": 1,
+                        "name": "PreviewEnabled",
+                        "type": "int",
+                        "value": 0
+                    },
+                    {
+                        "arraySize": 1,
+                        "name": "baseColor",
+                        "type": "vec4",
+                        "value": [
+                            1.0,
+                            1.0,
+                            1.0,
+                            1.0
+                        ]
+                    },
+                    {
+                        "arraySize": 1,
+                        "name": "baseTexBorderColor",
+                        "type": "vec4",
+                        "value": [
+                            1.0,
+                            1.0,
+                            1.0,
+                            1.0
+                        ]
+                    },
+                    {
+                        "arraySize": 1,
+                        "name": "baseTexDims",
+                        "type": "vec4",
+                        "value": [
+                            1.0,
+                            1.0,
+                            1.0,
+                            1.0
+                        ]
+                    },
+                    {
+                        "arraySize": 1,
+                        "name": "baseTexTransform",
+                        "type": "mat3",
+                        "value": [
+                            [
+                                1.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                1.0
+                            ]
+                        ]
+                    },
+                    {
+                        "arraySize": 1,
+                        "name": "baseTexUvMinMax",
+                        "type": "vec4",
+                        "value": [
+                            1.0,
+                            1.0,
+                            1.0,
+                            1.0
+                        ]
+                    },
+                    {
+                        "arraySize": 1,
+                        "name": "mainColor",
+                        "type": "vec4",
+                        "value": [
+                            1.0,
+                            1.0,
+                            1.0,
+                            1.0
+                        ]
+                    },
+                    {
+                        "arraySize": 1,
+                        "name": "materialParamsTexBorderColor",
+                        "type": "vec4",
+                        "value": [
+                            1.0,
+                            1.0,
+                            1.0,
+                            1.0
+                        ]
+                    },
+                    {
+                        "arraySize": 1,
+                        "name": "materialParamsTexDims",
+                        "type": "vec4",
+                        "value": [
+                            1.0,
+                            1.0,
+                            1.0,
+                            1.0
+                        ]
+                    },
+                    {
+                        "arraySize": 1,
+                        "name": "materialParamsTexTransform",
+                        "type": "mat3",
+                        "value": [
+                            [
+                                1.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                1.0
+                            ]
+                        ]
+                    },
+                    {
+                        "arraySize": 1,
+                        "name": "materialParamsTexUvMinMax",
+                        "type": "vec4",
+                        "value": [
+                            1.0,
+                            1.0,
+                            1.0,
+                            1.0
+                        ]
+                    },
+                    {
+                        "arraySize": 1,
+                        "name": "metallic",
+                        "type": "float",
+                        "value": 0.0
+                    },
+                    {
+                        "arraySize": 1,
+                        "name": "normalTexBorderColor",
+                        "type": "vec4",
+                        "value": [
+                            1.0,
+                            1.0,
+                            1.0,
+                            1.0
+                        ]
+                    },
+                    {
+                        "arraySize": 1,
+                        "name": "normalTexDims",
+                        "type": "vec4",
+                        "value": [
+                            1.0,
+                            1.0,
+                            1.0,
+                            1.0
+                        ]
+                    },
+                    {
+                        "arraySize": 1,
+                        "name": "normalTexTransform",
+                        "type": "mat3",
+                        "value": [
+                            [
+                                1.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                1.0
+                            ]
+                        ]
+                    },
+                    {
+                        "arraySize": 1,
+                        "name": "normalTexUvMinMax",
+                        "type": "vec4",
+                        "value": [
+                            1.0,
+                            1.0,
+                            1.0,
+                            1.0
+                        ]
+                    },
+                    {
+                        "arraySize": 1,
+                        "name": "overrideTimeDelta",
+                        "type": "float",
+                        "value": 0.0
+                    },
+                    {
+                        "arraySize": 1,
+                        "name": "overrideTimeElapsed",
+                        "type": "float",
+                        "value": 0.0
+                    },
+                    {
+                        "arraySize": 1,
+                        "name": "overrideTimeEnabled",
+                        "type": "int",
+                        "value": 0
+                    },
+                    {
+                        "arraySize": 1,
+                        "name": "roughness",
+                        "type": "float",
+                        "value": 0.0
+                    },
+                    {
+                        "name": "baseTex",
+                        "type": "texture",
+                        "texturetype": {
+                            "value": 13,
+                            "description": "2D"
+                        },
+                        "value": "1646267804967474:3834135",
+                        "filteringmode": {
+                            "value": 2,
+                            "description": "Trilinear"
+                        },
+                        "wrapmode": {
+                            "value": 1,
+                            "description": "Repeat"
+                        },
+                        "wrapmodeU": {
+                            "value": 1,
+                            "description": "Repeat"
+                        },
+                        "wrapmodeV": {
+                            "value": 1,
+                            "description": "Repeat"
+                        },
+                        "wrapmodeW": {
+                            "value": 1,
+                            "description": "Repeat"
+                        },
+                        "mipmaps": true,
+                        "bordercolor": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    {
+                        "name": "materialParamsTex",
+                        "type": "texture",
+                        "texturetype": {
+                            "value": 13,
+                            "description": "2D"
+                        },
+                        "value": "1646267804968452:3834146",
+                        "filteringmode": {
+                            "value": 2,
+                            "description": "Trilinear"
+                        },
+                        "wrapmode": {
+                            "value": 1,
+                            "description": "Repeat"
+                        },
+                        "wrapmodeU": {
+                            "value": 1,
+                            "description": "Repeat"
+                        },
+                        "wrapmodeV": {
+                            "value": 1,
+                            "description": "Repeat"
+                        },
+                        "wrapmodeW": {
+                            "value": 1,
+                            "description": "Repeat"
+                        },
+                        "mipmaps": true,
+                        "bordercolor": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    },
+                    {
+                        "name": "normalTex",
+                        "type": "texture",
+                        "texturetype": {
+                            "value": 13,
+                            "description": "2D"
+                        },
+                        "value": "1646267804969560:3834157",
+                        "filteringmode": {
+                            "value": 2,
+                            "description": "Trilinear"
+                        },
+                        "wrapmode": {
+                            "value": 1,
+                            "description": "Repeat"
+                        },
+                        "wrapmodeU": {
+                            "value": 1,
+                            "description": "Repeat"
+                        },
+                        "wrapmodeV": {
+                            "value": 1,
+                            "description": "Repeat"
+                        },
+                        "wrapmodeW": {
+                            "value": 1,
+                            "description": "Repeat"
+                        },
+                        "mipmaps": true,
+                        "bordercolor": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    }
+                ],
+                "provider": {
+                    "type": "Provider.FileShaderProvider",
+                    "hash": 9812087741209884047,
+                    "fileinfo": {
+                        "path": "/Files//UnpackedPresetGraphMaterials/UberPBR//pass0/uber.glsl",
+                        "location": 0
+                    },
+                    "filename": "/Files//UnpackedPresetGraphMaterials/UberPBR//pass0/uber.glsl",
+                    "fromBundle": false
+                }
+            }
+        ]
+    },
+    "privateAssets": {
+        "1646267804967474:3834135": {
+            "isLazyAsset": false,
+            "uid": "1646267804967474:3834135",
+            "type": "Asset.Texture",
+            "name": "PBR Textures/Base",
+            "provider": {
+                "type": "Provider.FileTextureProvider",
+                "hash": 5549303750204915061,
+                "useCache": true,
+                "allowDownscale": false,
+                "fileinfo": {
+                    "path": "system/materials/textures/gray.png",
+                    "location": 0
+                },
+                "filename": "system/materials/textures/gray.png",
+                "fileLocation": 0
+            }
+        },
+        "1646267804968452:3834146": {
+            "isLazyAsset": false,
+            "uid": "1646267804968452:3834146",
+            "type": "Asset.Texture",
+            "name": "PBR Textures/MaterialParams",
+            "provider": {
+                "type": "Provider.FileTextureProvider",
+                "hash": 9882253333878861902,
+                "useCache": true,
+                "allowDownscale": false,
+                "fileinfo": {
+                    "path": "system/materials/textures/darkblue.png",
+                    "location": 0
+                },
+                "filename": "system/materials/textures/darkblue.png",
+                "fileLocation": 0
+            }
+        },
+        "1646267804969560:3834157": {
+            "isLazyAsset": false,
+            "uid": "1646267804969560:3834157",
+            "type": "Asset.Texture",
+            "name": "PBR Textures/Normal",
+            "provider": {
+                "type": "Provider.FileTextureProvider",
+                "hash": 6330485097520512976,
+                "useCache": true,
+                "allowDownscale": false,
+                "fileinfo": {
+                    "path": "system/materials/textures/blue.png",
+                    "location": 0
+                },
+                "filename": "system/materials/textures/blue.png",
+                "fileLocation": 0
+            }
+        }
+    }
+}

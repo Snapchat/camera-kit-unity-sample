@@ -1,0 +1,15 @@
+{
+    "privateAssets": {
+        "1644947873472837:5609574": {
+            "isLazyAsset": false,
+            "uid": "1644947873472837:5609574",
+            "type": "Physics.Matter",
+            "name": "Physics Matters/Wheel Physics Matter [EDIT_ME]",
+            "friction": 0.800000011920929,
+            "rollFriction": 0.009999999776482582,
+            "spinFriction": 0.009999999776482582,
+            "statBounce": 0.1899999976158142,
+            "dynaBounce": 0.1899999976158142
+        }
+    }
+}

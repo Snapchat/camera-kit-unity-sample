@@ -1,0 +1,2984 @@
+{
+    "core": {
+        "uid": "1645060196377173:805327",
+        "type": "SceneObject",
+        "layerV2": 1,
+        "name": "Wall Front [EDIT_ME]",
+        "position": [
+            0.0,
+            7.0,
+            68.0
+        ],
+        "rotation": [
+            0.0,
+            0.7071068286895752,
+            0.0,
+            0.7071067094802856
+        ],
+        "scale": [
+            0.10000000149011612,
+            1.0,
+            9.0
+        ],
+        "segmentScaleCompensate": false,
+        "isuserenabled": true,
+        "components": [
+            {
+                "uid": "1645060196379436:805343",
+                "type": "Component.RenderMeshVisual",
+                "name": "Mesh Visual 1",
+                "isenabled": true,
+                "isInternal": false,
+                "updatepriority": 0,
+                "renderorder": 3,
+                "internalRenderOrder": 0,
+                "renderSpace": 1,
+                "stretchMode": {
+                    "value": 2,
+                    "description": "Stretch"
+                },
+                "verticalAlignment": {
+                    "value": 1,
+                    "description": "Center"
+                },
+                "horizontalAlignment": {
+                    "value": 1,
+                    "description": "Center"
+                },
+                "extentsTarget": "-1:-1",
+                "meshShadowMode": {
+                    "value": 2,
+                    "description": "receiver"
+                },
+                "shadowColor": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "shadowDensity": 1.0,
+                "blendShapesState": {
+                    "defaultWeights": null,
+                    "blendNormals": false,
+                    "enabled": true
+                },
+                "materials": [
+                    {
+                        "material": "1645060811119666:1076291"
+                    }
+                ],
+                "lrayEmitter": false,
+                "lrayReflMat": "-1:-1",
+                "lrayReceiver": false,
+                "lrayShadow": false,
+                "lraySieve": false,
+                "lrayEmGroups": 65535,
+                "lrayRecGroups": 65535,
+                "lrayHidden": false,
+                "mesh": "1644995882589651:1425238",
+                "skin": "-1:-1"
+            },
+            {
+                "uid": "1645060196381184:805356",
+                "type": "Physics.ColliderComponent",
+                "name": "Physics Collider",
+                "isenabled": true,
+                "isInternal": false,
+                "updatepriority": 0,
+                "shape": {
+                    "type": "BoxShape",
+                    "boxSize": [
+                        15.0,
+                        15.0,
+                        15.0
+                    ]
+                },
+                "matter": "-1:-1",
+                "filter": "-1:-1",
+                "worldSettings": "-1:-1",
+                "debugDrawEnabled": false,
+                "fitVisual": true,
+                "forceCompound": true,
+                "intangible": false,
+                "smooth": false,
+                "smoothTrans": 30.0,
+                "smoothRot": 30.0
+            },
+            {
+                "uid": "1645060196381833:805360",
+                "type": "Component.ScriptComponent",
+                "name": "Script",
+                "isenabled": true,
+                "isInternal": false,
+                "updatepriority": -1000,
+                "valuesManager": {
+                    "values": [
+                        {
+                            "uid": "1645060196382432:805363",
+                            "type": "Value.StringValue",
+                            "value": "Animated Texture"
+                        },
+                        {
+                            "uid": "1645060196382438:805365",
+                            "type": "Value.StringValue",
+                            "value": "Play or Resume"
+                        },
+                        {
+                            "uid": "1645060196382440:805367",
+                            "type": "Value.BoolValue",
+                            "value": false
+                        },
+                        {
+                            "uid": "1645060196382443:805369",
+                            "type": "Value.BoolValue",
+                            "value": false
+                        },
+                        {
+                            "uid": "1645060196382445:805371",
+                            "type": "Value.IntValue",
+                            "value": 0
+                        },
+                        {
+                            "uid": "1645060196382448:805373",
+                            "type": "Value.BoolValue",
+                            "value": false
+                        },
+                        {
+                            "uid": "1645060196382451:805375",
+                            "type": "Value.BoolValue",
+                            "value": false
+                        },
+                        {
+                            "uid": "1645060196382454:805377",
+                            "type": "Value.StringValue",
+                            "value": "Play or Resume"
+                        },
+                        {
+                            "uid": "1645060196382456:805379",
+                            "type": "Value.StringValue",
+                            "value": ""
+                        },
+                        {
+                            "uid": "1645060196382458:805381",
+                            "type": "Value.BoolValue",
+                            "value": false
+                        },
+                        {
+                            "uid": "1645060196382461:805383",
+                            "type": "Value.BoolValue",
+                            "value": true
+                        },
+                        {
+                            "uid": "1645060196382464:805385",
+                            "type": "Value.FloatValue",
+                            "value": 1.0
+                        },
+                        {
+                            "uid": "1645060196382466:805387",
+                            "type": "Value.StringValue",
+                            "value": ""
+                        },
+                        {
+                            "uid": "1645060196382469:805389",
+                            "type": "Value.StringValue",
+                            "value": "On Enter"
+                        },
+                        {
+                            "uid": "1645060196382471:805391",
+                            "type": "Value.IntValue",
+                            "value": 1
+                        },
+                        {
+                            "uid": "1645060196382473:805393",
+                            "type": "Value.StringValue",
+                            "value": ""
+                        },
+                        {
+                            "uid": "1645060196382476:805395",
+                            "type": "Value.StringValue",
+                            "value": ""
+                        },
+                        {
+                            "uid": "1645060196382478:805397",
+                            "type": "Value.StringValue",
+                            "value": "Component"
+                        },
+                        {
+                            "uid": "1645060196382481:805399",
+                            "type": "Value.SerializableArrayValue",
+                            "count": 0,
+                            "valuesTypeName": "Asset",
+                            "value": null
+                        },
+                        {
+                            "uid": "1645060196382486:805401",
+                            "type": "Value.BoolArrayValue",
+                            "count": 0,
+                            "value": null
+                        },
+                        {
+                            "uid": "1645060196382488:805403",
+                            "type": "Value.BoolValue",
+                            "value": false
+                        },
+                        {
+                            "uid": "1645060196382491:805405",
+                            "type": "Value.Vec4Value",
+                            "value": [
+                                0.0,
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        },
+                        {
+                            "uid": "1645060196382494:805407",
+                            "type": "Value.Vec3Value",
+                            "value": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        },
+                        {
+                            "uid": "1645060196382496:805409",
+                            "type": "Value.SerializableArrayValue",
+                            "count": 0,
+                            "valuesTypeName": "Component",
+                            "value": null
+                        },
+                        {
+                            "uid": "1645060196382499:805411",
+                            "type": "Value.FloatArrayValue",
+                            "count": 0,
+                            "value": null
+                        },
+                        {
+                            "uid": "1645060196382502:805413",
+                            "type": "Value.FloatValue",
+                            "value": 0.0
+                        },
+                        {
+                            "uid": "1645060196382504:805415",
+                            "type": "Value.IntArrayValue",
+                            "count": 0,
+                            "value": null
+                        },
+                        {
+                            "uid": "1645060196382506:805417",
+                            "type": "Value.IntValue",
+                            "value": 0
+                        },
+                        {
+                            "uid": "1645060196382511:805421",
+                            "type": "Value.QuatValue",
+                            "value": [
+                                0.0,
+                                0.0,
+                                0.0,
+                                1.0
+                            ]
+                        },
+                        {
+                            "uid": "1645060196382513:805423",
+                            "type": "Value.SerializableArrayValue",
+                            "count": 0,
+                            "valuesTypeName": "SceneObject",
+                            "value": null
+                        },
+                        {
+                            "uid": "1645060196382516:805425",
+                            "type": "Value.StringArrayValue",
+                            "count": 0,
+                            "value": null
+                        },
+                        {
+                            "uid": "1645060196382519:805427",
+                            "type": "Value.StringValue",
+                            "value": ""
+                        },
+                        {
+                            "uid": "1645060196382522:805429",
+                            "type": "Value.SerializableArrayValue",
+                            "count": 0,
+                            "valuesTypeName": "Asset.Texture",
+                            "value": null
+                        },
+                        {
+                            "uid": "1645060196382525:805431",
+                            "type": "Value.StringValue",
+                            "value": "None"
+                        },
+                        {
+                            "uid": "1645060196382527:805433",
+                            "type": "Value.Vec2ArrayValue",
+                            "count": 0,
+                            "value": null
+                        },
+                        {
+                            "uid": "1645060196382530:805435",
+                            "type": "Value.Vec2Value",
+                            "value": [
+                                0.0,
+                                0.0
+                            ]
+                        },
+                        {
+                            "uid": "1645060196382532:805437",
+                            "type": "Value.Vec3ArrayValue",
+                            "count": 0,
+                            "value": null
+                        },
+                        {
+                            "uid": "1645060196382535:805439",
+                            "type": "Value.Vec3Value",
+                            "value": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        },
+                        {
+                            "uid": "1645060196382537:805441",
+                            "type": "Value.Vec4ArrayValue",
+                            "count": 0,
+                            "value": null
+                        },
+                        {
+                            "uid": "1645060196382539:805443",
+                            "type": "Value.Vec4Value",
+                            "value": [
+                                0.0,
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        },
+                        {
+                            "uid": "1645060196382541:805445",
+                            "type": "Value.SerializableArrayValue",
+                            "count": 0,
+                            "valuesTypeName": "Asset",
+                            "value": null
+                        },
+                        {
+                            "uid": "1645060196382545:805447",
+                            "type": "Value.BoolArrayValue",
+                            "count": 0,
+                            "value": null
+                        },
+                        {
+                            "uid": "1645060196382548:805449",
+                            "type": "Value.BoolValue",
+                            "value": false
+                        },
+                        {
+                            "uid": "1645060196382550:805451",
+                            "type": "Value.Vec4Value",
+                            "value": [
+                                0.0,
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        },
+                        {
+                            "uid": "1645060196382552:805453",
+                            "type": "Value.Vec3Value",
+                            "value": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        },
+                        {
+                            "uid": "1645060196382554:805455",
+                            "type": "Value.SerializableArrayValue",
+                            "count": 0,
+                            "valuesTypeName": "Component",
+                            "value": null
+                        },
+                        {
+                            "uid": "1645060196382557:805457",
+                            "type": "Value.FloatArrayValue",
+                            "count": 0,
+                            "value": null
+                        },
+                        {
+                            "uid": "1645060196382559:805459",
+                            "type": "Value.FloatValue",
+                            "value": 0.0
+                        },
+                        {
+                            "uid": "1645060196382561:805461",
+                            "type": "Value.IntArrayValue",
+                            "count": 0,
+                            "value": null
+                        },
+                        {
+                            "uid": "1645060196382563:805463",
+                            "type": "Value.IntValue",
+                            "value": 0
+                        },
+                        {
+                            "uid": "1645060196382568:805467",
+                            "type": "Value.QuatValue",
+                            "value": [
+                                0.0,
+                                0.0,
+                                0.0,
+                                1.0
+                            ]
+                        },
+                        {
+                            "uid": "1645060196382570:805469",
+                            "type": "Value.SerializableArrayValue",
+                            "count": 0,
+                            "valuesTypeName": "SceneObject",
+                            "value": null
+                        },
+                        {
+                            "uid": "1645060196382573:805471",
+                            "type": "Value.StringArrayValue",
+                            "count": 0,
+                            "value": null
+                        },
+                        {
+                            "uid": "1645060196382575:805473",
+                            "type": "Value.StringValue",
+                            "value": ""
+                        },
+                        {
+                            "uid": "1645060196382577:805475",
+                            "type": "Value.SerializableArrayValue",
+                            "count": 0,
+                            "valuesTypeName": "Asset.Texture",
+                            "value": null
+                        },
+                        {
+                            "uid": "1645060196382579:805477",
+                            "type": "Value.StringValue",
+                            "value": "None"
+                        },
+                        {
+                            "uid": "1645060196382581:805479",
+                            "type": "Value.Vec2ArrayValue",
+                            "count": 0,
+                            "value": null
+                        },
+                        {
+                            "uid": "1645060196382583:805481",
+                            "type": "Value.Vec2Value",
+                            "value": [
+                                0.0,
+                                0.0
+                            ]
+                        },
+                        {
+                            "uid": "1645060196382585:805483",
+                            "type": "Value.Vec3ArrayValue",
+                            "count": 0,
+                            "value": null
+                        },
+                        {
+                            "uid": "1645060196382587:805485",
+                            "type": "Value.Vec3Value",
+                            "value": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        },
+                        {
+                            "uid": "1645060196382589:805487",
+                            "type": "Value.Vec4ArrayValue",
+                            "count": 0,
+                            "value": null
+                        },
+                        {
+                            "uid": "1645060196382591:805489",
+                            "type": "Value.Vec4Value",
+                            "value": [
+                                0.0,
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        },
+                        {
+                            "uid": "1645060196382593:805491",
+                            "type": "Value.SerializableArrayValue",
+                            "count": 0,
+                            "valuesTypeName": "Asset",
+                            "value": null
+                        },
+                        {
+                            "uid": "1645060196382597:805493",
+                            "type": "Value.BoolArrayValue",
+                            "count": 0,
+                            "value": null
+                        },
+                        {
+                            "uid": "1645060196382599:805495",
+                            "type": "Value.BoolValue",
+                            "value": false
+                        },
+                        {
+                            "uid": "1645060196382601:805497",
+                            "type": "Value.Vec4Value",
+                            "value": [
+                                0.0,
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        },
+                        {
+                            "uid": "1645060196382603:805499",
+                            "type": "Value.Vec3Value",
+                            "value": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        },
+                        {
+                            "uid": "1645060196382605:805501",
+                            "type": "Value.SerializableArrayValue",
+                            "count": 0,
+                            "valuesTypeName": "Component",
+                            "value": null
+                        },
+                        {
+                            "uid": "1645060196382608:805503",
+                            "type": "Value.FloatArrayValue",
+                            "count": 0,
+                            "value": null
+                        },
+                        {
+                            "uid": "1645060196382610:805505",
+                            "type": "Value.FloatValue",
+                            "value": 0.0
+                        },
+                        {
+                            "uid": "1645060196382612:805507",
+                            "type": "Value.IntArrayValue",
+                            "count": 0,
+                            "value": null
+                        },
+                        {
+                            "uid": "1645060196382614:805509",
+                            "type": "Value.IntValue",
+                            "value": 0
+                        },
+                        {
+                            "uid": "1645060196382619:805513",
+                            "type": "Value.QuatValue",
+                            "value": [
+                                0.0,
+                                0.0,
+                                0.0,
+                                1.0
+                            ]
+                        },
+                        {
+                            "uid": "1645060196382621:805515",
+                            "type": "Value.SerializableArrayValue",
+                            "count": 0,
+                            "valuesTypeName": "SceneObject",
+                            "value": null
+                        },
+                        {
+                            "uid": "1645060196382624:805517",
+                            "type": "Value.StringArrayValue",
+                            "count": 0,
+                            "value": null
+                        },
+                        {
+                            "uid": "1645060196382626:805519",
+                            "type": "Value.StringValue",
+                            "value": ""
+                        },
+                        {
+                            "uid": "1645060196382628:805521",
+                            "type": "Value.SerializableArrayValue",
+                            "count": 0,
+                            "valuesTypeName": "Asset.Texture",
+                            "value": null
+                        },
+                        {
+                            "uid": "1645060196382631:805523",
+                            "type": "Value.StringValue",
+                            "value": "float"
+                        },
+                        {
+                            "uid": "1645060196382633:805525",
+                            "type": "Value.Vec2ArrayValue",
+                            "count": 0,
+                            "value": null
+                        },
+                        {
+                            "uid": "1645060196382635:805527",
+                            "type": "Value.Vec2Value",
+                            "value": [
+                                0.0,
+                                0.0
+                            ]
+                        },
+                        {
+                            "uid": "1645060196382638:805529",
+                            "type": "Value.Vec3ArrayValue",
+                            "count": 0,
+                            "value": null
+                        },
+                        {
+                            "uid": "1645060196382640:805531",
+                            "type": "Value.Vec3Value",
+                            "value": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        },
+                        {
+                            "uid": "1645060196382643:805533",
+                            "type": "Value.Vec4ArrayValue",
+                            "count": 0,
+                            "value": null
+                        },
+                        {
+                            "uid": "1645060196382645:805535",
+                            "type": "Value.Vec4Value",
+                            "value": [
+                                0.0,
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        },
+                        {
+                            "uid": "1645060196382647:805537",
+                            "type": "Value.BoolValue",
+                            "value": false
+                        },
+                        {
+                            "uid": "1645060196382649:805539",
+                            "type": "Value.IntValue",
+                            "value": -1
+                        },
+                        {
+                            "uid": "1645060196382651:805541",
+                            "type": "Value.FloatValue",
+                            "value": 1.0
+                        },
+                        {
+                            "uid": "1645060196382653:805543",
+                            "type": "Value.BoolValue",
+                            "value": true
+                        },
+                        {
+                            "uid": "1645060196382655:805545",
+                            "type": "Value.StringValue",
+                            "value": "MouthOpenedEvent"
+                        },
+                        {
+                            "uid": "1645060196382659:805547",
+                            "type": "Value.IntValue",
+                            "value": 0
+                        },
+                        {
+                            "uid": "1645060196382663:805549",
+                            "type": "Value.StringValue",
+                            "value": "onTap"
+                        },
+                        {
+                            "uid": "1645060196382666:805551",
+                            "type": "Value.StringValue",
+                            "value": "Location Found"
+                        },
+                        {
+                            "uid": "1645060196382669:805553",
+                            "type": "Value.BoolValue",
+                            "value": false
+                        },
+                        {
+                            "uid": "1645060196382672:805555",
+                            "type": "Value.FloatValue",
+                            "value": 10.0
+                        },
+                        {
+                            "uid": "1645060196382675:805557",
+                            "type": "Value.IntValue",
+                            "value": -1
+                        },
+                        {
+                            "uid": "1645060196382678:805559",
+                            "type": "Value.BoolValue",
+                            "value": true
+                        },
+                        {
+                            "uid": "1645060196382681:805561",
+                            "type": "Value.StringValue",
+                            "value": "Loading Finished"
+                        },
+                        {
+                            "uid": "1645060196382685:805563",
+                            "type": "Value.StringValue",
+                            "value": "Marker Found"
+                        },
+                        {
+                            "uid": "1645060196382689:805565",
+                            "type": "Value.StringValue",
+                            "value": "Tracking Started"
+                        },
+                        {
+                            "uid": "1645060196382692:805567",
+                            "type": "Value.StringValue",
+                            "value": ""
+                        },
+                        {
+                            "uid": "1645060196382695:805569",
+                            "type": "Value.StringValue",
+                            "value": ""
+                        },
+                        {
+                            "uid": "1645060196382698:805571",
+                            "type": "Value.StringValue",
+                            "value": "Object Found"
+                        },
+                        {
+                            "uid": "1645060196382702:805573",
+                            "type": "Value.StringValue",
+                            "value": ""
+                        },
+                        {
+                            "uid": "1645060196382706:805575",
+                            "type": "Value.StringArrayValue",
+                            "count": 0,
+                            "value": null
+                        },
+                        {
+                            "uid": "1645060196382709:805577",
+                            "type": "Value.BoolValue",
+                            "value": false
+                        },
+                        {
+                            "uid": "1645060196382712:805579",
+                            "type": "Value.StringValue",
+                            "value": "Position"
+                        },
+                        {
+                            "uid": "1645060196382715:805581",
+                            "type": "Value.Vec3Value",
+                            "value": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        },
+                        {
+                            "uid": "1645060196382717:805583",
+                            "type": "Value.StringValue",
+                            "value": "Impulse"
+                        },
+                        {
+                            "uid": "1645060196382719:805585",
+                            "type": "Value.StringValue",
+                            "value": "World"
+                        },
+                        {
+                            "uid": "1645060196382721:805587",
+                            "type": "Value.StringArrayValue",
+                            "count": 0,
+                            "value": null
+                        },
+                        {
+                            "uid": "1645060196382723:805589",
+                            "type": "Value.SerializableArrayValue",
+                            "count": 1,
+                            "valuesTypeName": "Physics.ColliderComponent",
+                            "value": [
+                                {
+                                    "value": "1646082080841665:2539212"
+                                }
+                            ]
+                        },
+                        {
+                            "uid": "1645060196382728:805591",
+                            "type": "Value.StringValue",
+                            "value": "Collision"
+                        },
+                        {
+                            "uid": "1645060196382730:805593",
+                            "type": "Value.StringValue",
+                            "value": "On Enter"
+                        },
+                        {
+                            "uid": "1645060196382732:805595",
+                            "type": "Value.StringValue",
+                            "value": "Other object"
+                        },
+                        {
+                            "uid": "1645060196382734:805597",
+                            "type": "Value.StringValue",
+                            "value": "Equals"
+                        },
+                        {
+                            "uid": "1645060196382736:805599",
+                            "type": "Value.BoolValue",
+                            "value": true
+                        },
+                        {
+                            "uid": "1645060196382738:805601",
+                            "type": "Value.BoolValue",
+                            "value": true
+                        },
+                        {
+                            "uid": "1645060196382740:805603",
+                            "type": "Value.BoolValue",
+                            "value": true
+                        },
+                        {
+                            "uid": "1645060196382742:805605",
+                            "type": "Value.StringValue",
+                            "value": "Play"
+                        },
+                        {
+                            "uid": "1645060196382744:805607",
+                            "type": "Value.BoolValue",
+                            "value": false
+                        },
+                        {
+                            "uid": "1645060196382746:805609",
+                            "type": "Value.BoolValue",
+                            "value": false
+                        },
+                        {
+                            "uid": "1645060196382748:805611",
+                            "type": "Value.FloatValue",
+                            "value": 1.0
+                        },
+                        {
+                            "uid": "1645060196382750:805613",
+                            "type": "Value.StringValue",
+                            "value": "Play or Resume"
+                        },
+                        {
+                            "uid": "1645060196382752:805615",
+                            "type": "Value.BoolValue",
+                            "value": false
+                        },
+                        {
+                            "uid": "1645060196382754:805617",
+                            "type": "Value.StringValue",
+                            "value": ""
+                        },
+                        {
+                            "uid": "1645060196382756:805619",
+                            "type": "Value.StringValue",
+                            "value": "SnapRecordStartEvent"
+                        },
+                        {
+                            "uid": "1645060196382759:805621",
+                            "type": "Value.StringValue",
+                            "value": "runTween"
+                        },
+                        {
+                            "uid": "1645060196382761:805623",
+                            "type": "Value.StringValue",
+                            "value": "Run Immediate"
+                        },
+                        {
+                            "uid": "1645060196382763:805625",
+                            "type": "Value.IntValue",
+                            "value": 4
+                        },
+                        {
+                            "uid": "1645060196382765:805627",
+                            "type": "Value.BoolValue",
+                            "value": false
+                        },
+                        {
+                            "uid": "1645060196382767:805629",
+                            "type": "Value.IntValue",
+                            "value": 2
+                        },
+                        {
+                            "uid": "1645060196382769:805631",
+                            "type": "Value.BoolValue",
+                            "value": false
+                        },
+                        {
+                            "uid": "1645060196382782:805633",
+                            "type": "Value.StringValue",
+                            "value": "Start"
+                        },
+                        {
+                            "uid": "1645060196382785:805635",
+                            "type": "Value.StringValue",
+                            "value": "TWEEN_HIGHLIGHT"
+                        },
+                        {
+                            "uid": "1645060196382787:805637",
+                            "type": "Value.BoolValue",
+                            "value": true
+                        },
+                        {
+                            "uid": "1645060196382791:805639",
+                            "type": "Value.StringValue",
+                            "value": ""
+                        },
+                        {
+                            "uid": "1645060196382794:805641",
+                            "type": "Value.StringArrayValue",
+                            "count": 0,
+                            "value": null
+                        },
+                        {
+                            "uid": "1645060196382797:805643",
+                            "type": "Value.BoolValue",
+                            "value": false
+                        },
+                        {
+                            "uid": "1645060196382800:805645",
+                            "type": "Value.StringValue",
+                            "value": ""
+                        },
+                        {
+                            "uid": "1645060196382802:805647",
+                            "type": "Value.StringValue",
+                            "value": ""
+                        },
+                        {
+                            "uid": "1645060196382806:805649",
+                            "type": "Value.FloatValue",
+                            "value": 0.0
+                        },
+                        {
+                            "uid": "1645060196382809:805651",
+                            "type": "Value.FloatValue",
+                            "value": 0.0
+                        },
+                        {
+                            "uid": "1645060196382833:805653",
+                            "type": "Value.Vec4Value",
+                            "value": [
+                                0.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ]
+                        },
+                        {
+                            "uid": "1645060196382842:805655",
+                            "type": "Value.StringValue",
+                            "value": "Enable"
+                        },
+                        {
+                            "uid": "1645060196382847:805657",
+                            "type": "Value.StringValue",
+                            "value": "SceneObject"
+                        },
+                        {
+                            "uid": "1645060196382850:805659",
+                            "type": "Value.BoolValue",
+                            "value": false
+                        },
+                        {
+                            "uid": "1645060196382857:805661",
+                            "type": "Value.Vec4Value",
+                            "value": [
+                                0.0,
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        },
+                        {
+                            "uid": "1645060196382860:805663",
+                            "type": "Value.Vec3Value",
+                            "value": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        },
+                        {
+                            "uid": "1645060196382863:805665",
+                            "type": "Value.FloatValue",
+                            "value": 0.0
+                        },
+                        {
+                            "uid": "1645060196382866:805667",
+                            "type": "Value.IntValue",
+                            "value": 0
+                        },
+                        {
+                            "uid": "1645060196382870:805669",
+                            "type": "Value.StringValue",
+                            "value": ""
+                        },
+                        {
+                            "uid": "1645060196382872:805671",
+                            "type": "Value.StringValue",
+                            "value": "MeshVisual"
+                        },
+                        {
+                            "uid": "1645060196382874:805673",
+                            "type": "Value.StringValue",
+                            "value": "float"
+                        },
+                        {
+                            "uid": "1645060196382876:805675",
+                            "type": "Value.Vec2Value",
+                            "value": [
+                                0.0,
+                                0.0
+                            ]
+                        },
+                        {
+                            "uid": "1645060196382879:805677",
+                            "type": "Value.Vec3Value",
+                            "value": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        },
+                        {
+                            "uid": "1645060196382880:805679",
+                            "type": "Value.Vec4Value",
+                            "value": [
+                                0.0,
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        },
+                        {
+                            "uid": "1645060196382882:805681",
+                            "type": "Value.BoolValue",
+                            "value": false
+                        },
+                        {
+                            "uid": "1645060196382884:805683",
+                            "type": "Value.BoolValue",
+                            "value": true
+                        },
+                        {
+                            "uid": "1645060196382886:805685",
+                            "type": "Value.Vec3Value",
+                            "value": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        },
+                        {
+                            "uid": "1645060196382889:805687",
+                            "type": "Value.BoolValue",
+                            "value": true
+                        },
+                        {
+                            "uid": "1645060196382890:805689",
+                            "type": "Value.Vec3Value",
+                            "value": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        },
+                        {
+                            "uid": "1645060196382892:805691",
+                            "type": "Value.BoolValue",
+                            "value": true
+                        },
+                        {
+                            "uid": "1645060196382894:805693",
+                            "type": "Value.Vec3Value",
+                            "value": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        },
+                        {
+                            "uid": "1645060196382898:805695",
+                            "type": "Value.Vec2Value",
+                            "value": [
+                                0.0,
+                                0.0
+                            ]
+                        },
+                        {
+                            "uid": "1645060196382900:805697",
+                            "type": "Value.Vec3Value",
+                            "value": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        },
+                        {
+                            "uid": "1645060196382901:805699",
+                            "type": "Value.Vec2Value",
+                            "value": [
+                                0.0,
+                                0.0
+                            ]
+                        },
+                        {
+                            "uid": "1645060196382903:805701",
+                            "type": "Value.StringValue",
+                            "value": "Basic Position"
+                        },
+                        {
+                            "uid": "1645060196382905:805703",
+                            "type": "Value.FloatValue",
+                            "value": 0.0
+                        },
+                        {
+                            "uid": "1645060196382908:805705",
+                            "type": "Value.Vec2Value",
+                            "value": [
+                                0.0,
+                                0.0
+                            ]
+                        },
+                        {
+                            "uid": "1645060196382910:805707",
+                            "type": "Value.Vec3Value",
+                            "value": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        },
+                        {
+                            "uid": "1645060196382912:805709",
+                            "type": "Value.Vec2Value",
+                            "value": [
+                                0.0,
+                                0.0
+                            ]
+                        },
+                        {
+                            "uid": "1645060196382914:805711",
+                            "type": "Value.StringValue",
+                            "value": "Basic Scale"
+                        },
+                        {
+                            "uid": "1645060196382916:805713",
+                            "type": "Value.StringValue",
+                            "value": "Text"
+                        },
+                        {
+                            "uid": "1645060196382918:805715",
+                            "type": "Value.StringValue",
+                            "value": ""
+                        },
+                        {
+                            "uid": "1645060196382920:805717",
+                            "type": "Value.BoolValue",
+                            "value": true
+                        },
+                        {
+                            "uid": "1645060196382922:805719",
+                            "type": "Value.StringValue",
+                            "value": "Global Touches"
+                        },
+                        {
+                            "uid": "1645060196382924:805721",
+                            "type": "Value.BoolValue",
+                            "value": false
+                        },
+                        {
+                            "uid": "1645060196382926:805723",
+                            "type": "Value.BoolValue",
+                            "value": false
+                        },
+                        {
+                            "uid": "1645060196382928:805725",
+                            "type": "Value.BoolValue",
+                            "value": false
+                        },
+                        {
+                            "uid": "1645060196382930:805727",
+                            "type": "Value.BoolValue",
+                            "value": false
+                        },
+                        {
+                            "uid": "1645060196382931:805729",
+                            "type": "Value.BoolValue",
+                            "value": false
+                        },
+                        {
+                            "uid": "1645060196382933:805731",
+                            "type": "Value.BoolValue",
+                            "value": false
+                        },
+                        {
+                            "uid": "1645060196382935:805733",
+                            "type": "Value.FloatValue",
+                            "value": 2.0
+                        },
+                        {
+                            "uid": "1645060196382936:805735",
+                            "type": "Value.IntValue",
+                            "value": 0
+                        },
+                        {
+                            "uid": "1645060196382938:805737",
+                            "type": "Value.StringValue",
+                            "value": "TapEvent"
+                        },
+                        {
+                            "uid": "1645060196382941:805739",
+                            "type": "Value.FloatValue",
+                            "value": 0.0
+                        },
+                        {
+                            "uid": "1645060196382943:805741",
+                            "type": "Value.FloatValue",
+                            "value": 1.0
+                        },
+                        {
+                            "uid": "1645060196382944:805743",
+                            "type": "Value.StringValue",
+                            "value": "Always"
+                        },
+                        {
+                            "uid": "1645060196382946:805745",
+                            "type": "Value.StringValue",
+                            "value": "physicsColliderEvent"
+                        },
+                        {
+                            "uid": "1645060196382954:805747",
+                            "type": "Value.StringValue",
+                            "value": ""
+                        },
+                        {
+                            "uid": "1667338486143317:98582",
+                            "type": "Value.QuatArrayValue",
+                            "count": 0,
+                            "value": null
+                        },
+                        {
+                            "uid": "1667338486143332:98583",
+                            "type": "Value.QuatArrayValue",
+                            "count": 0,
+                            "value": null
+                        },
+                        {
+                            "uid": "1667338486143345:98584",
+                            "type": "Value.QuatArrayValue",
+                            "count": 0,
+                            "value": null
+                        },
+                        {
+                            "uid": "1667338486143371:98585",
+                            "type": "Value.StringArrayValue",
+                            "count": 0,
+                            "value": null
+                        },
+                        {
+                            "uid": "1667338486143372:98586",
+                            "type": "Value.SerializableArrayValue",
+                            "count": 0,
+                            "valuesTypeName": "Physics.ColliderComponent",
+                            "value": null
+                        },
+                        {
+                            "uid": "1667338486143374:98587",
+                            "type": "Value.BoolValue",
+                            "value": false
+                        },
+                        {
+                            "uid": "1667338486143375:98588",
+                            "type": "Value.StringValue",
+                            "value": "None"
+                        },
+                        {
+                            "uid": "1667338486143376:98589",
+                            "type": "Value.BoolValue",
+                            "value": false
+                        },
+                        {
+                            "uid": "1667338486143377:98590",
+                            "type": "Value.FloatValue",
+                            "value": 10000.0
+                        },
+                        {
+                            "uid": "1667338486143379:98591",
+                            "type": "Value.StringValue",
+                            "value": "Equals"
+                        },
+                        {
+                            "uid": "1667338486143380:98592",
+                            "type": "Value.BoolValue",
+                            "value": true
+                        },
+                        {
+                            "uid": "1667338486143381:98593",
+                            "type": "Value.BoolValue",
+                            "value": true
+                        },
+                        {
+                            "uid": "1667338486143382:98594",
+                            "type": "Value.BoolValue",
+                            "value": true
+                        },
+                        {
+                            "uid": "1667338486143383:98595",
+                            "type": "Value.StringValue",
+                            "value": "global"
+                        },
+                        {
+                            "uid": "1667338486143384:98596",
+                            "type": "Value.StringValue",
+                            "value": "touch"
+                        },
+                        {
+                            "uid": "1667338486143385:98597",
+                            "type": "Value.BoolValue",
+                            "value": true
+                        },
+                        {
+                            "uid": "1667338486143386:98598",
+                            "type": "Value.BoolValue",
+                            "value": false
+                        },
+                        {
+                            "uid": "1667338486143388:98599",
+                            "type": "Value.BoolValue",
+                            "value": false
+                        },
+                        {
+                            "uid": "1667338486143389:98600",
+                            "type": "Value.BoolValue",
+                            "value": false
+                        }
+                    ]
+                },
+                "includes": null,
+                "scriptObjects": [
+                    {
+                        "name": "touchEventTouchTarget",
+                        "typename": "Component.BaseMeshVisual",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "onEnabledObject",
+                        "typename": "SceneObject",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "onDisabledObject",
+                        "typename": "SceneObject",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "interactionEventTarget",
+                        "typename": "Component.BaseMeshVisual",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "animationEndAnimatedTexture",
+                        "typename": "Asset.Texture",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "animationEndImageVisual",
+                        "typename": "Component.MaterialMeshVisual",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "animationEndAnimMixer",
+                        "typename": "Component.AnimationMixer",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "tweenEndTargetObject",
+                        "typename": "SceneObject",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "lookingAtLookingObject",
+                        "typename": "SceneObject",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "lookingAtLookTarget",
+                        "typename": "SceneObject",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "boundsCheckObject",
+                        "typename": "SceneObject",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "boundsCheckBoundaryMeshVisual",
+                        "typename": "Component.RenderMeshVisual",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "distanceCheckObjectA",
+                        "typename": "SceneObject",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "distanceCheckObjectB",
+                        "typename": "SceneObject",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "markerTrackingEventMarkerTracking",
+                        "typename": "Component.MarkerTrackingComponent",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "objectTrackingEventObjectTracking",
+                        "typename": "Component.ObjectTracking",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "objectTracking3DEventObjectTracking3D",
+                        "typename": "Component.ObjectTracking3D",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "landmarkerEventLocationTracking",
+                        "typename": "Component.DeviceLocationTrackingComponent",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "machineLearningEventMlComponent",
+                        "typename": "Component.MLComponent",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "physicsRaycastSourceObject",
+                        "typename": "SceneObject",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "physicsRaycastCamera",
+                        "typename": "Component.Camera",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "physicsRaycastPhysicsWorld",
+                        "typename": "Physics.WorldComponent",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "animateImageAnimatedTexture",
+                        "typename": "Asset.Texture",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "animateImageVisualObject",
+                        "typename": "Component.MaterialMeshVisual",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "animateMeshAnimationMixer",
+                        "typename": "Component.AnimationMixer",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "playSoundAudioTrack",
+                        "typename": "Asset.AudioTrackAsset",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "playSoundAudioComponent",
+                        "typename": "Component.AudioComponent",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "playVideoVideoTexture",
+                        "typename": "Asset.Texture",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "playVideoVisualObject",
+                        "typename": "Component.MaterialMeshVisual",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "setEnabledTarget",
+                        "typename": "SceneObject",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "setEnabledTargetComponent",
+                        "typename": "Component",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "setParentTarget",
+                        "typename": "SceneObject",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "setParentNewParent",
+                        "typename": "SceneObject",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "setColorMaterial",
+                        "typename": "Asset.Material",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "setTextureTarget",
+                        "typename": "Component.MaterialMeshVisual",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "setTextureNewTexture",
+                        "typename": "Asset.Texture",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "setTextTextComponent",
+                        "typename": "Component.Text",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "setTextText3DComponent",
+                        "typename": "Component.Text3D",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "setPositionObjectToMove",
+                        "typename": "SceneObject",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "setRotationObjectToRotate",
+                        "typename": "SceneObject",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "setScaleObjectToScale",
+                        "typename": "SceneObject",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "setScreenPositionScreenTransform",
+                        "typename": "Component.ScreenTransform",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "setScreenRotationScreenTransform",
+                        "typename": "Component.ScreenTransform",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "setScreenSizeScreenTransform",
+                        "typename": "Component.ScreenTransform",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "setBlendshapesV2MeshVisual",
+                        "typename": "Component.RenderMeshVisual",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "setMaterialParameterMaterial",
+                        "typename": "Asset.Material",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "setMaterialParameterVFXAsset",
+                        "typename": "Asset.VFXAsset",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "setMaterialParameterVFXComponent",
+                        "typename": "Component.VFXComponent",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "setMaterialParameterTextureValue",
+                        "typename": "Asset.Texture",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "setTouchBlockingTouchComponent",
+                        "typename": "Component.InteractionComponent",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "runMLMlComponent",
+                        "typename": "Component.MLComponent",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "instantiatePrefabPrefab",
+                        "typename": "Asset.ObjectPrefab",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "instantiatePrefabParent",
+                        "typename": "SceneObject",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "destroyObjectObject",
+                        "typename": "SceneObject",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "callScriptAPISceneObject",
+                        "typename": "SceneObject",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "callScriptAPIScriptComponent",
+                        "typename": "Component.ScriptComponent",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "callScriptAPI_arg1SceneObjectValue",
+                        "typename": "SceneObject",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "callScriptAPI_arg1AssetValue",
+                        "typename": "Asset",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "callScriptAPI_arg1TextureValue",
+                        "typename": "Asset.Texture",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "callScriptAPI_arg1ComponentValue",
+                        "typename": "Component",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "callScriptAPI_arg2SceneObjectValue",
+                        "typename": "SceneObject",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "callScriptAPI_arg2AssetValue",
+                        "typename": "Asset",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "callScriptAPI_arg2TextureValue",
+                        "typename": "Asset.Texture",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "callScriptAPI_arg2ComponentValue",
+                        "typename": "Component",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "callScriptAPI_valueSceneObjectValue",
+                        "typename": "SceneObject",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "callScriptAPI_valueAssetValue",
+                        "typename": "Asset",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "callScriptAPI_valueTextureValue",
+                        "typename": "Asset.Texture",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "callScriptAPI_valueComponentValue",
+                        "typename": "Component",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "physicsApplyForceBody",
+                        "typename": "Physics.BodyComponent",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "physicsApplyForceObjectSpace",
+                        "typename": "SceneObject",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "setBlendshapesBlendshapes",
+                        "typename": "Component.BlendShapes",
+                        "scriptObject": "-1:-1"
+                    },
+                    {
+                        "name": "triggeringEventType",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196382946:805745"
+                    },
+                    {
+                        "name": "touchEventEventType",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196382938:805737"
+                    },
+                    {
+                        "name": "faceEventEventType",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196382655:805545"
+                    },
+                    {
+                        "name": "faceEventFaceIndex",
+                        "typename": "Value.IntValue",
+                        "scriptObject": "1645060196382659:805547"
+                    },
+                    {
+                        "name": "interactionEventEventType",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196382663:805549"
+                    },
+                    {
+                        "name": "animType",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196382432:805363"
+                    },
+                    {
+                        "name": "animationEndAnimLayerName",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196382466:805387"
+                    },
+                    {
+                        "name": "tweenEndTweenName",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196382954:805747"
+                    },
+                    {
+                        "name": "lookingAtFlipForwardVec",
+                        "typename": "Value.BoolValue",
+                        "scriptObject": "1645060196382678:805559"
+                    },
+                    {
+                        "name": "lookingAtCompareType",
+                        "typename": "Value.IntValue",
+                        "scriptObject": "1645060196382675:805557"
+                    },
+                    {
+                        "name": "lookingAtAngle",
+                        "typename": "Value.FloatValue",
+                        "scriptObject": "1645060196382672:805555"
+                    },
+                    {
+                        "name": "lookingAtAllowRepeat",
+                        "typename": "Value.BoolValue",
+                        "scriptObject": "1645060196382669:805553"
+                    },
+                    {
+                        "name": "boundsCheckTriggerOptions",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196382469:805389"
+                    },
+                    {
+                        "name": "distanceCheckCompareType",
+                        "typename": "Value.IntValue",
+                        "scriptObject": "1645060196382649:805539"
+                    },
+                    {
+                        "name": "distanceCheckDistance",
+                        "typename": "Value.FloatValue",
+                        "scriptObject": "1645060196382651:805541"
+                    },
+                    {
+                        "name": "distanceCheckAllowRepeat",
+                        "typename": "Value.BoolValue",
+                        "scriptObject": "1645060196382647:805537"
+                    },
+                    {
+                        "name": "distanceCheckFlattenZForScreenTransforms",
+                        "typename": "Value.BoolValue",
+                        "scriptObject": "1645060196382653:805543"
+                    },
+                    {
+                        "name": "markerTrackingEventEventType",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196382685:805563"
+                    },
+                    {
+                        "name": "objectTrackingEventEventType",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196382698:805571"
+                    },
+                    {
+                        "name": "objectTrackingEventDescStartKey",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196382695:805569"
+                    },
+                    {
+                        "name": "objectTrackingEventDescEndKey",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196382692:805567"
+                    },
+                    {
+                        "name": "objectTracking3DEventEventType",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196382689:805565"
+                    },
+                    {
+                        "name": "landmarkerEventEventType",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196382666:805551"
+                    },
+                    {
+                        "name": "machineLearningEventEventType",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196382681:805561"
+                    },
+                    {
+                        "name": "recordingEventEventType",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196382756:805619"
+                    },
+                    {
+                        "name": "onCustomTriggerTriggerName",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196382702:805573"
+                    },
+                    {
+                        "name": "onCustomTriggerTriggerNames",
+                        "typename": "Value.StringArrayValue",
+                        "scriptObject": "1645060196382706:805575"
+                    },
+                    {
+                        "name": "onCustomTriggerUseList",
+                        "typename": "Value.BoolValue",
+                        "scriptObject": "1645060196382709:805577"
+                    },
+                    {
+                        "name": "physicsColliderEventCollider",
+                        "typename": "Physics.ColliderComponent",
+                        "scriptObject": "1645060196381184:805356"
+                    },
+                    {
+                        "name": "physicsColliderEventCollisionType",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196382728:805591"
+                    },
+                    {
+                        "name": "physicsColliderEventEventType",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196382730:805593"
+                    },
+                    {
+                        "name": "physicsColliderEventOverlapStatic",
+                        "typename": "Value.BoolValue",
+                        "scriptObject": "1645060196382740:805603"
+                    },
+                    {
+                        "name": "physicsColliderEventOverlapDynamic",
+                        "typename": "Value.BoolValue",
+                        "scriptObject": "1645060196382736:805599"
+                    },
+                    {
+                        "name": "physicsColliderEventOverlapIntangible",
+                        "typename": "Value.BoolValue",
+                        "scriptObject": "1645060196382738:805601"
+                    },
+                    {
+                        "name": "physicsColliderEventFilterObjectsBy",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196382732:805595"
+                    },
+                    {
+                        "name": "physicsColliderEventAllowedObjects",
+                        "typename": "Value.SerializableArrayValue",
+                        "scriptObject": "1645060196382723:805589"
+                    },
+                    {
+                        "name": "physicsColliderEventNameMatchType",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196382734:805597"
+                    },
+                    {
+                        "name": "physicsColliderEventAllowedNames",
+                        "typename": "Value.StringArrayValue",
+                        "scriptObject": "1645060196382721:805587"
+                    },
+                    {
+                        "name": "physicsRaycastRaycastSource",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1667338486143384:98596"
+                    },
+                    {
+                        "name": "physicsRaycastFlipForwardVec",
+                        "typename": "Value.BoolValue",
+                        "scriptObject": "1667338486143376:98589"
+                    },
+                    {
+                        "name": "physicsRaycastTapEvent",
+                        "typename": "Value.BoolValue",
+                        "scriptObject": "1667338486143385:98597"
+                    },
+                    {
+                        "name": "physicsRaycastTouchStartEvent",
+                        "typename": "Value.BoolValue",
+                        "scriptObject": "1667338486143389:98600"
+                    },
+                    {
+                        "name": "physicsRaycastTouchMoveEvent",
+                        "typename": "Value.BoolValue",
+                        "scriptObject": "1667338486143388:98599"
+                    },
+                    {
+                        "name": "physicsRaycastTouchEndEvent",
+                        "typename": "Value.BoolValue",
+                        "scriptObject": "1667338486143386:98598"
+                    },
+                    {
+                        "name": "physicsRaycastProbeType",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1667338486143383:98595"
+                    },
+                    {
+                        "name": "physicsRaycastMaxDistance",
+                        "typename": "Value.FloatValue",
+                        "scriptObject": "1667338486143377:98590"
+                    },
+                    {
+                        "name": "physicsRaycastDebugDrawEnabled",
+                        "typename": "Value.BoolValue",
+                        "scriptObject": "1667338486143374:98587"
+                    },
+                    {
+                        "name": "physicsRaycastOverlapStatic",
+                        "typename": "Value.BoolValue",
+                        "scriptObject": "1667338486143382:98594"
+                    },
+                    {
+                        "name": "physicsRaycastOverlapDynamic",
+                        "typename": "Value.BoolValue",
+                        "scriptObject": "1667338486143380:98592"
+                    },
+                    {
+                        "name": "physicsRaycastOverlapIntangible",
+                        "typename": "Value.BoolValue",
+                        "scriptObject": "1667338486143381:98593"
+                    },
+                    {
+                        "name": "physicsRaycastFilterObjectsBy",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1667338486143375:98588"
+                    },
+                    {
+                        "name": "physicsRaycastAllowedObjects",
+                        "typename": "Value.SerializableArrayValue",
+                        "scriptObject": "1667338486143372:98586"
+                    },
+                    {
+                        "name": "physicsRaycastNameMatchType",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1667338486143379:98591"
+                    },
+                    {
+                        "name": "physicsRaycastAllowedNames",
+                        "typename": "Value.StringArrayValue",
+                        "scriptObject": "1667338486143371:98585"
+                    },
+                    {
+                        "name": "triggerLimitType",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196382944:805743"
+                    },
+                    {
+                        "name": "triggerInterval",
+                        "typename": "Value.FloatValue",
+                        "scriptObject": "1645060196382943:805741"
+                    },
+                    {
+                        "name": "triggerDelay",
+                        "typename": "Value.FloatValue",
+                        "scriptObject": "1645060196382941:805739"
+                    },
+                    {
+                        "name": "responseType",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196382759:805621"
+                    },
+                    {
+                        "name": "animateImageAction",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196382438:805365"
+                    },
+                    {
+                        "name": "animateImageLoop",
+                        "typename": "Value.BoolValue",
+                        "scriptObject": "1645060196382443:805369"
+                    },
+                    {
+                        "name": "animateImagePauseFrame",
+                        "typename": "Value.IntValue",
+                        "scriptObject": "1645060196382445:805371"
+                    },
+                    {
+                        "name": "animateImageAdvanced",
+                        "typename": "Value.BoolValue",
+                        "scriptObject": "1645060196382440:805367"
+                    },
+                    {
+                        "name": "animateImagePingPong",
+                        "typename": "Value.BoolValue",
+                        "scriptObject": "1645060196382448:805373"
+                    },
+                    {
+                        "name": "animateImageReverse",
+                        "typename": "Value.BoolValue",
+                        "scriptObject": "1645060196382451:805375"
+                    },
+                    {
+                        "name": "animateMeshLayerName",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196382456:805379"
+                    },
+                    {
+                        "name": "animateMeshAction",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196382454:805377"
+                    },
+                    {
+                        "name": "animateMeshWeight",
+                        "typename": "Value.FloatValue",
+                        "scriptObject": "1645060196382464:805385"
+                    },
+                    {
+                        "name": "animateMeshLoop",
+                        "typename": "Value.BoolValue",
+                        "scriptObject": "1645060196382458:805381"
+                    },
+                    {
+                        "name": "animateMeshStopOtherLayers",
+                        "typename": "Value.BoolValue",
+                        "scriptObject": "1645060196382461:805383"
+                    },
+                    {
+                        "name": "playSoundAction",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196382742:805605"
+                    },
+                    {
+                        "name": "playSoundLoop",
+                        "typename": "Value.BoolValue",
+                        "scriptObject": "1645060196382746:805609"
+                    },
+                    {
+                        "name": "playSoundVolume",
+                        "typename": "Value.FloatValue",
+                        "scriptObject": "1645060196382748:805611"
+                    },
+                    {
+                        "name": "playSoundFadeOut",
+                        "typename": "Value.BoolValue",
+                        "scriptObject": "1645060196382744:805607"
+                    },
+                    {
+                        "name": "playVideoAction",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196382750:805613"
+                    },
+                    {
+                        "name": "playVideoLoop",
+                        "typename": "Value.BoolValue",
+                        "scriptObject": "1645060196382752:805615"
+                    },
+                    {
+                        "name": "setEnabledEntityType",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196382847:805657"
+                    },
+                    {
+                        "name": "setEnabledAction",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196382842:805655"
+                    },
+                    {
+                        "name": "setParentPreserveWorldTransform",
+                        "typename": "Value.BoolValue",
+                        "scriptObject": "1645060196382882:805681"
+                    },
+                    {
+                        "name": "setColorVisual",
+                        "typename": "Component.MaterialMeshVisual",
+                        "scriptObject": "1645060196379436:805343"
+                    },
+                    {
+                        "name": "setColorColor",
+                        "typename": "Value.Vec4Value",
+                        "scriptObject": "1645060196382833:805653"
+                    },
+                    {
+                        "name": "setTextComponentType",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196382916:805713"
+                    },
+                    {
+                        "name": "setTextText",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196382918:805715"
+                    },
+                    {
+                        "name": "runTweenTargetObject",
+                        "typename": "SceneObject",
+                        "scriptObject": "1645060196377173:805327"
+                    },
+                    {
+                        "name": "runTweenTweenName",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196382785:805635"
+                    },
+                    {
+                        "name": "runTweenAction",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196382782:805633"
+                    },
+                    {
+                        "name": "setPositionPosition",
+                        "typename": "Value.Vec3Value",
+                        "scriptObject": "1645060196382886:805685"
+                    },
+                    {
+                        "name": "setPositionLocalSpace",
+                        "typename": "Value.BoolValue",
+                        "scriptObject": "1645060196382884:805683"
+                    },
+                    {
+                        "name": "setRotationRotationAngle",
+                        "typename": "Value.Vec3Value",
+                        "scriptObject": "1645060196382890:805689"
+                    },
+                    {
+                        "name": "setRotationLocalSpace",
+                        "typename": "Value.BoolValue",
+                        "scriptObject": "1645060196382889:805687"
+                    },
+                    {
+                        "name": "setScaleScale",
+                        "typename": "Value.Vec3Value",
+                        "scriptObject": "1645060196382894:805693"
+                    },
+                    {
+                        "name": "setScaleLocalSpace",
+                        "typename": "Value.BoolValue",
+                        "scriptObject": "1645060196382892:805691"
+                    },
+                    {
+                        "name": "setScreenPositionPositionType",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196382903:805701"
+                    },
+                    {
+                        "name": "setScreenPositionBasicPosition",
+                        "typename": "Value.Vec3Value",
+                        "scriptObject": "1645060196382900:805697"
+                    },
+                    {
+                        "name": "setScreenPositionAnchorsCenter",
+                        "typename": "Value.Vec2Value",
+                        "scriptObject": "1645060196382898:805695"
+                    },
+                    {
+                        "name": "setScreenPositionOffsetsCenter",
+                        "typename": "Value.Vec2Value",
+                        "scriptObject": "1645060196382901:805699"
+                    },
+                    {
+                        "name": "setScreenRotationAngle",
+                        "typename": "Value.FloatValue",
+                        "scriptObject": "1645060196382905:805703"
+                    },
+                    {
+                        "name": "setScreenSizeSizeType",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196382914:805711"
+                    },
+                    {
+                        "name": "setScreenSizeBasicScale",
+                        "typename": "Value.Vec3Value",
+                        "scriptObject": "1645060196382910:805707"
+                    },
+                    {
+                        "name": "setScreenSizeAnchorsSize",
+                        "typename": "Value.Vec2Value",
+                        "scriptObject": "1645060196382908:805705"
+                    },
+                    {
+                        "name": "setScreenSizeOffsetsSize",
+                        "typename": "Value.Vec2Value",
+                        "scriptObject": "1645060196382912:805709"
+                    },
+                    {
+                        "name": "setBlendshapesV2Name",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196382802:805647"
+                    },
+                    {
+                        "name": "setBlendshapesV2Weight",
+                        "typename": "Value.FloatValue",
+                        "scriptObject": "1645060196382806:805649"
+                    },
+                    {
+                        "name": "setMaterialParameterTargetType",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196382872:805671"
+                    },
+                    {
+                        "name": "setMaterialParameterMeshVisual",
+                        "typename": "Component.MaterialMeshVisual",
+                        "scriptObject": "1645060196379436:805343"
+                    },
+                    {
+                        "name": "setMaterialParameterParameterName",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196382870:805669"
+                    },
+                    {
+                        "name": "setMaterialParameterValueType",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196382874:805673"
+                    },
+                    {
+                        "name": "setMaterialParameterBoolValue",
+                        "typename": "Value.BoolValue",
+                        "scriptObject": "1645060196382850:805659"
+                    },
+                    {
+                        "name": "setMaterialParameterIntValue",
+                        "typename": "Value.IntValue",
+                        "scriptObject": "1645060196382866:805667"
+                    },
+                    {
+                        "name": "setMaterialParameterFloatValue",
+                        "typename": "Value.FloatValue",
+                        "scriptObject": "1645060196382863:805665"
+                    },
+                    {
+                        "name": "setMaterialParameterColorRGBValue",
+                        "typename": "Value.Vec3Value",
+                        "scriptObject": "1645060196382860:805663"
+                    },
+                    {
+                        "name": "setMaterialParameterColorRGBAValue",
+                        "typename": "Value.Vec4Value",
+                        "scriptObject": "1645060196382857:805661"
+                    },
+                    {
+                        "name": "setMaterialParameterVec2Value",
+                        "typename": "Value.Vec2Value",
+                        "scriptObject": "1645060196382876:805675"
+                    },
+                    {
+                        "name": "setMaterialParameterVec3Value",
+                        "typename": "Value.Vec3Value",
+                        "scriptObject": "1645060196382879:805677"
+                    },
+                    {
+                        "name": "setMaterialParameterVec4Value",
+                        "typename": "Value.Vec4Value",
+                        "scriptObject": "1645060196382880:805679"
+                    },
+                    {
+                        "name": "setTouchBlockingTargetType",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196382922:805719"
+                    },
+                    {
+                        "name": "setTouchBlockingGlobalTouchBlocking",
+                        "typename": "Value.BoolValue",
+                        "scriptObject": "1645060196382920:805717"
+                    },
+                    {
+                        "name": "setTouchBlockingTouchTypeTouch",
+                        "typename": "Value.BoolValue",
+                        "scriptObject": "1645060196382933:805731"
+                    },
+                    {
+                        "name": "setTouchBlockingTouchTypeTap",
+                        "typename": "Value.BoolValue",
+                        "scriptObject": "1645060196382931:805729"
+                    },
+                    {
+                        "name": "setTouchBlockingTouchTypeDoubleTap",
+                        "typename": "Value.BoolValue",
+                        "scriptObject": "1645060196382924:805721"
+                    },
+                    {
+                        "name": "setTouchBlockingTouchTypeScale",
+                        "typename": "Value.BoolValue",
+                        "scriptObject": "1645060196382928:805725"
+                    },
+                    {
+                        "name": "setTouchBlockingTouchTypePan",
+                        "typename": "Value.BoolValue",
+                        "scriptObject": "1645060196382926:805723"
+                    },
+                    {
+                        "name": "setTouchBlockingTouchTypeSwipe",
+                        "typename": "Value.BoolValue",
+                        "scriptObject": "1645060196382930:805727"
+                    },
+                    {
+                        "name": "showHintHint",
+                        "typename": "Value.IntValue",
+                        "scriptObject": "1645060196382936:805735"
+                    },
+                    {
+                        "name": "showHintDuration",
+                        "typename": "Value.FloatValue",
+                        "scriptObject": "1645060196382935:805733"
+                    },
+                    {
+                        "name": "runMLAction",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196382761:805623"
+                    },
+                    {
+                        "name": "runMLSync",
+                        "typename": "Value.BoolValue",
+                        "scriptObject": "1645060196382769:805631"
+                    },
+                    {
+                        "name": "runMLRecurring",
+                        "typename": "Value.BoolValue",
+                        "scriptObject": "1645060196382765:805627"
+                    },
+                    {
+                        "name": "runMLStartTiming",
+                        "typename": "Value.IntValue",
+                        "scriptObject": "1645060196382767:805629"
+                    },
+                    {
+                        "name": "runMLEndTiming",
+                        "typename": "Value.IntValue",
+                        "scriptObject": "1645060196382763:805625"
+                    },
+                    {
+                        "name": "printMessageText",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196382754:805617"
+                    },
+                    {
+                        "name": "callScriptAPITargetType",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196382478:805397"
+                    },
+                    {
+                        "name": "callScriptAPIComponent",
+                        "typename": "Component",
+                        "scriptObject": "1645060196379436:805343"
+                    },
+                    {
+                        "name": "callScriptAPICallType",
+                        "typename": "Value.IntValue",
+                        "scriptObject": "1645060196382471:805391"
+                    },
+                    {
+                        "name": "callScriptAPIFunctionName",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196382473:805393"
+                    },
+                    {
+                        "name": "callScriptAPIPropertyName",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196382476:805395"
+                    },
+                    {
+                        "name": "callScriptAPI_arg1ValueType",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196382525:805431"
+                    },
+                    {
+                        "name": "callScriptAPI_arg1BoolValue",
+                        "typename": "Value.BoolValue",
+                        "scriptObject": "1645060196382488:805403"
+                    },
+                    {
+                        "name": "callScriptAPI_arg1IntValue",
+                        "typename": "Value.IntValue",
+                        "scriptObject": "1645060196382506:805417"
+                    },
+                    {
+                        "name": "callScriptAPI_arg1FloatValue",
+                        "typename": "Value.FloatValue",
+                        "scriptObject": "1645060196382502:805413"
+                    },
+                    {
+                        "name": "callScriptAPI_arg1StringValue",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196382519:805427"
+                    },
+                    {
+                        "name": "callScriptAPI_arg1ColorRGBValue",
+                        "typename": "Value.Vec3Value",
+                        "scriptObject": "1645060196382494:805407"
+                    },
+                    {
+                        "name": "callScriptAPI_arg1ColorRGBAValue",
+                        "typename": "Value.Vec4Value",
+                        "scriptObject": "1645060196382491:805405"
+                    },
+                    {
+                        "name": "callScriptAPI_arg1Vec2Value",
+                        "typename": "Value.Vec2Value",
+                        "scriptObject": "1645060196382530:805435"
+                    },
+                    {
+                        "name": "callScriptAPI_arg1Vec3Value",
+                        "typename": "Value.Vec3Value",
+                        "scriptObject": "1645060196382535:805439"
+                    },
+                    {
+                        "name": "callScriptAPI_arg1Vec4Value",
+                        "typename": "Value.Vec4Value",
+                        "scriptObject": "1645060196382539:805443"
+                    },
+                    {
+                        "name": "callScriptAPI_arg1QuatValue",
+                        "typename": "Value.QuatValue",
+                        "scriptObject": "1645060196382511:805421"
+                    },
+                    {
+                        "name": "callScriptAPI_arg1BoolArrayValue",
+                        "typename": "Value.BoolArrayValue",
+                        "scriptObject": "1645060196382486:805401"
+                    },
+                    {
+                        "name": "callScriptAPI_arg1IntArrayValue",
+                        "typename": "Value.IntArrayValue",
+                        "scriptObject": "1645060196382504:805415"
+                    },
+                    {
+                        "name": "callScriptAPI_arg1FloatArrayValue",
+                        "typename": "Value.FloatArrayValue",
+                        "scriptObject": "1645060196382499:805411"
+                    },
+                    {
+                        "name": "callScriptAPI_arg1StringArrayValue",
+                        "typename": "Value.StringArrayValue",
+                        "scriptObject": "1645060196382516:805425"
+                    },
+                    {
+                        "name": "callScriptAPI_arg1Vec2ArrayValue",
+                        "typename": "Value.Vec2ArrayValue",
+                        "scriptObject": "1645060196382527:805433"
+                    },
+                    {
+                        "name": "callScriptAPI_arg1Vec3ArrayValue",
+                        "typename": "Value.Vec3ArrayValue",
+                        "scriptObject": "1645060196382532:805437"
+                    },
+                    {
+                        "name": "callScriptAPI_arg1Vec4ArrayValue",
+                        "typename": "Value.Vec4ArrayValue",
+                        "scriptObject": "1645060196382537:805441"
+                    },
+                    {
+                        "name": "callScriptAPI_arg1QuatArrayValue",
+                        "typename": "Value.QuatArrayValue",
+                        "scriptObject": "1667338486143317:98582"
+                    },
+                    {
+                        "name": "callScriptAPI_arg1SceneObjectArrayValue",
+                        "typename": "Value.SerializableArrayValue",
+                        "scriptObject": "1645060196382513:805423"
+                    },
+                    {
+                        "name": "callScriptAPI_arg1AssetArrayValue",
+                        "typename": "Value.SerializableArrayValue",
+                        "scriptObject": "1645060196382481:805399"
+                    },
+                    {
+                        "name": "callScriptAPI_arg1TextureArrayValue",
+                        "typename": "Value.SerializableArrayValue",
+                        "scriptObject": "1645060196382522:805429"
+                    },
+                    {
+                        "name": "callScriptAPI_arg1ComponentArrayValue",
+                        "typename": "Value.SerializableArrayValue",
+                        "scriptObject": "1645060196382496:805409"
+                    },
+                    {
+                        "name": "callScriptAPI_arg2ValueType",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196382579:805477"
+                    },
+                    {
+                        "name": "callScriptAPI_arg2BoolValue",
+                        "typename": "Value.BoolValue",
+                        "scriptObject": "1645060196382548:805449"
+                    },
+                    {
+                        "name": "callScriptAPI_arg2IntValue",
+                        "typename": "Value.IntValue",
+                        "scriptObject": "1645060196382563:805463"
+                    },
+                    {
+                        "name": "callScriptAPI_arg2FloatValue",
+                        "typename": "Value.FloatValue",
+                        "scriptObject": "1645060196382559:805459"
+                    },
+                    {
+                        "name": "callScriptAPI_arg2StringValue",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196382575:805473"
+                    },
+                    {
+                        "name": "callScriptAPI_arg2ColorRGBValue",
+                        "typename": "Value.Vec3Value",
+                        "scriptObject": "1645060196382552:805453"
+                    },
+                    {
+                        "name": "callScriptAPI_arg2ColorRGBAValue",
+                        "typename": "Value.Vec4Value",
+                        "scriptObject": "1645060196382550:805451"
+                    },
+                    {
+                        "name": "callScriptAPI_arg2Vec2Value",
+                        "typename": "Value.Vec2Value",
+                        "scriptObject": "1645060196382583:805481"
+                    },
+                    {
+                        "name": "callScriptAPI_arg2Vec3Value",
+                        "typename": "Value.Vec3Value",
+                        "scriptObject": "1645060196382587:805485"
+                    },
+                    {
+                        "name": "callScriptAPI_arg2Vec4Value",
+                        "typename": "Value.Vec4Value",
+                        "scriptObject": "1645060196382591:805489"
+                    },
+                    {
+                        "name": "callScriptAPI_arg2QuatValue",
+                        "typename": "Value.QuatValue",
+                        "scriptObject": "1645060196382568:805467"
+                    },
+                    {
+                        "name": "callScriptAPI_arg2BoolArrayValue",
+                        "typename": "Value.BoolArrayValue",
+                        "scriptObject": "1645060196382545:805447"
+                    },
+                    {
+                        "name": "callScriptAPI_arg2IntArrayValue",
+                        "typename": "Value.IntArrayValue",
+                        "scriptObject": "1645060196382561:805461"
+                    },
+                    {
+                        "name": "callScriptAPI_arg2FloatArrayValue",
+                        "typename": "Value.FloatArrayValue",
+                        "scriptObject": "1645060196382557:805457"
+                    },
+                    {
+                        "name": "callScriptAPI_arg2StringArrayValue",
+                        "typename": "Value.StringArrayValue",
+                        "scriptObject": "1645060196382573:805471"
+                    },
+                    {
+                        "name": "callScriptAPI_arg2Vec2ArrayValue",
+                        "typename": "Value.Vec2ArrayValue",
+                        "scriptObject": "1645060196382581:805479"
+                    },
+                    {
+                        "name": "callScriptAPI_arg2Vec3ArrayValue",
+                        "typename": "Value.Vec3ArrayValue",
+                        "scriptObject": "1645060196382585:805483"
+                    },
+                    {
+                        "name": "callScriptAPI_arg2Vec4ArrayValue",
+                        "typename": "Value.Vec4ArrayValue",
+                        "scriptObject": "1645060196382589:805487"
+                    },
+                    {
+                        "name": "callScriptAPI_arg2QuatArrayValue",
+                        "typename": "Value.QuatArrayValue",
+                        "scriptObject": "1667338486143332:98583"
+                    },
+                    {
+                        "name": "callScriptAPI_arg2SceneObjectArrayValue",
+                        "typename": "Value.SerializableArrayValue",
+                        "scriptObject": "1645060196382570:805469"
+                    },
+                    {
+                        "name": "callScriptAPI_arg2AssetArrayValue",
+                        "typename": "Value.SerializableArrayValue",
+                        "scriptObject": "1645060196382541:805445"
+                    },
+                    {
+                        "name": "callScriptAPI_arg2TextureArrayValue",
+                        "typename": "Value.SerializableArrayValue",
+                        "scriptObject": "1645060196382577:805475"
+                    },
+                    {
+                        "name": "callScriptAPI_arg2ComponentArrayValue",
+                        "typename": "Value.SerializableArrayValue",
+                        "scriptObject": "1645060196382554:805455"
+                    },
+                    {
+                        "name": "callScriptAPI_valueValueType",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196382631:805523"
+                    },
+                    {
+                        "name": "callScriptAPI_valueBoolValue",
+                        "typename": "Value.BoolValue",
+                        "scriptObject": "1645060196382599:805495"
+                    },
+                    {
+                        "name": "callScriptAPI_valueIntValue",
+                        "typename": "Value.IntValue",
+                        "scriptObject": "1645060196382614:805509"
+                    },
+                    {
+                        "name": "callScriptAPI_valueFloatValue",
+                        "typename": "Value.FloatValue",
+                        "scriptObject": "1645060196382610:805505"
+                    },
+                    {
+                        "name": "callScriptAPI_valueStringValue",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196382626:805519"
+                    },
+                    {
+                        "name": "callScriptAPI_valueColorRGBValue",
+                        "typename": "Value.Vec3Value",
+                        "scriptObject": "1645060196382603:805499"
+                    },
+                    {
+                        "name": "callScriptAPI_valueColorRGBAValue",
+                        "typename": "Value.Vec4Value",
+                        "scriptObject": "1645060196382601:805497"
+                    },
+                    {
+                        "name": "callScriptAPI_valueVec2Value",
+                        "typename": "Value.Vec2Value",
+                        "scriptObject": "1645060196382635:805527"
+                    },
+                    {
+                        "name": "callScriptAPI_valueVec3Value",
+                        "typename": "Value.Vec3Value",
+                        "scriptObject": "1645060196382640:805531"
+                    },
+                    {
+                        "name": "callScriptAPI_valueVec4Value",
+                        "typename": "Value.Vec4Value",
+                        "scriptObject": "1645060196382645:805535"
+                    },
+                    {
+                        "name": "callScriptAPI_valueQuatValue",
+                        "typename": "Value.QuatValue",
+                        "scriptObject": "1645060196382619:805513"
+                    },
+                    {
+                        "name": "callScriptAPI_valueBoolArrayValue",
+                        "typename": "Value.BoolArrayValue",
+                        "scriptObject": "1645060196382597:805493"
+                    },
+                    {
+                        "name": "callScriptAPI_valueIntArrayValue",
+                        "typename": "Value.IntArrayValue",
+                        "scriptObject": "1645060196382612:805507"
+                    },
+                    {
+                        "name": "callScriptAPI_valueFloatArrayValue",
+                        "typename": "Value.FloatArrayValue",
+                        "scriptObject": "1645060196382608:805503"
+                    },
+                    {
+                        "name": "callScriptAPI_valueStringArrayValue",
+                        "typename": "Value.StringArrayValue",
+                        "scriptObject": "1645060196382624:805517"
+                    },
+                    {
+                        "name": "callScriptAPI_valueVec2ArrayValue",
+                        "typename": "Value.Vec2ArrayValue",
+                        "scriptObject": "1645060196382633:805525"
+                    },
+                    {
+                        "name": "callScriptAPI_valueVec3ArrayValue",
+                        "typename": "Value.Vec3ArrayValue",
+                        "scriptObject": "1645060196382638:805529"
+                    },
+                    {
+                        "name": "callScriptAPI_valueVec4ArrayValue",
+                        "typename": "Value.Vec4ArrayValue",
+                        "scriptObject": "1645060196382643:805533"
+                    },
+                    {
+                        "name": "callScriptAPI_valueQuatArrayValue",
+                        "typename": "Value.QuatArrayValue",
+                        "scriptObject": "1667338486143345:98584"
+                    },
+                    {
+                        "name": "callScriptAPI_valueSceneObjectArrayValue",
+                        "typename": "Value.SerializableArrayValue",
+                        "scriptObject": "1645060196382621:805515"
+                    },
+                    {
+                        "name": "callScriptAPI_valueAssetArrayValue",
+                        "typename": "Value.SerializableArrayValue",
+                        "scriptObject": "1645060196382593:805491"
+                    },
+                    {
+                        "name": "callScriptAPI_valueTextureArrayValue",
+                        "typename": "Value.SerializableArrayValue",
+                        "scriptObject": "1645060196382628:805521"
+                    },
+                    {
+                        "name": "callScriptAPI_valueComponentArrayValue",
+                        "typename": "Value.SerializableArrayValue",
+                        "scriptObject": "1645060196382605:805501"
+                    },
+                    {
+                        "name": "sendCustomTriggerTriggerName",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196382791:805639"
+                    },
+                    {
+                        "name": "sendCustomTriggerTriggerNames",
+                        "typename": "Value.StringArrayValue",
+                        "scriptObject": "1645060196382794:805641"
+                    },
+                    {
+                        "name": "sendCustomTriggerUseList",
+                        "typename": "Value.BoolValue",
+                        "scriptObject": "1645060196382797:805643"
+                    },
+                    {
+                        "name": "sendCustomTriggerLoopAfterEnd",
+                        "typename": "Value.BoolValue",
+                        "scriptObject": "1645060196382787:805637"
+                    },
+                    {
+                        "name": "physicsApplyForceForceType",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196382712:805579"
+                    },
+                    {
+                        "name": "physicsApplyForceMode",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196382717:805583"
+                    },
+                    {
+                        "name": "physicsApplyForceForceValue",
+                        "typename": "Value.Vec3Value",
+                        "scriptObject": "1645060196382715:805581"
+                    },
+                    {
+                        "name": "physicsApplyForceSpace",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196382719:805585"
+                    },
+                    {
+                        "name": "setBlendshapesName",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196382800:805645"
+                    },
+                    {
+                        "name": "setBlendshapesWeight",
+                        "typename": "Value.FloatValue",
+                        "scriptObject": "1645060196382809:805651"
+                    }
+                ],
+                "typeObjects": null,
+                "events": [
+                    {
+                        "event": {
+                            "eventType": "SceneEvent.OnAwakeEvent"
+                        },
+                        "script": "1644829505045995:6234837"
+                    }
+                ],
+                "wrapInitializationSources": true
+            },
+            {
+                "uid": "1645060196383334:805749",
+                "type": "Component.ScriptComponent",
+                "name": "Script 2",
+                "isenabled": true,
+                "isInternal": false,
+                "updatepriority": -1000,
+                "valuesManager": {
+                    "values": [
+                        {
+                            "uid": "1645060196383989:805752",
+                            "type": "Value.BoolValue",
+                            "value": false
+                        },
+                        {
+                            "uid": "1645060196383994:805754",
+                            "type": "Value.FloatValue",
+                            "value": 0.0
+                        },
+                        {
+                            "uid": "1645060196383997:805756",
+                            "type": "Value.StringValue",
+                            "value": "Quadratic"
+                        },
+                        {
+                            "uid": "1645060196383999:805758",
+                            "type": "Value.StringValue",
+                            "value": "Out"
+                        },
+                        {
+                            "uid": "1645060196384001:805760",
+                            "type": "Value.IntValue",
+                            "value": 3
+                        },
+                        {
+                            "uid": "1645060196384003:805762",
+                            "type": "Value.IntValue",
+                            "value": 0
+                        },
+                        {
+                            "uid": "1645060196384005:805764",
+                            "type": "Value.BoolValue",
+                            "value": false
+                        },
+                        {
+                            "uid": "1645060196384007:805766",
+                            "type": "Value.BoolValue",
+                            "value": false
+                        },
+                        {
+                            "uid": "1645060196384008:805768",
+                            "type": "Value.FloatValue",
+                            "value": 0.5
+                        },
+                        {
+                            "uid": "1645060196384010:805770",
+                            "type": "Value.StringValue",
+                            "value": "TWEEN_HIGHLIGHT"
+                        },
+                        {
+                            "uid": "1645060196384013:805772",
+                            "type": "Value.FloatValue",
+                            "value": 0.5
+                        },
+                        {
+                            "uid": "1645060196384015:805774",
+                            "type": "Value.FloatValue",
+                            "value": 0.0
+                        },
+                        {
+                            "uid": "1645060196384017:805776",
+                            "type": "Value.FloatValue",
+                            "value": 0.0
+                        },
+                        {
+                            "uid": "1645060196384019:805778",
+                            "type": "Value.FloatValue",
+                            "value": 0.0
+                        },
+                        {
+                            "uid": "1645060196384020:805780",
+                            "type": "Value.FloatValue",
+                            "value": 0.0
+                        }
+                    ]
+                },
+                "includes": null,
+                "scriptObjects": [
+                    {
+                        "name": "sceneObject",
+                        "typename": "SceneObject",
+                        "scriptObject": "1645060196377173:805327"
+                    },
+                    {
+                        "name": "tweenName",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196384010:805770"
+                    },
+                    {
+                        "name": "playAutomatically",
+                        "typename": "Value.BoolValue",
+                        "scriptObject": "1645060196384005:805764"
+                    },
+                    {
+                        "name": "loopType",
+                        "typename": "Value.IntValue",
+                        "scriptObject": "1645060196384001:805760"
+                    },
+                    {
+                        "name": "movementType",
+                        "typename": "Value.IntValue",
+                        "scriptObject": "1645060196384003:805762"
+                    },
+                    {
+                        "name": "start",
+                        "typename": "Value.FloatValue",
+                        "scriptObject": "1645060196384019:805778"
+                    },
+                    {
+                        "name": "end",
+                        "typename": "Value.FloatValue",
+                        "scriptObject": "1645060196384013:805772"
+                    },
+                    {
+                        "name": "from",
+                        "typename": "Value.FloatValue",
+                        "scriptObject": "1645060196384015:805774"
+                    },
+                    {
+                        "name": "to",
+                        "typename": "Value.FloatValue",
+                        "scriptObject": "1645060196384020:805780"
+                    },
+                    {
+                        "name": "offset",
+                        "typename": "Value.FloatValue",
+                        "scriptObject": "1645060196384017:805776"
+                    },
+                    {
+                        "name": "additive",
+                        "typename": "Value.BoolValue",
+                        "scriptObject": "1645060196383989:805752"
+                    },
+                    {
+                        "name": "recursive",
+                        "typename": "Value.BoolValue",
+                        "scriptObject": "1645060196384007:805766"
+                    },
+                    {
+                        "name": "time",
+                        "typename": "Value.FloatValue",
+                        "scriptObject": "1645060196384008:805768"
+                    },
+                    {
+                        "name": "delay",
+                        "typename": "Value.FloatValue",
+                        "scriptObject": "1645060196383994:805754"
+                    },
+                    {
+                        "name": "easingFunction",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196383997:805756"
+                    },
+                    {
+                        "name": "easingType",
+                        "typename": "Value.StringValue",
+                        "scriptObject": "1645060196383999:805758"
+                    }
+                ],
+                "typeObjects": null,
+                "events": [
+                    {
+                        "event": {
+                            "eventType": "SceneEvent.OnAwakeEvent"
+                        },
+                        "script": "1645002271957556:656665"
+                    }
+                ],
+                "wrapInitializationSources": true
+            }
+        ]
+    }
+}

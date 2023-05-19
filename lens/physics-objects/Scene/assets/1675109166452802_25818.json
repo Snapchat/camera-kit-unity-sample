@@ -1,0 +1,18 @@
+{
+    "privateAssets": {
+        "1645238215708830:73191": {
+            "isLazyAsset": false,
+            "uid": "1645238215708830:73191",
+            "type": "Asset.RenderMesh",
+            "name": "Meshes/Car/Car Body.mesh",
+            "provider": {
+                "type": "Provider.FileRenderObjectProvider",
+                "fileinfo": {
+                    "path": "Files/File_1675109166452924_25945.mesh",
+                    "location": 0
+                },
+                "filename": "Files/File_1675109166452924_25945.mesh"
+            }
+        }
+    }
+}

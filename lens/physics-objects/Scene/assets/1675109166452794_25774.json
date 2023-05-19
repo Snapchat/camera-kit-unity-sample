@@ -1,0 +1,403 @@
+{
+    "privateAssets": {
+        "1644734549941256:265724": {
+            "isLazyAsset": false,
+            "uid": "1644734549941256:265724",
+            "type": "Asset.Material",
+            "name": "WorldObjectController/Materials/ground_grid.lsmat",
+            "passes": [
+                {
+                    "type": "Asset.Pass",
+                    "name": "/Resources/Resource8/uber.glsl",
+                    "twosided": false,
+                    "depthwrite": true,
+                    "depthtest": true,
+                    "colormask": [
+                        true,
+                        true,
+                        true,
+                        false
+                    ],
+                    "polygonoffset": [
+                        0.0,
+                        0.0
+                    ],
+                    "instancecount": 1,
+                    "blendmode": {
+                        "value": 7,
+                        "description": "Add"
+                    },
+                    "stencilState": {
+                        "enabled": false,
+                        "face": {
+                            "value": 0,
+                            "description": "FrontAndBack"
+                        },
+                        "stencilFailureOperation": {
+                            "value": 0,
+                            "description": "Keep"
+                        },
+                        "depthFailureOperation": {
+                            "value": 0,
+                            "description": "Keep"
+                        },
+                        "depthStencilPassOperation": {
+                            "value": 0,
+                            "description": "Keep"
+                        },
+                        "stencilCompareFunction": {
+                            "value": 0,
+                            "description": "Always"
+                        },
+                        "referenceValue": 0,
+                        "readMask": 255,
+                        "writeMask": 255
+                    },
+                    "cullmode": {
+                        "value": 1,
+                        "description": "Back"
+                    },
+                    "depthfunc": {
+                        "value": 3,
+                        "description": "LessEqual"
+                    },
+                    "frustumcullmode2": {
+                        "value": 0,
+                        "description": "Auto"
+                    },
+                    "positionmodified": false,
+                    "frustumcullpad": 0.0,
+                    "defines": [],
+                    "properties": [
+                        {
+                            "arraySize": 1,
+                            "name": "Port_Center_N085",
+                            "type": "vec2",
+                            "value": [
+                                0.5,
+                                0.5
+                            ]
+                        },
+                        {
+                            "arraySize": 1,
+                            "name": "Port_Depth_N004",
+                            "type": "float",
+                            "value": 1.0
+                        },
+                        {
+                            "arraySize": 1,
+                            "name": "Port_FinalColor1_N004",
+                            "type": "vec4",
+                            "value": [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ]
+                        },
+                        {
+                            "arraySize": 1,
+                            "name": "Port_FinalColor2_N004",
+                            "type": "vec4",
+                            "value": [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ]
+                        },
+                        {
+                            "arraySize": 1,
+                            "name": "Port_FinalColor3_N004",
+                            "type": "vec4",
+                            "value": [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ]
+                        },
+                        {
+                            "arraySize": 1,
+                            "name": "Port_Import_N025",
+                            "type": "float",
+                            "value": 0.10000000149011612
+                        },
+                        {
+                            "arraySize": 1,
+                            "name": "Port_Import_N028",
+                            "type": "float",
+                            "value": 20.0
+                        },
+                        {
+                            "arraySize": 1,
+                            "name": "Port_Import_N091",
+                            "type": "vec2",
+                            "value": [
+                                1.0,
+                                1.0
+                            ]
+                        },
+                        {
+                            "arraySize": 1,
+                            "name": "Port_Input0_N020",
+                            "type": "float",
+                            "value": 1.0
+                        },
+                        {
+                            "arraySize": 1,
+                            "name": "Port_Input0_N027",
+                            "type": "float",
+                            "value": 2.0
+                        },
+                        {
+                            "arraySize": 1,
+                            "name": "Port_Input1_N015",
+                            "type": "vec2",
+                            "value": [
+                                -1.0,
+                                1.0
+                            ]
+                        },
+                        {
+                            "arraySize": 1,
+                            "name": "Port_Input1_N021",
+                            "type": "float",
+                            "value": 2.0
+                        },
+                        {
+                            "arraySize": 1,
+                            "name": "Port_Input1_N022",
+                            "type": "float",
+                            "value": 1.0
+                        },
+                        {
+                            "arraySize": 1,
+                            "name": "Port_Input1_N024",
+                            "type": "float",
+                            "value": -1.0
+                        },
+                        {
+                            "arraySize": 1,
+                            "name": "Port_Input1_N030",
+                            "type": "float",
+                            "value": 3.0
+                        },
+                        {
+                            "arraySize": 1,
+                            "name": "Port_Input1_N033",
+                            "type": "float",
+                            "value": 0.5
+                        },
+                        {
+                            "arraySize": 1,
+                            "name": "Port_Input2_N030",
+                            "type": "float",
+                            "value": 50.0
+                        },
+                        {
+                            "arraySize": 1,
+                            "name": "Port_LODValue_N003",
+                            "type": "float",
+                            "value": 0.0
+                        },
+                        {
+                            "arraySize": 1,
+                            "name": "Port_RangeMaxB_N039",
+                            "type": "float",
+                            "value": 1.0
+                        },
+                        {
+                            "arraySize": 1,
+                            "name": "Port_RangeMinA_N039",
+                            "type": "float",
+                            "value": 0.0
+                        },
+                        {
+                            "arraySize": 1,
+                            "name": "Port_RangeMinB_N039",
+                            "type": "float",
+                            "value": 0.0
+                        },
+                        {
+                            "arraySize": 1,
+                            "name": "Port_Value3_N007",
+                            "type": "float",
+                            "value": 0.0
+                        },
+                        {
+                            "arraySize": 1,
+                            "name": "Port_Value4_N007",
+                            "type": "float",
+                            "value": 0.0
+                        },
+                        {
+                            "arraySize": 1,
+                            "name": "Port_WorldNormal_N004",
+                            "type": "vec3",
+                            "value": [
+                                0.0,
+                                1.0,
+                                0.0
+                            ]
+                        },
+                        {
+                            "arraySize": 1,
+                            "name": "Port_WorldPosition_N004",
+                            "type": "vec3",
+                            "value": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        },
+                        {
+                            "arraySize": 1,
+                            "name": "Port_WorldTangent_N004",
+                            "type": "vec3",
+                            "value": [
+                                0.0,
+                                0.0,
+                                1.0
+                            ]
+                        },
+                        {
+                            "arraySize": 1,
+                            "name": "PreviewEnabled",
+                            "type": "int",
+                            "value": 0
+                        },
+                        {
+                            "arraySize": 1,
+                            "name": "baseColor",
+                            "type": "vec3",
+                            "value": [
+                                1.0,
+                                1.0,
+                                1.0
+                            ]
+                        },
+                        {
+                            "arraySize": 1,
+                            "name": "baseTexBorderColor",
+                            "type": "vec4",
+                            "value": [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ]
+                        },
+                        {
+                            "arraySize": 1,
+                            "name": "baseTexDims",
+                            "type": "vec4",
+                            "value": [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ]
+                        },
+                        {
+                            "arraySize": 1,
+                            "name": "baseTexTransform",
+                            "type": "mat3",
+                            "value": [
+                                [
+                                    1.0,
+                                    0.0,
+                                    0.0
+                                ],
+                                [
+                                    0.0,
+                                    1.0,
+                                    0.0
+                                ],
+                                [
+                                    0.0,
+                                    0.0,
+                                    1.0
+                                ]
+                            ]
+                        },
+                        {
+                            "arraySize": 1,
+                            "name": "baseTexUvMinMax",
+                            "type": "vec4",
+                            "value": [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ]
+                        },
+                        {
+                            "arraySize": 1,
+                            "name": "mainColor",
+                            "type": "vec4",
+                            "value": [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ]
+                        },
+                        {
+                            "arraySize": 1,
+                            "name": "uvScale",
+                            "type": "float",
+                            "value": 0.004999999888241291
+                        },
+                        {
+                            "name": "baseTex",
+                            "type": "texture",
+                            "texturetype": {
+                                "value": 13,
+                                "description": "2D"
+                            },
+                            "value": "1650575969295116:155610",
+                            "filteringmode": {
+                                "value": 2,
+                                "description": "Trilinear"
+                            },
+                            "wrapmode": {
+                                "value": 1,
+                                "description": "Repeat"
+                            },
+                            "wrapmodeU": {
+                                "value": 1,
+                                "description": "Repeat"
+                            },
+                            "wrapmodeV": {
+                                "value": 1,
+                                "description": "Repeat"
+                            },
+                            "wrapmodeW": {
+                                "value": 1,
+                                "description": "Repeat"
+                            },
+                            "mipmaps": false,
+                            "bordercolor": [
+                                0.0,
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        }
+                    ],
+                    "provider": {
+                        "type": "Provider.FileShaderProvider",
+                        "hash": 1241853309264455350,
+                        "fileinfo": {
+                            "path": "Files/File_1675109166452847_25882/pass0/uber.glsl",
+                            "location": 0
+                        },
+                        "filename": "Files/File_1675109166452847_25882/pass0/uber.glsl",
+                        "fromBundle": false
+                    }
+                }
+            ]
+        }
+    }
+}

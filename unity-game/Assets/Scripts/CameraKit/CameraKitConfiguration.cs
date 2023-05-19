@@ -20,11 +20,13 @@ public enum CameraKitDevice {
 public class CameraKitConfiguration 
 {
     // TODO: Implement Shutter Button Logic
+    public string LensID;
+    public string LensGroupID;
+    public string RemoteAPISpecId;
     public CameraKitShutterButtonMode ShutterButtonMode = CameraKitShutterButtonMode.On;
     public CameraKitRenderMode RenderMode = CameraKitRenderMode.Fullscreen;
     public CameraKitDevice StartWithCamera = CameraKitDevice.FrontCamera;
-    public string RemoteAPISpecId;
-    public string LensID;
-    public string LensGroupID;
     public Dictionary<string, string> LaunchParameters = new Dictionary<string, string>();    
+    // This will force the lens to be unloaded after CameraKit is dismissed. Useful for flushing internal state of the lenses and force a reinitialization
+    public bool UnloadLensAfterDismiss = false;
 }

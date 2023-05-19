@@ -16,7 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UnityFrameworkListener {
     
     
     fileprivate var supportedOrientations: UIInterfaceOrientationMask = .allButUpsideDown
-    fileprivate var cameraController: UnityCameraController = .init()
     fileprivate var cameraViewController: UnityCameraViewController?
 
     var window: UIWindow?
@@ -216,23 +215,26 @@ extension AppDelegate: NativeCallsProtocol {
         withLaunchData launchData: [String: String]!,
         withRenderMode renderMode: NSNumber!,
         withCameraMode cameraMode: NSNumber!,
-        withShutterButtonMode shutterButtonMode: NSNumber!
+        withShutterButtonMode shutterButtonMode: NSNumber!,
+        withUnloadLensOption unloadLens: Bool
     ) {
-        //TODO: Add clearLensAfterDismiss parameter
-        cameraController = UnityCameraController()
-        cameraController.cameraKit.lenses.repository.addObserver(self, specificLensID: lensId, inGroupID: groupId)
-        cameraController.cameraKit.lenses.repository.addObserver(self, groupID: groupId)
+        
+        let cameraController = UnityCameraController()
         
         if (cameraViewController == nil) {
             cameraViewController = UnityCameraViewController(cameraController: cameraController)
         }
         
+        cameraController.cameraKit.lenses.repository.addObserver(cameraViewController!, specificLensID: lensId, inGroupID: groupId)
+        cameraController.cameraKit.lenses.repository.addObserver(cameraViewController!, groupID: groupId)
+                
         cameraViewController?.appOrientationDelegate = self
         cameraViewController?.applyLensId = lensId;
         cameraViewController?.applyGroupId = groupId;
         cameraViewController?.launchDataFromUnity = launchData;
         cameraViewController?.cameraView.carouselView.isHidden = true
         cameraViewController?.shutterButtonMode = shutterButtonMode
+        cameraViewController?.clearLensAfterDismiss = unloadLens;
         
         if (renderMode == Constants.RenderMode.BehindUnity) { 
             invokeCameraKitAsBackgroundLayer()
@@ -289,32 +291,6 @@ extension AppDelegate: NativeCallsProtocol {
     }
 }
 
-extension AppDelegate: LensRepositorySpecificObserver, LensRepositoryGroupObserver {
-    func repository(_ repository: LensRepository, didUpdateLenses lenses: [Lens], forGroupID groupID: String) {
-        print("Loaded group " + groupID)
-        cameraController.cameraKit.lenses.prefetcher.prefetch(lenses: lenses)
-    }
-
-    func repository(_ repository: LensRepository, didFailToUpdateLensesForGroupID groupID: String, error: Error?) {
-        self.unityFramework?.sendMessageToGO(withName: "CameraKitHandler", functionName: "MessageCameraKitInitFailed", message:"Failed to upload lenses")
-        print("Failed to update lenses")
-    }
-
-    func repository(_ repository: LensRepository, didUpdate lens: Lens, forGroupID groupID: String) {
-        print("Loaded lens " + lens.id)
-    }
-    
-    func repository(
-        _ repository: LensRepository,
-        didFailToUpdateLensID lensID: String,
-        forGroupID groupID: String,
-        error: Error?
-    ) {
-        self.unityFramework?.sendMessageToGO(withName: "CameraKitHandler", functionName: "MessageCameraKitInitFailed", message:"Error loading lens " + lensID)
-        print("Error loading lens " + lensID)
-    }
-}
-
 extension AppDelegate: CLLocationManagerDelegate {
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         manager.requestWhenInUseAuthorization()
@@ -339,7 +315,6 @@ class UnityCameraViewController: CameraViewController  {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let lens = cameraController.cameraKit.lenses.repository.lens(id: applyLensId!, groupID: applyGroupId!)
         let launchDataBuilder = LensLaunchDataBuilder()
         launchDataFromUnity?.forEach {
@@ -367,6 +342,9 @@ class UnityCameraViewController: CameraViewController  {
         super.viewDidDisappear(animated)
         if (clearLensAfterDismiss) {
             clearLens()
+            cameraController.cameraKit.stop()
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.cameraViewController = nil
         }
     }
     
@@ -374,16 +352,17 @@ class UnityCameraViewController: CameraViewController  {
         cameraView.cameraActionsView.isHidden = hide
     }
     
-    override func cameraControllerRequestedCameraFlip(_ controller: CameraController) {
+    override func cameraControllerRequestedCamera(_ controller: CameraController) {
         //TODO: Not working
-        super.cameraControllerRequestedCameraFlip(controller)
-        if (shutterButtonMode == Constants.ShutterButtonMode.OnlyOnFrontCamera) {
-            if (cameraController.cameraPosition == .front) {
-                cameraView.cameraButton.isHidden = false
-            } else {
-                cameraView.cameraButton.isHidden = true
-            }
-        }
+        super.cameraControllerRequestedCamera(controller)
+        print("We have a flip here")
+//        if (shutterButtonMode == Constants.ShutterButtonMode.OnlyOnFrontCamera) {
+//            if (cameraController.cameraPosition == .front) {
+//                cameraView.cameraButton.isHidden = false
+//            } else {
+//                cameraView.cameraButton.isHidden = true
+//            }
+//        }
         
     }
     
@@ -442,6 +421,36 @@ class UnityCameraController: CameraController {
         }
         return nil
     }
+}
+
+
+extension UnityCameraViewController: LensRepositorySpecificObserver, LensRepositoryGroupObserver {
+    func repository(_ repository: LensRepository, didUpdateLenses lenses: [Lens], forGroupID groupID: String) {
+        print("Loaded group " + groupID)
+        cameraController.cameraKit.lenses.prefetcher.prefetch(lenses: lenses)
+    }
+
+    func repository(_ repository: LensRepository, didFailToUpdateLensesForGroupID groupID: String, error: Error?) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.unityFramework?.sendMessageToGO(withName: "CameraKitHandler", functionName: "MessageCameraKitInitFailed", message:"Failed to upload lenses")
+        print("Failed to update lenses")
+    }
+
+    func repository(_ repository: LensRepository, didUpdate lens: Lens, forGroupID groupID: String) {
+        print("Loaded lens " + lens.id)
+    }
+    
+    func repository(
+        _ repository: LensRepository,
+        didFailToUpdateLensID lensID: String,
+        forGroupID groupID: String,
+        error: Error?
+    ) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.unityFramework?.sendMessageToGO(withName: "CameraKitHandler", functionName: "MessageCameraKitInitFailed", message:"Error loading lens " + lensID)
+        print("Error loading lens " + lensID)
+    }
+    
 }
 
 @nonobjc extension UIViewController {

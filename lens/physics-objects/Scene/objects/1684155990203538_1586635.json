@@ -1,0 +1,57 @@
+{
+    "core": {
+        "uid": "1684155990203538:1586635",
+        "type": "SceneObject",
+        "layerV2": 1,
+        "name": "Unity SDK - Generic API API",
+        "position": [
+            0.0,
+            0.0,
+            0.0
+        ],
+        "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+        ],
+        "scale": [
+            1.0,
+            1.0,
+            1.0
+        ],
+        "segmentScaleCompensate": false,
+        "isuserenabled": true,
+        "components": [
+            {
+                "uid": "1684155990203841:1586636",
+                "type": "Component.ScriptComponent",
+                "name": "Script",
+                "isenabled": true,
+                "isInternal": false,
+                "updatepriority": -1000,
+                "valuesManager": {
+                    "values": null
+                },
+                "includes": null,
+                "scriptObjects": [
+                    {
+                        "name": "remoteServiceModule",
+                        "typename": "Asset.RemoteServiceModule",
+                        "scriptObject": "1684155990188720:1586615"
+                    }
+                ],
+                "typeObjects": null,
+                "events": [
+                    {
+                        "event": {
+                            "eventType": "SceneEvent.OnAwakeEvent"
+                        },
+                        "script": "1684155990201281:1586629"
+                    }
+                ],
+                "wrapInitializationSources": true
+            }
+        ]
+    }
+}

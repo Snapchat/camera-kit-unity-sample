@@ -1,0 +1,20 @@
+{
+    "core": {
+        "isLazyAsset": false,
+        "uid": "1675732466150254:1181349",
+        "type": "Asset.Texture",
+        "name": "Textures/Base.png",
+        "provider": {
+            "type": "Provider.FileTextureProvider",
+            "hash": 5549303750204915061,
+            "useCache": true,
+            "allowDownscale": false,
+            "fileinfo": {
+                "path": "system/materials/textures/gray.png",
+                "location": 0
+            },
+            "filename": "system/materials/textures/gray.png",
+            "fileLocation": 0
+        }
+    }
+}

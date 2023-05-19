@@ -1,0 +1,22 @@
+{
+    "privateAssets": {
+        "1645061453717649:1411289": {
+            "isLazyAsset": false,
+            "uid": "1645061453717649:1411289",
+            "type": "Asset.ScriptAsset",
+            "name": "Scripts/SlowMotionSetting.js",
+            "publicName": "Scripts/SlowMotionSetting.js",
+            "hash": 0,
+            "provider": {
+                "type": "Provider.FileScriptProvider",
+                "fileinfo": {
+                    "path": "Files/File_1675109166452892_25919.js",
+                    "location": 0
+                },
+                "filename": "Files/File_1675109166452892_25919.js"
+            },
+            "staticInputs": null,
+            "automodules": null
+        }
+    }
+}

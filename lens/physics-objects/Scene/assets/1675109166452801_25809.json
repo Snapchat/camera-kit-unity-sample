@@ -1,0 +1,18 @@
+{
+    "privateAssets": {
+        "1645140792624997:614191": {
+            "isLazyAsset": false,
+            "uid": "1645140792624997:614191",
+            "type": "Asset.Font",
+            "name": "Fonts/jellee_roman.ttf",
+            "provider": {
+                "type": "Provider.BinFileProvider",
+                "filename": "Files/File_1675109166452907_25932.ttf",
+                "fileinfo": {
+                    "path": "Files/File_1675109166452907_25932.ttf",
+                    "location": 0
+                }
+            }
+        }
+    }
+}

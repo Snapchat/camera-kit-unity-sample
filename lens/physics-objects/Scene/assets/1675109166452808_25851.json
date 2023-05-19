@@ -1,0 +1,18 @@
+{
+    "privateAssets": {
+        "1646688348717897:340211": {
+            "isLazyAsset": false,
+            "uid": "1646688348717897:340211",
+            "type": "Asset.RenderMesh",
+            "name": "Meshes/base ball.mesh",
+            "provider": {
+                "type": "Provider.FileRenderObjectProvider",
+                "fileinfo": {
+                    "path": "Files/File_1675109166452986_25996.mesh",
+                    "location": 0
+                },
+                "filename": "Files/File_1675109166452986_25996.mesh"
+            }
+        }
+    }
+}

@@ -20,7 +20,8 @@ public class CameraKitAPIiOS : ICameraKit
         IntPtr lensLaunchDataValues, int lensLaunchDataValuesLength,        
         int renderMode,
         int cameraMode,
-        int shutterButtonMode
+        int shutterButtonMode,
+        int unloadLensAfterDismiss
     );
 
     [DllImport("__Internal")]
@@ -50,7 +51,8 @@ public class CameraKitAPIiOS : ICameraKit
             unsafeptr_DataValues, launchDataValues.Length,
             (int)config.RenderMode,
             (int)config.StartWithCamera,
-            (int)config.ShutterButtonMode
+            (int)config.ShutterButtonMode,
+            config.UnloadLensAfterDismiss ? 1 : 0
         );
 
         cleanUpNativeStrArray(unsafeptr_DataKeys, launchDataKeys.Length);
