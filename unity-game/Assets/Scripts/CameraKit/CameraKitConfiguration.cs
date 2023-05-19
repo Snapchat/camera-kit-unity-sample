@@ -10,7 +10,7 @@ public enum CameraKitRenderMode {
 public enum CameraKitShutterButtonMode {
     Off = 0,
     On = 1,
-    OnlyOnForFrontCamera = 2
+    OnlyOnFrontCamera = 2
 }
 
 public enum CameraKitDevice {
@@ -19,7 +19,6 @@ public enum CameraKitDevice {
 }
 public class CameraKitConfiguration 
 {
-    // TODO: Implement Shutter Button Logic
     public string LensID;
     public string LensGroupID;
     public string RemoteAPISpecId;

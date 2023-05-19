@@ -285,8 +285,6 @@ extension AppDelegate: NativeCallsProtocol {
     
     func dismissCameraKit() {
         unityFramework?.appController().rootView.backgroundColor = UIColor.black;
-//        cameraController.cameraKit.lenses.processor?.clear()
-//        cameraController.cameraKit.stop()
         cameraViewController?.remove();
     }
 }
@@ -310,7 +308,6 @@ class UnityCameraViewController: CameraViewController  {
         title = ""
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(dismissSelf) )
         cameraController.uiDelegate = self
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -352,23 +349,30 @@ class UnityCameraViewController: CameraViewController  {
         cameraView.cameraActionsView.isHidden = hide
     }
     
-    override func cameraControllerRequestedCamera(_ controller: CameraController) {
-        //TODO: Not working
-        super.cameraControllerRequestedCamera(controller)
-        print("We have a flip here")
+    
+    // To get ShutterButtonMode.OnlyOnFrontCamera to work:
+    // 1- Mark the function flip() as "open" in CameraViewController
+    // 2- Uncomment the function below
+    
+//    override func flip(sender: Any) {
+//        super.flip(sender: sender)
 //        if (shutterButtonMode == Constants.ShutterButtonMode.OnlyOnFrontCamera) {
 //            if (cameraController.cameraPosition == .front) {
 //                cameraView.cameraButton.isHidden = false
-//            } else {
+//            } else if (cameraController.cameraPosition == .back) {
 //                cameraView.cameraButton.isHidden = true
 //            }
 //        }
-        
-    }
+//    }
     
 }
     
 class UnityCameraController: CameraController {
+    
+    override init(cameraKit: CameraKitProtocol, captureSession: AVCaptureSession) {
+        super.init(cameraKit: cameraKit, captureSession: captureSession)
+    }
+    
     override func configureDataProvider() -> DataProviderComponent {
         DataProviderComponent(
             deviceMotion: nil, userData: UserDataProvider(), lensHint: nil, location: nil,
