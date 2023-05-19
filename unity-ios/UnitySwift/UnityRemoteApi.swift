@@ -28,18 +28,8 @@ class UnityRemoteApiService: NSObject, LensRemoteApiService {
         print("Camera Kit got callback from Remote API")
         if (request.endpointId == "unitySendData") {
             DispatchQueue.main.async {
-//                print(request.parameters)
                 let appDelegate = UIApplication.shared.delegate as! AppDelegate
                 appDelegate.unityFramework?.sendMessageToGO(withName: "CameraKitHandler", functionName: "MessageResponseFromLens", message: request.parameters["unityData"])
-//                let encoder = JSONEncoder()
-//                encoder.outputFormatting = .prettyPrinted
-//                if let data = try? encoder.encode(request.parameters["unityData"]) {
-//                    let message = String(data:data, encoding: .utf8)
-////                    print("Message:\n" + message!)
-//                    appDelegate.unityFramework?.sendMessageToGO(withName: "CameraKitHandler", functionName: "MessageResponseFromLens", message: message)
-//                } else {
-//                    appDelegate.unityFramework?.sendMessageToGO(withName: "CameraKitHandler", functionName: "MessageResponseFromLens", message: nil)
-//                }
             }
             return IgnoredRemoteApiServiceCall()
         } else if (request.endpointId == "unityRequestState") {
