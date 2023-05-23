@@ -8,9 +8,9 @@ target 'UnitySwift' do
   # Pods for UnitySwift
 
   pod 'Alamofire', '~> 5.4'
-  pod 'SCSDKCameraKit', '1.23.0'
-	pod 'SCSDKCameraKitReferenceUI', '1.23.0'
-	pod 'SCSDKCameraKitReferenceSwiftUI', '1.23.0'
+  pod 'SCSDKCameraKit', '$CAMKITVERSION'
+	pod 'SCSDKCameraKitReferenceUI', '$CAMKITVERSION'
+	pod 'SCSDKCameraKitReferenceSwiftUI', '$CAMKITVERSION'
   
   target 'UnitySwiftTests' do
     inherit! :search_paths

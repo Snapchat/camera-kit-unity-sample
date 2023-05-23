@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "495B9FC2272D650700370A17"
-               BuildableName = "UnitySwift.app"
-               BlueprintName = "UnitySwift"
-               ReferencedContainer = "container:UnitySwift.xcodeproj">
+               BuildableName = "UnityWithCameraKit.app"
+               BlueprintName = "UnityWithCameraKit"
+               ReferencedContainer = "container:UnityWithCameraKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "495B9FD8272D650800370A17"
-               BuildableName = "UnitySwiftTests.xctest"
-               BlueprintName = "UnitySwiftTests"
-               ReferencedContainer = "container:UnitySwift.xcodeproj">
+               BuildableName = "UnityWithCameraKitTests.xctest"
+               BlueprintName = "UnityWithCameraKitTests"
+               ReferencedContainer = "container:UnityWithCameraKit.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "495B9FE2272D650800370A17"
-               BuildableName = "UnitySwiftUITests.xctest"
-               BlueprintName = "UnitySwiftUITests"
-               ReferencedContainer = "container:UnitySwift.xcodeproj">
+               BuildableName = "UnityWithCameraKitUITests.xctest"
+               BlueprintName = "UnityWithCameraKitUITests"
+               ReferencedContainer = "container:UnityWithCameraKit.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -65,9 +65,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "495B9FC2272D650700370A17"
-            BuildableName = "UnitySwift.app"
-            BlueprintName = "UnitySwift"
-            ReferencedContainer = "container:UnitySwift.xcodeproj">
+            BuildableName = "UnityWithCameraKit.app"
+            BlueprintName = "UnityWithCameraKit"
+            ReferencedContainer = "container:UnityWithCameraKit.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -82,9 +82,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "495B9FC2272D650700370A17"
-            BuildableName = "UnitySwift.app"
-            BlueprintName = "UnitySwift"
-            ReferencedContainer = "container:UnitySwift.xcodeproj">
+            BuildableName = "UnityWithCameraKit.app"
+            BlueprintName = "UnityWithCameraKit"
+            ReferencedContainer = "container:UnityWithCameraKit.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
