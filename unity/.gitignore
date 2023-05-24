@@ -13,12 +13,11 @@
 
 # Unity build folders
 # These folders are not checked into github, but should keep the same names
-/exports/
-/exports/unity-ios-export/
-/exports/unity-android-export/
+exports/unity-ios-export/*
+exports/unity-android-export/*
 *_DoNotShip/
-!/exports/unity-ios-export/.deleteme
-!/unity-android-export/.deleteme
+!exports/unity-ios-export/.deleteme
+!exports/unity-android-export/.deleteme
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
