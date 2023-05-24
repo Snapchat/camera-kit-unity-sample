@@ -12,24 +12,22 @@ This repository contains a template project that allows you to build a Unity app
   - Cocoapods
 
 ## Project structure
-This project makes use of [Unity as a Library](https://github.com/Unity-Technologies/uaal-example) to integrate an Unity project with Camera Kit's native iOS and Android SDKs. The fact that we're using Unity as a Library means that the main build of your app will be performed via native build tools (XCode for iOS and Android Studio for Android). The Unity IDE will not be responsible for building and deploying your code. It will instead export source code that is then referenced by the two native apps. We built this sample keeping in mind that the majority of Unity developers don't want to spend time in native code, so there will be a small amount of configuration needed in both native apps and all of the application logic will be written in Unity's managed code (C#).
+This project makes use of [Unity as a Library](https://github.com/Unity-Technologies/uaal-example) to integrate an Unity project with Camera Kit's native iOS and Android SDKs. The fact that we're using Unity as a Library means that the main build of your app will be performed via native build tools (XCode for iOS and Android Studio for Android). The Unity IDE will not be responsible for building and deploying your code. It will instead export source code that is then referenced by the two native apps. That being said, you won't be required to write any native (Swift/Kotlin) code and can still build and configure your app from inside of Unity.
 
 The project contains the following folders:
-- [unity-ios/](unity-ios/): iOS wrapper
-- [unity-android/](unity-android/): Android wrapper
-- [unity-game/](unity-game/): Unity Project 
-- [lens/](lens/): Sample Dynamic Lens project
+- [ios-app/](ios-app/): iOS wrapper
+- [android-app/](android-app/): Android wrapper
+- [unity/](unity/): Unity Project 
+- [lenses/](lenses/): Lenses used in the demo
 
-## How to use this template
-
- 
+## How to use this template 
 The recommended way to use this template is to start by following the App Setup section below and making sure that you can run the space shooter demo and invoke Camera Kit successfully on your desired platform(s). After that, you can remove the contents of the Sprites, Scripts, Prefabs and Scenes folders which effectively turns your Unity project into a blank project that is set up to build with Camera Kit.
 
 ### Development flow
-After the initial setup described below, you will develop your game/app in Unity as normal. The only difference is during build time. You will ask Unity to export a project source code and then shift focus to the native IDE (XCode or Android Studio) and build from there. This also means that application metadata (icons, descriptions) will not be handled by Unity and will need to be set up in the native IDEs.
+After the initial setup described below, you will develop your game/app in Unity as normal. The only difference is during build time. You will ask Unity to export a project source code and then shift focus to the native IDE (XCode or Android Studio) and build from there. 
 
 ### Application behavior
-The native apps that wrap your Unity application have the sole purpose of connecting Unity with Camera Kit. Your Unity project is the main application logic and will be invoked as soon as the app starts. From Unity's C# code you can invoke Camera Kit. Camera Kit is invoked as an Form Sheet Modal on iOS (where swiping down returns to the game) and a full screen activity on Android (where pressing the back button returns to the game). A Unity pause signal is sent to your application whenever Camera Kit is invoked/dismissed so make sure to respond to Application Pause events in your Unity logic
+The native apps that wrap your Unity application have the sole purpose of connecting Unity with Camera Kit. Your Unity project is the main application logic and will be invoked as soon as the app starts. From Unity's C# code you can invoke Camera Kit. 
 
 
 ## App Setup
@@ -42,7 +40,7 @@ Follow the steps on the [Camera Kit Documentation](https://docs.snap.com/snap-ki
 ### Step 2: Android Setup
 
 1. In Unity: 
-   1. Open the Unity Project ([unity-game/](unity-game/))
+   1. Open the Unity Project ([unity/](unity/))
    2. Go to Build Settings and change the Platform to **Android**
    3. Still in the Build Settings dialog, check the box **Export Project**
    4. Go to Player Settings -> Settings for Android -> Other Settings, and make sure these options are set
@@ -50,7 +48,7 @@ Follow the steps on the [Camera Kit Documentation](https://docs.snap.com/snap-ki
       * Scripting Backend: IL2CPP
       * API Compatibility Level: .NET Standard 2.1
       * Target architectures: ARMv7, ARM64 
-   5. Now click **Export** and select as an output folder [unity-game/unity-android-build](unity-game/unity-android-build/). **⚠️ Important:** If you select a different folder, the wrapper application will not work.
+   5. Now click **Export** and select as an output folder [unity/exports/unity-android-e](unity/exports/unity-android-e/). **⚠️ Important:** If you select a different folder, the wrapper application will not work.
 2. In Android Studio:
    1. File -> Open Project and select the folder [unity-android/](unity-android/)
    2. Add your API Key and App ID to [unity-android/app/src/main/AndroidManifest.xml](unity-android/app/src/main/AndroidManifest.xml), replacing the placeholder strings
@@ -63,21 +61,23 @@ Follow the steps on the [Camera Kit Documentation](https://docs.snap.com/snap-ki
 
 ### Step 3: iOS Setup
 1. In Unity:
-   1. Open the Unity Project ([unity-game/](unity-game/))
-   2. Go to Build Settings and change the Platform to **iOS**
-   3. Click on **Build**  and select as output folder: [unity-game/unity-ios-build/](unity-game/unity-ios-build/). **⚠️ Important:** If you select a different folder, the wrapper application will not work.
-2. Run `pod install` on [unity-ios/](unity-ios) to install [Cocoapods](https://cocoapods.org/) dependencies 
+   1. Open the Unity Project ([unity/](unity/))
+   2. Open the Camera Kit menu (Camera Kit -> Camera Kit Settings)
+   3. Input your API Token and App ID (found in the Camera Kit portal) and hit save
+   4. (Optionally, if you have a different install path for Cocoapods, or have the wrapper app in a different folder, you can configure them in the iOS settings tab)
+   5. Go to Build Settings and change the Platform to **iOS**
+   6. Click on **Build**  and select as output folder: [exports/unity-ios-export/](exports/unity-ios-export/). **⚠️ Important:** If you select a different folder, the wrapper application will not work.
+2. Click build. Unity will run some postprocessing scripts to prepare your iOS wrapper application
 3. Open [unity-ios/main.xcworkspace](unity-ios/main.xcworkspace/). Here you'll have 3 projects:
    * Unity-iPhone: autogenerated code created by your Unity app
    * Pods: autogenerated code created by Cocoapods
-   * UnitySwift: wrapper native application
+   * UnityWithCameraKit: wrapper native application
 4. In XCode: 
-   1. Click on **UnitySwift** -> Signing and Capabilities, and configure your application's provisioning profile and bundle identifier
+   1. Click on **UnityWithCameraKit** -> Signing and Capabilities, and configure your application's provisioning profile and bundle identifier
    2. Click on **Pods** -> Signing and Capabilities, select the SCSDKCameraKitReferenceUI target and choose your Apple Developer team to sign the build
-   3. Right-click [Unity-iPhone/Libraries/Plugins/iOS/NativeCallProxy.h](unity-game/unity-ios-build/Libraries/Plugins/iOS/NativeCallProxy.h) select "Show File Inspector" and in the the right-side Inspector, Target Membership, where the UnityFramework target is selected, change the visibility from "Project" to "Public"
-   4. Right-click [Unity-iPhone/Data/](unity-game/unity-ios-build/Data) folder, select "Show File Inspector" and in the right side Inspector, Target Membership, de-select Unity-iPhone and select UnityFramework
-   5. Open [UnitySwift/Info.plist](unity-ios/UnitySwift/Info.plist) and add your API Key and App ID, replacing the placeholder strings
-5. **Ready!** Now you're be ready to build your application. Building from XCode should be a familiar step since this is the default workflow for Unity developers. Simply remember that your main project is not Unity-iPhone anymore, it's UnitySwift instead.
+   3. Right-click [Unity-iPhone/Libraries/Plugins/iOS/NativeCallProxy.h](unity/exports/unity-ios-export/Libraries/Plugins/iOS/NativeCallProxy.h) select "Show File Inspector" and in the the right-side Inspector, Target Membership, where the UnityFramework target is selected, change the visibility from "Project" to "Public"
+   4. Right-click [Unity-iPhone/Data/](unity/exports/unity-ios-export/Data) folder, select "Show File Inspector" and in the right side Inspector, Target Membership, de-select Unity-iPhone and select UnityFramework
+5. **Ready!** Now you're be ready to build your application. Building from XCode should be a familiar step since this is the default workflow for Unity developers. Simply remember that your main project is not Unity-iPhone anymore, it's **UnityWithCameraKit** instead.
 
 ## Camera Kit C# API
 
