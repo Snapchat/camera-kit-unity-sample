@@ -32,17 +32,29 @@ public class CameraKitAPIAndroid : ICameraKit
 
     public void Validate(CameraKitConfiguration config)
     {
-        throw new System.NotImplementedException("Validate is not implemented on Camera Kit Android");
+        //no-op
     }
 
     public void UpdateLensState(Dictionary<string, string> lensParams)
     {
-        throw new System.NotImplementedException("Update Lens State is not implemented on Camera Kit Android");
+        string[] launchDataKeys = new string[0];
+        string[] launchDataValues = new string[0];
+
+        if (lensParams != null) {
+            launchDataKeys = new List<string>(lensParams.Keys).ToArray();
+            launchDataValues = new List<string>(lensParams.Values).ToArray();
+        }
+        
+        callNativeJavaMethod(
+            "updateLensState", 
+            launchDataKeys, 
+            launchDataValues            
+        );
     }
 
     public void DismissCameraKit()
     {
-        throw new System.NotImplementedException("Dismiss Camera Kit is not implemented on Camera Kit Android");
+        callNativeJavaMethod("dismissCameraKit");
     }
 
     private void callNativeJavaMethod(string methodName, params object[] args)

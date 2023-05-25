@@ -12,10 +12,21 @@ public abstract class OverrideUnityActivity extends UnityPlayerActivity
     abstract protected void invokeCameraKit(
         String lensId,
         String groupId,
-        String[] lensLaunchDataKeys, 
+        String remoteApiSpecId,
+        String[] lensLaunchDataKeys,
         String[] lensLaunchDataValues, 
-        int cameraKitMode,
-        String remoteApiSpecId);
+        int renderMode,
+        int cameraMode,
+        int shutterButtonMode,
+        int unloadLensAfterDismiss
+    );
+
+    abstract protected void updateLensState(
+        String[] lensLaunchDataKeys,
+        String[] lensLaunchDataValues
+    );
+
+    abstract protected void dismissCameraKit();
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
