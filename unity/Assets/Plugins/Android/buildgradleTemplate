@@ -6,7 +6,7 @@ plugins {
 
 subprojects {
     ext {
-        cameraKitVersion = '1.19.1'
+        cameraKitVersion = '$CAMERAKITVERSION'
     }
 }
 

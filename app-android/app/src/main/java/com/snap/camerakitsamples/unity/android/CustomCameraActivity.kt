@@ -17,6 +17,7 @@ class CustomCameraActivity : CameraActivity() {
                 remoteApiServiceFactory(UnityGenericApiService.Factory)
             }
         }
+//        cameraLayout.rootView
     }
 
     companion object {

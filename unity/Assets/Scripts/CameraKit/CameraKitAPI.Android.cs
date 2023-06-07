@@ -23,10 +23,13 @@ public class CameraKitAPIAndroid : ICameraKit
             "invokeCameraKit", 
             config.LensID, 
             config.LensGroupID, 
+            config.RemoteAPISpecId,
             launchDataKeys, 
             launchDataValues, 
             (int) config.RenderMode, 
-            config.RemoteAPISpecId
+            (int) config.StartWithCamera,
+            (int) config.ShutterButtonMode,
+            config.UnloadLensAfterDismiss
         );
     }
 

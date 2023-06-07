@@ -94,9 +94,7 @@ public class GameManager : MonoBehaviour
     private void OnLensDataSentToUnity(SerializedResponseFromLens responseObj)
     {
         // --- Obtaining a response from CameraKit ---
-        // In order to pass data from the Lens to the Unity project, your Lens needs to use Remote APIs
-        // The source code for the lens used in this project is part of the Github project. 
-        // Please check the ShipSelector.js script in the lens included in this repository.
+        // In order to receive data from the Lens to the Unity project, your Lens needs to use Remote APIs
         // More info: https://docs.snap.com/camera-kit/guides/tutorials/communicating-between-lenses-and-app#lens-studio-best-practices-for-remote-apis  
         if (_activeLensId == Constants.LENS_ID_COLLECT_COINS) {
             // For the purposes of this demo, the only time we're responding to 

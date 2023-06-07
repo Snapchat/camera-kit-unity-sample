@@ -48,10 +48,10 @@ Follow the steps on the [Camera Kit Documentation](https://docs.snap.com/snap-ki
       * Scripting Backend: IL2CPP
       * API Compatibility Level: .NET Standard 2.1
       * Target architectures: ARMv7, ARM64 
-   5. Now click **Export** and select as an output folder [unity/exports/unity-android-e](unity/exports/unity-android-e/). **⚠️ Important:** If you select a different folder, the wrapper application will not work.
+   5. Now click **Export** and select as an output folder [unity/exports/unity-android-export](unity/exports/unity-android-export/). **⚠️ Important:** If you select a different folder, the wrapper application will not work.
 2. In Android Studio:
-   1. File -> Open Project and select the folder [unity-android/](unity-android/)
-   2. Add your API Key and App ID to [unity-android/app/src/main/AndroidManifest.xml](unity-android/app/src/main/AndroidManifest.xml), replacing the placeholder strings
+   1. File -> Open Project and select the folder [android-app/](android-app/)
+   2. Add your API Key and App ID to [android-app/app/src/main/AndroidManifest.xml](android-app/app/src/main/AndroidManifest.xml), replacing the placeholder strings
    3. Copy the `ndk.dir` property from [unity-game/unity-android-build/local.properties](unity-game/unity-android-build/local.properties) and append it to [unity-android/local.properties](unity-android/local.properties)
    4. Open the file [unity-game/unity-android-build/unityLibrary/src/main/AndroidManifest.xml](unity-game/unity-android-build/unityLibrary/src/main/AndroidManifest.xml) and add the property `android:exported="true"` to `UnityPlayerActivity`. It should look like this: `
 <activity android:name="com.unity3d.player.UnityPlayerActivity" android:exported="true" ... >`

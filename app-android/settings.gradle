@@ -8,7 +8,7 @@ pluginManagement {
 
 include ':app'
 include ':unityLibrary'
-project(':unityLibrary').projectDir = new File('..\\unity-game\\unity-android-build\\unityLibrary')
+project(':unityLibrary').projectDir = new File('..\\unity\\exports\\unity-android-export\\unityLibrary')
 
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)

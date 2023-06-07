@@ -15,12 +15,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
 
-        <meta-data android:name="com.snap.camerakit.app.id" android:value="01361f3f-c65e-42af-b48c-437e952e22bf" />
-        <meta-data android:name="com.snap.camerakit.api.token" android:value="eyJhbGciOiJIUzI1NiIsImtpZCI6IkNhbnZhc1MyU0hNQUNQcm9kIiwidHlwIjoiSldUIn0.eyJhdWQiOiJjYW52YXMtY2FudmFzYXBpIiwiaXNzIjoiY2FudmFzLXMyc3Rva2VuIiwibmJmIjoxNjY2MDIxNTA5LCJzdWIiOiIwMTM2MWYzZi1jNjVlLTQyYWYtYjQ4Yy00MzdlOTUyZTIyYmZ-U1RBR0lOR34zOTU2MmRiMi1mNzUzLTQzODgtYWY0MS05M2Q3YThhMzkyYWQifQ.QWXI1YRWGcLoj4_3gw1B2mUBEx4bomcbO1MnCIfhtJc" />
+        <meta-data android:name="com.snap.camerakit.app.id" android:value="$CAMERAKITAPPID" />
+        <meta-data android:name="com.snap.camerakit.api.token" android:value="$CAMERAKITAPITOKEN" />
 
         <activity
             android:name=".MainUnityActivity"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="fullSensor"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale|layoutDirection|density"
+            android:hardwareAccelerated="false">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,6 +31,9 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".CustomCameraActivity">
+
+        </activity>
     </application>
 
 </manifest>

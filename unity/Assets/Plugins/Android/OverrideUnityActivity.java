@@ -18,7 +18,7 @@ public abstract class OverrideUnityActivity extends UnityPlayerActivity
         int renderMode,
         int cameraMode,
         int shutterButtonMode,
-        int unloadLensAfterDismiss
+        boolean unloadLensAfterDismiss
     );
 
     abstract protected void updateLensState(

@@ -23,12 +23,16 @@ public class AnimationChangeStage : BaseAnimation
     [SerializeField]
     private GameObject _capturePreview;
 
+    [SerializeField]
+    private Color _backgroundColor;
+
     
     public override void Play() {
         _bg.texture = _targetTexture;
         _buttonsRoot.gameObject.SetActive(_showButtons);
         _xOutButton.gameObject.SetActive(!_showButtons);
         _capturePreview.gameObject.SetActive(false);
+        Camera.main.backgroundColor = _backgroundColor;
         Finished();
     }
 }
