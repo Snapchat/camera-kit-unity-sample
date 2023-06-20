@@ -32,6 +32,9 @@ import com.snap.camerakit.plugin.OverrideUnityActivity
 import com.snap.camerakit.support.camerax.CameraXImageProcessorSource
 import com.snap.camerakit.support.widget.CameraLayout
 import com.unity3d.player.UnityPlayer
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.invoke
+import kotlinx.coroutines.runBlocking
 
 private const val REQUEST_CODE_CAMERA_KIT_CAPTURE = 1
 private const val REQUEST_CODE_CAMERA_KIT_PLAY = 2
@@ -53,8 +56,6 @@ class MainUnityActivity : AppCompatActivity() {
 
         findViewById<CameraLayout>(R.id.camera_layout).apply {
             val imageProcessor = CameraXImageProcessorSource(this.context, customCameraLifecycle)
-            customCameraLifecycle.initialize()
-            customCameraLifecycle.start()
             configureSession {
                 imageProcessorSource(imageProcessor)
                 apiToken("eyJhbGciOiJIUzI1NiIsImtpZCI6IkNhbnZhc1MyU0hNQUNQcm9kIiwidHlwIjoiSldUIn0.eyJhdWQiOiJjYW52YXMtY2FudmFzYXBpIiwiaXNzIjoiY2FudmFzLXMyc3Rva2VuIiwibmJmIjoxNjY2MDIxNTA5LCJzdWIiOiIwMTM2MWYzZi1jNjVlLTQyYWYtYjQ4Yy00MzdlOTUyZTIyYmZ-U1RBR0lOR34zOTU2MmRiMi1mNzUzLTQzODgtYWY0MS05M2Q3YThhMzkyYWQifQ.QWXI1YRWGcLoj4_3gw1B2mUBEx4bomcbO1MnCIfhtJc")
@@ -96,14 +97,11 @@ class MainUnityActivity : AppCompatActivity() {
         shutterButtonMode: Int,
         unloadLensAfterDismiss: Boolean
     ) {
-//        findViewById<CameraLayout>(R.id.camera_layout).apply {
-//            configureSession {
-//                apiToken("eyJhbGciOiJIUzI1NiIsImtpZCI6IkNhbnZhc1MyU0hNQUNQcm9kIiwidHlwIjoiSldUIn0.eyJhdWQiOiJjYW52YXMtY2FudmFzYXBpIiwiaXNzIjoiY2FudmFzLXMyc3Rva2VuIiwibmJmIjoxNjY2MDIxNTA5LCJzdWIiOiIwMTM2MWYzZi1jNjVlLTQyYWYtYjQ4Yy00MzdlOTUyZTIyYmZ-U1RBR0lOR34zOTU2MmRiMi1mNzUzLTQzODgtYWY0MS05M2Q3YThhMzkyYWQifQ.QWXI1YRWGcLoj4_3gw1B2mUBEx4bomcbO1MnCIfhtJc")
-//            }
-//            configureLensesCarousel {
-//                observedGroupIds = linkedSetOf("726c9036-31bd-4713-804c-e6d1b52cbea1")
-//            }
-//        }
+        runBlocking {
+            Dispatchers.Main.invoke {
+                customCameraLifecycle.start()
+            }
+        }
     }
 
     fun updateLensState(
@@ -116,11 +114,11 @@ class MainUnityActivity : AppCompatActivity() {
     }
 
     fun dismissCameraKit() {
-
-
-        //TODO: Implement logic here for dismissing camera kit, leaving only Unity view
-
-        Log.d(TAG,"Dismiss Camera Kit")
+        runBlocking {
+            Dispatchers.Main.invoke {
+                customCameraLifecycle.stop()
+            }
+        }
     }
 
 }

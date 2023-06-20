@@ -8,24 +8,17 @@ class CameraLifecycleOwner : LifecycleOwner {
     private var lifecycleRegistry:LifecycleRegistry = LifecycleRegistry(this)
 
     init {
-        lifecycleRegistry.currentState = Lifecycle.State.CREATED
+        lifecycleRegistry.handleLifecycleEvent(Lifecycle.Event.ON_CREATE)
     }
 
     public fun start() {
-        lifecycleRegistry.currentState = Lifecycle.State.STARTED
+        lifecycleRegistry.handleLifecycleEvent(Lifecycle.Event.ON_START)
     }
 
     public fun stop() {
-        lifecycleRegistry.currentState = Lifecycle.State.DESTROYED
+        lifecycleRegistry.handleLifecycleEvent(Lifecycle.Event.ON_STOP)
     }
 
-    public fun resume() {
-        lifecycleRegistry.currentState = Lifecycle.State.RESUMED
-    }
-
-    public fun initialize() {
-        lifecycleRegistry.currentState = Lifecycle.State.INITIALIZED
-    }
 
     override fun getLifecycle(): Lifecycle {
         return lifecycleRegistry

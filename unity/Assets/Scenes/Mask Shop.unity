@@ -482,7 +482,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 4817617693ded494c86536618fb6b87f, type: 3}
+  m_Texture: {fileID: 2800000, guid: 11a72ced5d196448fa4c16743266a879, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -595,7 +595,7 @@ MonoBehaviour:
   _showButtons: 1
   _xOutButton: {fileID: 347529645}
   _capturePreview: {fileID: 724641823}
-  _backgroundColor: {r: 0, g: 0, b: 0, a: 1}
+  _backgroundColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &305782329
 GameObject:
   m_ObjectHideFlags: 0
@@ -2340,7 +2340,7 @@ MonoBehaviour:
   _showButtons: 0
   _xOutButton: {fileID: 347529645}
   _capturePreview: {fileID: 724641823}
-  _backgroundColor: {r: 0, g: 0.5764706, b: 0.554353, a: 0}
+  _backgroundColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1557424446
 GameObject:
   m_ObjectHideFlags: 0
