@@ -21,7 +21,7 @@ internal object UnityGenericApiService : LensesComponent.RemoteApiService {
         return when (val endpointId = request.endpointId) {
             "unitySendData" -> {
                 Log.d("unity-camkit", "Params from Lens ${request.parameters.toString()}")
-                UnityPlayer.UnitySendMessage("CameraKitHandler", "OnResponseFromLens", request.parameters["unityData"])
+                UnityPlayer.UnitySendMessage("CameraKitHandler", "MessageResponseFromLens", request.parameters["unityData"])
                 onResponse.accept(request.toSuccessResponse())
                 LensesComponent.RemoteApiService.Call.Answered
             }

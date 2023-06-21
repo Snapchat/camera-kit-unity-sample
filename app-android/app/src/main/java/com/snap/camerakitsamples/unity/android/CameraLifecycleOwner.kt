@@ -19,6 +19,14 @@ class CameraLifecycleOwner : LifecycleOwner {
         lifecycleRegistry.handleLifecycleEvent(Lifecycle.Event.ON_STOP)
     }
 
+    public fun pause() {
+        lifecycleRegistry.handleLifecycleEvent(Lifecycle.Event.ON_PAUSE)
+    }
+
+    public fun resume() {
+        lifecycleRegistry.handleLifecycleEvent(Lifecycle.Event.ON_RESUME)
+    }
+
 
     override fun getLifecycle(): Lifecycle {
         return lifecycleRegistry

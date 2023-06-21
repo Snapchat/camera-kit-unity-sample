@@ -35,6 +35,7 @@ import com.unity3d.player.UnityPlayer
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.invoke
 import kotlinx.coroutines.runBlocking
+import java.io.Closeable
 
 private const val REQUEST_CODE_CAMERA_KIT_CAPTURE = 1
 private const val REQUEST_CODE_CAMERA_KIT_PLAY = 2
@@ -43,7 +44,10 @@ private const val TAG = "MainUnityActivity"
 class MainUnityActivity : AppCompatActivity() {
     lateinit var cameraLayout:CameraLayout
     lateinit var camerakitSession: Session
+    var appliedLens: LensesComponent.Lens? = null
     val customCameraLifecycle:CameraLifecycleOwner = CameraLifecycleOwner()
+    private val closeOnDestroy = mutableListOf<Closeable>()
+
 
     companion object {
         lateinit var instance: MainUnityActivity
@@ -53,18 +57,67 @@ class MainUnityActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.camkit_unity_layout)
 
+        val camkitApiToken = applicationContext.applicationInfo.metaData.getString("com.snap.camerakit.api.token")
+//        val remoteApiSpecId = applicationContext.applicationInfo.metaData.getString("com.snap.camerakit.remoteapi.id")
+//        UnityGenericApiService.Factory.supportedApiSpecIds = setOf(remoteApiSpecId!!)
 
-        findViewById<CameraLayout>(R.id.camera_layout).apply {
+        cameraLayout = findViewById<CameraLayout>(R.id.camera_layout).apply {
             val imageProcessor = CameraXImageProcessorSource(this.context, customCameraLifecycle)
+
             configureSession {
                 imageProcessorSource(imageProcessor)
-                apiToken("eyJhbGciOiJIUzI1NiIsImtpZCI6IkNhbnZhc1MyU0hNQUNQcm9kIiwidHlwIjoiSldUIn0.eyJhdWQiOiJjYW52YXMtY2FudmFzYXBpIiwiaXNzIjoiY2FudmFzLXMyc3Rva2VuIiwibmJmIjoxNjY2MDIxNTA5LCJzdWIiOiIwMTM2MWYzZi1jNjVlLTQyYWYtYjQ4Yy00MzdlOTUyZTIyYmZ-U1RBR0lOR34zOTU2MmRiMi1mNzUzLTQzODgtYWY0MS05M2Q3YThhMzkyYWQifQ.QWXI1YRWGcLoj4_3gw1B2mUBEx4bomcbO1MnCIfhtJc")
+                apiToken(camkitApiToken)
             }
-            configureLensesCarousel {
-                observedGroupIds = linkedSetOf("726c9036-31bd-4713-804c-e6d1b52cbea1")
+            configureLenses {
+                remoteApiServiceFactory(UnityGenericApiService.Factory)
             }
             onSessionAvailable { session ->
                 camerakitSession = session
+                // An example of how dynamic launch data can be used. Vendor specific metadata is added into
+                // LaunchData so it can be used by lens on launch.
+                val reApplyLensWithVendorData = { lens: LensesComponent.Lens ->
+                    if (lens.vendorData.isNotEmpty()) {
+                        val launchData = LensesComponent.Lens.LaunchData {
+                            for ((key, value) in lens.vendorData) {
+                                putString(key, value)
+                            }
+                        }
+                        session.lenses.processor.apply(lens, launchData) { success ->
+                            Log.d(TAG, "Apply lens [$lens] with launch data [$launchData] success: $success")
+                        }
+                    }
+                }
+
+                // This block demonstrates how to receive and react to lens lifecycle events. When Applied event is received
+                // we keep the ID of applied lens to persist and restore it via savedInstanceState later on.
+                session.lenses.processor.observe { event ->
+                    Log.d(TAG, "Observed lenses processor event: $event")
+                    runOnUiThread {
+                        event.whenApplied { event ->
+                            reApplyLensWithVendorData(event.lens)
+                            appliedLens = event.lens
+                        }
+                        event.whenIdle {
+                            appliedLens = null
+                        }
+                    }
+                }.addTo(closeOnDestroy)
+
+                // By default, CameraKit does not reset lens state when app is backgrounded and resumed, however it is
+                // possible to do so by simply tracking the last applied lens and applying it with the "reset" flag set
+                // to true when app resumes to match the behavior of the Snapchat app.
+                val lifecycleObserver = object : DefaultLifecycleObserver {
+                    override fun onResume(owner: LifecycleOwner) {
+                        appliedLens
+                            ?.let { lens ->
+                                session.lenses.processor.apply(lens, reset = true)
+                            }
+                    }
+                }
+                customCameraLifecycle.lifecycle.addObserver(lifecycleObserver)
+                Closeable {
+                    customCameraLifecycle.lifecycle.removeObserver(lifecycleObserver)
+                }.addTo(closeOnDestroy)
             }
         }
 
@@ -97,9 +150,24 @@ class MainUnityActivity : AppCompatActivity() {
         shutterButtonMode: Int,
         unloadLensAfterDismiss: Boolean
     ) {
+        if (remoteApiSpecId != null)
+        {
+            UnityGenericApiService.Factory.supportedApiSpecIds = setOf(remoteApiSpecId)
+        }
+        cameraLayout.apply {
+            configureLensesCarousel {
+                observedGroupIds = linkedSetOf(groupId!!)
+            }
+        }
+        camerakitSession.lenses.repository.get(LensesComponent.Repository.QueryCriteria.ById(lensId!!, groupId!!)) {
+            it.whenHasFirst { lens ->
+                camerakitSession.lenses.processor.apply(lens)
+            }
+        }
         runBlocking {
             Dispatchers.Main.invoke {
                 customCameraLifecycle.start()
+                cameraLayout.startPreview(facingFront = (cameraMode == Constants.Device.FRONT_CAMERA.value))
             }
         }
     }
@@ -109,7 +177,6 @@ class MainUnityActivity : AppCompatActivity() {
         lensLaunchDataValues: Array<out String>?
     ) {
         //TODO: Implement logic here for responding to pending Remote API
-
         Log.d(TAG,"Update Lens State")
     }
 
@@ -119,6 +186,12 @@ class MainUnityActivity : AppCompatActivity() {
                 customCameraLifecycle.stop()
             }
         }
+        closeOnDestroy.forEach { it.close() }
+    }
+
+    override fun onDestroy() {
+        closeOnDestroy.forEach { it.close() }
+        super.onDestroy()
     }
 
 }
