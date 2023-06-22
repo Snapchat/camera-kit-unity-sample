@@ -48,6 +48,7 @@ class MainUnityActivity : AppCompatActivity() {
     var appliedLens: LensesComponent.Lens? = null
     val customCameraLifecycle:CameraLifecycleOwner = CameraLifecycleOwner()
     private val closeOnDestroy = mutableListOf<Closeable>()
+    private var lensLaunchParams = mapOf<String, String>()
 
 
     companion object {
@@ -77,9 +78,9 @@ class MainUnityActivity : AppCompatActivity() {
                 // An example of how dynamic launch data can be used. Vendor specific metadata is added into
                 // LaunchData so it can be used by lens on launch.
                 val reApplyLensWithVendorData = { lens: LensesComponent.Lens ->
-                    if (lens.vendorData.isNotEmpty()) {
+                    if (lensLaunchParams.isNotEmpty()) {
                         val launchData = LensesComponent.Lens.LaunchData {
-                            for ((key, value) in lens.vendorData) {
+                            for ((key, value) in lensLaunchParams) {
                                 putString(key, value)
                             }
                         }
@@ -151,26 +152,52 @@ class MainUnityActivity : AppCompatActivity() {
         shutterButtonMode: Int,
         unloadLensAfterDismiss: Boolean
     ) {
+        if (lensLaunchDataKeys != null && lensLaunchDataKeys.isNotEmpty()) {
+            var mapLaunchParams = mutableMapOf<String, String>()
+            for (i in lensLaunchDataKeys.indices) {
+                mapLaunchParams.put(lensLaunchDataKeys[i], lensLaunchDataValues!![i])
+            }
+            lensLaunchParams = mapLaunchParams
+        }
         if (remoteApiSpecId != null)
         {
             UnityGenericApiService.Factory.supportedApiSpecIds = setOf(remoteApiSpecId)
         }
-        cameraLayout.apply {
-            configureLensesCarousel {
-                observedGroupIds = linkedSetOf(groupId!!)
+
+        if (renderMode == Constants.RenderMode.BEHIND_UNITY.value) {
+            cameraLayout.apply {
+                configureLensesCarousel {
+                    observedGroupIds = linkedSetOf(groupId!!)
+                }
             }
-        }
-        camerakitSession.lenses.repository.get(LensesComponent.Repository.QueryCriteria.ById(lensId!!, groupId!!)) {
-            it.whenHasFirst { lens ->
-                camerakitSession.lenses.processor.apply(lens)
+            camerakitSession.lenses.repository.get(LensesComponent.Repository.QueryCriteria.ById(lensId!!, groupId!!)) {
+                it.whenHasFirst { lens ->
+                    camerakitSession.lenses.processor.apply(lens)
+                }
             }
-        }
-        runBlocking {
-            Dispatchers.Main.invoke {
-                customCameraLifecycle.start()
-                cameraLayout.startPreview(facingFront = (cameraMode == Constants.Device.FRONT_CAMERA.value))
+            runBlocking {
+                Dispatchers.Main.invoke {
+                    customCameraLifecycle.start()
+                    cameraLayout.startPreview(facingFront = (cameraMode == Constants.Device.FRONT_CAMERA.value))
+                }
             }
+        } else if (renderMode == Constants.RenderMode.FULL_SCREEN.value) {
+            val config = CameraActivity.Configuration.WithLens(
+                lensId!!,
+                groupId!!,
+                true,
+                {
+                    for (key in lensLaunchParams.keys) {
+                        this.putString(key, lensLaunchParams[key]!!)
+                    }
+                }
+            )
+            val requestCode = REQUEST_CODE_CAMERA_KIT_CAPTURE
+            val intent = CustomCameraActivity.intentFor(this, config, 0)
+            startActivityForResult(intent, requestCode)
         }
+
+
     }
 
     fun updateLensState(
