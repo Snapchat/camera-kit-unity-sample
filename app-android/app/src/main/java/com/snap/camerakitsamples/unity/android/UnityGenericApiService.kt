@@ -5,6 +5,8 @@ import com.snap.camerakit.common.Consumer
 import com.snap.camerakit.lenses.LensesComponent
 import com.snap.camerakit.lenses.toSuccessResponse
 import com.unity3d.player.UnityPlayer
+import java.io.Closeable
+import java.nio.charset.Charset
 
 internal object UnityGenericApiService : LensesComponent.RemoteApiService {
     object Factory : LensesComponent.RemoteApiService.Factory {
@@ -12,6 +14,11 @@ internal object UnityGenericApiService : LensesComponent.RemoteApiService {
         override var supportedApiSpecIds: Set<String> = setOf("")
 
         override fun createFor(lens: LensesComponent.Lens): LensesComponent.RemoteApiService = UnityGenericApiService
+    }
+
+    object Pending {
+        var statusUpdateResponse: Consumer<LensesComponent.RemoteApiService.Response>? = null
+        var statusUpdateRequest: LensesComponent.RemoteApiService.Request? = null
     }
 
     override fun process(
@@ -24,6 +31,15 @@ internal object UnityGenericApiService : LensesComponent.RemoteApiService {
                 UnityPlayer.UnitySendMessage("CameraKitHandler", "MessageResponseFromLens", request.parameters["unityData"])
                 onResponse.accept(request.toSuccessResponse())
                 LensesComponent.RemoteApiService.Call.Answered
+            }
+            "unityRequestState" -> {
+                Log.d("unity-camkit", "Params from Lens ${request.parameters.toString()}")
+                UnityPlayer.UnitySendMessage("CameraKitHandler", "MessageLensRequestedState", "")
+                Pending.statusUpdateRequest = request
+                Pending.statusUpdateResponse = onResponse
+                LensesComponent.RemoteApiService.Call.Ongoing(Closeable {
+                    Log.d("unity-camkit", "closeable is being invoked now")
+                })
             }
             else -> LensesComponent.RemoteApiService.Call.Ignored
         }

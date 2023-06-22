@@ -35,6 +35,7 @@ import com.unity3d.player.UnityPlayer
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.invoke
 import kotlinx.coroutines.runBlocking
+import org.json.JSONObject
 import java.io.Closeable
 
 private const val REQUEST_CODE_CAMERA_KIT_CAPTURE = 1
@@ -176,8 +177,22 @@ class MainUnityActivity : AppCompatActivity() {
         lensLaunchDataKeys: Array<out String>?,
         lensLaunchDataValues: Array<out String>?
     ) {
-        //TODO: Implement logic here for responding to pending Remote API
         Log.d(TAG,"Update Lens State")
+        var responseJson = ""
+        if (lensLaunchDataKeys != null && lensLaunchDataKeys.isNotEmpty()) {
+            var paramsMap = mutableMapOf<String, String>()
+            for (i in lensLaunchDataKeys.indices) {
+                val key = lensLaunchDataKeys[i]
+                val value = lensLaunchDataValues!![i]
+                paramsMap[key]= value
+            }
+
+            responseJson = JSONObject(paramsMap as Map<String, String>?).toString()
+        }
+        var responseBody = responseJson.toByteArray(Charsets.UTF_8)
+
+        UnityGenericApiService.Pending.statusUpdateResponse?.accept(
+            UnityGenericApiService.Pending.statusUpdateRequest?.toSuccessResponse(body=responseBody))
     }
 
     fun dismissCameraKit() {
