@@ -15,8 +15,12 @@ import android.widget.Button
 import android.widget.FrameLayout
 import android.widget.TextView
 import android.widget.ToggleButton
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContract
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.graphics.component1
+import androidx.core.net.toFile
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.add
 import androidx.fragment.app.commit
@@ -29,6 +33,7 @@ import com.snap.camerakit.lenses.*
 import com.snap.camerakit.newBuilder
 import com.snap.camerakit.support.app.CameraActivity
 import com.snap.camerakit.plugin.OverrideUnityActivity
+import com.snap.camerakit.support.app.CameraActivity.Capture.Result
 import com.snap.camerakit.support.camerax.CameraXImageProcessorSource
 import com.snap.camerakit.support.widget.CameraLayout
 import com.unity3d.player.UnityPlayer
@@ -37,6 +42,8 @@ import kotlinx.coroutines.invoke
 import kotlinx.coroutines.runBlocking
 import org.json.JSONObject
 import java.io.Closeable
+import java.io.File
+import java.io.FileOutputStream
 
 private const val REQUEST_CODE_CAMERA_KIT_CAPTURE = 1
 private const val REQUEST_CODE_CAMERA_KIT_PLAY = 2
@@ -49,7 +56,7 @@ class MainUnityActivity : AppCompatActivity() {
     val customCameraLifecycle:CameraLifecycleOwner = CameraLifecycleOwner()
     private val closeOnDestroy = mutableListOf<Closeable>()
     private var lensLaunchParams = mapOf<String, String>()
-
+    lateinit var fullscreenCaptureLauncher : ActivityResultLauncher<CameraActivity.Configuration>
 
     companion object {
         lateinit var instance: MainUnityActivity
@@ -60,8 +67,6 @@ class MainUnityActivity : AppCompatActivity() {
         setContentView(R.layout.camkit_unity_layout)
 
         val camkitApiToken = applicationContext.applicationInfo.metaData.getString("com.snap.camerakit.api.token")
-//        val remoteApiSpecId = applicationContext.applicationInfo.metaData.getString("com.snap.camerakit.remoteapi.id")
-//        UnityGenericApiService.Factory.supportedApiSpecIds = setOf(remoteApiSpecId!!)
 
         cameraLayout = findViewById<CameraLayout>(R.id.camera_layout).apply {
             val imageProcessor = CameraXImageProcessorSource(this.context, customCameraLifecycle)
@@ -123,22 +128,26 @@ class MainUnityActivity : AppCompatActivity() {
             }
         }
 
+        fullscreenCaptureLauncher = registerForActivityResult(CustomCameraActivity.Capture) { result ->
+            Log.d("camkit-unity", "Activity result here")
+            if (result is CustomCameraActivity.Capture.Result.Success) {
+                val externalDir = application.getExternalFilesDir(null) // Get the external files directory
+
+                val originalFile = File(result.uri.path) // Retrieve the original file using the URI
+                val copiedFile = File(externalDir, "CameraKitOutput.png") // Create a new file with the same name in the external directory
+
+                originalFile.inputStream().use { input ->
+                    FileOutputStream(copiedFile).use { output ->
+                        input.copyTo(output) // Copy the file contents from the original file to the new file
+                    }
+                }
+                UnityPlayer.UnitySendMessage("CameraKitHandler", "MessageCameraKitCaptureResult", copiedFile.absolutePath)
+            } else if (result is CustomCameraActivity.Capture.Result.Cancelled) {
+                UnityPlayer.UnitySendMessage("CameraKitHandler", "MessageCameraKitDismissed", "")
+            }
+        }
+
         instance = this
-    }
-
-    private fun invokeCameraKitAsFullScreen(configuration: CameraActivity.Configuration) {
-
-        //TODO: Implement logic here for full screen invocation
-
-        Log.d(TAG,"Invoking Camera Kit as full screen")
-    }
-
-    private fun invokeCameraKitAsPartialView(configuration: CameraActivity.Configuration)
-    {
-
-        //TODO: Implement logic here for invocation behind translucent unity view
-
-        Log.d(TAG,"Invoking Camera Kit as a partial")
     }
 
     fun invokeCameraKit(
@@ -182,19 +191,24 @@ class MainUnityActivity : AppCompatActivity() {
                 }
             }
         } else if (renderMode == Constants.RenderMode.FULL_SCREEN.value) {
+            var cameraFacingFront = (cameraMode == Constants.Device.FRONT_CAMERA.value)
+            var showShutterButtonOnStartup = (shutterButtonMode == Constants.ShutterButtonMode.ON.value) ||
+                    ((shutterButtonMode == Constants.ShutterButtonMode.ONLY_ON_FRONT_CAMERA.value) && cameraFacingFront )
+
+            showShutterButtonOnStartup = false
+
             val config = CameraActivity.Configuration.WithLens(
                 lensId!!,
                 groupId!!,
-                true,
-                {
+                false,
+                withLaunchData = {
                     for (key in lensLaunchParams.keys) {
                         this.putString(key, lensLaunchParams[key]!!)
                     }
-                }
+                },
+                cameraFacingFront = cameraFacingFront
             )
-            val requestCode = REQUEST_CODE_CAMERA_KIT_CAPTURE
-            val intent = CustomCameraActivity.intentFor(this, config, 0)
-            startActivityForResult(intent, requestCode)
+            fullscreenCaptureLauncher.launch(config)
         }
 
 
