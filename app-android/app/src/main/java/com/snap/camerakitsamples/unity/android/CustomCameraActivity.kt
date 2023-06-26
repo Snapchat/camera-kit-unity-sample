@@ -7,10 +7,13 @@ import android.net.Uri
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.util.Log
+import android.widget.LinearLayout
 import androidx.activity.result.contract.ActivityResultContract
+import androidx.core.view.isVisible
 import com.snap.camerakit.support.app.CameraActivity
 import com.snap.camerakit.support.app.CameraActivity.Capture
 import com.snap.camerakit.support.widget.CameraLayout
+import com.snap.camerakit.support.widget.SnapButtonView
 
 class CustomCameraActivity : CameraActivity() {
 
@@ -106,12 +109,16 @@ class CustomCameraActivity : CameraActivity() {
             configureLenses {
                 remoteApiServiceFactory(UnityGenericApiService.Factory)
             }
+            findViewById<SnapButtonView>(R.id.button_capture).isVisible = showShutterButton
+            findViewById<LinearLayout>(R.id.control_strip).isVisible = showShutterButton
         }
 
 //        cameraLayout.rootView
     }
 
     companion object {
+        var showShutterButton: Boolean = true
+
         @JvmStatic
         fun intentFor(context: Context, configuration: Configuration): Intent {
             var intent = CameraActivity.intentFor(context, configuration)

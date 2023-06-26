@@ -13,6 +13,7 @@ import android.view.TextureView
 import android.view.View
 import android.widget.Button
 import android.widget.FrameLayout
+import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.ToggleButton
 import androidx.activity.result.ActivityResultLauncher
@@ -21,6 +22,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.graphics.component1
 import androidx.core.net.toFile
+import androidx.core.view.isVisible
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.add
 import androidx.fragment.app.commit
@@ -52,11 +54,14 @@ private const val TAG = "MainUnityActivity"
 class MainUnityActivity : AppCompatActivity() {
     lateinit var cameraLayout:CameraLayout
     lateinit var camerakitSession: Session
+    lateinit var cameraControls: View
     var appliedLens: LensesComponent.Lens? = null
     val customCameraLifecycle:CameraLifecycleOwner = CameraLifecycleOwner()
     private val closeOnDestroy = mutableListOf<Closeable>()
     private var lensLaunchParams = mapOf<String, String>()
     lateinit var fullscreenCaptureLauncher : ActivityResultLauncher<CameraActivity.Configuration>
+    private var unloadAfterDismiss = false
+
 
     companion object {
         lateinit var instance: MainUnityActivity
@@ -70,6 +75,7 @@ class MainUnityActivity : AppCompatActivity() {
 
         cameraLayout = findViewById<CameraLayout>(R.id.camera_layout).apply {
             val imageProcessor = CameraXImageProcessorSource(this.context, customCameraLifecycle)
+            cameraControls = this.findViewById(R.id.control_strip)
 
             configureSession {
                 imageProcessorSource(imageProcessor)
@@ -161,6 +167,10 @@ class MainUnityActivity : AppCompatActivity() {
         shutterButtonMode: Int,
         unloadLensAfterDismiss: Boolean
     ) {
+        this.unloadAfterDismiss = unloadLensAfterDismiss
+        if (shutterButtonMode == Constants.ShutterButtonMode.ONLY_ON_FRONT_CAMERA.value) {
+            Log.d("camkit-unity", "CameraKitShutterButtonMode.OnlyOnFrontCamera is not available on Android yet. Defaulting to ON")
+        }
         if (lensLaunchDataKeys != null && lensLaunchDataKeys.isNotEmpty()) {
             var mapLaunchParams = mutableMapOf<String, String>()
             for (i in lensLaunchDataKeys.indices) {
@@ -188,14 +198,13 @@ class MainUnityActivity : AppCompatActivity() {
                 Dispatchers.Main.invoke {
                     customCameraLifecycle.start()
                     cameraLayout.startPreview(facingFront = (cameraMode == Constants.Device.FRONT_CAMERA.value))
+                    cameraControls.isVisible = false
                 }
             }
         } else if (renderMode == Constants.RenderMode.FULL_SCREEN.value) {
             var cameraFacingFront = (cameraMode == Constants.Device.FRONT_CAMERA.value)
-            var showShutterButtonOnStartup = (shutterButtonMode == Constants.ShutterButtonMode.ON.value) ||
-                    ((shutterButtonMode == Constants.ShutterButtonMode.ONLY_ON_FRONT_CAMERA.value) && cameraFacingFront )
-
-            showShutterButtonOnStartup = false
+            CustomCameraActivity.showShutterButton =  (shutterButtonMode == Constants.ShutterButtonMode.ON.value)
+                    || (shutterButtonMode == Constants.ShutterButtonMode.ONLY_ON_FRONT_CAMERA.value)
 
             val config = CameraActivity.Configuration.WithLens(
                 lensId!!,
@@ -240,6 +249,10 @@ class MainUnityActivity : AppCompatActivity() {
         runBlocking {
             Dispatchers.Main.invoke {
                 customCameraLifecycle.stop()
+                if (unloadAfterDismiss) {
+                    camerakitSession.lenses.processor.clear()
+                }
+
             }
         }
         closeOnDestroy.forEach { it.close() }
