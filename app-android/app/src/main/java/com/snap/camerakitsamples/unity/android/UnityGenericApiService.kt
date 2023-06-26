@@ -6,7 +6,6 @@ import com.snap.camerakit.lenses.LensesComponent
 import com.snap.camerakit.lenses.toSuccessResponse
 import com.unity3d.player.UnityPlayer
 import java.io.Closeable
-import java.nio.charset.Charset
 
 internal object UnityGenericApiService : LensesComponent.RemoteApiService {
     object Factory : LensesComponent.RemoteApiService.Factory {

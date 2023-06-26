@@ -1,34 +1,13 @@
 package com.snap.camerakitsamples.unity.android
 
-import android.app.Activity
-import android.content.Context
-import android.content.Intent
-import android.graphics.Camera
-import android.graphics.Color
 import android.os.Bundle
-import android.util.AttributeSet
 import android.util.Log
-import android.view.SurfaceView
-import android.view.TextureView
 import android.view.View
-import android.widget.Button
-import android.widget.FrameLayout
-import android.widget.LinearLayout
-import android.widget.TextView
-import android.widget.ToggleButton
 import androidx.activity.result.ActivityResultLauncher
-import androidx.activity.result.contract.ActivityResultContract
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.graphics.component1
-import androidx.core.net.toFile
 import androidx.core.view.isVisible
-import androidx.fragment.app.FragmentActivity
-import androidx.fragment.app.add
-import androidx.fragment.app.commit
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.LifecycleOwner
-import com.snap.camerakit.LegalProcessor
 import com.snap.camerakit.Session
 import com.snap.camerakit.connectOutput
 import com.snap.camerakit.lenses.*
@@ -46,6 +25,8 @@ import org.json.JSONObject
 import java.io.Closeable
 import java.io.File
 import java.io.FileOutputStream
+import com.snap.camerakit.support.widget.cameralayout.R as CameraLayoutResources
+import com.fictionalcompany.mygame.R
 
 private const val REQUEST_CODE_CAMERA_KIT_CAPTURE = 1
 private const val REQUEST_CODE_CAMERA_KIT_PLAY = 2
@@ -75,7 +56,7 @@ class MainUnityActivity : AppCompatActivity() {
 
         cameraLayout = findViewById<CameraLayout>(R.id.camera_layout).apply {
             val imageProcessor = CameraXImageProcessorSource(this.context, customCameraLifecycle)
-            cameraControls = this.findViewById(R.id.control_strip)
+            cameraControls = this.findViewById(CameraLayoutResources.id.control_strip)
 
             configureSession {
                 imageProcessorSource(imageProcessor)

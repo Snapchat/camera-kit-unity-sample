@@ -2,23 +2,16 @@ package com.snap.camerakitsamples.unity.android
 
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
-import android.opengl.GLSurfaceView
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.Surface
-import android.view.SurfaceView
 import android.view.View
 import android.view.ViewGroup
-import android.view.WindowManager
 import android.widget.FrameLayout
-import androidx.camera.core.impl.utils.ContextUtil
 import androidx.fragment.app.DialogFragment
-import androidx.fragment.app.Fragment
-import com.snap.camerakitsamples.unity.android.R.layout.fragment_unity_player
 import com.unity3d.player.UnityPlayer
-import com.unity3d.player.UnityPlayerActivity
+import com.fictionalcompany.mygame.R
 
-class UnityPlayerFragment : DialogFragment(fragment_unity_player) {
+class UnityPlayerFragment : DialogFragment(R.layout.fragment_unity_player) {
     lateinit var mUnityPlayer: UnityPlayer;
     lateinit var fl_forUnity : FrameLayout;
 
@@ -43,20 +36,9 @@ class UnityPlayerFragment : DialogFragment(fragment_unity_player) {
         super.onCreateView(inflater, container, savedInstanceState)
 
         mUnityPlayer = UnityPlayer(activity)
-        val view : FrameLayout = inflater.inflate(fragment_unity_player, container, false) as FrameLayout
-//        fl_forUnity = view.findViewById(R.layout.fragment_unity_player) as FrameLayout
+        val view : FrameLayout = inflater.inflate(R.layout.fragment_unity_player, container, false) as FrameLayout
 
         view.addView(mUnityPlayer.view, FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT)
-
-//        view.apply {
-//            alpha = 0.5f
-//        }
-//        mUnityPlayer.apply {
-//            alpha = 0.5f
-//        }
-//        view.findViewById<SurfaceView>(R.id.unitySurfaceView).apply {
-//            alpha = 0.5f
-//        }
 
         mUnityPlayer.requestFocus()
         mUnityPlayer.windowFocusChanged(true)

@@ -140,7 +140,9 @@ public class CameraKitSettingsWindow : EditorWindow
         Debug.Log("Android postprocess started");
         Config = ReadSettingsFromDisk();
         Android_PrepareManifestFile(pathToBuiltProject);
+        Android_RewriteImports(pathToBuiltProject);
         Android_PrepareGradeFiles(pathToBuiltProject);
+        Android_CopyAssets(pathToBuiltProject);
         Debug.Log("Android postprocess finished");
     }
 
@@ -160,13 +162,43 @@ public class CameraKitSettingsWindow : EditorWindow
         var destManifestPath = Path.Combine(pathToBuiltProject, Config.AndroidWrapperProjectRelativePath, "app/src/main/AndroidManifest.xml");
         var manifestContent = File.ReadAllText(templatePath);
         
+        manifestContent = manifestContent.Replace("$APPNAME", Application.productName);
+        manifestContent = manifestContent.Replace("$BUNDLEIDENTIFIER", Application.identifier);
         manifestContent = manifestContent.Replace("$CAMERAKITAPPID", Config.AppId);
         manifestContent = manifestContent.Replace("$CAMERAKITAPITOKEN", Config.ApiToken);
 
         File.WriteAllText(destManifestPath, manifestContent);
         Debug.Log("Finished writing manifest file to " + destManifestPath);
     }
+
+    static void Android_RewriteImports(string pathToBuiltProject) {
+        var filesToRewriteImports = new string[] {"MainUnityActivity.kt", "UnityPlayerFragment.kt"};
+        foreach (var file in filesToRewriteImports) {
+            var filePath = Path.Combine(pathToBuiltProject, Config.AndroidWrapperProjectRelativePath, "app/src/main/java/com/snap/camerakitsamples/unity/android", file);
+            var content = File.ReadAllText(filePath);
+            content = content.Replace("com.snap.camerakit.mydemogame", Application.identifier);
+            File.WriteAllText(filePath, content);
+        }
+        Debug.Log("finished rewriting imports");
+    }
+
+    static void Android_CopyAssets(string pathToBuiltProject) {
+        var allMipmapfolders = Directory.GetDirectories(Path.Combine(pathToBuiltProject, "launcher/src/main/res"), "mipmap*", SearchOption.AllDirectories);
+        var destDir = Path.Combine(pathToBuiltProject, Config.AndroidWrapperProjectRelativePath, "app/src/main/res");
+        Debug.Log("--> Destination folder " + destDir);
+        foreach(var mipmapFolder in allMipmapfolders) {
+            
+            var destMipmap = Path.Combine(destDir, new DirectoryInfo(mipmapFolder).Name);
+            Debug.Log("---> Copying " + mipmapFolder);
+            Debug.Log("----> to " + destMipmap);
+            CopyDirectory(mipmapFolder, destMipmap, true);
+        }        
+        Debug.Log("finished copying assets");
+    }
+
     #endif
+
+
 
     #endregion
 

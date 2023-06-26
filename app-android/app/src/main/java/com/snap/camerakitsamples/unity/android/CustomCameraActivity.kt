@@ -5,15 +5,15 @@ import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.os.PersistableBundle
-import android.util.Log
 import android.widget.LinearLayout
 import androidx.activity.result.contract.ActivityResultContract
 import androidx.core.view.isVisible
 import com.snap.camerakit.support.app.CameraActivity
-import com.snap.camerakit.support.app.CameraActivity.Capture
 import com.snap.camerakit.support.widget.CameraLayout
 import com.snap.camerakit.support.widget.SnapButtonView
+import com.snap.camerakit.support.widget.cameralayout.R
+import com.snap.camerakit.support.app.cameraactivity.R as CameraActivityResources
+
 
 class CustomCameraActivity : CameraActivity() {
 
@@ -105,7 +105,7 @@ class CustomCameraActivity : CameraActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        cameraLayout = findViewById<CameraLayout>(R.id.camera_layout).apply {
+        cameraLayout = findViewById<CameraLayout>(CameraActivityResources.id.camera_layout).apply {
             configureLenses {
                 remoteApiServiceFactory(UnityGenericApiService.Factory)
             }
