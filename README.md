@@ -1,5 +1,5 @@
 # Camera Kit Unity Template
-This repository contains a template project that allows you to build a Unity application and leverage Snap's Camera Kit technology. It supports both iOS and Android builds. 
+This repository contains a template project that allows you to build a Unity application and leverage Snap's Camera Kit technology. It supports both iOS and Android builds.
 
 ## Requirements
 - Unity 2022.1.23f1
@@ -259,28 +259,94 @@ After that, you can subscribe to the event and update the Lens State, like so:
     }
 ```
 
-# CameraKitHandler
+### 5. Guide: Passing Launch Parameters
 
-## Events
-### ⚡️ `OnResponseFromLensEvent` 
+#### 5.1 Reading Launch Parameters from Lens (Javascript)
+
+The provided [Mask Try-on Demo Lens](lenses/mask-tryon/) shows how to read launch parameters passed by Unity as soon as the lens starts up. There relevant script is [**`ParamsManager.js`**](lenses/mask-tryon/Public/ParamsManager.js)
+
+```javascript
+var launchParams = global.launchParams;
+var storageKey = "selectedMask"
+
+function getData() {
+    if (launchParams) {
+        if (launchParams.has(storageKey) ) {
+            selectedMask = launchParams.getString(storageKey);         
+            return true;
+        }
+    return false;
+    }
+}
+```
+#### 5.2 Passing Launch Parameters from Unity (C#)
+
+```csharp
+private void InvokeCameraKitWithLaunchParams()
+    {
+        var config = new CameraKitConfiguration()
+        {
+            LensID = "abcde-1234-edcba-4321",
+            LensGroupID = "aabbc-11223-ccbba-33221"
+            //...
+            LaunchParameters = new Dictionary<string, string>() {
+                {"selectedMask", "halloween"}
+            }
+        };
+        CameraKitHandler.InvokeCameraKit(config);
+    }
+```
+
+## API Reference
+
+### Events
+
+#### ⚡️ `OnResponseFromLensEvent`
+
 Fires when the CameraKit Lens invokes the `unitySendData` endpoint of the Remote API. 
 This event will contain a `SerializedResponseFromLens` object with data passed by the lens. You can modify the `SerializedResponseFromLens` class to match the data sent by your lens.
 
-### ⚡️ `OnCameraDismissed`
+#### ⚡️ `OnCameraDismissed`
+
 Fires when CameraKit is dismissed.
 
-### ⚡️ `OnCaptureFinished`
+#### ⚡️ `OnCaptureFinished`
+
 Fires when CameraKit finishes capturing. This event will contain an `string` object that contains a path to the captured file.
 
-### ⚡️ `OnLensRequestedUpdatedState`
+#### ⚡️ `OnLensRequestedUpdatedState`
+
 Fires when CameraKit is asking for an updated State from Unity. You can set your Lens logic to request this at specific times, or on a schedule (multiple times per second) as in the example provided with this repository. To properly respond to this event, call `CameraKitHandler.UpdateLensState` in the event handler.
 
-## Methods
-### ▶️ `DismissCameraKit()`
-Stops camera and rendering. Sets unity view background color to black. 
+### Methods
 
-### ▶️ `UpdateLensState(Dictionary<string,string> state)`
-Updates lens state that will be fetched next stime the lens requests it. 
+#### ▶️ `DismissCameraKit()`
 
-### ▶️ `InvokeCameraKit(CameraKitConfiguration config)`
+Stops camera and rendering. Sets unity view background color to black.
+
+#### ▶️ `UpdateLensState(Dictionary<string,string> state)`
+
+Updates lens state that will be fetched next time the lens requests it.
+
+#### ▶️ `InvokeCameraKit(CameraKitConfiguration config)`
+
 Starts Camera Kit with the provided configuration
+
+### Classes
+
+#### 📦 `CameraKitHandler` class
+
+Monobehavior responsible for bridging native Camera Kit calls and Unity's managed C# code. All its functionalities are accessed statically. It will add itself to the scene upon invocation, and doesn't need to be manually added to the scene hierarchy.
+
+#### 📦 `CameraKitConfiguration` class
+
+Contains the following properties to invoke CameraKit
+
+- `LensID`: The ID of the Lens to be invoked
+- `LensGroupID`: The ID of the group to which the lens belongs in the camera kit portal
+- `RemoteAPISpecId`: The ID of the Remote API as defined in My Lenses portal, in case the lens needs to communicate with Unity (optional)
+- `ShutterButtonMode`: Configures how/whether to display the shutter (capture) button
+- `RenderMode`: Configures how to invoke Camera Kit (whether in Full Screen or Behind Unity's surface, seen "through" transparent areas)
+- `StartWithCamera`: Configures which Camera (front, back) should be initialized with the Lens
+- `LaunchParameters`: Configures data to be read by the lens at initialization
+- `UnloadLensAfterDismiss`: Configures whether the Lens should be unloaded from memory to have its state reset after being dismissed
