@@ -154,7 +154,12 @@ public class CameraKitSettingsWindow : EditorWindow
         gradleContent = gradleContent.Replace("$CAMERAKITVERSION", Config.CameraKitVersion);
 
         File.WriteAllText(destGradlePath, gradleContent);
-        Debug.Log("Finished writing gradle file to " + destGradlePath);        
+
+        var propertiesPath = Path.Combine(pathToBuiltProject, "local.properties");
+        var destPropertiesPath = Path.Combine(pathToBuiltProject, Config.AndroidWrapperProjectRelativePath, "local.properties");
+        File.Copy(propertiesPath, destPropertiesPath, true);
+        
+        Debug.Log("Finished writing gradle files");
     }
 
     static void Android_PrepareManifestFile(string pathToBuiltProject) {
@@ -179,21 +184,18 @@ public class CameraKitSettingsWindow : EditorWindow
             content = content.Replace("com.snap.camerakit.mydemogame", Application.identifier);
             File.WriteAllText(filePath, content);
         }
-        Debug.Log("finished rewriting imports");
+        Debug.Log("Finished rewriting imports");
     }
 
     static void Android_CopyAssets(string pathToBuiltProject) {
         var allMipmapfolders = Directory.GetDirectories(Path.Combine(pathToBuiltProject, "launcher/src/main/res"), "mipmap*", SearchOption.AllDirectories);
         var destDir = Path.Combine(pathToBuiltProject, Config.AndroidWrapperProjectRelativePath, "app/src/main/res");
-        Debug.Log("--> Destination folder " + destDir);
         foreach(var mipmapFolder in allMipmapfolders) {
             
             var destMipmap = Path.Combine(destDir, new DirectoryInfo(mipmapFolder).Name);
-            Debug.Log("---> Copying " + mipmapFolder);
-            Debug.Log("----> to " + destMipmap);
             CopyDirectory(mipmapFolder, destMipmap, true);
         }        
-        Debug.Log("finished copying assets");
+        Debug.Log("Finished copying assets");
     }
 
     #endif
