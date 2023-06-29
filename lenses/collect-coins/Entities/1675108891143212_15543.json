@@ -1,0 +1,39 @@
+{
+    "1675108891143212:15543": {
+        "IResourceController": {
+            "name": "four",
+            "type": 12,
+            "subtype": -1,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1629851992115238:3663831",
+            "fileId": "1675108891143321:15685",
+            "originalId": "1675108891143322:15686",
+            "publicId": "1675108891143439:15855",
+            "expected_hash": "855e594cc81f4549840c58b716298586"
+        },
+        "IResourceManager": {
+            "uid": "1629851992115238:3663831",
+            "name": "four",
+            "flags": 0
+        }
+    },
+    "1675108891143321:15685": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143321_15685.oprfb"
+        }
+    },
+    "1675108891143322:15686": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143322_15686.oprfb"
+        }
+    },
+    "1675108891143439:15855": {
+        "IResourceController": {
+            "public": {
+                "path": "Hand Tracking Assets/Hand Gesture Presets [TRY_PREFABS]/four.oprfb",
+                "hash": "cc5a3ae59a1ca1d7a573ab4371f49da6"
+            }
+        }
+    }
+}

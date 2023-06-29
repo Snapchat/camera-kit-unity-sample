@@ -1,0 +1,33 @@
+{
+    "1675108891143208:15513": {
+        "IResourceController": {
+            "name": "GetJointDistance",
+            "type": 4,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1628106630655553:3390645",
+            "fileId": "1675108891143277:15639",
+            "publicId": "1675108891143430:15818",
+            "expected_hash": "0f8182ffb56417c0af50b3a050ecf26b"
+        },
+        "IResourceManager": {
+            "uid": "1628106630655553:3390645",
+            "name": "Files/File_1675108891143277_15639.js",
+            "flags": 1
+        }
+    },
+    "1675108891143277:15639": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143277_15639.js"
+        }
+    },
+    "1675108891143430:15818": {
+        "IResourceController": {
+            "public": {
+                "path": "Hand Tracking Assets/Scripts/Helpers/GetJointDistance.js",
+                "hash": "0f8182ffb56417c0af50b3a050ecf26b"
+            }
+        }
+    }
+}

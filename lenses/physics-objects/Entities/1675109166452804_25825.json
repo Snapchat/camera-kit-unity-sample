@@ -1,0 +1,17 @@
+{
+    "1675109166452804:25825": {
+        "IResourceController": {
+            "name": "Physics Back Camera World Settings [EDIT_ME]",
+            "type": 36,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1645656071855775:1396362"
+        },
+        "IResourceManager": {
+            "uid": "1645656071855775:1396362",
+            "name": "PhysicsWorldSettings Asset",
+            "flags": 0
+        }
+    }
+}

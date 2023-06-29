@@ -1,0 +1,18 @@
+{
+    "privateAssets": {
+        "1645236367697271:6959648": {
+            "isLazyAsset": false,
+            "uid": "1645236367697271:6959648",
+            "type": "Asset.RenderMesh",
+            "name": "Meshes/Trafiic Cone.mesh",
+            "provider": {
+                "type": "Provider.FileRenderObjectProvider",
+                "fileinfo": {
+                    "path": "Files/File_1675109166452909_25933.mesh",
+                    "location": 0
+                },
+                "filename": "Files/File_1675109166452909_25933.mesh"
+            }
+        }
+    }
+}

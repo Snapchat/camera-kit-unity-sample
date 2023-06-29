@@ -1,0 +1,33 @@
+{
+    "1675108891143211:15534": {
+        "IResourceController": {
+            "name": "ChainController",
+            "type": 4,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1629839445700394:262426",
+            "fileId": "1675108891143306:15670",
+            "publicId": "1675108891143436:15843",
+            "expected_hash": "875503243a5f3d53745f63fc57470822"
+        },
+        "IResourceManager": {
+            "uid": "1629839445700394:262426",
+            "name": "Files/File_1675108891143306_15670.js",
+            "flags": 1
+        }
+    },
+    "1675108891143306:15670": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143306_15670.js"
+        }
+    },
+    "1675108891143436:15843": {
+        "IResourceController": {
+            "public": {
+                "path": "Scripts/ChainController/ChainController.js",
+                "hash": "875503243a5f3d53745f63fc57470822"
+            }
+        }
+    }
+}

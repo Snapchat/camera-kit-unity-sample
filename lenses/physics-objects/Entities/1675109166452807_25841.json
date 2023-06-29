@@ -1,0 +1,115 @@
+{
+    "1645812485222696:1104984": {
+        "Compression::IController": {
+            "compressed_files": "",
+            "infos": {
+                "compressedRAM": "121344",
+                "compressedSize": "45119",
+                "extension": "mesh",
+                "originalRAM": "121344",
+                "originalSize": "45119",
+                "settings": {
+                    "attributeFormat": "",
+                    "draco": {
+                        "colorBits": "8",
+                        "compressLvl": "7",
+                        "normalBits": "8",
+                        "posBits": "11",
+                        "texBits": "10"
+                    },
+                    "info": {
+                        "hasBlendShapes": "false",
+                        "vertexAttribs": [
+                            {
+                                "canBeDisabled": "false",
+                                "format": "9",
+                                "semantic": "position"
+                            },
+                            {
+                                "canBeDisabled": "true",
+                                "format": "9",
+                                "semantic": "normal"
+                            },
+                            {
+                                "canBeDisabled": "true",
+                                "format": "9",
+                                "semantic": "tangent"
+                            },
+                            {
+                                "canBeDisabled": "true",
+                                "format": "9",
+                                "semantic": "texture0"
+                            }
+                        ]
+                    },
+                    "isCompressed": "false",
+                    "type": "0"
+                }
+            },
+            "uncompressed_file": "1675109166452967:25981"
+        }
+    },
+    "1675109166452807:25841": {
+        "IResourceController": {
+            "name": "temp_box_bt",
+            "type": 3,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1645812485222696:1104984",
+            "fileId": "1675109166452966:25980",
+            "publicId": "1675109166453509:26123",
+            "expected_hash": "db1f615865abb95823acc229ab9703c8",
+            "additional": {
+                "info": {
+                    "hasBlendShapes": "false",
+                    "vertexAttribs": [
+                        {
+                            "canBeDisabled": "false",
+                            "format": "9",
+                            "semantic": "position"
+                        },
+                        {
+                            "canBeDisabled": "true",
+                            "format": "9",
+                            "semantic": "normal"
+                        },
+                        {
+                            "canBeDisabled": "true",
+                            "format": "9",
+                            "semantic": "tangent"
+                        },
+                        {
+                            "canBeDisabled": "true",
+                            "format": "9",
+                            "semantic": "texture0"
+                        }
+                    ]
+                }
+            }
+        },
+        "IResourceManager": {
+            "uid": "1645812485222696:1104984",
+            "name": "Files/File_1675109166452966_25980.mesh",
+            "flags": 1
+        }
+    },
+    "1675109166452966:25980": {
+        "IFileManager": {
+            "path": "Files/File_1675109166452966_25980.mesh"
+        }
+    },
+    "1675109166452967:25981": {
+        "IFileManager": {
+            "path": "Files/File_1675109166452967_25981.mesh"
+        }
+    },
+    "1675109166453509:26123": {
+        "IResourceController": {
+            "public": {
+                "path": "Meshes/temp_box_bt.mesh",
+                "hash": "db1f615865abb95823acc229ab9703c8"
+            }
+        }
+    }
+}

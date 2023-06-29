@@ -1,0 +1,33 @@
+{
+    "1683025478546372:1527053": {
+        "IFileManager": {
+            "path": "Files/File_1683025478546372_1527053.js"
+        }
+    },
+    "1683025478548197:1527054": {
+        "IResourceController": {
+            "name": "Mirror on front camera",
+            "type": 4,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1683025478548221:1527055",
+            "fileId": "1683025478546372:1527053",
+            "publicId": "1683025478549682:1527060",
+            "expected_hash": "644e0d3a045de99a4233b9350a283898"
+        },
+        "IResourceManager": {
+            "uid": "1683025478548221:1527055",
+            "name": "Files/File_1683025478546372_1527053.js",
+            "flags": 1
+        }
+    },
+    "1683025478549682:1527060": {
+        "IResourceController": {
+            "public": {
+                "path": "Mirror on front camera.js",
+                "hash": "644e0d3a045de99a4233b9350a283898"
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "core": {
+        "isLazyAsset": false,
+        "uid": "1645596599535901:112241",
+        "type": "Physics.Matter",
+        "name": "Physics Materials/Floor Physics Material [EDIT_ME]",
+        "friction": 0.8999999761581421,
+        "rollFriction": 0.4300000071525574,
+        "spinFriction": 0.38999998569488525,
+        "statBounce": 1.0,
+        "dynaBounce": 1.0
+    }
+}

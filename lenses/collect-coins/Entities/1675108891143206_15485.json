@@ -1,0 +1,33 @@
+{
+    "1675108891143206:15485": {
+        "IResourceController": {
+            "name": "SetFollowHandHelper",
+            "type": 4,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1626214448335761:7724",
+            "fileId": "1675108891143244:15602",
+            "publicId": "1675108891143424:15790",
+            "expected_hash": "fa5be30537fdef421636252fcdf4f06b"
+        },
+        "IResourceManager": {
+            "uid": "1626214448335761:7724",
+            "name": "Files/File_1675108891143244_15602.js",
+            "flags": 1
+        }
+    },
+    "1675108891143244:15602": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143244_15602.js"
+        }
+    },
+    "1675108891143424:15790": {
+        "IResourceController": {
+            "public": {
+                "path": "Hand Tracking Assets/Scripts/Helpers/SetFollowHandHelper.js",
+                "hash": "fa5be30537fdef421636252fcdf4f06b"
+            }
+        }
+    }
+}

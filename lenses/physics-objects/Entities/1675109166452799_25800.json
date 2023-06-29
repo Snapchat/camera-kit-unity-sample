@@ -1,0 +1,39 @@
+{
+    "1675109166452799:25800": {
+        "IResourceController": {
+            "name": "Wall Font",
+            "type": 2,
+            "subtype": 1,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1645060811119666:1076291",
+            "fileId": "1675109166452887:25915",
+            "originalId": "1675109166452888:25916",
+            "publicId": "1675109166453496:26088",
+            "expected_hash": "9af486e9fc8742e00d990cb18fa04f46"
+        },
+        "IResourceManager": {
+            "uid": "1645060811119666:1076291",
+            "name": "Files/File_1675109166452887_25915",
+            "flags": 1
+        }
+    },
+    "1675109166452887:25915": {
+        "IFileManager": {
+            "path": "Files/File_1675109166452887_25915"
+        }
+    },
+    "1675109166452888:25916": {
+        "IFileManager": {
+            "path": "Files/File_1675109166452888_25916.lsmat"
+        }
+    },
+    "1675109166453496:26088": {
+        "IResourceController": {
+            "public": {
+                "path": "Materials/Wall Font.lsmat",
+                "hash": "f220227b7724cd7cd41d6b5f715b8d15"
+            }
+        }
+    }
+}

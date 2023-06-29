@@ -1,0 +1,15 @@
+{
+    "privateAssets": {
+        "1645832920184341:11273492": {
+            "isLazyAsset": false,
+            "uid": "1645832920184341:11273492",
+            "type": "Physics.Matter",
+            "name": "Physics Matters/Maze Floor Physics Matter [EDIT_ME]",
+            "friction": 0.8999999761581421,
+            "rollFriction": 0.4300000071525574,
+            "spinFriction": 0.38999998569488525,
+            "statBounce": 0.699999988079071,
+            "dynaBounce": 0.699999988079071
+        }
+    }
+}

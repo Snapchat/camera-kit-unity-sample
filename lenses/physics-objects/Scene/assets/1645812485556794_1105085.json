@@ -1,0 +1,18 @@
+{
+    "core": {
+        "isLazyAsset": false,
+        "uid": "1645812485556794:1105085",
+        "type": "Asset.IntStepNoLerpAnimationTrackKeyFramed",
+        "name": "",
+        "keys": [
+            [
+                0.0,
+                1
+            ],
+            [
+                1.0,
+                1
+            ]
+        ]
+    }
+}

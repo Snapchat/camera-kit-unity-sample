@@ -1,0 +1,15 @@
+{
+    "privateAssets": {
+        "1645205064986381:661310": {
+            "isLazyAsset": false,
+            "uid": "1645205064986381:661310",
+            "type": "Physics.Matter",
+            "name": "Physics Matters/Wood Ramp Physics Matter [EDIT_ME]",
+            "friction": 1.0,
+            "rollFriction": 0.14000000059604645,
+            "spinFriction": 0.14000000059604645,
+            "statBounce": 0.75,
+            "dynaBounce": 0.800000011920929
+        }
+    }
+}

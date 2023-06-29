@@ -1,0 +1,79 @@
+{
+    "1650575968724265:155479": {
+        "Compression::IController": {
+            "compressed_files": [
+                {
+                    "k": {
+                        "settings_hash": "2049",
+                        "uncompressed_hash": "cce42fcfc39edd1744c35f8b2aeedd61"
+                    },
+                    "v": "1675109166453030:26029"
+                }
+            ],
+            "infos": {
+                "compressedRAM": "524288",
+                "compressedSize": "25945",
+                "extension": "png",
+                "originalRAM": "4194304",
+                "originalSize": "60783",
+                "settings": {
+                    "isCompressed": "true",
+                    "level": "2",
+                    "subtype": "9",
+                    "type": "1"
+                }
+            },
+            "uncompressed_file": "1675109166453016:26018"
+        }
+    },
+    "1675109166452809:25859": {
+        "IResourceController": {
+            "name": "Cone",
+            "type": 1,
+            "subtype": 9,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1650575968724265:155479",
+            "fileId": "1675109166453013:26016",
+            "originalId": "1675109166453014:26017",
+            "publicId": "1675109166453516:26142",
+            "expected_hash": "2a5318378b055c65908c96c6d288dcb1",
+            "additional": {
+                "originHash": "cce42fcfc39edd1744c35f8b2aeedd61"
+            }
+        },
+        "IResourceManager": {
+            "uid": "1650575968724265:155479",
+            "name": "Files/File7572.jpg",
+            "flags": 1
+        }
+    },
+    "1675109166453013:26016": {
+        "IFileManager": {
+            "path": "Files/File_1675109166453013_26016.pvr"
+        }
+    },
+    "1675109166453014:26017": {
+        "IFileManager": {
+            "path": "Files/File_1675109166453014_26017.png"
+        }
+    },
+    "1675109166453016:26018": {
+        "IFileManager": {
+            "path": "Files/File_1675109166453016_26018.png"
+        }
+    },
+    "1675109166453030:26029": {
+        "IFileManager": {
+            "path": "Files/File_1675109166453030_26029.pvr"
+        }
+    },
+    "1675109166453516:26142": {
+        "IResourceController": {
+            "public": {
+                "path": "Textures/Cone.png",
+                "hash": "cce42fcfc39edd1744c35f8b2aeedd61"
+            }
+        }
+    }
+}

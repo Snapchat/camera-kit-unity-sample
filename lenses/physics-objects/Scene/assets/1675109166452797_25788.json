@@ -1,0 +1,30 @@
+{
+    "privateAssets": {
+        "1644986472869327:1258664": {
+            "isLazyAsset": false,
+            "uid": "1644986472869327:1258664",
+            "type": "Asset.RenderMesh",
+            "name": "Meshes/Face Mesh",
+            "provider": {
+                "type": "Provider.FaceRenderObjectProvider",
+                "faceMeshVersion": 3,
+                "faceIndex": 0,
+                "enableFace": true,
+                "enableEye": true,
+                "enableEyeCorner": true,
+                "enableMouth": true,
+                "enableSkull": true,
+                "enableEar": false,
+                "externalFace": {
+                    "scale": 1.0,
+                    "multiplier": 1.0,
+                    "mesh": "-1:-1",
+                    "mapUV": {
+                        "value": 4,
+                        "description": "Texcoord0"
+                    }
+                }
+            }
+        }
+    }
+}

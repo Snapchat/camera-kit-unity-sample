@@ -1,0 +1,18 @@
+{
+    "privateAssets": {
+        "1645238215440907:73069": {
+            "isLazyAsset": false,
+            "uid": "1645238215440907:73069",
+            "type": "Asset.RenderMesh",
+            "name": "Meshes/Car/Arm.mesh",
+            "provider": {
+                "type": "Provider.FileRenderObjectProvider",
+                "fileinfo": {
+                    "path": "Files/File_1675109166452911_25935.mesh",
+                    "location": 0
+                },
+                "filename": "Files/File_1675109166452911_25935.mesh"
+            }
+        }
+    }
+}

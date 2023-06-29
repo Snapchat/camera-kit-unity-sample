@@ -1,0 +1,41 @@
+{
+    "core": {
+        "uid": "1646082080876041:2539438",
+        "type": "SceneObject",
+        "layerV2": 1,
+        "name": "Constraint",
+        "position": [
+            2.5420684814453125,
+            -20.55562973022461,
+            7.62939453125e-06
+        ],
+        "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+        ],
+        "scale": [
+            1.0,
+            1.0,
+            1.0
+        ],
+        "segmentScaleCompensate": false,
+        "isuserenabled": true,
+        "components": [
+            {
+                "uid": "1646082080876852:2539440",
+                "type": "Physics.ConstraintComponent",
+                "name": "Physics Constraint",
+                "isenabled": true,
+                "isInternal": false,
+                "updatepriority": 0,
+                "target": "1646082080841665:2539212",
+                "constraint": {
+                    "type": "Physics.PointConstraint"
+                },
+                "debugDraw": false
+            }
+        ]
+    }
+}

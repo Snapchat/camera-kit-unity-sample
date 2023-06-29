@@ -1,0 +1,18 @@
+{
+    "privateAssets": {
+        "1645238215791524:73225": {
+            "isLazyAsset": false,
+            "uid": "1645238215791524:73225",
+            "type": "Asset.RenderMesh",
+            "name": "Meshes/Car/Wind Shield.mesh",
+            "provider": {
+                "type": "Provider.FileRenderObjectProvider",
+                "fileinfo": {
+                    "path": "Files/File_1675109166452929_25949.mesh",
+                    "location": 0
+                },
+                "filename": "Files/File_1675109166452929_25949.mesh"
+            }
+        }
+    }
+}

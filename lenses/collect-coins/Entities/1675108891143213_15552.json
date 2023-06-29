@@ -1,0 +1,33 @@
+{
+    "1675108891143213:15552": {
+        "IResourceController": {
+            "name": "SingleGestureTrigger[EDIT_ME]",
+            "type": 4,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1629859729409907:8961191",
+            "fileId": "1675108891143338:15703",
+            "publicId": "1675108891143442:15865",
+            "expected_hash": "b7ce7cac9bcfbea77482e325712a06f1"
+        },
+        "IResourceManager": {
+            "uid": "1629859729409907:8961191",
+            "name": "Files/File_1675108891143338_15703.js",
+            "flags": 1
+        }
+    },
+    "1675108891143338:15703": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143338_15703.js"
+        }
+    },
+    "1675108891143442:15865": {
+        "IResourceController": {
+            "public": {
+                "path": "Hand Tracking Assets/Scripts/Helpers/SingleGestureTrigger[EDIT_ME].js",
+                "hash": "b7ce7cac9bcfbea77482e325712a06f1"
+            }
+        }
+    }
+}

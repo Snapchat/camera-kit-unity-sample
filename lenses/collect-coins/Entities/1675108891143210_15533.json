@@ -1,0 +1,33 @@
+{
+    "1675108891143210:15533": {
+        "IResourceController": {
+            "name": "JSMathLibrary",
+            "type": 4,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1629839445671844:262414",
+            "fileId": "1675108891143305:15669",
+            "publicId": "1675108891143436:15842",
+            "expected_hash": "43c36090b4dd23790651dd6d7e5c1706"
+        },
+        "IResourceManager": {
+            "uid": "1629839445671844:262414",
+            "name": "Files/File_1675108891143305_15669.js",
+            "flags": 1
+        }
+    },
+    "1675108891143305:15669": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143305_15669.js"
+        }
+    },
+    "1675108891143436:15842": {
+        "IResourceController": {
+            "public": {
+                "path": "Scripts/ChainController/JSMathLibrary.js",
+                "hash": "43c36090b4dd23790651dd6d7e5c1706"
+            }
+        }
+    }
+}

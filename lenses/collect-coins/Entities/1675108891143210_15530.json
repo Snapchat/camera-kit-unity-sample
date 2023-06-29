@@ -1,0 +1,30 @@
+{
+    "1675108891143210:15530": {
+        "IResourceController": {
+            "name": "RightHandModel",
+            "type": 12,
+            "subtype": -1,
+            "dependency": 1,
+            "hidden": false,
+            "uid": "1629745465682642:453613",
+            "fileId": "1675108891143300:15664",
+            "originalId": "1675108891143302:15666",
+            "expected_hash": "957eda805801d0fc297757accbc8c4e3"
+        },
+        "IResourceManager": {
+            "uid": "1629745465682642:453613",
+            "name": "RightHandModel",
+            "flags": 0
+        }
+    },
+    "1675108891143300:15664": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143300_15664.oprfb"
+        }
+    },
+    "1675108891143302:15666": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143302_15666.oprfb"
+        }
+    }
+}

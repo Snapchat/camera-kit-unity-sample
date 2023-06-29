@@ -1,0 +1,33 @@
+{
+    "1675108891143209:15515": {
+        "IResourceController": {
+            "name": "GetJointsRotationHelper",
+            "type": 4,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1628201349125238:1672653",
+            "fileId": "1675108891143280:15642",
+            "publicId": "1675108891143432:15824",
+            "expected_hash": "4c6bdc874143a0b7004007140f62b6f8"
+        },
+        "IResourceManager": {
+            "uid": "1628201349125238:1672653",
+            "name": "Files/File_1675108891143280_15642.js",
+            "flags": 1
+        }
+    },
+    "1675108891143280:15642": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143280_15642.js"
+        }
+    },
+    "1675108891143432:15824": {
+        "IResourceController": {
+            "public": {
+                "path": "Hand Tracking Assets/Scripts/Helpers/GetJointsRotationHelper.js",
+                "hash": "4c6bdc874143a0b7004007140f62b6f8"
+            }
+        }
+    }
+}

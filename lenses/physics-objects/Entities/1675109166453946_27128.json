@@ -1,0 +1,22 @@
+{
+    "1675109166453488:26067": {
+        "IResourceController": {
+            "public": {
+                "path": "Meshes/Balloons Pack Resources/Textures"
+            }
+        }
+    },
+    "1675109166453946:27128": {
+        "IResourceController": {
+            "name": "Textures",
+            "type": 0,
+            "subtype": -1,
+            "dependency": 0,
+            "hidden": false,
+            "publicId": "1675109166453488:26067",
+            "resources": [
+                "1675109166452796:25780"
+            ]
+        }
+    }
+}

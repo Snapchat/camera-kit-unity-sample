@@ -1,0 +1,39 @@
+{
+    "1675109166452799:25798": {
+        "IResourceController": {
+            "name": "Wall Right",
+            "type": 2,
+            "subtype": 1,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1645060674024689:991997",
+            "fileId": "1675109166452882:25911",
+            "originalId": "1675109166452883:25912",
+            "publicId": "1675109166453496:26086",
+            "expected_hash": "9af486e9fc8742e00d990cb18fa04f46"
+        },
+        "IResourceManager": {
+            "uid": "1645060674024689:991997",
+            "name": "Files/File_1675109166452882_25911",
+            "flags": 1
+        }
+    },
+    "1675109166452882:25911": {
+        "IFileManager": {
+            "path": "Files/File_1675109166452882_25911"
+        }
+    },
+    "1675109166452883:25912": {
+        "IFileManager": {
+            "path": "Files/File_1675109166452883_25912.lsmat"
+        }
+    },
+    "1675109166453496:26086": {
+        "IResourceController": {
+            "public": {
+                "path": "Materials/Wall Right.lsmat",
+                "hash": "e57e87ee0fe40054b83069f6f1077de3"
+            }
+        }
+    }
+}

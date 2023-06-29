@@ -1,0 +1,83 @@
+{
+    "core": {
+        "uid": "1645775484172866:10461355",
+        "type": "SceneObject",
+        "layerV2": 1,
+        "name": "Pipe",
+        "position": [
+            5.801380157470703,
+            1.3275632858276367,
+            2.515913963317871
+        ],
+        "rotation": [
+            2.6928148599836277e-09,
+            6.491908344230524e-09,
+            -0.7071068286895752,
+            0.7071066498756409
+        ],
+        "scale": [
+            1.0000001192092896,
+            1.0000001192092896,
+            1.0000003576278687
+        ],
+        "segmentScaleCompensate": false,
+        "isuserenabled": true,
+        "components": [
+            {
+                "uid": "1645775484174987:10461357",
+                "type": "Component.RenderMeshVisual",
+                "name": "component_14",
+                "isenabled": true,
+                "isInternal": false,
+                "updatepriority": 0,
+                "renderorder": 0,
+                "internalRenderOrder": 0,
+                "renderSpace": 1,
+                "stretchMode": {
+                    "value": 2,
+                    "description": "Stretch"
+                },
+                "verticalAlignment": {
+                    "value": 1,
+                    "description": "Center"
+                },
+                "horizontalAlignment": {
+                    "value": 1,
+                    "description": "Center"
+                },
+                "extentsTarget": "-1:-1",
+                "meshShadowMode": {
+                    "value": 0,
+                    "description": "none"
+                },
+                "shadowColor": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "shadowDensity": 1.0,
+                "blendShapesState": {
+                    "defaultWeights": null,
+                    "blendNormals": false,
+                    "enabled": true
+                },
+                "materials": [
+                    {
+                        "material": "1645084898757777:6169649"
+                    }
+                ],
+                "lrayEmitter": false,
+                "lrayReflMat": "-1:-1",
+                "lrayReceiver": false,
+                "lrayShadow": false,
+                "lraySieve": false,
+                "lrayEmGroups": 65535,
+                "lrayRecGroups": 65535,
+                "lrayHidden": false,
+                "mesh": "1645238216954222:73794",
+                "skin": "-1:-1"
+            }
+        ]
+    }
+}

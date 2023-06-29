@@ -1,0 +1,18 @@
+{
+    "privateAssets": {
+        "1645770575854077:5669548": {
+            "isLazyAsset": false,
+            "uid": "1645770575854077:5669548",
+            "type": "Asset.RenderMesh",
+            "name": "Meshes/Road/Cube 5.mesh",
+            "provider": {
+                "type": "Provider.FileRenderObjectProvider",
+                "fileinfo": {
+                    "path": "Files/File_1675109166452954_25970.mesh",
+                    "location": 0
+                },
+                "filename": "Files/File_1675109166452954_25970.mesh"
+            }
+        }
+    }
+}

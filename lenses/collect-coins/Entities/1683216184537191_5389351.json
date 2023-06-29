@@ -1,0 +1,17 @@
+{
+    "1683216184537191:5389351": {
+        "IResourceController": {
+            "name": "Unity SDK - Generic API",
+            "type": 27,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1683216184537184:5389350"
+        },
+        "IResourceManager": {
+            "uid": "1683216184537184:5389350",
+            "name": "",
+            "flags": 0
+        }
+    }
+}

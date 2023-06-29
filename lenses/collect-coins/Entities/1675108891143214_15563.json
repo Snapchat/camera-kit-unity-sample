@@ -1,0 +1,42 @@
+{
+    "1675108891143214:15563": {
+        "IResourceController": {
+            "name": "pink",
+            "type": 2,
+            "subtype": 1,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1630350076259406:399087",
+            "fileId": "1675108891143357:15723",
+            "originalId": "1675108891143358:15724",
+            "publicId": "1675108891143445:15874",
+            "expected_hash": "5b627cfe990681a62cbb4cb17c33afc9",
+            "additional": {
+                "isUnpackedInPublic": "false"
+            }
+        },
+        "IResourceManager": {
+            "uid": "1630350076259406:399087",
+            "name": "Files/File_1675108891143357_15723",
+            "flags": 1
+        }
+    },
+    "1675108891143357:15723": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143357_15723"
+        }
+    },
+    "1675108891143358:15724": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143358_15724.lsmat"
+        }
+    },
+    "1675108891143445:15874": {
+        "IResourceController": {
+            "public": {
+                "path": "Hand Tracking Assets/Materials/Bones/pink.lsmat",
+                "hash": "3addf917ae66d40d73408aced4fec9d7"
+            }
+        }
+    }
+}

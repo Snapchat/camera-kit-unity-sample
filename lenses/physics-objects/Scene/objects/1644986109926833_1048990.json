@@ -1,0 +1,38 @@
+{
+    "core": {
+        "uid": "1644986109926833:1048990",
+        "type": "SceneObject",
+        "layerV2": 1,
+        "name": "Race Track World",
+        "position": [
+            0.0,
+            0.0,
+            0.0
+        ],
+        "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+        ],
+        "scale": [
+            1.0,
+            1.0,
+            1.0
+        ],
+        "segmentScaleCompensate": false,
+        "isuserenabled": true,
+        "components": [
+            {
+                "uid": "1645656119171866:1447893",
+                "type": "Physics.WorldComponent",
+                "name": "Physics World",
+                "isenabled": true,
+                "isInternal": false,
+                "updatepriority": 0,
+                "updateOrder": 0,
+                "worldSettings": "1645656071855775:1396362"
+            }
+        ]
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "1675108891143212:15546": {
+        "IResourceController": {
+            "name": "telephone",
+            "type": 12,
+            "subtype": -1,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1629851997743378:3740219",
+            "fileId": "1675108891143327:15691",
+            "originalId": "1675108891143328:15692",
+            "publicId": "1675108891143440:15858",
+            "expected_hash": "25cba5913ebf06922c920e35f8809bc9"
+        },
+        "IResourceManager": {
+            "uid": "1629851997743378:3740219",
+            "name": "telephone",
+            "flags": 0
+        }
+    },
+    "1675108891143327:15691": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143327_15691.oprfb"
+        }
+    },
+    "1675108891143328:15692": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143328_15692.oprfb"
+        }
+    },
+    "1675108891143440:15858": {
+        "IResourceController": {
+            "public": {
+                "path": "Hand Tracking Assets/Hand Gesture Presets [TRY_PREFABS]/telephone.oprfb",
+                "hash": "9916c6b0a9ea64feb7849aaee8455c2d"
+            }
+        }
+    }
+}

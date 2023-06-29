@@ -1,0 +1,42 @@
+{
+    "1675108891143213:15561": {
+        "IResourceController": {
+            "name": "green",
+            "type": 2,
+            "subtype": 1,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1630350074657630:337698",
+            "fileId": "1675108891143353:15719",
+            "originalId": "1675108891143354:15720",
+            "publicId": "1675108891143444:15872",
+            "expected_hash": "5b627cfe990681a62cbb4cb17c33afc9",
+            "additional": {
+                "isUnpackedInPublic": "false"
+            }
+        },
+        "IResourceManager": {
+            "uid": "1630350074657630:337698",
+            "name": "Files/File_1675108891143353_15719",
+            "flags": 1
+        }
+    },
+    "1675108891143353:15719": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143353_15719"
+        }
+    },
+    "1675108891143354:15720": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143354_15720.lsmat"
+        }
+    },
+    "1675108891143444:15872": {
+        "IResourceController": {
+            "public": {
+                "path": "Hand Tracking Assets/Materials/Bones/green.lsmat",
+                "hash": "339780c86018db4293f65472c4cf90ba"
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "1675109166452795:25777": {
+        "IResourceController": {
+            "name": "Wood Floor Physics Matter [EDIT_ME]",
+            "type": 37,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1644740369898443:828192"
+        },
+        "IResourceManager": {
+            "uid": "1644740369898443:828192",
+            "name": "PhysicsMatter Asset",
+            "flags": 0
+        }
+    }
+}

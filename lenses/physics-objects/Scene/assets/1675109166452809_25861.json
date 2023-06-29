@@ -1,0 +1,22 @@
+{
+    "privateAssets": {
+        "1650575969295116:155610": {
+            "isLazyAsset": false,
+            "uid": "1650575969295116:155610",
+            "type": "Asset.Texture",
+            "name": "WorldObjectController/Textures/ground_grid.png",
+            "provider": {
+                "type": "Provider.FileTextureProvider",
+                "hash": 8228031820731580502,
+                "useCache": true,
+                "allowDownscale": false,
+                "fileinfo": {
+                    "path": "Files/File_1675109166453021_26022.pvr",
+                    "location": 0
+                },
+                "filename": "Files/File_1675109166453021_26022.pvr",
+                "fileLocation": 0
+            }
+        }
+    }
+}

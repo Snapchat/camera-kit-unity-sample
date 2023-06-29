@@ -1,0 +1,33 @@
+{
+    "1684156305005333:2212168": {
+        "IFileManager": {
+            "path": "Files/File_1684156305005333_2212168.js"
+        }
+    },
+    "1684156305007834:2212173": {
+        "IResourceController": {
+            "name": "RequestUnityState",
+            "type": 4,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1684156305007845:2212174",
+            "fileId": "1684156305005333:2212168",
+            "publicId": "1684156305008650:2212181",
+            "expected_hash": "22e1e7a5f036d6bb71982bedb59b8830"
+        },
+        "IResourceManager": {
+            "uid": "1684156305007845:2212174",
+            "name": "Files/File_1684156305005333_2212168.js",
+            "flags": 1
+        }
+    },
+    "1684156305008650:2212181": {
+        "IResourceController": {
+            "public": {
+                "path": "Scripts/RequestUnityState.js",
+                "hash": "22e1e7a5f036d6bb71982bedb59b8830"
+            }
+        }
+    }
+}

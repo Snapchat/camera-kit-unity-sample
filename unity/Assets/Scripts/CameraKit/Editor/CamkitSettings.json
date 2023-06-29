@@ -1,0 +1,8 @@
+{
+    "ApiToken": "eyJhbGciOiJIUzI1NiIsImtpZCI6IkNhbnZhc1MyU0hNQUNQcm9kIiwidHlwIjoiSldUIn0.eyJhdWQiOiJjYW52YXMtY2FudmFzYXBpIiwiaXNzIjoiY2FudmFzLXMyc3Rva2VuIiwibmJmIjoxNjY2MDIxNTA5LCJzdWIiOiIwMTM2MWYzZi1jNjVlLTQyYWYtYjQ4Yy00MzdlOTUyZTIyYmZ-U1RBR0lOR34zOTU2MmRiMi1mNzUzLTQzODgtYWY0MS05M2Q3YThhMzkyYWQifQ.QWXI1YRWGcLoj4_3gw1B2mUBEx4bomcbO1MnCIfhtJc",
+    "AppId": "01361f3f-c65e-42af-b48c-437e952e22bf",
+    "CameraKitVersion": "1.23.0",
+    "CocoaPodsAbsolutePath": "/usr/local/bin/pod",
+    "IosWrapperProjectRelativePath": "../../../app-ios/",
+    "AndroidWrapperProjectRelativePath": "../../../app-android/"
+}

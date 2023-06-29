@@ -1,0 +1,39 @@
+{
+    "1675108891143212:15548": {
+        "IResourceController": {
+            "name": "chefs_kiss",
+            "type": 12,
+            "subtype": -1,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1629852000507561:3791166",
+            "fileId": "1675108891143330:15695",
+            "originalId": "1675108891143331:15696",
+            "publicId": "1675108891143441:15860",
+            "expected_hash": "63edd5911d771760177c138a46ebd3ac"
+        },
+        "IResourceManager": {
+            "uid": "1629852000507561:3791166",
+            "name": "chefs_kiss",
+            "flags": 0
+        }
+    },
+    "1675108891143330:15695": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143330_15695.oprfb"
+        }
+    },
+    "1675108891143331:15696": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143331_15696.oprfb"
+        }
+    },
+    "1675108891143441:15860": {
+        "IResourceController": {
+            "public": {
+                "path": "Hand Tracking Assets/Hand Gesture Presets [TRY_PREFABS]/chefs_kiss.oprfb",
+                "hash": "2d8e1eeca4387b53408c9e397db44fa6"
+            }
+        }
+    }
+}

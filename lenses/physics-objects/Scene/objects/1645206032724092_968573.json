@@ -1,0 +1,78 @@
+{
+    "core": {
+        "uid": "1645206032724092:968573",
+        "type": "SceneObject",
+        "layerV2": 1,
+        "name": "Slow Motion Zone [EDIT_ME]",
+        "position": [
+            18.65781021118164,
+            25.36126136779785,
+            25.876867294311523
+        ],
+        "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+        ],
+        "scale": [
+            1.0,
+            1.0,
+            1.0
+        ],
+        "segmentScaleCompensate": false,
+        "isuserenabled": true,
+        "components": [
+            {
+                "uid": "1645489911703667:3265875",
+                "type": "Component.ScriptComponent",
+                "name": "Script 2",
+                "isenabled": true,
+                "isInternal": false,
+                "updatepriority": -1000,
+                "valuesManager": {
+                    "values": [
+                        {
+                            "uid": "1645514866910187:327497",
+                            "type": "Value.FloatValue",
+                            "value": 3.0
+                        },
+                        {
+                            "uid": "1645514866910193:327498",
+                            "type": "Value.FloatValue",
+                            "value": 3.0
+                        }
+                    ]
+                },
+                "includes": null,
+                "scriptObjects": [
+                    {
+                        "name": "worldComponent",
+                        "typename": "Physics.WorldComponent",
+                        "scriptObject": "1645656119171866:1447893"
+                    },
+                    {
+                        "name": "slowStep",
+                        "typename": "Value.FloatValue",
+                        "scriptObject": "1645514866910187:327497"
+                    },
+                    {
+                        "name": "slowTime",
+                        "typename": "Value.FloatValue",
+                        "scriptObject": "1645514866910193:327498"
+                    }
+                ],
+                "typeObjects": null,
+                "events": [
+                    {
+                        "event": {
+                            "eventType": "SceneEvent.OnAwakeEvent"
+                        },
+                        "script": "1645061453717649:1411289"
+                    }
+                ],
+                "wrapInitializationSources": true
+            }
+        ]
+    }
+}

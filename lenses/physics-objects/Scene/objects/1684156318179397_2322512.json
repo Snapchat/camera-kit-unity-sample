@@ -1,0 +1,68 @@
+{
+    "core": {
+        "uid": "1684156318179397:2322512",
+        "type": "SceneObject",
+        "layerV2": 1,
+        "name": "RequestUnityState",
+        "position": [
+            0.0,
+            0.0,
+            0.0
+        ],
+        "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+        ],
+        "scale": [
+            1.0,
+            1.0,
+            1.0
+        ],
+        "segmentScaleCompensate": false,
+        "isuserenabled": true,
+        "components": [
+            {
+                "uid": "1684156327077944:2326158",
+                "type": "Component.ScriptComponent",
+                "name": "Script",
+                "isenabled": true,
+                "isInternal": false,
+                "updatepriority": -1000,
+                "valuesManager": {
+                    "values": [
+                        {
+                            "uid": "1684156352200160:2440942",
+                            "type": "Value.IntValue",
+                            "value": 10
+                        }
+                    ]
+                },
+                "includes": null,
+                "scriptObjects": [
+                    {
+                        "name": "remoteServiceModule",
+                        "typename": "Asset.RemoteServiceModule",
+                        "scriptObject": "1684155990188720:1586615"
+                    },
+                    {
+                        "name": "maximumConsecutiveErrors",
+                        "typename": "Value.IntValue",
+                        "scriptObject": "1684156352200160:2440942"
+                    }
+                ],
+                "typeObjects": null,
+                "events": [
+                    {
+                        "event": {
+                            "eventType": "SceneEvent.OnAwakeEvent"
+                        },
+                        "script": "1684156305007845:2212174"
+                    }
+                ],
+                "wrapInitializationSources": true
+            }
+        ]
+    }
+}

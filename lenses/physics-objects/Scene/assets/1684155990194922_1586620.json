@@ -1,0 +1,22 @@
+{
+    "privateAssets": {
+        "1684155990194963:1586621": {
+            "isLazyAsset": false,
+            "uid": "1684155990194963:1586621",
+            "type": "Asset.ScriptAsset",
+            "name": "Unity SDK - Generic API API Module.js",
+            "publicName": "Unity SDK - Generic API API Module.js",
+            "hash": 15573517483005513687,
+            "provider": {
+                "type": "Provider.FileScriptProvider",
+                "fileinfo": {
+                    "path": "Files/File_1684155990192886_1586619.js",
+                    "location": 0
+                },
+                "filename": "Files/File_1684155990192886_1586619.js"
+            },
+            "staticInputs": null,
+            "automodules": null
+        }
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "1675108891143211:15542": {
+        "IResourceController": {
+            "name": "three",
+            "type": 12,
+            "subtype": -1,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1629851990059876:3638377",
+            "fileId": "1675108891143319:15683",
+            "originalId": "1675108891143320:15684",
+            "publicId": "1675108891143439:15854",
+            "expected_hash": "65cbc7b2b8a09acb8786abdc82a35bd9"
+        },
+        "IResourceManager": {
+            "uid": "1629851990059876:3638377",
+            "name": "three",
+            "flags": 0
+        }
+    },
+    "1675108891143319:15683": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143319_15683.oprfb"
+        }
+    },
+    "1675108891143320:15684": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143320_15684.oprfb"
+        }
+    },
+    "1675108891143439:15854": {
+        "IResourceController": {
+            "public": {
+                "path": "Hand Tracking Assets/Hand Gesture Presets [TRY_PREFABS]/three.oprfb",
+                "hash": "8ea85840a739d99d11769675fcc8c8f0"
+            }
+        }
+    }
+}

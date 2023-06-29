@@ -1,0 +1,39 @@
+{
+    "1675108891143212:15545": {
+        "IResourceController": {
+            "name": "spock",
+            "type": 12,
+            "subtype": -1,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1629851996055479:3714751",
+            "fileId": "1675108891143325:15689",
+            "originalId": "1675108891143326:15690",
+            "publicId": "1675108891143440:15857",
+            "expected_hash": "050136c8a33af361c32b786fb55c2d4a"
+        },
+        "IResourceManager": {
+            "uid": "1629851996055479:3714751",
+            "name": "spock",
+            "flags": 0
+        }
+    },
+    "1675108891143325:15689": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143325_15689.oprfb"
+        }
+    },
+    "1675108891143326:15690": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143326_15690.oprfb"
+        }
+    },
+    "1675108891143440:15857": {
+        "IResourceController": {
+            "public": {
+                "path": "Hand Tracking Assets/Hand Gesture Presets [TRY_PREFABS]/spock.oprfb",
+                "hash": "455afcb2f7a1da54b8fba9dd7bfa1a3b"
+            }
+        }
+    }
+}

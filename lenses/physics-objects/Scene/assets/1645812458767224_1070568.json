@@ -1,0 +1,26 @@
+{
+    "core": {
+        "isLazyAsset": false,
+        "uid": "1645812458767224:1070568",
+        "type": "Asset.Vec3AnimationTrackKeyFramed",
+        "name": "",
+        "keys": [
+            [
+                0.0,
+                [
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            ],
+            [
+                6.633333206176758,
+                [
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            ]
+        ]
+    }
+}

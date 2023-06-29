@@ -1,0 +1,26 @@
+{
+    "core": {
+        "uid": "1645775483633184:10452359",
+        "type": "SceneObject",
+        "layerV2": 1,
+        "name": "Walls",
+        "position": [
+            0.0,
+            0.0,
+            0.0
+        ],
+        "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+        ],
+        "scale": [
+            1.0,
+            1.0,
+            1.0
+        ],
+        "segmentScaleCompensate": false,
+        "isuserenabled": true
+    }
+}

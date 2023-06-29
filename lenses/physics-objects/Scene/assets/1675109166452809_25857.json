@@ -1,0 +1,22 @@
+{
+    "privateAssets": {
+        "1650575966958921:154803": {
+            "isLazyAsset": false,
+            "uid": "1650575966958921:154803",
+            "type": "Asset.Texture",
+            "name": "Textures/Car.png",
+            "provider": {
+                "type": "Provider.FileTextureProvider",
+                "hash": 18439912211392092144,
+                "useCache": true,
+                "allowDownscale": false,
+                "fileinfo": {
+                    "path": "Files/File_1675109166453005_26010.pvr",
+                    "location": 0
+                },
+                "filename": "Files/File_1675109166453005_26010.pvr",
+                "fileLocation": 0
+            }
+        }
+    }
+}

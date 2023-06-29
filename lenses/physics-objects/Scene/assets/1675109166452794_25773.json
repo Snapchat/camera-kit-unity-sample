@@ -1,0 +1,18 @@
+{
+    "privateAssets": {
+        "1644734549772450:265682": {
+            "isLazyAsset": false,
+            "uid": "1644734549772450:265682",
+            "type": "Asset.RenderMesh",
+            "name": "WorldObjectController/Meshes/plane.mesh",
+            "provider": {
+                "type": "Provider.FileRenderObjectProvider",
+                "fileinfo": {
+                    "path": "Files/File_1675109166452844_25880.mesh",
+                    "location": 0
+                },
+                "filename": "Files/File_1675109166452844_25880.mesh"
+            }
+        }
+    }
+}

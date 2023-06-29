@@ -1,0 +1,22 @@
+{
+    "privateAssets": {
+        "1650575968307798:155401": {
+            "isLazyAsset": false,
+            "uid": "1650575968307798:155401",
+            "type": "Asset.Texture",
+            "name": "Textures/ball_baseball_color.png",
+            "provider": {
+                "type": "Provider.FileTextureProvider",
+                "hash": 8855671256228847368,
+                "useCache": true,
+                "allowDownscale": false,
+                "fileinfo": {
+                    "path": "Files/File_1675109166453009_26013.pvr",
+                    "location": 0
+                },
+                "filename": "Files/File_1675109166453009_26013.pvr",
+                "fileLocation": 0
+            }
+        }
+    }
+}

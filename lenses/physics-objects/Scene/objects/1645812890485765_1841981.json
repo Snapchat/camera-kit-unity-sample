@@ -1,0 +1,55 @@
+{
+    "core": {
+        "uid": "1645812890485765:1841981",
+        "type": "SceneObject",
+        "layerV2": 1,
+        "name": "baseball",
+        "position": [
+            0.0,
+            0.0,
+            0.0
+        ],
+        "rotation": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+        ],
+        "scale": [
+            0.5,
+            0.5,
+            0.5
+        ],
+        "segmentScaleCompensate": false,
+        "isuserenabled": false,
+        "components": [
+            {
+                "uid": "1645812890491231:1842000",
+                "type": "Physics.BodyComponent",
+                "name": "Physics Body",
+                "isenabled": true,
+                "isInternal": false,
+                "updatepriority": 0,
+                "shape": {
+                    "type": "SphereShape",
+                    "sphereRadius": 3.799999952316284
+                },
+                "matter": "1645773961804881:7628264",
+                "filter": "-1:-1",
+                "worldSettings": "-1:-1",
+                "debugDrawEnabled": false,
+                "fitVisual": false,
+                "forceCompound": false,
+                "intangible": false,
+                "smooth": false,
+                "smoothTrans": 30.0,
+                "smoothRot": 30.0,
+                "dynamic": true,
+                "useDensity": false,
+                "massOrDensity": 0.004999999888241291,
+                "damping": 0.019999999552965164,
+                "angularDamping": 0.019999999552965164
+            }
+        ]
+    }
+}

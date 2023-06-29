@@ -1,0 +1,22 @@
+{
+    "privateAssets": {
+        "1645002272153404:656737": {
+            "isLazyAsset": false,
+            "uid": "1645002272153404:656737",
+            "type": "Asset.ScriptAsset",
+            "name": "Scripts/Tween/Tween.js",
+            "publicName": "Scripts/Tween/Tween.js",
+            "hash": 0,
+            "provider": {
+                "type": "Provider.FileScriptProvider",
+                "fileinfo": {
+                    "path": "Files/File_1675109166452880_25909.js",
+                    "location": 0
+                },
+                "filename": "Files/File_1675109166452880_25909.js"
+            },
+            "staticInputs": null,
+            "automodules": null
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "privateAssets": {
+        "1644829363244852:6177126": {
+            "isLazyAsset": false,
+            "uid": "1644829363244852:6177126",
+            "type": "Asset.RenderMesh",
+            "name": "Meshes/Balloons Pack Resources/Meshes/string_2.mesh",
+            "provider": {
+                "type": "Provider.FileRenderObjectProvider",
+                "fileinfo": {
+                    "path": "Files/File_1675109166452860_25893.mesh",
+                    "location": 0
+                },
+                "filename": "Files/File_1675109166452860_25893.mesh"
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "privateAssets": {
+        "1645238215752291:73206": {
+            "isLazyAsset": false,
+            "uid": "1645238215752291:73206",
+            "type": "Asset.RenderMesh",
+            "name": "Meshes/Car/Seat.mesh",
+            "provider": {
+                "type": "Provider.FileRenderObjectProvider",
+                "fileinfo": {
+                    "path": "Files/File_1675109166452926_25947.mesh",
+                    "location": 0
+                },
+                "filename": "Files/File_1675109166452926_25947.mesh"
+            }
+        }
+    }
+}

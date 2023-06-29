@@ -1,0 +1,17 @@
+{
+    "1675108891143214:15568": {
+        "IResourceController": {
+            "name": "Left Hand Tracking Asset",
+            "type": 34,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1642206104607688:182756"
+        },
+        "IResourceManager": {
+            "uid": "1642206104607688:182756",
+            "name": "",
+            "flags": 0
+        }
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "1675108891143212:15551": {
+        "IResourceController": {
+            "name": "SequencedGestureTrigger[EDIT_ME]",
+            "type": 4,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1629856999815491:7269280",
+            "fileId": "1675108891143337:15702",
+            "publicId": "1675108891143442:15864",
+            "expected_hash": "489bdb50d7f010dc7822d4fdcc7b0013"
+        },
+        "IResourceManager": {
+            "uid": "1629856999815491:7269280",
+            "name": "Files/File_1675108891143337_15702.js",
+            "flags": 1
+        }
+    },
+    "1675108891143337:15702": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143337_15702.js"
+        }
+    },
+    "1675108891143442:15864": {
+        "IResourceController": {
+            "public": {
+                "path": "Hand Tracking Assets/Scripts/Helpers/SequencedGestureTrigger[EDIT_ME].js",
+                "hash": "489bdb50d7f010dc7822d4fdcc7b0013"
+            }
+        }
+    }
+}
