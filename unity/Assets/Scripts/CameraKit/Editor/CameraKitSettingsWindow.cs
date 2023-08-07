@@ -7,7 +7,6 @@ using UnityEditor.Build;
 using UnityEditor.Build.Reporting;
 using UnityEditor.Callbacks;
 using Debug = UnityEngine.Debug;
-using UnityEditor.Build;
 using System.Text.RegularExpressions;
 #if UNITY_IOS
 using UnityEditor.iOS.Xcode;
@@ -70,10 +69,10 @@ public class CameraKitSettingsWindow : EditorWindow
             // }
         } else if (buildTarget == BuildTargetGroup.Android) {
             Config.AndroidWrapperProjectRelativePath = EditorGUILayout.TextField("Android Wrapper Path: ", Config.AndroidWrapperProjectRelativePath);
-            if (GUILayout.Button("DEBUG - Run Android Postprocess")) {
-                var pathToBuiltProject = Path.Combine(Application.dataPath, "../exports/unity-android-export/");
-                OnPostProcessBuild(BuildTarget.Android, pathToBuiltProject);
-            }
+            // if (GUILayout.Button("DEBUG - Run Android Postprocess")) {
+            //     var pathToBuiltProject = Path.Combine(Application.dataPath, "../exports/unity-android-export/");
+            //     OnPostProcessBuild(BuildTarget.Android, pathToBuiltProject);
+            // }
         }
         EditorGUILayout.EndBuildTargetSelectionGrouping();
         
@@ -255,16 +254,27 @@ public class CameraKitSettingsWindow : EditorWindow
     static void iOSTask_ConfigureXcodeProject(string pathToBuiltProject)
     {
         Debug.Log("Going to copy assets");
-        var destAssets = Path.Combine(pathToBuiltProject, Config.IosWrapperProjectRelativePath, "UnitySwift/Assets.xcassets");
+        var destAssets = Path.Combine(pathToBuiltProject, Config.IosWrapperProjectRelativePath, "UnityWithCameraKit/Assets.xcassets");
         var srcAssets = Path.Combine(pathToBuiltProject, "Unity-iPhone/Images.xcassets");
         CopyDirectory(srcAssets, destAssets, true);
         Debug.Log("Finished copying assets");
+        Debug.Log("Going to update bundle identifier");
+        var pbxPath = Path.Combine(pathToBuiltProject, Config.IosWrapperProjectRelativePath, "UnityWithCameraKit.xcodeproj/project.pbxproj");
+        var pbxProject = new PBXProject();
+        pbxProject.ReadFromFile(pbxPath);
+        var targetGuid = pbxProject.TargetGuidByName("UnityWithCameraKit");
+        Debug.Log("pbxPath " + pbxPath);
+        Debug.Log("targetGuid " + targetGuid);
+        Debug.Log("bundle id " + Application.identifier);
+        pbxProject.SetBuildProperty(targetGuid, "PRODUCT_BUNDLE_IDENTIFIER", Application.identifier);
+        pbxProject.WriteToFile(pbxPath);
+        Debug.Log("Finished updating bundle identifier");
     }
 
     static void iOSTask_ConfigureInfoPlist(string pathToBuiltProject)
     {
         Debug.Log("Going to edit Info.plist");
-        var infoPlistPath = Path.Combine(pathToBuiltProject, Config.IosWrapperProjectRelativePath, "UnitySwift/Info.plist");
+        var infoPlistPath = Path.Combine(pathToBuiltProject, Config.IosWrapperProjectRelativePath, "UnityWithCameraKit/Info.plist");
         var plist = new PlistDocument();
         plist.ReadFromString(File.ReadAllText(infoPlistPath));
 
@@ -272,6 +282,7 @@ public class CameraKitSettingsWindow : EditorWindow
         var rootDict = plist.root;
         rootDict["SCCameraKitClientID"] = new PlistElementString(Config.AppId);
         rootDict["SCCameraKitAPIToken"] = new PlistElementString(Config.ApiToken);
+        rootDict["CFBundleIdentifier"] = new PlistElementString(Application.identifier);
 
         File.WriteAllText(infoPlistPath, plist.WriteToString());
         Debug.Log("Finished editing Info.plist");
