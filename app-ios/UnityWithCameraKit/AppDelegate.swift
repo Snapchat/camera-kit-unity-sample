@@ -235,17 +235,14 @@ extension AppDelegate: NativeCallsProtocol {
         cameraViewController?.cameraView.carouselView.isHidden = true
         cameraViewController?.shutterButtonMode = shutterButtonMode
         cameraViewController?.clearLensAfterDismiss = unloadLens;
+        cameraViewController?.selectedCamera = cameraMode;
         
         if (renderMode == Constants.RenderMode.BehindUnity) { 
             invokeCameraKitAsBackgroundLayer()
         } else {
             invokeCameraKitAsModalFullScreen()
         }
-        
-        if ((cameraMode == Constants.Device.BackCamera && cameraViewController?.cameraController.cameraPosition == .front)
-            || (cameraMode == Constants.Device.FrontCamera && cameraViewController?.cameraController.cameraPosition == .back)) {
-            cameraViewController?.cameraController.flipCamera()
-        }
+
         
         if (shutterButtonMode == Constants.ShutterButtonMode.On) {
             cameraViewController?.cameraView.cameraButton.isHidden = false
@@ -302,6 +299,7 @@ class UnityCameraViewController: CameraViewController  {
     fileprivate var applyGroupId: String?
     fileprivate var shutterButtonMode: NSNumber?
     fileprivate var clearLensAfterDismiss: Bool = false
+    fileprivate var selectedCamera: NSNumber?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -320,6 +318,11 @@ class UnityCameraViewController: CameraViewController  {
         let launchDataToLens = launchDataBuilder.launchData ?? EmptyLensLaunchData()
         if (lens != nil) {
             cameraController.cameraKit.lenses.processor?.apply(lens: lens!, launchData: launchDataToLens)
+        }
+                
+        if ((selectedCamera == Constants.Device.BackCamera && cameraController.cameraPosition == .front)
+            || (selectedCamera == Constants.Device.FrontCamera && cameraController.cameraPosition == .back)) {
+            cameraController.flipCamera()
         }
     }
 

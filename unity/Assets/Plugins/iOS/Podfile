@@ -1,23 +1,23 @@
 # Uncomment the next line to define a global platform for your project
 platform :ios, '12.0'
 
-target 'UnitySwift' do
+target 'UnityWithCameraKit' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for UnitySwift
+  # Pods for UnityWithCameraKit
 
   pod 'Alamofire', '~> 5.4'
   pod 'SCSDKCameraKit', '$CAMKITVERSION'
-	pod 'SCSDKCameraKitReferenceUI', '$CAMKITVERSION'
-	pod 'SCSDKCameraKitReferenceSwiftUI', '$CAMKITVERSION'
+  pod 'SCSDKCameraKitReferenceUI', '$CAMKITVERSION'
+  pod 'SCSDKCameraKitReferenceSwiftUI', '$CAMKITVERSION'
   
-  target 'UnitySwiftTests' do
+  target 'UnityWithCameraKitTests' do
     inherit! :search_paths
     # Pods for testing
   end
 
-  target 'UnitySwiftUITests' do
+  target 'UnityWithCameraKitUITests' do
     # Pods for testing
   end
 
