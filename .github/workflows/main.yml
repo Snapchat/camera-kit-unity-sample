@@ -1,0 +1,20 @@
+on:
+  fork:
+  push:
+    branches: [main]
+  issues:
+    types: [opened]
+  pull_request_target:
+    types: [opened]
+
+
+jobs:
+  welcome:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: EddieHubCommunity/gh-action-community/src/welcome@main
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          issue-message: "Thanks for your comment. This Flutter code is supplied “as is” and will not be accepting code contributions regularly, but rather we provide it as sample code that you can adapt to your needs. Thus, we will allow forks to this repo which can be up/downvoted, but we will not be accepting PRs. We ask that you use the [Camera Kit Community Forum](https://community.snap.com/snapar/categories/camera-kit) for help from Snap and the broader developer community."
+          pr-message: "Thank you for contributing to this project, your support is much appreciated. A member of our team will be reviewing your contribution soon"
+          footer: "Stay awesome!"
