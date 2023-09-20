@@ -15,6 +15,6 @@ jobs:
       - uses: EddieHubCommunity/gh-action-community/src/welcome@main
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          issue-message: "Thanks for your comment. This Flutter code is supplied “as is” and will not be accepting code contributions regularly, but rather we provide it as sample code that you can adapt to your needs. Thus, we will allow forks to this repo which can be up/downvoted, but we will not be accepting PRs. We ask that you use the [Camera Kit Community Forum](https://community.snap.com/snapar/categories/camera-kit) for help from Snap and the broader developer community."
+          issue-message: "Hello, thank you for your response. We are enthusiastic about receiving contributions from our community. If your issue/comment requires support, please see the [Camera Kit Community Forum](https://community.snap.com/snapar/categories/camera-kit) for support as support requests on this repo will be closed out. Code contributions will be reviewed regularly. Thank you!"
           pr-message: "Thank you for contributing to this project, your support is much appreciated. A member of our team will be reviewing your contribution soon"
-          footer: "Stay awesome!"
+          footer: ""
