@@ -262,7 +262,7 @@
             },
             "show_snap_ui": "false",
             "show_sponsored_ui": "false",
-            "input_stream_type": "Image",
+            "input_stream_type": "WebCam",
             "preview_images_project_config": {
                 "back_preview_id": "bundle:Preview\/Images\/Gesture Open.jpg",
                 "back_preview_is_favorite": "false",
