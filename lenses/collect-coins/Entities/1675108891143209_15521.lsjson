@@ -1,0 +1,38 @@
+{
+    "1628839897714863:3760530": {
+        "ScriptModulesController": {
+            "dependent_module_names": []
+        }
+    },
+    "1675108891143209:15521": {
+        "IResourceController": {
+            "name": "TweenAlpha",
+            "type": 4,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1628839897714863:3760530",
+            "fileId": "1675108891143288:15651",
+            "publicId": "1675108891143433:15831",
+            "expected_hash": "4bf7515ee17137b35e353d99bc906bb4"
+        },
+        "IResourceManager": {
+            "uid": "1628839897714863:3760530",
+            "name": "Files/File_1675108891143288_15651.js",
+            "flags": 1
+        }
+    },
+    "1675108891143288:15651": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143288_15651.js"
+        }
+    },
+    "1675108891143433:15831": {
+        "IResourceController": {
+            "public": {
+                "path": "Scripts/Tween/TweenTypes/TweenAlpha.js",
+                "hash": "4bf7515ee17137b35e353d99bc906bb4"
+            }
+        }
+    }
+}

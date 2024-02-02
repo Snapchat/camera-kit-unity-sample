@@ -6,12 +6,24 @@
 // @input Asset.RemoteServiceModule remoteServiceModule
 
 // Import module
-const Module = require("./Unity SDK - Generic API API Module");
+const Module = require("./Camera Kit Unity Bridge API Module");
 const UnityApi = new Module.ApiModule(script.remoteServiceModule);
 
 // -----JS CODE-----
 var dragging = false
 var overlapping = false
+
+function sendEventToUnity(eventName, eventValue) {
+    var dataToSend = {
+        "eventName" : eventName,
+        "eventValue" : eventValue
+    };
+    UnityApi.unity_send_data(JSON.stringify(dataToSend), function(err, r){
+        print("Data sent to Unity");
+        print("Error? " + err);
+        print("Result? " + r);
+    })
+}
 
 function handDetected(handName) {
     //print("Hand detected: "+ handName);
@@ -21,18 +33,6 @@ function handDetected(handName) {
 function handLost(handName) {
     //print("Hand lost: "+ handName);
     sendEventToUnity("handLost", handName);
-}
-
-function sendEventToUnity(eventName, eventValue) {
-    var dataToSend = {
-        "eventName" : eventName,
-        "eventValue" : eventValue
-    };
-    UnityApi.unitySendData(JSON.stringify(dataToSend), function(err, r){
-        print("Data sent to Unity");
-        print("Error? " + err);
-        print("Result? " + r);
-    })
 }
 
 script.createEvent("UpdateEvent").bind(function() {

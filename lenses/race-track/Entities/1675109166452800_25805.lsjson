@@ -1,0 +1,39 @@
+{
+    "1675109166452800:25805": {
+        "IResourceController": {
+            "name": "Car Body",
+            "type": 2,
+            "subtype": 1,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1645084596534853:6048696",
+            "fileId": "1675109166452897:25924",
+            "originalId": "1675109166452899:25925",
+            "publicId": "1675109166453498:26094",
+            "expected_hash": "d5130be8be4b5fdd67d0b8329db1b2a6"
+        },
+        "IResourceManager": {
+            "uid": "1645084596534853:6048696",
+            "name": "Files/File_1675109166452897_25924",
+            "flags": 1
+        }
+    },
+    "1675109166452897:25924": {
+        "IFileManager": {
+            "path": "Files/File_1675109166452897_25924"
+        }
+    },
+    "1675109166452899:25925": {
+        "IFileManager": {
+            "path": "Files/File_1675109166452899_25925.lsmat"
+        }
+    },
+    "1675109166453498:26094": {
+        "IResourceController": {
+            "public": {
+                "path": "Materials/Car Body.lsmat",
+                "hash": "9ad023022ade4c90d87fbf508dab7a4d"
+            }
+        }
+    }
+}

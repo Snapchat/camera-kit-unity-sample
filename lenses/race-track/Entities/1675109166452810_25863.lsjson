@@ -1,0 +1,39 @@
+{
+    "1675109166452810:25863": {
+        "IResourceController": {
+            "name": "string_color_1",
+            "type": 2,
+            "subtype": 1,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1650577322529944:756040",
+            "fileId": "1675109166453036:26034",
+            "originalId": "1675109166453038:26035",
+            "publicId": "1675109166453518:26146",
+            "expected_hash": "c3fa1847125f1cff856b896812887026"
+        },
+        "IResourceManager": {
+            "uid": "1650577322529944:756040",
+            "name": "Files/File_1675109166453036_26034",
+            "flags": 1
+        }
+    },
+    "1675109166453036:26034": {
+        "IFileManager": {
+            "path": "Files/File_1675109166453036_26034"
+        }
+    },
+    "1675109166453038:26035": {
+        "IFileManager": {
+            "path": "Files/File_1675109166453038_26035.lsmat"
+        }
+    },
+    "1675109166453518:26146": {
+        "IResourceController": {
+            "public": {
+                "path": "Meshes/Balloons Pack Resources/Materials/string_color_1.lsmat",
+                "hash": "1f45f4111a713825a86b6704fc8d9bbb"
+            }
+        }
+    }
+}

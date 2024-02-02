@@ -1,0 +1,40 @@
+{
+    "1706808154129059:1285880": {
+        "IFileManager": {
+            "path": "Files/File_1706808154129059_1285880.js"
+        }
+    },
+    "1706808154131777:1285881": {
+        "IResourceController": {
+            "name": "RequestUnityState",
+            "type": 4,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1706808154131795:1285882",
+            "fileId": "1706808154129059:1285880",
+            "publicId": "1706808154133465:1285887",
+            "expected_hash": "06c4d8811639b99c71d6946614d2f541"
+        },
+        "IResourceManager": {
+            "uid": "1706808154131795:1285882",
+            "name": "Files/File_1706808154129059_1285880.js",
+            "flags": 1
+        }
+    },
+    "1706808154131795:1285882": {
+        "ScriptModulesController": {
+            "dependent_module_names": [
+                "Camera Kit Unity Bridge API Module"
+            ]
+        }
+    },
+    "1706808154133465:1285887": {
+        "IResourceController": {
+            "public": {
+                "path": "Scripts/RequestUnityState.js",
+                "hash": "06c4d8811639b99c71d6946614d2f541"
+            }
+        }
+    }
+}

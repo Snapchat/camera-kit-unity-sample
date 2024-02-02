@@ -1,0 +1,17 @@
+{
+    "1706205471151311:2759091": {
+        "IResourceController": {
+            "name": "Camera Kit Unity Bridge",
+            "type": 27,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1706205471151303:2759090"
+        },
+        "IResourceManager": {
+            "uid": "1706205471151303:2759090",
+            "name": "",
+            "flags": 0
+        }
+    }
+}

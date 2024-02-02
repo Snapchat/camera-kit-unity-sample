@@ -1,0 +1,38 @@
+{
+    "1629839445743520:262438": {
+        "ScriptModulesController": {
+            "dependent_module_names": []
+        }
+    },
+    "1675108891143211:15535": {
+        "IResourceController": {
+            "name": "PositionBasedDynamicsHelpers",
+            "type": 4,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1629839445743520:262438",
+            "fileId": "1675108891143307:15671",
+            "publicId": "1675108891143437:15844",
+            "expected_hash": "d2151bce54cf73d8154e94fbc99fbee4"
+        },
+        "IResourceManager": {
+            "uid": "1629839445743520:262438",
+            "name": "Files/File_1675108891143307_15671.js",
+            "flags": 1
+        }
+    },
+    "1675108891143307:15671": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143307_15671.js"
+        }
+    },
+    "1675108891143437:15844": {
+        "IResourceController": {
+            "public": {
+                "path": "Scripts/ChainController/PositionBasedDynamicsHelpers.js",
+                "hash": "d2151bce54cf73d8154e94fbc99fbee4"
+            }
+        }
+    }
+}

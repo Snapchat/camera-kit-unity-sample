@@ -1,0 +1,38 @@
+{
+    "1626214448213322:7700": {
+        "ScriptModulesController": {
+            "dependent_module_names": []
+        }
+    },
+    "1675108891143205:15483": {
+        "IResourceController": {
+            "name": "HandTrackingController",
+            "type": 4,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1626214448213322:7700",
+            "fileId": "1675108891143242:15600",
+            "publicId": "1675108891143423:15788",
+            "expected_hash": "25477c195e34a7a29137d4b2500ab2f1"
+        },
+        "IResourceManager": {
+            "uid": "1626214448213322:7700",
+            "name": "Files/File_1675108891143242_15600.js",
+            "flags": 1
+        }
+    },
+    "1675108891143242:15600": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143242_15600.js"
+        }
+    },
+    "1675108891143423:15788": {
+        "IResourceController": {
+            "public": {
+                "path": "Hand Tracking Assets/Scripts/HandTrackingController.js",
+                "hash": "25477c195e34a7a29137d4b2500ab2f1"
+            }
+        }
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "1675109166452803:25823": {
+        "IResourceController": {
+            "name": "Toon Tree Green",
+            "type": 2,
+            "subtype": 1,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1645496731684770:5504037",
+            "fileId": "1675109166452936:25955",
+            "originalId": "1675109166452937:25956",
+            "publicId": "1675109166453505:26112",
+            "expected_hash": "8184f14405a6b5e0e7f19867bb5fe511"
+        },
+        "IResourceManager": {
+            "uid": "1645496731684770:5504037",
+            "name": "Files/File_1675109166452936_25955",
+            "flags": 1
+        }
+    },
+    "1675109166452936:25955": {
+        "IFileManager": {
+            "path": "Files/File_1675109166452936_25955"
+        }
+    },
+    "1675109166452937:25956": {
+        "IFileManager": {
+            "path": "Files/File_1675109166452937_25956.lsmat"
+        }
+    },
+    "1675109166453505:26112": {
+        "IResourceController": {
+            "public": {
+                "path": "Materials/Toon Tree Green.lsmat",
+                "hash": "01cfece455e004ff7dec21e727b92c0f"
+            }
+        }
+    }
+}

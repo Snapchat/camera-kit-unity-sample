@@ -1,0 +1,42 @@
+{
+    "1675108891143209:15518": {
+        "IResourceController": {
+            "name": "Hand Hint PBR",
+            "type": 2,
+            "subtype": 1,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1628797520887825:510787",
+            "fileId": "1675108891143285:15647",
+            "originalId": "1675108891143286:15648",
+            "publicId": "1675108891143432:15826",
+            "expected_hash": "bbc70334cbc378ce2a7fe2a4e374d378",
+            "additional": {
+                "isUnpackedInPublic": "false"
+            }
+        },
+        "IResourceManager": {
+            "uid": "1628797520887825:510787",
+            "name": "Files/File_1675108891143285_15647",
+            "flags": 1
+        }
+    },
+    "1675108891143285:15647": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143285_15647"
+        }
+    },
+    "1675108891143286:15648": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143286_15648.lsmat"
+        }
+    },
+    "1675108891143432:15826": {
+        "IResourceController": {
+            "public": {
+                "path": "Hand Tracking Assets/Materials/Hand Hint PBR.lsmat",
+                "hash": "d8c01a29f689d1124889063d3b40c399"
+            }
+        }
+    }
+}

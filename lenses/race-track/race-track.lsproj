@@ -1,0 +1,1933 @@
+{
+    "lens_id": "",
+    "document_id": "kAJS-XFdxKe5zFK3LPAB",
+    "original_document_id": "kAJS-XFdxKe5zFK3LPAB",
+    "version": "33",
+    "preview": "icon.png",
+    "videoPreview": "preview.mp4",
+    "videoPreviewUpdateTime": "",
+    "isReadOnly": "false",
+    "isAutoSaved": "true",
+    "api_level": "public",
+    "public_api_user_data_access": "unrestricted",
+    "studioVersion": {
+        "createdWith": {
+            "type": "Public",
+            "major": "4",
+            "minor": "55",
+            "patch": "1",
+            "build": "0"
+        },
+        "lastSavedWith": {
+            "type": "Public",
+            "major": "4",
+            "minor": "55",
+            "patch": "1",
+            "build": "0"
+        }
+    },
+    "view": {
+        "InspectorUiComponent": "",
+        "MapUiComponent": {
+            "mapPinPoints": {
+                "1649082416475574:107527": {
+                    "longitude": "0",
+                    "latitude": "0",
+                    "selected": "false",
+                    "valid": "false",
+                    "pinName": "",
+                    "pinUid": "-1:-1",
+                    "locationAsset": "-1:-1"
+                },
+                "1649082427199232:110271": {
+                    "longitude": "0",
+                    "latitude": "0",
+                    "selected": "false",
+                    "valid": "false",
+                    "pinName": "",
+                    "pinUid": "-1:-1",
+                    "locationAsset": "-1:-1"
+                },
+                "1649082439729750:113424": {
+                    "longitude": "0",
+                    "latitude": "0",
+                    "selected": "false",
+                    "valid": "false",
+                    "pinName": "",
+                    "pinUid": "-1:-1",
+                    "locationAsset": "-1:-1"
+                },
+                "1649082450030542:116090": {
+                    "longitude": "0",
+                    "latitude": "0",
+                    "selected": "false",
+                    "valid": "false",
+                    "pinName": "",
+                    "pinUid": "-1:-1",
+                    "locationAsset": "-1:-1"
+                },
+                "1649082460630816:118829": {
+                    "longitude": "0",
+                    "latitude": "0",
+                    "selected": "false",
+                    "valid": "false",
+                    "pinName": "",
+                    "pinUid": "-1:-1",
+                    "locationAsset": "-1:-1"
+                },
+                "1649082471244376:121575": {
+                    "longitude": "0",
+                    "latitude": "0",
+                    "selected": "false",
+                    "valid": "false",
+                    "pinName": "",
+                    "pinUid": "-1:-1",
+                    "locationAsset": "-1:-1"
+                },
+                "1649082481781800:124296": {
+                    "longitude": "0",
+                    "latitude": "0",
+                    "selected": "false",
+                    "valid": "false",
+                    "pinName": "",
+                    "pinUid": "-1:-1",
+                    "locationAsset": "-1:-1"
+                },
+                "1649082491465116:126851": {
+                    "longitude": "0",
+                    "latitude": "0",
+                    "selected": "false",
+                    "valid": "false",
+                    "pinName": "",
+                    "pinUid": "-1:-1",
+                    "locationAsset": "-1:-1"
+                },
+                "1649082504700263:130155": {
+                    "longitude": "0",
+                    "latitude": "0",
+                    "selected": "false",
+                    "valid": "false",
+                    "pinName": "",
+                    "pinUid": "-1:-1",
+                    "locationAsset": "-1:-1"
+                },
+                "1649083114749264:286916": {
+                    "longitude": "-0.13116145133972168",
+                    "latitude": "51.512794494628906",
+                    "selected": "false",
+                    "valid": "true",
+                    "pinName": "Pin",
+                    "pinUid": "1649083114749061:286915",
+                    "locationAsset": "1649083114749736:286917"
+                },
+                "1649094984677630:32157": {
+                    "longitude": "-0.13121148943901062",
+                    "latitude": "51.512771606445312",
+                    "selected": "false",
+                    "valid": "true",
+                    "pinName": "Pin",
+                    "pinUid": "1649094984677441:32156",
+                    "locationAsset": "1649094984678151:32158"
+                },
+                "1649772212970366:35230": {
+                    "longitude": "-0.13149562478065491",
+                    "latitude": "51.513656616210938",
+                    "selected": "false",
+                    "valid": "true",
+                    "pinName": "Pin",
+                    "pinUid": "1649772212970143:35229",
+                    "locationAsset": "1649772212970867:35231"
+                },
+                "1649778275335615:644381": {
+                    "longitude": "0",
+                    "latitude": "0",
+                    "selected": "false",
+                    "valid": "false",
+                    "pinName": "",
+                    "pinUid": "-1:-1",
+                    "locationAsset": "-1:-1"
+                },
+                "1649778655920914:710757": {
+                    "longitude": "-0.13150887191295624",
+                    "latitude": "51.513614654541016",
+                    "selected": "false",
+                    "valid": "true",
+                    "pinName": "Pin - Frith Street [PLACE_CONTENT_HERE]",
+                    "pinUid": "1649778655920668:710756",
+                    "locationAsset": "1649778655921339:710758"
+                },
+                "1649865066556768:58106": {
+                    "longitude": "-0.13167314231395721",
+                    "latitude": "51.513031005859375",
+                    "selected": "false",
+                    "valid": "true",
+                    "pinName": "Pin - Old Compton Street [PLACE_CONTENT_HERE]",
+                    "pinUid": "1649865066556471:58105",
+                    "locationAsset": "1649865066557449:58107"
+                },
+                "1649964505575077:712535": {
+                    "longitude": "-0.13096083700656891",
+                    "latitude": "51.512859344482422",
+                    "selected": "false",
+                    "valid": "true",
+                    "pinName": "Pin - Romilly Street [PLACE_CONTENT_HERE]",
+                    "pinUid": "1649964505574756:712534",
+                    "locationAsset": "1649964505575881:712536"
+                },
+                "1651740821321039:38503": {
+                    "longitude": "-0.13170607388019562",
+                    "latitude": "51.512580871582031",
+                    "selected": "false",
+                    "valid": "true",
+                    "pinName": "Pin - Dean Street And Romily",
+                    "pinUid": "1651740821320812:38502",
+                    "locationAsset": "1651740821321523:38504"
+                },
+                "1651744904534351:1306090": {
+                    "longitude": "-0.13159231841564178",
+                    "latitude": "51.512386322021484",
+                    "selected": "false",
+                    "valid": "true",
+                    "pinName": "Pin",
+                    "pinUid": "1651744904534135:1306089",
+                    "locationAsset": "1651744904535003:1306091"
+                },
+                "1652347539892906:46549": {
+                    "longitude": "-0.085821650922298431",
+                    "latitude": "51.528266906738281",
+                    "selected": "false",
+                    "valid": "true",
+                    "pinName": "Pin",
+                    "pinUid": "1652347539892395:46548",
+                    "locationAsset": "1652347539893864:46550"
+                },
+                "1653297295919937:563039": {
+                    "longitude": "-0.12685032188892365",
+                    "latitude": "51.507827758789062",
+                    "selected": "false",
+                    "valid": "true",
+                    "pinName": "Pin",
+                    "pinUid": "1653297295919457:563038",
+                    "locationAsset": "1653297295921503:563046"
+                },
+                "1653297493220826:286071": {
+                    "longitude": "-0.12681996822357178",
+                    "latitude": "51.515045166015625",
+                    "selected": "false",
+                    "valid": "true",
+                    "pinName": "Pin",
+                    "pinUid": "1653297493220620:286070",
+                    "locationAsset": "1653297493221647:286072"
+                },
+                "1653297815414767:678204": {
+                    "longitude": "-0.12326952069997787",
+                    "latitude": "51.509716033935547",
+                    "selected": "false",
+                    "valid": "true",
+                    "pinName": "Pin",
+                    "pinUid": "1653297815414537:678203",
+                    "locationAsset": "1653297815415381:678205"
+                }
+            },
+            "mapCurrentPosition": {
+                "x": "-0.130984917",
+                "y": "51.5128555"
+            },
+            "mapCurrentCity": "0"
+        },
+        "Material::UiComponent": "",
+        "MetaInfoUIComponent": {
+            "icon_hash": "17db888a2b01654de6849317238d14cf",
+            "icon_path": "icon.png",
+            "hints": [
+                ""
+            ],
+            "lens": "DUCK: Race Track",
+            "applicability": "3",
+            "compatibility_descriptors": [
+                "mobile",
+                "web"
+            ],
+            "lens_descriptors": "",
+            "sg": "false",
+            "git_friendly": "true",
+            "activation_camera": "front",
+            "Spectacles2021UseAllowed": "false"
+        },
+        "ObjectTracking3DUIComponent": "",
+        "PreviewUiComponent": {
+            "preview_descriptor": {
+                "is_capture": "0",
+                "camera_type": "1"
+            },
+            "show_snap_ui": "true",
+            "show_sponsored_ui": "false",
+            "input_stream_type": "Image",
+            "preview_images_project_config": {
+                "back_preview_id": "bundle:Preview\/Images\/Beach.jpg",
+                "back_preview_is_favorite": "false",
+                "front_preview_id": "bundle:Preview\/Images\/Person 4.jpg",
+                "front_preview_is_favorite": "false"
+            },
+            "preview_videos_project_config": {
+                "back_preview_id": "bundle:Preview\/Videos\/Stairs.webm",
+                "back_preview_is_favorite": "false",
+                "front_preview_id": "bundle:Preview\/Videos\/Idle Person 4.webm",
+                "front_preview_is_favorite": "false"
+            },
+            "preview_ie_project_config": {
+                "back_preview_id": "bundle:Preview\/InteractiveEnvironments\/Colorful Home",
+                "back_preview_is_favorite": "false",
+                "front_preview_id": "bundle:Preview\/InteractiveEnvironments\/Colorful Home",
+                "front_preview_is_favorite": "false"
+            }
+        },
+        "ResourceUiComponent": "",
+        "SceneTreeUiComponent": "",
+        "Script::UiComponent": "",
+        "VFX::UiComponent": ""
+    },
+    "model": {
+        "IFileManager": "",
+        "IResourceManager": {
+            "MaterialUpdateManager": {
+                "unrecognizedMaterials": ""
+            }
+        },
+        "LayerComponent": {
+            "nextLayerId": "2",
+            "showOrthographicLayer": "true",
+            "layersInfo": [
+                {
+                    "layerId": "0",
+                    "layerName": "Default Layer",
+                    "layerMask": "1",
+                    "colorCode": "20"
+                },
+                {
+                    "layerId": "1",
+                    "layerName": "Orthographic Layer",
+                    "layerMask": "1048576",
+                    "colorCode": "21"
+                }
+            ]
+        },
+        "RemoteApi::ModelManager": {
+            "api_specs": [
+                {
+                    "k": "1706804380415039:759025",
+                    "v": {
+                        "api_spec_id": "98821e72-0407-4125-be80-89a9c7933631",
+                        "name": "Unity SDK - Generic API",
+                        "provider_name": "Camera Kit - Unity SDK",
+                        "description": "A generic API allowing for interchange of information between the Unity SDK and Lens Studio",
+                        "host": "unity",
+                        "documentation_url": "",
+                        "endpoints": [
+                            {
+                                "ref_id": "unitySendData",
+                                "metadata": {
+                                    "name": "",
+                                    "description": ""
+                                },
+                                "parameters": [
+                                    {
+                                        "name": "unityData",
+                                        "is_optional": "true"
+                                    }
+                                ]
+                            }
+                        ],
+                        "local_only": "false",
+                        "visibility": "private",
+                        "source": "developer",
+                        "restricted_js_api_permissions": ""
+                    }
+                },
+                {
+                    "k": "1706804445670229:1175281",
+                    "v": {
+                        "api_spec_id": "7e97dc02-2575-441e-a32f-7f838bbf6fd8",
+                        "name": "Camera Kit Unity Bridge",
+                        "provider_name": "Camera Kit Unity",
+                        "description": "Creates a bridge between Unity and Lens Studio ",
+                        "host": "unity",
+                        "documentation_url": "",
+                        "endpoints": [
+                            {
+                                "ref_id": "unitysenddata",
+                                "metadata": {
+                                    "name": "",
+                                    "description": ""
+                                },
+                                "parameters": [
+                                    {
+                                        "name": "unityData",
+                                        "is_optional": "true"
+                                    }
+                                ]
+                            },
+                            {
+                                "ref_id": "unityrequeststate",
+                                "metadata": {
+                                    "name": "",
+                                    "description": ""
+                                },
+                                "parameters": ""
+                            }
+                        ],
+                        "local_only": "true",
+                        "visibility": "private",
+                        "source": "developer",
+                        "restricted_js_api_permissions": ""
+                    }
+                }
+            ]
+        },
+        "RenderOrderComponent": "",
+        "WorldComponent": {
+            "sceneFile": "Scene",
+            "sceneType": "splitScene",
+            "hitTestDisabledObjectsList": {
+                "type_name": "array"
+            }
+        }
+    },
+    "controller": {
+        "AssetImportController": {
+            "itemUidToID": ""
+        },
+        "Compression::IController": "",
+        "DigitalGoodsController": {
+            "digital_goods": ""
+        },
+        "IResourceController": "",
+        "InspectorController": "",
+        "ObjectPrefabController": {
+            "state": {
+                "objectToInfo": ""
+            },
+            "importInfo": [
+                {
+                    "k": "1644802495434475:1969036",
+                    "v": [
+                        {
+                            "k": "",
+                            "v": "1644802495430862:1969017"
+                        },
+                        {
+                            "k": [
+                                "Default"
+                            ],
+                            "v": "1644802495432279:1969019"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_1"
+                            ],
+                            "v": "1644802495432614:1969021"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_1",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1644802495432962:1969023"
+                        }
+                    ]
+                },
+                {
+                    "k": "1644807908507855:2670957",
+                    "v": [
+                        {
+                            "k": "",
+                            "v": "1644809743985448:3050491"
+                        },
+                        {
+                            "k": [
+                                "Object_1.003"
+                            ],
+                            "v": "1644809743999449:3050497"
+                        },
+                        {
+                            "k": [
+                                "Object_1.003",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1644809744000138:3050499"
+                        },
+                        {
+                            "k": [
+                                "Object_10.003"
+                            ],
+                            "v": "1644809744014475:3050617"
+                        },
+                        {
+                            "k": [
+                                "Object_10.003",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1644809744015169:3050619"
+                        },
+                        {
+                            "k": [
+                                "Object_11.003"
+                            ],
+                            "v": "1644809744016375:3050632"
+                        },
+                        {
+                            "k": [
+                                "Object_11.003",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1644809744017041:3050634"
+                        },
+                        {
+                            "k": [
+                                "Object_12.003"
+                            ],
+                            "v": "1644809744018208:3050647"
+                        },
+                        {
+                            "k": [
+                                "Object_12.003",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1644809744018879:3050649"
+                        },
+                        {
+                            "k": [
+                                "Object_13.003"
+                            ],
+                            "v": "1644809744019945:3050662"
+                        },
+                        {
+                            "k": [
+                                "Object_13.003",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1644809744020594:3050664"
+                        },
+                        {
+                            "k": [
+                                "Object_14.003"
+                            ],
+                            "v": "1644809744021710:3050677"
+                        },
+                        {
+                            "k": [
+                                "Object_14.003",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1644809744022296:3050679"
+                        },
+                        {
+                            "k": [
+                                "Object_15.003"
+                            ],
+                            "v": "1644809744023370:3050692"
+                        },
+                        {
+                            "k": [
+                                "Object_15.003",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1644809744023959:3050694"
+                        },
+                        {
+                            "k": [
+                                "Object_16.002"
+                            ],
+                            "v": "1644809744024954:3050707"
+                        },
+                        {
+                            "k": [
+                                "Object_16.002",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1644809744025537:3050709"
+                        },
+                        {
+                            "k": [
+                                "Object_17.002"
+                            ],
+                            "v": "1644809744026622:3050722"
+                        },
+                        {
+                            "k": [
+                                "Object_17.002",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1644809744027306:3050728"
+                        },
+                        {
+                            "k": [
+                                "Object_18.002"
+                            ],
+                            "v": "1644809744028305:3050741"
+                        },
+                        {
+                            "k": [
+                                "Object_18.002",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1644809744029184:3050743"
+                        },
+                        {
+                            "k": [
+                                "Object_19.002"
+                            ],
+                            "v": "1644809744030188:3050756"
+                        },
+                        {
+                            "k": [
+                                "Object_19.002",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1644809744030978:3050758"
+                        },
+                        {
+                            "k": [
+                                "Object_20.002"
+                            ],
+                            "v": "1644809744032242:3050771"
+                        },
+                        {
+                            "k": [
+                                "Object_20.002",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1644809744032942:3050773"
+                        },
+                        {
+                            "k": [
+                                "Object_21.002"
+                            ],
+                            "v": "1644809744033998:3050786"
+                        },
+                        {
+                            "k": [
+                                "Object_21.002",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1644809744034608:3050788"
+                        },
+                        {
+                            "k": [
+                                "Object_22.002"
+                            ],
+                            "v": "1644809744035660:3050801"
+                        },
+                        {
+                            "k": [
+                                "Object_22.002",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1644809744036268:3050803"
+                        },
+                        {
+                            "k": [
+                                "Object_23.002"
+                            ],
+                            "v": "1644809744037487:3050816"
+                        },
+                        {
+                            "k": [
+                                "Object_23.002",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1644809744038158:3050818"
+                        },
+                        {
+                            "k": [
+                                "Object_24.002"
+                            ],
+                            "v": "1644809744039141:3050831"
+                        },
+                        {
+                            "k": [
+                                "Object_24.002",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1644809744039747:3050833"
+                        },
+                        {
+                            "k": [
+                                "Object_25.002"
+                            ],
+                            "v": "1644809744040743:3050846"
+                        },
+                        {
+                            "k": [
+                                "Object_25.002",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1644809744041354:3050848"
+                        },
+                        {
+                            "k": [
+                                "Object_26.002"
+                            ],
+                            "v": "1644809744042382:3050861"
+                        },
+                        {
+                            "k": [
+                                "Object_26.002",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1644809744043032:3050863"
+                        },
+                        {
+                            "k": [
+                                "Object_27.002"
+                            ],
+                            "v": "1644809744044012:3050876"
+                        },
+                        {
+                            "k": [
+                                "Object_27.002",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1644809744044628:3050878"
+                        },
+                        {
+                            "k": [
+                                "Object_28.002"
+                            ],
+                            "v": "1644809744045621:3050891"
+                        },
+                        {
+                            "k": [
+                                "Object_28.002",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1644809744046237:3050893"
+                        },
+                        {
+                            "k": [
+                                "Object_29.002"
+                            ],
+                            "v": "1644809744047234:3050906"
+                        },
+                        {
+                            "k": [
+                                "Object_29.002",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1644809744047869:3050908"
+                        },
+                        {
+                            "k": [
+                                "Object_3.004"
+                            ],
+                            "v": "1644809744001440:3050512"
+                        },
+                        {
+                            "k": [
+                                "Object_3.004",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1644809744002079:3050514"
+                        },
+                        {
+                            "k": [
+                                "Object_30.002"
+                            ],
+                            "v": "1644809744048879:3050921"
+                        },
+                        {
+                            "k": [
+                                "Object_30.002",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1644809744049511:3050923"
+                        },
+                        {
+                            "k": [
+                                "Object_31.002"
+                            ],
+                            "v": "1644809744050606:3050936"
+                        },
+                        {
+                            "k": [
+                                "Object_31.002",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1644809744051288:3050938"
+                        },
+                        {
+                            "k": [
+                                "Object_32.002"
+                            ],
+                            "v": "1644809744052466:3050951"
+                        },
+                        {
+                            "k": [
+                                "Object_32.002",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1644809744053113:3050953"
+                        },
+                        {
+                            "k": [
+                                "Object_33.002"
+                            ],
+                            "v": "1644809744054201:3050966"
+                        },
+                        {
+                            "k": [
+                                "Object_33.002",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1644809744054834:3050968"
+                        },
+                        {
+                            "k": [
+                                "Object_34.002"
+                            ],
+                            "v": "1644809744056007:3050981"
+                        },
+                        {
+                            "k": [
+                                "Object_34.002",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1644809744056661:3050983"
+                        },
+                        {
+                            "k": [
+                                "Object_35.002"
+                            ],
+                            "v": "1644809744057787:3050996"
+                        },
+                        {
+                            "k": [
+                                "Object_35.002",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1644809744058573:3051002"
+                        },
+                        {
+                            "k": [
+                                "Object_36.002"
+                            ],
+                            "v": "1644809744059593:3051015"
+                        },
+                        {
+                            "k": [
+                                "Object_36.002",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1644809744060586:3051017"
+                        },
+                        {
+                            "k": [
+                                "Object_37.002"
+                            ],
+                            "v": "1644809744061569:3051030"
+                        },
+                        {
+                            "k": [
+                                "Object_37.002",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1644809744062344:3051032"
+                        },
+                        {
+                            "k": [
+                                "Object_38.002"
+                            ],
+                            "v": "1644809744063540:3051045"
+                        },
+                        {
+                            "k": [
+                                "Object_38.002",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1644809744064273:3051047"
+                        },
+                        {
+                            "k": [
+                                "Object_39.002"
+                            ],
+                            "v": "1644809744065295:3051060"
+                        },
+                        {
+                            "k": [
+                                "Object_39.002",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1644809744065974:3051062"
+                        },
+                        {
+                            "k": [
+                                "Object_4.003"
+                            ],
+                            "v": "1644809744003289:3050527"
+                        },
+                        {
+                            "k": [
+                                "Object_4.003",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1644809744004020:3050529"
+                        },
+                        {
+                            "k": [
+                                "Object_40.002"
+                            ],
+                            "v": "1644809744067334:3051075"
+                        },
+                        {
+                            "k": [
+                                "Object_40.002",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1644809744068002:3051077"
+                        },
+                        {
+                            "k": [
+                                "Object_41.002"
+                            ],
+                            "v": "1644809744069035:3051090"
+                        },
+                        {
+                            "k": [
+                                "Object_41.002",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1644809744069706:3051092"
+                        },
+                        {
+                            "k": [
+                                "Object_42.002"
+                            ],
+                            "v": "1644809744071267:3051105"
+                        },
+                        {
+                            "k": [
+                                "Object_42.002",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1644809744071955:3051107"
+                        },
+                        {
+                            "k": [
+                                "Object_43.002"
+                            ],
+                            "v": "1644809744073011:3051120"
+                        },
+                        {
+                            "k": [
+                                "Object_43.002",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1644809744073734:3051122"
+                        },
+                        {
+                            "k": [
+                                "Object_44.002"
+                            ],
+                            "v": "1644809744074894:3051135"
+                        },
+                        {
+                            "k": [
+                                "Object_44.002",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1644809744075591:3051137"
+                        },
+                        {
+                            "k": [
+                                "Object_5.003"
+                            ],
+                            "v": "1644809744005198:3050542"
+                        },
+                        {
+                            "k": [
+                                "Object_5.003",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1644809744005859:3050544"
+                        },
+                        {
+                            "k": [
+                                "Object_6.003"
+                            ],
+                            "v": "1644809744007046:3050557"
+                        },
+                        {
+                            "k": [
+                                "Object_6.003",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1644809744007706:3050559"
+                        },
+                        {
+                            "k": [
+                                "Object_7.003"
+                            ],
+                            "v": "1644809744008828:3050572"
+                        },
+                        {
+                            "k": [
+                                "Object_7.003",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1644809744009501:3050574"
+                        },
+                        {
+                            "k": [
+                                "Object_8.003"
+                            ],
+                            "v": "1644809744010705:3050587"
+                        },
+                        {
+                            "k": [
+                                "Object_8.003",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1644809744011420:3050589"
+                        },
+                        {
+                            "k": [
+                                "Object_9.003"
+                            ],
+                            "v": "1644809744012582:3050602"
+                        },
+                        {
+                            "k": [
+                                "Object_9.003",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1644809744013265:3050604"
+                        }
+                    ]
+                },
+                {
+                    "k": "1645122391966071:1056831",
+                    "v": [
+                        {
+                            "k": "",
+                            "v": "1645122391748708:1055903"
+                        },
+                        {
+                            "k": [
+                                "Default"
+                            ],
+                            "v": "1645122391767571:1055905"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_1"
+                            ],
+                            "v": "1645122391769127:1055907"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_1",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391770560:1055909"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_10"
+                            ],
+                            "v": "1645122391794493:1056031"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_10",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391795971:1056033"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_11"
+                            ],
+                            "v": "1645122391797326:1056046"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_11",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391798821:1056048"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_12"
+                            ],
+                            "v": "1645122391800171:1056061"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_12",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391801665:1056063"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_13"
+                            ],
+                            "v": "1645122391803101:1056076"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_13",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391804588:1056078"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_14"
+                            ],
+                            "v": "1645122391805957:1056091"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_14",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391807449:1056093"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_15"
+                            ],
+                            "v": "1645122391808829:1056106"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_15",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391810444:1056108"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_16"
+                            ],
+                            "v": "1645122391812102:1056125"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_16",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391813782:1056127"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_17"
+                            ],
+                            "v": "1645122391815172:1056140"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_17",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391816679:1056142"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_18"
+                            ],
+                            "v": "1645122391818051:1056155"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_18",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391819581:1056157"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_19"
+                            ],
+                            "v": "1645122391821348:1056170"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_19",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391823224:1056172"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_20"
+                            ],
+                            "v": "1645122391824820:1056185"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_20",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391826423:1056187"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_21"
+                            ],
+                            "v": "1645122391827866:1056200"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_21",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391829386:1056202"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_22"
+                            ],
+                            "v": "1645122391830786:1056215"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_22",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391832313:1056217"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_23"
+                            ],
+                            "v": "1645122391833657:1056230"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_23",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391835171:1056232"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_24"
+                            ],
+                            "v": "1645122391836517:1056245"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_24",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391838079:1056247"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_25"
+                            ],
+                            "v": "1645122391839453:1056260"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_25",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391840986:1056262"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_26"
+                            ],
+                            "v": "1645122391842443:1056275"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_26",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391844226:1056281"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_27"
+                            ],
+                            "v": "1645122391845665:1056294"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_27",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391847252:1056296"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_28"
+                            ],
+                            "v": "1645122391848787:1056309"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_28",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391850335:1056311"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_29"
+                            ],
+                            "v": "1645122391851762:1056324"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_29",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391854319:1056326"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_3"
+                            ],
+                            "v": "1645122391772043:1055922"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_3",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391774240:1055926"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_30"
+                            ],
+                            "v": "1645122391855800:1056339"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_30",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391857503:1056341"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_31"
+                            ],
+                            "v": "1645122391859078:1056354"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_31",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391860676:1056356"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_32"
+                            ],
+                            "v": "1645122391862117:1056369"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_32",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391863758:1056371"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_33"
+                            ],
+                            "v": "1645122391865193:1056384"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_33",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391866784:1056386"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_34"
+                            ],
+                            "v": "1645122391868144:1056399"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_34",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391869740:1056401"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_35"
+                            ],
+                            "v": "1645122391871156:1056414"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_35",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391872794:1056416"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_36"
+                            ],
+                            "v": "1645122391874225:1056429"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_36",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391876578:1056433"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_37"
+                            ],
+                            "v": "1645122391878059:1056448"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_37",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391879735:1056450"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_38"
+                            ],
+                            "v": "1645122391881152:1056463"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_38",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391882753:1056465"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_39"
+                            ],
+                            "v": "1645122391884244:1056478"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_39",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391886489:1056480"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_4"
+                            ],
+                            "v": "1645122391775805:1055941"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_4",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391777300:1055943"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_40"
+                            ],
+                            "v": "1645122391888387:1056493"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_40",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391890155:1056495"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_41"
+                            ],
+                            "v": "1645122391891617:1056508"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_41",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391893289:1056510"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_42"
+                            ],
+                            "v": "1645122391894716:1056523"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_42",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391896394:1056525"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_43"
+                            ],
+                            "v": "1645122391897813:1056538"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_43",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391899462:1056540"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_44"
+                            ],
+                            "v": "1645122391900883:1056553"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_44",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391902622:1056555"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_45"
+                            ],
+                            "v": "1645122391904093:1056568"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_45",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391905818:1056570"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_46"
+                            ],
+                            "v": "1645122391907378:1056583"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_46",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391909907:1056587"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_47"
+                            ],
+                            "v": "1645122391911512:1056602"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_47",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391913246:1056604"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_48"
+                            ],
+                            "v": "1645122391914635:1056617"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_48",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391916332:1056619"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_49"
+                            ],
+                            "v": "1645122391917835:1056632"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_49",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391920769:1056634"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_5"
+                            ],
+                            "v": "1645122391778727:1055956"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_5",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391780203:1055958"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_50"
+                            ],
+                            "v": "1645122391922355:1056647"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_50",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391924138:1056649"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_51"
+                            ],
+                            "v": "1645122391925641:1056662"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_51",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391927407:1056664"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_52"
+                            ],
+                            "v": "1645122391928907:1056677"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_52",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391930596:1056679"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_53"
+                            ],
+                            "v": "1645122391932110:1056692"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_53",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391933851:1056694"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_54"
+                            ],
+                            "v": "1645122391935293:1056707"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_54",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391937013:1056709"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_55"
+                            ],
+                            "v": "1645122391938505:1056722"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_55",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391940619:1056724"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_56"
+                            ],
+                            "v": "1645122391942329:1056741"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_56",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391944232:1056743"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_57"
+                            ],
+                            "v": "1645122391945739:1056756"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_57",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391947466:1056758"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_58"
+                            ],
+                            "v": "1645122391948997:1056771"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_58",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391950808:1056773"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_59"
+                            ],
+                            "v": "1645122391952391:1056786"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_59",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391954602:1056788"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_6"
+                            ],
+                            "v": "1645122391781551:1055971"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_6",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391783008:1055973"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_60"
+                            ],
+                            "v": "1645122391956163:1056801"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_60",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391957944:1056803"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_61"
+                            ],
+                            "v": "1645122391959492:1056816"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_61",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391961331:1056818"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_7"
+                            ],
+                            "v": "1645122391784339:1055986"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_7",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391786462:1055988"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_8"
+                            ],
+                            "v": "1645122391788331:1056001"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_8",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391790027:1056003"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_9"
+                            ],
+                            "v": "1645122391791564:1056016"
+                        },
+                        {
+                            "k": [
+                                "Default",
+                                "Object_9",
+                                "Component.RenderMeshVisual"
+                            ],
+                            "v": "1645122391793125:1056018"
+                        }
+                    ]
+                }
+            ]
+        },
+        "ObjectTracking3DController": {
+            "hand_tracking_mode": "0"
+        },
+        "ScriptModulesController": ""
+    },
+    "templateName": "Physics Toys",
+    "templateUrl": "https:\/\/downloads.ctfassets.net\/xyb83mibqg29\/3sPJtTcvlHxH3P0OSP6V6m\/e870e88f556f3dd74edcc8d9f6b6b6e3\/Physics_Toys.zip"
+}

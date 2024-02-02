@@ -1,0 +1,42 @@
+{
+    "1675108891143213:15562": {
+        "IResourceController": {
+            "name": "orange",
+            "type": 2,
+            "subtype": 1,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1630350075710155:387828",
+            "fileId": "1675108891143355:15721",
+            "originalId": "1675108891143356:15722",
+            "publicId": "1675108891143444:15873",
+            "expected_hash": "592cc3544428e5c4526890bb552654e9",
+            "additional": {
+                "isUnpackedInPublic": "false"
+            }
+        },
+        "IResourceManager": {
+            "uid": "1630350075710155:387828",
+            "name": "Files/File_1675108891143355_15721",
+            "flags": 1
+        }
+    },
+    "1675108891143355:15721": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143355_15721"
+        }
+    },
+    "1675108891143356:15722": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143356_15722.lsmat"
+        }
+    },
+    "1675108891143444:15873": {
+        "IResourceController": {
+            "public": {
+                "path": "Hand Tracking Assets/Materials/Bones/orange.lsmat",
+                "hash": "6cfd079c6cc5b8312352473fd4c0a1a6"
+            }
+        }
+    }
+}

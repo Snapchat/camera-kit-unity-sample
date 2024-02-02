@@ -1,0 +1,39 @@
+{
+    "1675109166452800:25806": {
+        "IResourceController": {
+            "name": "Car Black",
+            "type": 2,
+            "subtype": 1,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1645084898757777:6169649",
+            "fileId": "1675109166452900:25926",
+            "originalId": "1675109166452901:25927",
+            "publicId": "1675109166453499:26095",
+            "expected_hash": "77ade2a2f5236e1ccbd79bcd1c5f36c5"
+        },
+        "IResourceManager": {
+            "uid": "1645084898757777:6169649",
+            "name": "Files/File_1675109166452900_25926",
+            "flags": 1
+        }
+    },
+    "1675109166452900:25926": {
+        "IFileManager": {
+            "path": "Files/File_1675109166452900_25926"
+        }
+    },
+    "1675109166452901:25927": {
+        "IFileManager": {
+            "path": "Files/File_1675109166452901_25927.lsmat"
+        }
+    },
+    "1675109166453499:26095": {
+        "IResourceController": {
+            "public": {
+                "path": "Materials/Car Black.lsmat",
+                "hash": "1bff5de0cc561acc991300cdce49a671"
+            }
+        }
+    }
+}
