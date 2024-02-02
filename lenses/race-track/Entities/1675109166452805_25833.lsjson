@@ -1,0 +1,115 @@
+{
+    "1645770575854077:5669548": {
+        "Compression::IController": {
+            "compressed_files": "",
+            "infos": {
+                "compressedRAM": "1224",
+                "compressedSize": "793",
+                "extension": "mesh",
+                "originalRAM": "1224",
+                "originalSize": "793",
+                "settings": {
+                    "attributeFormat": "",
+                    "draco": {
+                        "colorBits": "8",
+                        "compressLvl": "7",
+                        "normalBits": "8",
+                        "posBits": "11",
+                        "texBits": "10"
+                    },
+                    "info": {
+                        "hasBlendShapes": "false",
+                        "vertexAttribs": [
+                            {
+                                "canBeDisabled": "false",
+                                "format": "9",
+                                "semantic": "position"
+                            },
+                            {
+                                "canBeDisabled": "true",
+                                "format": "9",
+                                "semantic": "normal"
+                            },
+                            {
+                                "canBeDisabled": "true",
+                                "format": "9",
+                                "semantic": "tangent"
+                            },
+                            {
+                                "canBeDisabled": "true",
+                                "format": "9",
+                                "semantic": "texture0"
+                            }
+                        ]
+                    },
+                    "isCompressed": "false",
+                    "type": "0"
+                }
+            },
+            "uncompressed_file": "1675109166452955:25971"
+        }
+    },
+    "1675109166452805:25833": {
+        "IResourceController": {
+            "name": "Cube 5",
+            "type": 3,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1645770575854077:5669548",
+            "fileId": "1675109166452954:25970",
+            "publicId": "1675109166453508:26121",
+            "expected_hash": "513fdcf977807cffaa72e3fce447c653",
+            "additional": {
+                "info": {
+                    "hasBlendShapes": "false",
+                    "vertexAttribs": [
+                        {
+                            "canBeDisabled": "false",
+                            "format": "9",
+                            "semantic": "position"
+                        },
+                        {
+                            "canBeDisabled": "true",
+                            "format": "9",
+                            "semantic": "normal"
+                        },
+                        {
+                            "canBeDisabled": "true",
+                            "format": "9",
+                            "semantic": "tangent"
+                        },
+                        {
+                            "canBeDisabled": "true",
+                            "format": "9",
+                            "semantic": "texture0"
+                        }
+                    ]
+                }
+            }
+        },
+        "IResourceManager": {
+            "uid": "1645770575854077:5669548",
+            "name": "Files/File_1675109166452954_25970.mesh",
+            "flags": 1
+        }
+    },
+    "1675109166452954:25970": {
+        "IFileManager": {
+            "path": "Files/File_1675109166452954_25970.mesh"
+        }
+    },
+    "1675109166452955:25971": {
+        "IFileManager": {
+            "path": "Files/File_1675109166452955_25971.mesh"
+        }
+    },
+    "1675109166453508:26121": {
+        "IResourceController": {
+            "public": {
+                "path": "Meshes/Road/Cube 5.mesh",
+                "hash": "513fdcf977807cffaa72e3fce447c653"
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "1675108891143209:15517": {
+        "IResourceController": {
+            "name": "Indicator Line",
+            "type": 2,
+            "subtype": 1,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1628718309746692:5645130",
+            "fileId": "1675108891143283:15645",
+            "originalId": "1675108891143284:15646",
+            "publicId": "1675108891143432:15825",
+            "expected_hash": "c8f8230630a7fa1bb190e3a1af4abf00",
+            "additional": {
+                "isUnpackedInPublic": "false"
+            }
+        },
+        "IResourceManager": {
+            "uid": "1628718309746692:5645130",
+            "name": "Files/File_1675108891143283_15645",
+            "flags": 1
+        }
+    },
+    "1675108891143283:15645": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143283_15645"
+        }
+    },
+    "1675108891143284:15646": {
+        "IFileManager": {
+            "path": "Files/File_1675108891143284_15646.lsmat"
+        }
+    },
+    "1675108891143432:15825": {
+        "IResourceController": {
+            "public": {
+                "path": "Hand Tracking Assets/Materials/Indicator Line.lsmat",
+                "hash": "386711749e4556e7e2664329b842da68"
+            }
+        }
+    }
+}

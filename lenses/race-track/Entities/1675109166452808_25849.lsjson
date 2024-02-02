@@ -1,0 +1,39 @@
+{
+    "1675109166452808:25849": {
+        "IResourceController": {
+            "name": "Gift Box",
+            "type": 2,
+            "subtype": 1,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1646166097436734:566522",
+            "fileId": "1675109166452981:25992",
+            "originalId": "1675109166452983:25993",
+            "publicId": "1675109166453513:26132",
+            "expected_hash": "9c87e46cabed648e2db503992d54ff0d"
+        },
+        "IResourceManager": {
+            "uid": "1646166097436734:566522",
+            "name": "Files/File_1675109166452981_25992",
+            "flags": 1
+        }
+    },
+    "1675109166452981:25992": {
+        "IFileManager": {
+            "path": "Files/File_1675109166452981_25992"
+        }
+    },
+    "1675109166452983:25993": {
+        "IFileManager": {
+            "path": "Files/File_1675109166452983_25993.lsmat"
+        }
+    },
+    "1675109166453513:26132": {
+        "IResourceController": {
+            "public": {
+                "path": "Materials/Gift Box.lsmat",
+                "hash": "87d73ee7ec853ccafa4664a05d231234"
+            }
+        }
+    }
+}

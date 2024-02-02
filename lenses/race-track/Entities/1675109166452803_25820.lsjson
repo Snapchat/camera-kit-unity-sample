@@ -1,0 +1,115 @@
+{
+    "1645238215791524:73225": {
+        "Compression::IController": {
+            "compressed_files": "",
+            "infos": {
+                "compressedRAM": "2520",
+                "compressedSize": "1355",
+                "extension": "mesh",
+                "originalRAM": "2520",
+                "originalSize": "1355",
+                "settings": {
+                    "attributeFormat": "",
+                    "draco": {
+                        "colorBits": "8",
+                        "compressLvl": "7",
+                        "normalBits": "8",
+                        "posBits": "11",
+                        "texBits": "10"
+                    },
+                    "info": {
+                        "hasBlendShapes": "false",
+                        "vertexAttribs": [
+                            {
+                                "canBeDisabled": "false",
+                                "format": "9",
+                                "semantic": "position"
+                            },
+                            {
+                                "canBeDisabled": "true",
+                                "format": "9",
+                                "semantic": "normal"
+                            },
+                            {
+                                "canBeDisabled": "true",
+                                "format": "9",
+                                "semantic": "tangent"
+                            },
+                            {
+                                "canBeDisabled": "true",
+                                "format": "9",
+                                "semantic": "texture0"
+                            }
+                        ]
+                    },
+                    "isCompressed": "false",
+                    "type": "0"
+                }
+            },
+            "uncompressed_file": "1675109166452930:25950"
+        }
+    },
+    "1675109166452803:25820": {
+        "IResourceController": {
+            "name": "Wind Shield",
+            "type": 3,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1645238215791524:73225",
+            "fileId": "1675109166452929:25949",
+            "publicId": "1675109166453503:26109",
+            "expected_hash": "268392a3207732f3a9aae1fd6716719e",
+            "additional": {
+                "info": {
+                    "hasBlendShapes": "false",
+                    "vertexAttribs": [
+                        {
+                            "canBeDisabled": "false",
+                            "format": "9",
+                            "semantic": "position"
+                        },
+                        {
+                            "canBeDisabled": "true",
+                            "format": "9",
+                            "semantic": "normal"
+                        },
+                        {
+                            "canBeDisabled": "true",
+                            "format": "9",
+                            "semantic": "tangent"
+                        },
+                        {
+                            "canBeDisabled": "true",
+                            "format": "9",
+                            "semantic": "texture0"
+                        }
+                    ]
+                }
+            }
+        },
+        "IResourceManager": {
+            "uid": "1645238215791524:73225",
+            "name": "Files/File_1675109166452929_25949.mesh",
+            "flags": 1
+        }
+    },
+    "1675109166452929:25949": {
+        "IFileManager": {
+            "path": "Files/File_1675109166452929_25949.mesh"
+        }
+    },
+    "1675109166452930:25950": {
+        "IFileManager": {
+            "path": "Files/File_1675109166452930_25950.mesh"
+        }
+    },
+    "1675109166453503:26109": {
+        "IResourceController": {
+            "public": {
+                "path": "Meshes/Car/Wind Shield.mesh",
+                "hash": "268392a3207732f3a9aae1fd6716719e"
+            }
+        }
+    }
+}

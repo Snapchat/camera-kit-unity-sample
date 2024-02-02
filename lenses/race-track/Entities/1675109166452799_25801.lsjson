@@ -1,0 +1,39 @@
+{
+    "1675109166452799:25801": {
+        "IResourceController": {
+            "name": "Wall Back",
+            "type": 2,
+            "subtype": 1,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1645060818678240:1094338",
+            "fileId": "1675109166452889:25917",
+            "originalId": "1675109166452890:25918",
+            "publicId": "1675109166453497:26089",
+            "expected_hash": "1d75d3a97fbab6420bad1eb9862eb163"
+        },
+        "IResourceManager": {
+            "uid": "1645060818678240:1094338",
+            "name": "Files/File_1675109166452889_25917",
+            "flags": 1
+        }
+    },
+    "1675109166452889:25917": {
+        "IFileManager": {
+            "path": "Files/File_1675109166452889_25917"
+        }
+    },
+    "1675109166452890:25918": {
+        "IFileManager": {
+            "path": "Files/File_1675109166452890_25918.lsmat"
+        }
+    },
+    "1675109166453497:26089": {
+        "IResourceController": {
+            "public": {
+                "path": "Materials/Wall Back.lsmat",
+                "hash": "973693b3cbc8f6ab1b3c266f6e94987d"
+            }
+        }
+    }
+}

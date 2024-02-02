@@ -10,7 +10,7 @@ import SCSDKCameraKit
 
 class UnityRemoteApiServiceProvider: NSObject, LensRemoteApiServiceProvider {
 
-    var supportedApiSpecIds: Set<String> = ["98821e72-0407-4125-be80-89a9c7933631"]
+    var supportedApiSpecIds: Set<String> = ["7e97dc02-2575-441e-a32f-7f838bbf6fd8"]
 
     func remoteApiService(for lens: Lens) -> LensRemoteApiService {
         return UnityRemoteApiService()
@@ -26,13 +26,13 @@ class UnityRemoteApiService: NSObject, LensRemoteApiService {
         responseHandler: @escaping (LensRemoteApiServiceCallStatus, LensRemoteApiResponseProtocol) -> Void
     ) -> LensRemoteApiServiceCall {
         print("Camera Kit got callback from Remote API")
-        if (request.endpointId == "unitySendData") {
+        if (request.endpointId == "unity_send_data") {
             DispatchQueue.main.async {
                 let appDelegate = UIApplication.shared.delegate as! AppDelegate
                 appDelegate.unityFramework?.sendMessageToGO(withName: "CameraKitHandler", functionName: "MessageResponseFromLens", message: request.parameters["unityData"])
             }
             return IgnoredRemoteApiServiceCall()
-        } else if (request.endpointId == "unityRequestState") {
+        } else if (request.endpointId == "unity_request_state") {
             DispatchQueue.main.async {
                 let appDelegate = UIApplication.shared.delegate as! AppDelegate
                 appDelegate.unityFramework?.sendMessageToGO(withName: "CameraKitHandler", functionName: "MessageLensRequestedState", message: "")

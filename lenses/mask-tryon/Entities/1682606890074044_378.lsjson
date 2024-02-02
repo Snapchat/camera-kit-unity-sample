@@ -1,0 +1,38 @@
+{
+    "1666104031825555:30794": {
+        "ScriptModulesController": {
+            "dependent_module_names": []
+        }
+    },
+    "1682606890074044:378": {
+        "IResourceController": {
+            "name": "ParamsManager",
+            "type": 4,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1666104031825555:30794",
+            "fileId": "1682606890074047:402",
+            "publicId": "1682606890074124:451",
+            "expected_hash": "6fc750c64668eab7e00f22389d62bb3b"
+        },
+        "IResourceManager": {
+            "uid": "1666104031825555:30794",
+            "name": "Files/File_1682606890074047_402.js",
+            "flags": 1
+        }
+    },
+    "1682606890074047:402": {
+        "IFileManager": {
+            "path": "Files/File_1682606890074047_402.js"
+        }
+    },
+    "1682606890074124:451": {
+        "IResourceController": {
+            "public": {
+                "path": "ParamsManager.js",
+                "hash": "6fc750c64668eab7e00f22389d62bb3b"
+            }
+        }
+    }
+}

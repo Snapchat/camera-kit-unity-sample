@@ -1,0 +1,17 @@
+{
+    "1675109166452806:25835": {
+        "IResourceController": {
+            "name": "Baseball Physics Matter [EDIT_ME]",
+            "type": 37,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1645773961804881:7628264"
+        },
+        "IResourceManager": {
+            "uid": "1645773961804881:7628264",
+            "name": "PhysicsMatter Asset",
+            "flags": 0
+        }
+    }
+}

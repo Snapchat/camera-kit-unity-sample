@@ -1,0 +1,42 @@
+{
+    "1675109166452806:25839": {
+        "IResourceController": {
+            "name": "ball_01_lambert1_materialParams",
+            "type": 1,
+            "subtype": 9,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1645812457159993:1066766",
+            "fileId": "1675109166452961:25976",
+            "originalId": "1675109166452962:25977",
+            "publicId": "1675109166453510:26126",
+            "expected_hash": "452d43057f69ef303913fc1087bb7342",
+            "additional": {
+                "originHash": "452d43057f69ef303913fc1087bb7342"
+            }
+        },
+        "IResourceManager": {
+            "uid": "1645812457159993:1066766",
+            "name": "Files/File6782.jpg",
+            "flags": 1
+        }
+    },
+    "1675109166452961:25976": {
+        "IFileManager": {
+            "path": "Files/File_1675109166452961_25976.pvr"
+        }
+    },
+    "1675109166452962:25977": {
+        "IFileManager": {
+            "path": "Files/File_1675109166452962_25977.pvr"
+        }
+    },
+    "1675109166453510:26126": {
+        "IResourceController": {
+            "public": {
+                "path": "Textures/ball_01_lambert1_materialParams.pvr",
+                "hash": "452d43057f69ef303913fc1087bb7342"
+            }
+        }
+    }
+}

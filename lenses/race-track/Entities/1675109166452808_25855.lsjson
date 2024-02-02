@@ -1,0 +1,79 @@
+{
+    "1650575965846046:154561": {
+        "Compression::IController": {
+            "compressed_files": [
+                {
+                    "k": {
+                        "settings_hash": "2049",
+                        "uncompressed_hash": "c6d02b99591cf653f2f5db30cef3e77c"
+                    },
+                    "v": "1675109166453026:26026"
+                }
+            ],
+            "infos": {
+                "compressedRAM": "131072",
+                "compressedSize": "7753",
+                "extension": "png",
+                "originalRAM": "1048576",
+                "originalSize": "15476",
+                "settings": {
+                    "isCompressed": "true",
+                    "level": "2",
+                    "subtype": "9",
+                    "type": "1"
+                }
+            },
+            "uncompressed_file": "1675109166452999:26006"
+        }
+    },
+    "1675109166452808:25855": {
+        "IResourceController": {
+            "name": "Wheel",
+            "type": 1,
+            "subtype": 9,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1650575965846046:154561",
+            "fileId": "1675109166452996:26004",
+            "originalId": "1675109166452998:26005",
+            "publicId": "1675109166453515:26138",
+            "expected_hash": "64894c6e3b5825694ecf1ef89ea07473",
+            "additional": {
+                "originHash": "c6d02b99591cf653f2f5db30cef3e77c"
+            }
+        },
+        "IResourceManager": {
+            "uid": "1650575965846046:154561",
+            "name": "Files/File7560.jpg",
+            "flags": 1
+        }
+    },
+    "1675109166452996:26004": {
+        "IFileManager": {
+            "path": "Files/File_1675109166452996_26004.pvr"
+        }
+    },
+    "1675109166452998:26005": {
+        "IFileManager": {
+            "path": "Files/File_1675109166452998_26005.png"
+        }
+    },
+    "1675109166452999:26006": {
+        "IFileManager": {
+            "path": "Files/File_1675109166452999_26006.png"
+        }
+    },
+    "1675109166453026:26026": {
+        "IFileManager": {
+            "path": "Files/File_1675109166453026_26026.pvr"
+        }
+    },
+    "1675109166453515:26138": {
+        "IResourceController": {
+            "public": {
+                "path": "Textures/Wheel.png",
+                "hash": "c6d02b99591cf653f2f5db30cef3e77c"
+            }
+        }
+    }
+}

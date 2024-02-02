@@ -1,0 +1,17 @@
+{
+    "1675109166452801:25810": {
+        "IResourceController": {
+            "name": "Physics Front Camera World Settings [EDIT_ME]",
+            "type": 36,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1645141359201198:198448"
+        },
+        "IResourceManager": {
+            "uid": "1645141359201198:198448",
+            "name": "PhysicsWorldSettings Asset",
+            "flags": 0
+        }
+    }
+}

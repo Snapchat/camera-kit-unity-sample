@@ -80,7 +80,7 @@ public class GameManager : MonoBehaviour
     {
         var config = new CameraKitConfiguration()
         {
-            LensID = Constants.LENS_ID_PHYSICS,
+            LensID = Constants.LENS_ID_RACE_TRACK,
             LensGroupID = Constants.LENS_GROUP_ID,
             RemoteAPISpecId = Constants.API_SPEC_ID,
             RenderMode = CameraKitRenderMode.BehindUnity,
@@ -238,7 +238,7 @@ public class GameManager : MonoBehaviour
     {
         animationManager.PlayScene("StartPhysicsLens");        
         InvokeCameraKit_PhysicsLens();
-        _activeLensId = Constants.LENS_ID_PHYSICS;
+        _activeLensId = Constants.LENS_ID_RACE_TRACK;
     }
 
     public void OnMaskSelected(string mask)

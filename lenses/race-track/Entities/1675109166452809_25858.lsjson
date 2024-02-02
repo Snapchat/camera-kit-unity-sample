@@ -1,0 +1,79 @@
+{
+    "1650575968307798:155401": {
+        "Compression::IController": {
+            "compressed_files": [
+                {
+                    "k": {
+                        "settings_hash": "2049",
+                        "uncompressed_hash": "d57574571079c303bce4b019cf73f779"
+                    },
+                    "v": "1675109166453029:26028"
+                }
+            ],
+            "infos": {
+                "compressedRAM": "32768",
+                "compressedSize": "5291",
+                "extension": "png",
+                "originalRAM": "262144",
+                "originalSize": "9864",
+                "settings": {
+                    "isCompressed": "true",
+                    "level": "2",
+                    "subtype": "9",
+                    "type": "1"
+                }
+            },
+            "uncompressed_file": "1675109166453012:26015"
+        }
+    },
+    "1675109166452809:25858": {
+        "IResourceController": {
+            "name": "ball_baseball_color",
+            "type": 1,
+            "subtype": 9,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1650575968307798:155401",
+            "fileId": "1675109166453009:26013",
+            "originalId": "1675109166453011:26014",
+            "publicId": "1675109166453516:26141",
+            "expected_hash": "111b1e4ff7224cea6e67717bc1298ce0",
+            "additional": {
+                "originHash": "d57574571079c303bce4b019cf73f779"
+            }
+        },
+        "IResourceManager": {
+            "uid": "1650575968307798:155401",
+            "name": "Files/File7569.jpg",
+            "flags": 1
+        }
+    },
+    "1675109166453009:26013": {
+        "IFileManager": {
+            "path": "Files/File_1675109166453009_26013.pvr"
+        }
+    },
+    "1675109166453011:26014": {
+        "IFileManager": {
+            "path": "Files/File_1675109166453011_26014.png"
+        }
+    },
+    "1675109166453012:26015": {
+        "IFileManager": {
+            "path": "Files/File_1675109166453012_26015.png"
+        }
+    },
+    "1675109166453029:26028": {
+        "IFileManager": {
+            "path": "Files/File_1675109166453029_26028.pvr"
+        }
+    },
+    "1675109166453516:26141": {
+        "IResourceController": {
+            "public": {
+                "path": "Textures/ball_baseball_color.png",
+                "hash": "d57574571079c303bce4b019cf73f779"
+            }
+        }
+    }
+}

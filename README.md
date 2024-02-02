@@ -2,13 +2,13 @@
 This repository contains a template project that allows you to build a Unity application and leverage Snap's Camera Kit technology. It supports both iOS and Android builds.
 
 ## Requirements
-- Unity 2022.1.23f1
-- Camera Kit SDK 1.23.0 (compatible with Lens Studio v4.47)
+- Unity 2022.3.17f1
+- Camera Kit SDK 1.26.1 (compatible with Lens Studio v4.55.1)
 - Android: 
-  - Android Studio Flaming (Min SDK version 22, Target SDK version 33)
+  - Android Studio Flamingo (Min SDK version 22, Target SDK version 33)
   - Gradle 7.2
 - iOS:
-  - XCode 14.1
+  - XCode 15
   - Cocoapods
 
 ## Project structure
@@ -134,17 +134,20 @@ In order to get a callback from your app, you'll need to configure a Remote API.
    2. Visibility: `Private`
    3. Host: `unity`
    4. Security Scheme: `NONE`
-   5.  Click **Next**
-3. In the following screen, add an Endpoint with information as below:
-   1.  Reference ID: `unitySendData`
+3. **Add Endpoint** with information as below:
+   1.  Reference ID: `unity_send_data`
    2.  Path: `sendData`
    3.  Method: `POST`
-4. Click **Add Parameter**, and add a Parameter with information as below:
-   1. Name: `unityData`
-   2. Parameter Location: `HEADER`
-   3. External Name: `unitySendData`
-   4. Optional: `YES`
-   5. Constant: `NO`
+   4. **Add Parameter**, and add a Parameter with information as below:
+      1. Name: `unityData`
+      2. Parameter Location: `HEADER`
+      4. Optional: `YES`
+      5. Constant: `NO`
+4. **Add Endpoint** with information as below:
+   1.  Reference ID: `unity_request_state`
+   2.  Path: `requestState`
+   3.  Method: `GET`
+   4.  (No parameters)
 5. Check the confirmation box and click **Submit API**
 
 From this moment on, you have a **Remote API Spec ID** in the portal, which you will need for the steps below.
@@ -161,7 +164,7 @@ function sendEventToUnity(eventName, eventValue) {
         "eventName" : eventName,
         "eventValue" : eventValue
     };
-    UnityApi.unitySendData(JSON.stringify(dataToSend), function(err, r){
+    UnityApi.unity_send_data(JSON.stringify(dataToSend), function(err, r){
         print("Data sent to Unity");
         print("Error? " + err);
         print("Result? " + r);
@@ -220,7 +223,7 @@ Since there is no direct method for a lens to receive pushes from an outside con
 ```javascript
 script.api.requestUpdatedStateFromUnity = function() 
 {   
-    ApiModule.unityRequestState(script.api.handleUnityUpdate)
+    ApiModule.unity_request_state(script.api.handleUnityUpdate)
 }
 
 script.api.handleUnityUpdate = function(err, response) {

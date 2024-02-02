@@ -1,0 +1,39 @@
+{
+    "1675109166452800:25804": {
+        "IResourceController": {
+            "name": "Wheel",
+            "type": 2,
+            "subtype": 1,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1645083977124996:5883857",
+            "fileId": "1675109166452895:25922",
+            "originalId": "1675109166452896:25923",
+            "publicId": "1675109166453498:26093",
+            "expected_hash": "c4219708e6a9405a573a66a27dbce5b1"
+        },
+        "IResourceManager": {
+            "uid": "1645083977124996:5883857",
+            "name": "Files/File_1675109166452895_25922",
+            "flags": 1
+        }
+    },
+    "1675109166452895:25922": {
+        "IFileManager": {
+            "path": "Files/File_1675109166452895_25922"
+        }
+    },
+    "1675109166452896:25923": {
+        "IFileManager": {
+            "path": "Files/File_1675109166452896_25923.lsmat"
+        }
+    },
+    "1675109166453498:26093": {
+        "IResourceController": {
+            "public": {
+                "path": "Materials/Wheel.lsmat",
+                "hash": "92859e45230d1fc088295682ab3ac18b"
+            }
+        }
+    }
+}

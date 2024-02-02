@@ -1,0 +1,39 @@
+{
+    "1675109166452800:25807": {
+        "IResourceController": {
+            "name": "Toon Road",
+            "type": 2,
+            "subtype": 1,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1645119665443554:206278",
+            "fileId": "1675109166452902:25928",
+            "originalId": "1675109166452903:25929",
+            "publicId": "1675109166453499:26096",
+            "expected_hash": "b0b1335112ee89771264f73add4554bb"
+        },
+        "IResourceManager": {
+            "uid": "1645119665443554:206278",
+            "name": "Files/File_1675109166452902_25928",
+            "flags": 1
+        }
+    },
+    "1675109166452902:25928": {
+        "IFileManager": {
+            "path": "Files/File_1675109166452902_25928"
+        }
+    },
+    "1675109166452903:25929": {
+        "IFileManager": {
+            "path": "Files/File_1675109166452903_25929.lsmat"
+        }
+    },
+    "1675109166453499:26096": {
+        "IResourceController": {
+            "public": {
+                "path": "Materials/Toon Road.lsmat",
+                "hash": "4269a3cedab4ae5c7b60e562b86d75f1"
+            }
+        }
+    }
+}

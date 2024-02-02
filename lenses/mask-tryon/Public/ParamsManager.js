@@ -12,9 +12,9 @@ var selectedMask;
 
 var storageKey = "selectedMask"
 
-// for testing...
+// Uncomment the declaration below for testing
 //launchParams = {
-//    "selectedMask" : "pumpkin",
+//    "selectedMask" : "robot",
 //    "has" : function() {return true},
 //    "getString" : function() {return this.selectedMask}
 //}

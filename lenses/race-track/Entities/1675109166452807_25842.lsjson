@@ -1,0 +1,115 @@
+{
+    "1645812485408914:1105015": {
+        "Compression::IController": {
+            "compressed_files": "",
+            "infos": {
+                "compressedRAM": "253728",
+                "compressedSize": "99014",
+                "extension": "mesh",
+                "originalRAM": "253728",
+                "originalSize": "99014",
+                "settings": {
+                    "attributeFormat": "",
+                    "draco": {
+                        "colorBits": "8",
+                        "compressLvl": "7",
+                        "normalBits": "8",
+                        "posBits": "11",
+                        "texBits": "10"
+                    },
+                    "info": {
+                        "hasBlendShapes": "false",
+                        "vertexAttribs": [
+                            {
+                                "canBeDisabled": "false",
+                                "format": "9",
+                                "semantic": "position"
+                            },
+                            {
+                                "canBeDisabled": "true",
+                                "format": "9",
+                                "semantic": "normal"
+                            },
+                            {
+                                "canBeDisabled": "true",
+                                "format": "9",
+                                "semantic": "tangent"
+                            },
+                            {
+                                "canBeDisabled": "true",
+                                "format": "9",
+                                "semantic": "texture0"
+                            }
+                        ]
+                    },
+                    "isCompressed": "false",
+                    "type": "0"
+                }
+            },
+            "uncompressed_file": "1675109166452970:25983"
+        }
+    },
+    "1675109166452807:25842": {
+        "IResourceController": {
+            "name": "temp_box_top",
+            "type": 3,
+            "subtype": 0,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1645812485408914:1105015",
+            "fileId": "1675109166452968:25982",
+            "publicId": "1675109166453509:26124",
+            "expected_hash": "7ea5c9af1a1e5cda845a20016613fc5b",
+            "additional": {
+                "info": {
+                    "hasBlendShapes": "false",
+                    "vertexAttribs": [
+                        {
+                            "canBeDisabled": "false",
+                            "format": "9",
+                            "semantic": "position"
+                        },
+                        {
+                            "canBeDisabled": "true",
+                            "format": "9",
+                            "semantic": "normal"
+                        },
+                        {
+                            "canBeDisabled": "true",
+                            "format": "9",
+                            "semantic": "tangent"
+                        },
+                        {
+                            "canBeDisabled": "true",
+                            "format": "9",
+                            "semantic": "texture0"
+                        }
+                    ]
+                }
+            }
+        },
+        "IResourceManager": {
+            "uid": "1645812485408914:1105015",
+            "name": "Files/File_1675109166452968_25982.mesh",
+            "flags": 1
+        }
+    },
+    "1675109166452968:25982": {
+        "IFileManager": {
+            "path": "Files/File_1675109166452968_25982.mesh"
+        }
+    },
+    "1675109166452970:25983": {
+        "IFileManager": {
+            "path": "Files/File_1675109166452970_25983.mesh"
+        }
+    },
+    "1675109166453509:26124": {
+        "IResourceController": {
+            "public": {
+                "path": "Meshes/temp_box_top.mesh",
+                "hash": "7ea5c9af1a1e5cda845a20016613fc5b"
+            }
+        }
+    }
+}

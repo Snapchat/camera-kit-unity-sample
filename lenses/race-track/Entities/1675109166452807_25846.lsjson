@@ -1,0 +1,39 @@
+{
+    "1675109166452807:25846": {
+        "IResourceController": {
+            "name": "Beach Ball",
+            "type": 2,
+            "subtype": 1,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1646165774412018:270716",
+            "fileId": "1675109166452974:25986",
+            "originalId": "1675109166452975:25987",
+            "publicId": "1675109166453512:26130",
+            "expected_hash": "8f3dd7da1bae1d27cf208419f3f02d30"
+        },
+        "IResourceManager": {
+            "uid": "1646165774412018:270716",
+            "name": "Files/File_1675109166452974_25986",
+            "flags": 1
+        }
+    },
+    "1675109166452974:25986": {
+        "IFileManager": {
+            "path": "Files/File_1675109166452974_25986"
+        }
+    },
+    "1675109166452975:25987": {
+        "IFileManager": {
+            "path": "Files/File_1675109166452975_25987.lsmat"
+        }
+    },
+    "1675109166453512:26130": {
+        "IResourceController": {
+            "public": {
+                "path": "Materials/Beach Ball.lsmat",
+                "hash": "f12d8ad0a97c5385a444959e5242fca9"
+            }
+        }
+    }
+}

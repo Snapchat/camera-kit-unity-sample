@@ -19,9 +19,6 @@ public class CamKitSettings
     public string ApiToken;
     public string AppId;
     
-    // Changing this string will update camera kit references on iOS and Android
-    public string CameraKitVersion = "1.23.0"; 
-
     // IOS Settings
     public string CocoaPodsAbsolutePath = "/usr/local/bin/pod";
     public string IosWrapperProjectRelativePath = "../../../app-ios/";
@@ -47,7 +44,7 @@ public class CameraKitSettingsWindow : EditorWindow
 
     void OnGUI() {
         
-        EditorGUILayout.LabelField("Camera Kit Version: " + Config.CameraKitVersion, new GUIStyle(GUI.skin.label) { alignment=TextAnchor.MiddleCenter}, GUILayout.ExpandWidth(true));
+        EditorGUILayout.LabelField("Camera Kit Version: " + Constants.CAMERA_KIT_VERSION, new GUIStyle(GUI.skin.label) { alignment=TextAnchor.MiddleCenter}, GUILayout.ExpandWidth(true));
 
         EditorGUILayout.Separator();
 
@@ -150,7 +147,7 @@ public class CameraKitSettingsWindow : EditorWindow
         var destGradlePath = Path.Combine(pathToBuiltProject, Config.AndroidWrapperProjectRelativePath, "build.gradle");
         var gradleContent = File.ReadAllText(templatePath);
 
-        gradleContent = gradleContent.Replace("$CAMERAKITVERSION", Config.CameraKitVersion);
+        gradleContent = gradleContent.Replace("$CAMERAKITVERSION", Constants.CAMERA_KIT_VERSION);
 
         File.WriteAllText(destGradlePath, gradleContent);
 
@@ -221,7 +218,7 @@ public class CameraKitSettingsWindow : EditorWindow
     static void iOSTask_RunCocoapods(string pathToBuiltProject)
     {
         var podfileStr = File.ReadAllText(Application.dataPath + "/Plugins/iOS/Podfile");
-        podfileStr = podfileStr.Replace("$CAMKITVERSION", Config.CameraKitVersion);
+        podfileStr = podfileStr.Replace("$CAMKITVERSION", Constants.CAMERA_KIT_VERSION);
         var newPodfilePath = Path.Combine(pathToBuiltProject, Config.IosWrapperProjectRelativePath, "Podfile");
         File.WriteAllText(newPodfilePath, podfileStr);
         Debug.Log("Pod file copied to " + newPodfilePath);

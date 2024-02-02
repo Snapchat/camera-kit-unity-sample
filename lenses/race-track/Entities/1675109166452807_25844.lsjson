@@ -1,0 +1,39 @@
+{
+    "1675109166452807:25844": {
+        "IResourceController": {
+            "name": "Ocean",
+            "type": 2,
+            "subtype": 1,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1645814441100829:3905800",
+            "fileId": "1675109166452971:25984",
+            "originalId": "1675109166452972:25985",
+            "publicId": "1675109166453511:26128",
+            "expected_hash": "0bd282d76a450f395acd7e54aece8f51"
+        },
+        "IResourceManager": {
+            "uid": "1645814441100829:3905800",
+            "name": "Files/File_1675109166452971_25984",
+            "flags": 1
+        }
+    },
+    "1675109166452971:25984": {
+        "IFileManager": {
+            "path": "Files/File_1675109166452971_25984"
+        }
+    },
+    "1675109166452972:25985": {
+        "IFileManager": {
+            "path": "Files/File_1675109166452972_25985.lsmat"
+        }
+    },
+    "1675109166453511:26128": {
+        "IResourceController": {
+            "public": {
+                "path": "Materials/Ocean.lsmat",
+                "hash": "9139d2cfc609c41e1aa945b4eef77c87"
+            }
+        }
+    }
+}

@@ -1,15 +1,15 @@
 {
     "lens_id": "",
-    "document_id": "1C4gC_EhV9MotSskHJIW",
+    "document_id": "pJ0d6i_W46JVggr7v_fV",
     "original_document_id": "1C4gC_EhV9MotSskHJIW",
-    "version": "31",
+    "version": "33",
     "preview": "icon.png",
     "videoPreview": "preview.mp4",
     "videoPreviewUpdateTime": "",
     "isReadOnly": "false",
     "isAutoSaved": "true",
     "api_level": "public",
-    "public_api_user_data_access": "restricted",
+    "public_api_user_data_access": "unrestricted",
     "studioVersion": {
         "createdWith": {
             "type": "Public",
@@ -21,15 +21,219 @@
         "lastSavedWith": {
             "type": "Public",
             "major": "4",
-            "minor": "43",
-            "patch": "0",
+            "minor": "55",
+            "patch": "1",
             "build": "0"
         }
     },
     "view": {
         "InspectorUiComponent": "",
         "MapUiComponent": {
-            "mapPinPoints": ""
+            "mapPinPoints": {
+                "1649082416475574:107527": {
+                    "longitude": "0",
+                    "latitude": "0",
+                    "selected": "false",
+                    "valid": "false",
+                    "pinName": "",
+                    "pinUid": "-1:-1",
+                    "locationAsset": "-1:-1"
+                },
+                "1649082427199232:110271": {
+                    "longitude": "0",
+                    "latitude": "0",
+                    "selected": "false",
+                    "valid": "false",
+                    "pinName": "",
+                    "pinUid": "-1:-1",
+                    "locationAsset": "-1:-1"
+                },
+                "1649082439729750:113424": {
+                    "longitude": "0",
+                    "latitude": "0",
+                    "selected": "false",
+                    "valid": "false",
+                    "pinName": "",
+                    "pinUid": "-1:-1",
+                    "locationAsset": "-1:-1"
+                },
+                "1649082450030542:116090": {
+                    "longitude": "0",
+                    "latitude": "0",
+                    "selected": "false",
+                    "valid": "false",
+                    "pinName": "",
+                    "pinUid": "-1:-1",
+                    "locationAsset": "-1:-1"
+                },
+                "1649082460630816:118829": {
+                    "longitude": "0",
+                    "latitude": "0",
+                    "selected": "false",
+                    "valid": "false",
+                    "pinName": "",
+                    "pinUid": "-1:-1",
+                    "locationAsset": "-1:-1"
+                },
+                "1649082471244376:121575": {
+                    "longitude": "0",
+                    "latitude": "0",
+                    "selected": "false",
+                    "valid": "false",
+                    "pinName": "",
+                    "pinUid": "-1:-1",
+                    "locationAsset": "-1:-1"
+                },
+                "1649082481781800:124296": {
+                    "longitude": "0",
+                    "latitude": "0",
+                    "selected": "false",
+                    "valid": "false",
+                    "pinName": "",
+                    "pinUid": "-1:-1",
+                    "locationAsset": "-1:-1"
+                },
+                "1649082491465116:126851": {
+                    "longitude": "0",
+                    "latitude": "0",
+                    "selected": "false",
+                    "valid": "false",
+                    "pinName": "",
+                    "pinUid": "-1:-1",
+                    "locationAsset": "-1:-1"
+                },
+                "1649082504700263:130155": {
+                    "longitude": "0",
+                    "latitude": "0",
+                    "selected": "false",
+                    "valid": "false",
+                    "pinName": "",
+                    "pinUid": "-1:-1",
+                    "locationAsset": "-1:-1"
+                },
+                "1649083114749264:286916": {
+                    "longitude": "-0.13116145133972168",
+                    "latitude": "51.512794494628906",
+                    "selected": "false",
+                    "valid": "true",
+                    "pinName": "Pin",
+                    "pinUid": "1649083114749061:286915",
+                    "locationAsset": "1649083114749736:286917"
+                },
+                "1649094984677630:32157": {
+                    "longitude": "-0.13121148943901062",
+                    "latitude": "51.512771606445312",
+                    "selected": "false",
+                    "valid": "true",
+                    "pinName": "Pin",
+                    "pinUid": "1649094984677441:32156",
+                    "locationAsset": "1649094984678151:32158"
+                },
+                "1649772212970366:35230": {
+                    "longitude": "-0.13149562478065491",
+                    "latitude": "51.513656616210938",
+                    "selected": "false",
+                    "valid": "true",
+                    "pinName": "Pin",
+                    "pinUid": "1649772212970143:35229",
+                    "locationAsset": "1649772212970867:35231"
+                },
+                "1649778275335615:644381": {
+                    "longitude": "0",
+                    "latitude": "0",
+                    "selected": "false",
+                    "valid": "false",
+                    "pinName": "",
+                    "pinUid": "-1:-1",
+                    "locationAsset": "-1:-1"
+                },
+                "1649778655920914:710757": {
+                    "longitude": "-0.13150887191295624",
+                    "latitude": "51.513614654541016",
+                    "selected": "false",
+                    "valid": "true",
+                    "pinName": "Pin - Frith Street [PLACE_CONTENT_HERE]",
+                    "pinUid": "1649778655920668:710756",
+                    "locationAsset": "1649778655921339:710758"
+                },
+                "1649865066556768:58106": {
+                    "longitude": "-0.13167314231395721",
+                    "latitude": "51.513031005859375",
+                    "selected": "false",
+                    "valid": "true",
+                    "pinName": "Pin - Old Compton Street [PLACE_CONTENT_HERE]",
+                    "pinUid": "1649865066556471:58105",
+                    "locationAsset": "1649865066557449:58107"
+                },
+                "1649964505575077:712535": {
+                    "longitude": "-0.13096083700656891",
+                    "latitude": "51.512859344482422",
+                    "selected": "false",
+                    "valid": "true",
+                    "pinName": "Pin - Romilly Street [PLACE_CONTENT_HERE]",
+                    "pinUid": "1649964505574756:712534",
+                    "locationAsset": "1649964505575881:712536"
+                },
+                "1651740821321039:38503": {
+                    "longitude": "-0.13170607388019562",
+                    "latitude": "51.512580871582031",
+                    "selected": "false",
+                    "valid": "true",
+                    "pinName": "Pin - Dean Street And Romily",
+                    "pinUid": "1651740821320812:38502",
+                    "locationAsset": "1651740821321523:38504"
+                },
+                "1651744904534351:1306090": {
+                    "longitude": "-0.13159231841564178",
+                    "latitude": "51.512386322021484",
+                    "selected": "false",
+                    "valid": "true",
+                    "pinName": "Pin",
+                    "pinUid": "1651744904534135:1306089",
+                    "locationAsset": "1651744904535003:1306091"
+                },
+                "1652347539892906:46549": {
+                    "longitude": "-0.085821650922298431",
+                    "latitude": "51.528266906738281",
+                    "selected": "false",
+                    "valid": "true",
+                    "pinName": "Pin",
+                    "pinUid": "1652347539892395:46548",
+                    "locationAsset": "1652347539893864:46550"
+                },
+                "1653297295919937:563039": {
+                    "longitude": "-0.12685032188892365",
+                    "latitude": "51.507827758789062",
+                    "selected": "false",
+                    "valid": "true",
+                    "pinName": "Pin",
+                    "pinUid": "1653297295919457:563038",
+                    "locationAsset": "1653297295921503:563046"
+                },
+                "1653297493220826:286071": {
+                    "longitude": "-0.12681996822357178",
+                    "latitude": "51.515045166015625",
+                    "selected": "false",
+                    "valid": "true",
+                    "pinName": "Pin",
+                    "pinUid": "1653297493220620:286070",
+                    "locationAsset": "1653297493221647:286072"
+                },
+                "1653297815414767:678204": {
+                    "longitude": "-0.12326952069997787",
+                    "latitude": "51.509716033935547",
+                    "selected": "false",
+                    "valid": "true",
+                    "pinName": "Pin",
+                    "pinUid": "1653297815414537:678203",
+                    "locationAsset": "1653297815415381:678205"
+                }
+            },
+            "mapCurrentPosition": {
+                "x": "-0.130984917",
+                "y": "51.5128555"
+            },
+            "mapCurrentCity": "0"
         },
         "Material::UiComponent": "",
         "MetaInfoUIComponent": {
@@ -40,9 +244,14 @@
             ],
             "lens": "DUCK: Collect Coin",
             "applicability": "2",
+            "compatibility_descriptors": [
+                "mobile",
+                "web"
+            ],
             "lens_descriptors": "",
             "sg": "false",
             "git_friendly": "true",
+            "activation_camera": "front",
             "Spectacles2021UseAllowed": "false"
         },
         "ObjectTracking3DUIComponent": "",
@@ -53,6 +262,7 @@
             },
             "show_snap_ui": "false",
             "show_sponsored_ui": "false",
+            "input_stream_type": "Image",
             "preview_images_project_config": {
                 "back_preview_id": "bundle:Preview\/Images\/Gesture Open.jpg",
                 "back_preview_is_favorite": "false",
@@ -130,6 +340,72 @@
                             }
                         ],
                         "local_only": "false",
+                        "visibility": "private",
+                        "source": "developer",
+                        "restricted_js_api_permissions": ""
+                    }
+                },
+                {
+                    "k": "1706202969141273:1931392",
+                    "v": {
+                        "api_spec_id": "7e97dc02-2575-441e-a32f-7f838bbf6fd8",
+                        "name": "Camera Kit Unity Bridge",
+                        "provider_name": "Camera Kit Unity",
+                        "description": "Creates a bridge between Unity and Lens Studio ",
+                        "host": "unity",
+                        "documentation_url": "",
+                        "endpoints": [
+                            {
+                                "ref_id": "unitysenddata",
+                                "metadata": {
+                                    "name": "",
+                                    "description": ""
+                                },
+                                "parameters": ""
+                            },
+                            {
+                                "ref_id": "unityrequeststate",
+                                "metadata": {
+                                    "name": "",
+                                    "description": ""
+                                },
+                                "parameters": ""
+                            }
+                        ],
+                        "local_only": "true",
+                        "visibility": "private",
+                        "source": "developer",
+                        "restricted_js_api_permissions": ""
+                    }
+                },
+                {
+                    "k": "1706205471151303:2759090",
+                    "v": {
+                        "api_spec_id": "7e97dc02-2575-441e-a32f-7f838bbf6fd8",
+                        "name": "Camera Kit Unity Bridge",
+                        "provider_name": "Camera Kit Unity",
+                        "description": "Creates a bridge between Unity and Lens Studio ",
+                        "host": "unity",
+                        "documentation_url": "",
+                        "endpoints": [
+                            {
+                                "ref_id": "unitysenddata",
+                                "metadata": {
+                                    "name": "",
+                                    "description": ""
+                                },
+                                "parameters": ""
+                            },
+                            {
+                                "ref_id": "unityrequeststate",
+                                "metadata": {
+                                    "name": "",
+                                    "description": ""
+                                },
+                                "parameters": ""
+                            }
+                        ],
+                        "local_only": "true",
                         "visibility": "private",
                         "source": "developer",
                         "restricted_js_api_permissions": ""
@@ -4707,7 +4983,8 @@
         },
         "ObjectTracking3DController": {
             "hand_tracking_mode": "1"
-        }
+        },
+        "ScriptModulesController": ""
     },
     "templateName": "3D Hand Interactions",
     "templateUrl": "https:\/\/downloads.ctfassets.net\/xyb83mibqg29\/2w8Sda10TXWm2VbAnR0Y8\/e448d54d9c7e8b6aae672bb1d10d8c0f\/3D_Hand_Interactions.zip"

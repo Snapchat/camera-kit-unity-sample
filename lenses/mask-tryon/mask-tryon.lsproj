@@ -1,8 +1,8 @@
 {
     "lens_id": "",
-    "document_id": "UlnATPhwhI-gf5SYclN8",
+    "document_id": "5Swdyq6W2FMOyfYpyRmL",
     "original_document_id": "bTE6b6GXZP6dl1LX6Bw0",
-    "version": "31",
+    "version": "33",
     "preview": "icon.png",
     "videoPreview": "preview.mp4",
     "videoPreviewUpdateTime": "",
@@ -21,15 +21,16 @@
         "lastSavedWith": {
             "type": "Public",
             "major": "4",
-            "minor": "43",
-            "patch": "0",
+            "minor": "55",
+            "patch": "1",
             "build": "0"
         }
     },
     "view": {
         "InspectorUiComponent": "",
         "MapUiComponent": {
-            "mapPinPoints": ""
+            "mapPinPoints": "",
+            "mapCurrentCity": "0"
         },
         "Material::UiComponent": "",
         "MetaInfoUIComponent": {
@@ -40,9 +41,14 @@
             ],
             "lens": "DUCK: Mask try-on",
             "applicability": "1",
+            "compatibility_descriptors": [
+                "mobile",
+                "web"
+            ],
             "lens_descriptors": "",
             "sg": "false",
             "git_friendly": "true",
+            "activation_camera": "front",
             "Spectacles2021UseAllowed": "false"
         },
         "ObjectTracking3DUIComponent": "",
@@ -53,6 +59,7 @@
             },
             "show_snap_ui": "false",
             "show_sponsored_ui": "false",
+            "input_stream_type": "WebCam",
             "preview_images_project_config": {
                 "back_preview_id": "bundle:Preview\/Images\/Beach.jpg",
                 "back_preview_is_favorite": "false",
@@ -169,7 +176,8 @@
         },
         "ObjectTracking3DController": {
             "hand_tracking_mode": "0"
-        }
+        },
+        "ScriptModulesController": ""
     },
     "templateName": "Empty Project",
     "templateUrl": "Lens Studio version 4.22.0"

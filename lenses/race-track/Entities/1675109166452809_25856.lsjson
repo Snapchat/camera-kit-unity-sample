@@ -1,0 +1,79 @@
+{
+    "1650575966142688:154658": {
+        "Compression::IController": {
+            "compressed_files": [
+                {
+                    "k": {
+                        "settings_hash": "3072",
+                        "uncompressed_hash": "a1f6fbf2dae7448b56daea912625f52f"
+                    },
+                    "v": "1675109166453025:26025"
+                }
+            ],
+            "infos": {
+                "compressedRAM": "4194304",
+                "compressedSize": "126403",
+                "extension": "jpg",
+                "originalRAM": "4194304",
+                "originalSize": "178303",
+                "settings": {
+                    "isCompressed": "true",
+                    "level": "3",
+                    "subtype": "9",
+                    "type": "0"
+                }
+            },
+            "uncompressed_file": "1675109166453003:26009"
+        }
+    },
+    "1675109166452809:25856": {
+        "IResourceController": {
+            "name": "gift_box_d",
+            "type": 1,
+            "subtype": 9,
+            "dependency": 0,
+            "hidden": false,
+            "uid": "1650575966142688:154658",
+            "fileId": "1675109166453000:26007",
+            "originalId": "1675109166453001:26008",
+            "publicId": "1675109166453515:26139",
+            "expected_hash": "f6bc68dfb22776654421b9b93856dffe",
+            "additional": {
+                "originHash": "a1f6fbf2dae7448b56daea912625f52f"
+            }
+        },
+        "IResourceManager": {
+            "uid": "1650575966142688:154658",
+            "name": "Files/File_1675109166453000_26007.jpg",
+            "flags": 1
+        }
+    },
+    "1675109166453000:26007": {
+        "IFileManager": {
+            "path": "Files/File_1675109166453000_26007.jpg"
+        }
+    },
+    "1675109166453001:26008": {
+        "IFileManager": {
+            "path": "Files/File_1675109166453001_26008.jpg"
+        }
+    },
+    "1675109166453003:26009": {
+        "IFileManager": {
+            "path": "Files/File_1675109166453003_26009.jpg"
+        }
+    },
+    "1675109166453025:26025": {
+        "IFileManager": {
+            "path": "Files/File_1675109166453025_26025.jpg"
+        }
+    },
+    "1675109166453515:26139": {
+        "IResourceController": {
+            "public": {
+                "path": "Textures/gift_box_d.jpg",
+                "hash": "a1f6fbf2dae7448b56daea912625f52f"
+            }
+        }
+    }
+}
