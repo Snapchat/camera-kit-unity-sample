@@ -1,5 +1,9 @@
 # Camera Kit Unity Template
-This repository contains a template project that allows you to build a Unity application and leverage Snap's Camera Kit technology. It supports both iOS and Android builds.
+
+> [!IMPORTANT] 
+> This repository contains example projects to help you get started with Camera Kit integrations. The software is provided "as is" without any warranties or guarantees, and it is not officially supported for production use.
+
+This is a template project that allows you to build a Unity application and leverage Snap's Camera Kit technology. It supports both iOS and Android builds.
 
 ## Requirements
 - Unity 2022.3.17f1
